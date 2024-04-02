@@ -3,7 +3,11 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - '*'
+      - '*/*'
+      - '**'
+      - '!preview'
+      - '!main'
   pull_request:
 
 permissions:
