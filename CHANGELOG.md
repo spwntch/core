@@ -1,3 +1,3 @@
 ## 0.1.0 (2024-04-02)
 
-This was a version bump only, there were no code changes.
+Can spawn an nx workspace with a nextjs app using tailwindcss for styling.
