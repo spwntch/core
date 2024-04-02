@@ -4,6 +4,7 @@ import {
   formatFiles,
   generateFiles,
   Tree,
+  updateJson,
 } from '@nx/devkit';
 import * as path from 'path';
 import { PresetGeneratorSchema } from './schema';
@@ -18,6 +19,13 @@ export async function presetGenerator(
     projectType: 'application',
     targets: {},
   });
+
+  updateJson(tree, 'package.json', (json) => {
+    json.scripts = json.scripts || {};
+    json.scripts.start = 'npx nx run getting-started:dev';
+    return json;
+  });
+
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
 
