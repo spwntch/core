@@ -1,11 +1,17 @@
 # spawn-workspace
 
-This library was generated with [Nx](https://nx.dev).
+```bash
+npx spawn-workspace
+```
 
-## Building
+## What is It?
 
-Run `nx build spawn-workspace` to build the library.
+It's a command to spawn a new nx monorepo workspace, kitted out with everything you need to use **Spawntech's** other packages efficiently.
 
-## Running unit tests
+## Getting Started
 
-Run `nx test spawn-workspace` to execute the unit tests via [Jest](https://jestjs.io).
+### Spawning a workspace
+
+```bash
+npx spawn-workspace
+```
