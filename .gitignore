@@ -42,3 +42,10 @@ Thumbs.db
 
 # Generated output
 spawned-workspace
+
+# Next.js
+.next
+out
+
+
+storybook-static

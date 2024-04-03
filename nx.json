@@ -48,5 +48,35 @@
       "preVersionCommand": "pnpm dlx nx run-many -t build"
     }
   },
-  "nxCloudAccessToken": "MWYyMTk2NTItNDMzNi00OGE3LTljZmQtNDEzZTZmZTBmMjgzfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MWYyMTk2NTItNDMzNi00OGE3LTljZmQtNDEzZTZmZTBmMjgzfHJlYWQtd3JpdGU=",
+  "plugins": [
+    {
+      "plugin": "@nx/next/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "startTargetName": "start",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "plugin": "@nx/storybook/plugin",
+      "options": {
+        "buildStorybookTargetName": "build-storybook",
+        "serveStorybookTargetName": "storybook",
+        "testStorybookTargetName": "test-storybook",
+        "staticStorybookTargetName": "static-storybook"
+      }
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "previewTargetName": "preview",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "serveStaticTargetName": "serve-static"
+      }
+    }
+  ]
 }
