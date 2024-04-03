@@ -3,6 +3,7 @@ import {
   formatFiles,
   generateFiles,
   Tree,
+  updateJson,
 } from '@nx/devkit';
 import * as path from 'path';
 import { GettingStartedDocsGeneratorSchema } from './schema';
@@ -12,12 +13,19 @@ export async function gettingStartedDocsGenerator(
   options: GettingStartedDocsGeneratorSchema
 ) {
   const projectRoot = `apps/getting-started-docs`;
-  addProjectConfiguration(tree, options.name, {
+  addProjectConfiguration(tree, 'getting-started-docs', {
     root: projectRoot,
     projectType: 'application',
     sourceRoot: `${projectRoot}`,
     targets: {},
   });
+
+  updateJson(tree, 'package.json', (json) => {
+    json.scripts = json.scripts || {};
+    json.scripts.docs = 'npx nx run getting-started:dev';
+    return json;
+  });
+
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
 }
