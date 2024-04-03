@@ -13,8 +13,10 @@ export async function presetGenerator(
   tree: Tree,
   options: PresetGeneratorSchema
 ) {
+  const {name, addDocs} = options;
+
   const projectRoot = `.`;
-  addProjectConfiguration(tree, options.name, {
+  addProjectConfiguration(tree, name, {
     root: projectRoot,
     projectType: 'application',
     targets: {},
@@ -22,7 +24,7 @@ export async function presetGenerator(
 
   updateJson(tree, 'package.json', (json) => {
     json.scripts = json.scripts || {};
-    json.scripts.start = 'npx nx run getting-started:dev';
+    json.scripts.docs = 'npx nx run getting-started:dev';
     return json;
   });
 

@@ -11,7 +11,11 @@
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "What name would you like to use?"
+      "x-prompt": "What would you like to name your new workspace?"
+    },
+    "addDocs": {
+      "type": "boolean",
+      "x-prompt": "Would you like to add Getting Started docs?"
     }
   },
   "required": ["name"]

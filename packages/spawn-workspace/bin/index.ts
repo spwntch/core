@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { createWorkspace } from 'create-nx-workspace';
-import { intro, text } from '@clack/prompts';
+import { confirm, intro, text } from '@clack/prompts';
 
 async function main() {
   intro(`
@@ -22,6 +22,11 @@ async function main() {
     // if (!name) throw new Error('Please provide a name for the workspace');
   }
 
+  const addDocs = await confirm({
+    message: 'Would you like to add Getting Started docs?',
+    initialValue: true,
+  });
+
   console.log(`Creating the workspace: ${name}`);
 
   // This assumes "workspace-generator" and "spawn-workspace" are at the same version
@@ -35,6 +40,7 @@ async function main() {
       name,
       nxCloud: 'skip',
       packageManager: 'npm',
+      addDocs,
     }
   );
 
