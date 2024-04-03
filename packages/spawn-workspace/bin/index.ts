@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
+import { confirm, intro, outro, text } from '@clack/prompts';
 import { createWorkspace } from 'create-nx-workspace';
-import { confirm, intro, text } from '@clack/prompts';
 
 async function main() {
   intro(`
@@ -25,11 +25,17 @@ async function main() {
     initialValue: true,
   });
 
-  console.log(`Creating the workspace: ${name}`);
+  console.log(`
+
+  💪 Creating new Spawntech workspace: ${name}
+  
+  `);
 
   // This assumes "workspace-generator" and "spawn-workspace" are at the same version
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const presetVersion = require('../package.json').version;
+
+  
 
   // TODO: update below to customize the workspace
   const { directory } = await createWorkspace(
@@ -42,7 +48,10 @@ async function main() {
     }
   );
 
-  console.log(`Successfully created the workspace: ${directory}.`);
+  outro(`
+Your new Spawntech workspace is all set 🎉.
+Find it at ${directory}.
+  `);
 }
 
 main();

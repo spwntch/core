@@ -2,7 +2,8 @@
   "name": "@workspace-generator/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+  },
   "private": true,
   "dependencies": {
     "@nx/devkit": "18.2.1",
