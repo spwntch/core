@@ -8,8 +8,6 @@ async function main() {
   {x} Ready to spawn a new workspace?
       Let's get your started 🚀`);
 
-  console.log(process.argv);
-
   let name = process.argv[2]; // TODO: use libraries like yargs or enquirer to set your workspace name
   if (!name) {
     name = (await text({
@@ -41,7 +39,6 @@ async function main() {
       nxCloud: 'skip',
       packageManager: 'npm',
       addDocs,
-      
     }
   );
 

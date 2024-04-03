@@ -17,7 +17,7 @@ export async function presetGenerator(
 
   console.log({ name, addDocs });
 
-  // const projectRoot = `.`;
+  const projectRoot = `.`;
   // addProjectConfiguration(tree, name, {
   //   root: projectRoot,
   //   projectType: 'application',
