@@ -1,3 +1,14 @@
+## 0.2.2 (2024-04-03)
+
+
+### 🩹 Fixes
+
+- **workspace-generator:** update generated files to use correct app name ([8ceaa1d](https://github.com/spwntch/workspace-generator/commit/8ceaa1d))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.2.1 (2024-04-03)
 
 This was a version bump only, there were no code changes.
