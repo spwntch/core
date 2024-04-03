@@ -22,7 +22,7 @@ export async function gettingStartedDocsGenerator(
 
   updateJson(tree, 'package.json', (json) => {
     json.scripts = json.scripts || {};
-    json.scripts.docs = 'npx nx run getting-started:dev';
+    json.scripts.docs = 'npx nx run getting-started-docs:dev --port 3001';
     return json;
   });
 
