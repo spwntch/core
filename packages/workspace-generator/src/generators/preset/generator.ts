@@ -13,20 +13,22 @@ export async function presetGenerator(
   tree: Tree,
   options: PresetGeneratorSchema
 ) {
-  const {name, addDocs} = options;
+  const { name, addDocs } = options;
 
-  const projectRoot = `.`;
-  addProjectConfiguration(tree, name, {
-    root: projectRoot,
-    projectType: 'application',
-    targets: {},
-  });
+  console.log({ name, addDocs });
 
-  updateJson(tree, 'package.json', (json) => {
-    json.scripts = json.scripts || {};
-    json.scripts.docs = 'npx nx run getting-started:dev';
-    return json;
-  });
+  // const projectRoot = `.`;
+  // addProjectConfiguration(tree, name, {
+  //   root: projectRoot,
+  //   projectType: 'application',
+  //   targets: {},
+  // });
+
+  // updateJson(tree, 'package.json', (json) => {
+  //   json.scripts = json.scripts || {};
+  //   json.scripts.docs = 'npx nx run getting-started:dev';
+  //   return json;
+  // });
 
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);

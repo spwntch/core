@@ -41,6 +41,7 @@ async function main() {
       nxCloud: 'skip',
       packageManager: 'npm',
       addDocs,
+      
     }
   );
 
