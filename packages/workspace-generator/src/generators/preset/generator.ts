@@ -17,14 +17,13 @@ export async function presetGenerator(
 
   console.log({ name, addDocs });
 
-  const projectRoot = `.`;
-
-  generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
-  await formatFiles(tree);
-
   if (addDocs) {
     gettingStartedDocsGenerator(tree, { name });
   }
+
+  const projectRoot = `.`;
+  generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
+  await formatFiles(tree);
 
   return addDependenciesToPackageJson(
     tree,
