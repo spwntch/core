@@ -1,3 +1,18 @@
+## 0.1.5 (2024-04-03)
+
+
+### 🚀 Features
+
+- **workspace-generator:** attempt to call getting-started-docs generator from preset generator ([cab910d](https://github.com/spwntch/workspace-generator/commit/cab910d))
+
+### 🩹 Fixes
+
+- **workspace-generator:** note projectRoot as '.' ([90b9028](https://github.com/spwntch/workspace-generator/commit/90b9028))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.1.4 (2024-04-03)
 
 
