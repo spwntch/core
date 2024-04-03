@@ -5,6 +5,11 @@
       "schema": "./src/generators/preset/schema.json",
       "description": "preset generator",
       "x-use-standalone-layout": true
+    },
+    "getting-started-docs": {
+      "factory": "./src/generators/getting-started-docs/generator",
+      "schema": "./src/generators/getting-started-docs/schema.json",
+      "description": "Generates a getting-started-docs in workspace app folder"
     }
   }
 }

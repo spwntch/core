@@ -1,13 +1,13 @@
 import {
   addDependenciesToPackageJson,
-  addProjectConfiguration,
   formatFiles,
   generateFiles,
   Tree,
-  updateJson,
 } from '@nx/devkit';
 import * as path from 'path';
 import { PresetGeneratorSchema } from './schema';
+
+import gettingStartedDocsGenerator from '../getting-started-docs/generator';
 
 export async function presetGenerator(
   tree: Tree,
@@ -32,6 +32,10 @@ export async function presetGenerator(
 
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
+
+  if (addDocs) {
+    gettingStartedDocsGenerator(tree, { name });
+  }
 
   return addDependenciesToPackageJson(
     tree,
