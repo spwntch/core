@@ -1,6 +1,5 @@
 {
   "name": "@spwntch/workspace-generator",
-  "version": "0.1.2",
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "@nx/devkit": "18.2.1",
