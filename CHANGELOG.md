@@ -1,3 +1,21 @@
+## 0.2.0 (2024-04-03)
+
+
+### 🚀 Features
+
+- add a start script for the generated workspace ([88d9cda](https://github.com/spwntch/workspace-generator/commit/88d9cda))
+- add addDocs var to workspace-generator schema ([106b7a6](https://github.com/spwntch/workspace-generator/commit/106b7a6))
+- **workspace-generator:** attempt to call getting-started-docs generator from preset generator ([cab910d](https://github.com/spwntch/workspace-generator/commit/cab910d))
+
+### 🩹 Fixes
+
+- **workspace-generator:** note projectRoot as '.' ([90b9028](https://github.com/spwntch/workspace-generator/commit/90b9028))
+- **workspace-generator:** update generated files to use correct app name ([f61e8fb](https://github.com/spwntch/workspace-generator/commit/f61e8fb))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.1.3 (2024-04-03)
 
 
