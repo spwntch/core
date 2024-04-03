@@ -1,3 +1,14 @@
+## 0.1.4 (2024-04-03)
+
+
+### 🚀 Features
+
+- add addDocs var to workspace-generator schema ([106b7a6](https://github.com/spwntch/workspace-generator/commit/106b7a6))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.1.3 (2024-04-03)
 
 
