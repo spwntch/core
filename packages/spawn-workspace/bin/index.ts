@@ -1,11 +1,25 @@
 #!/usr/bin/env node
 
 import { createWorkspace } from 'create-nx-workspace';
+import { intro, text } from '@clack/prompts';
 
 async function main() {
-  const name = process.argv[2]; // TODO: use libraries like yargs or enquirer to set your workspace name
+  intro(`
+  {x} Ready to spawn a new workspace?
+      Let's get your started 🚀`);
+
+  console.log(process.argv);
+
+  let name = process.argv[2]; // TODO: use libraries like yargs or enquirer to set your workspace name
   if (!name) {
-    throw new Error('Please provide a name for the workspace');
+    name = (await text({
+      message: 'What would you like to name your new workspace?',
+      validate(value) {
+        if (value.trim().length === 0)
+          return 'Please provide a name for the workspace';
+      },
+    })) as string;
+    // if (!name) throw new Error('Please provide a name for the workspace');
   }
 
   console.log(`Creating the workspace: ${name}`);
