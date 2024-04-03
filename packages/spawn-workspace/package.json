@@ -1,7 +1,8 @@
 {
   "name": "spawn-workspace",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "dependencies": {
+    "@clack/prompts": "^0.7.0",
     "create-nx-workspace": "18.2.1",
     "tslib": "^2.3.0"
   },

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/schema",
-  "$id": "Preset",
+  "$id": "GettingStartedDocs",
   "title": "",
   "type": "object",
   "properties": {
@@ -11,11 +11,7 @@
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "What would you like to name your new workspace?"
-    },
-    "addDocs": {
-      "type": "boolean",
-      "x-prompt": "Would you like to add Getting Started docs?"
+      "x-prompt": "What name would you like to use?"
     }
   },
   "required": ["name"]

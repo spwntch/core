@@ -1,6 +1,5 @@
 import {
   addDependenciesToPackageJson,
-  addProjectConfiguration,
   formatFiles,
   generateFiles,
   Tree,
@@ -8,20 +7,27 @@ import {
 import * as path from 'path';
 import { PresetGeneratorSchema } from './schema';
 
+import gettingStartedDocsGenerator from '../getting-started-docs/generator';
+import { spinner } from '@clack/prompts';
+
 export async function presetGenerator(
   tree: Tree,
   options: PresetGeneratorSchema
 ) {
+  const installation = spinner();
+  installation.start('Adding awesomeness to your workspace...');
+
+  const { name, addDocs } = options;
+
+  if (addDocs) {
+    gettingStartedDocsGenerator(tree, { name });
+  }
+
   const projectRoot = `.`;
-  addProjectConfiguration(tree, options.name, {
-    root: projectRoot,
-    projectType: 'application',
-    targets: {},
-  });
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
 
-  return addDependenciesToPackageJson(
+  addDependenciesToPackageJson(
     tree,
     {
       next: '14.0.4',
@@ -66,6 +72,8 @@ export async function presetGenerator(
       typescript: '~5.4.2',
     }
   );
+
+  return installation.stop('Done');
 }
 
 export default presetGenerator;
