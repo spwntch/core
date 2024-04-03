@@ -1,3 +1,14 @@
+## 0.2.4 (2024-04-03)
+
+
+### 🩹 Fixes
+
+- **workspace-generator:** add .next/types/**/*.ts to tsconfig includes ([3f2685b](https://github.com/spwntch/workspace-generator/commit/3f2685b))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.2.3 (2024-04-03)
 
 
