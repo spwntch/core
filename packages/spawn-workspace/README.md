@@ -10,4 +10,14 @@ It's a command to spawn a new nx monorepo workspace, kitted out with everything 
 
 ```bash
 npx spawn-workspace
+cd <WORKSPACE_NAME>
+npm i
+```
+
+### Launching Docs
+
+Assuming you opted in to the generation of Spawntech's **Getting Started Docs**,
+
+```bash
+npm run docs
 ```
