@@ -1,3 +1,14 @@
+## 0.2.3 (2024-04-03)
+
+
+### 🩹 Fixes
+
+- a better subline for npm ([0425445](https://github.com/spwntch/workspace-generator/commit/0425445))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.2.2 (2024-04-03)
 
 
