@@ -1,6 +1,5 @@
 {
   "name": "@spwntch/tailwind",
-  "version": "0.22.3",
   "private": true,
   "main": "./src/index.js",
   "files": [
