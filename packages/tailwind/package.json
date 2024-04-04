@@ -1,5 +1,7 @@
 {
   "name": "@spwntch/tailwind",
+  "version": "0.22.3",
+  "private": true,
   "main": "./src/index.js",
   "files": [
     "src"
@@ -19,5 +21,7 @@
   ],
   "author": "spwntch",
   "license": "MIT",
-  "version": "0.22.2"
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  }
 }
