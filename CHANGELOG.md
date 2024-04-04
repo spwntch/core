@@ -1,3 +1,14 @@
+## 0.26.0 (2024-04-04)
+
+
+### 🚀 Features
+
+- **react-components:** add all ui and typography components ([1abfe47](https://github.com/spwntch/workspace-generator/commit/1abfe47))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.25.0 (2024-04-04)
 
 
