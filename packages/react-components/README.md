@@ -59,7 +59,7 @@ This library includes all of Spawntech's base `react.js` capability, including:
 1. Install the package
 
 ```
-npm i @spwntch/react-ui
+npm i @spwntch/react-components
 ```
 
 2. Import package styles
@@ -67,14 +67,14 @@ npm i @spwntch/react-ui
 ```
 // app/globals.css
 
-@import "@spwntch/react-ui/styles";
+@import "@spwntch/react-components/styles";
 
 ```
 
 3. Use our components
 
 ```
-import { Button } from "@spwntch/react-ui";
+import { Button } from "@spwntch/react-components";
 
 export default function MyComponent() {
   return <Button>click me</Button>;
