@@ -1,7 +1,7 @@
 export function ReactComponents() {
   return (
     <div>
-      <h1 className="text-5xl text-primary-foreground">
+      <h1 className="text-5xl text-primary">
         Welcome to ReactComponents!
       </h1>
     </div>
