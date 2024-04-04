@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/react-components": ["packages/react-components/src/index.ts"],
+      "@/tailwind": ["packages/tailwind/src/index.js"],
       "@/workspace-generator": ["packages/workspace-generator/src/index.ts"]
     }
   },
