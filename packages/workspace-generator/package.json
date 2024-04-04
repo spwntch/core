@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/workspace-generator",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "type": "commonjs",
   "files": [
     "dist",
