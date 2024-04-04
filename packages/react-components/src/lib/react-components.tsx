@@ -1,7 +1,4 @@
-/* eslint-disable-next-line */
-export interface ReactComponentsProps {}
-
-export function ReactComponents(props: ReactComponentsProps) {
+export function ReactComponents() {
   return (
     <div>
       <h1 className="text-5xl text-primary-foreground">
