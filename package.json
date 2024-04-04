@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "webp": "tools/scripts/webp.sh ",
     "local-registry": "pnpm dlx nx local-registry",
     "spawn-workspace": "pnpm dlx nx run spawn",
     "add-shad": "pnpm dlx nx run react-components:add-shad"
