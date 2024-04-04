@@ -1,3 +1,14 @@
+## 0.22.6 (2024-04-04)
+
+
+### 🩹 Fixes
+
+- **rewact-components:** Update welcome message in ReactComponents component ([0bf4a60](https://github.com/spwntch/workspace-generator/commit/0bf4a60))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.22.5 (2024-04-04)
 
 This was a version bump only, there were no code changes.
