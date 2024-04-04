@@ -12,6 +12,7 @@ async function main() {
   if (!name) {
     name = (await text({
       message: 'What would you like to name your new workspace?',
+      initialValue: 'spawned-workspace',
       validate(value) {
         if (value.trim().length === 0)
           return 'Please provide a name for the workspace';
