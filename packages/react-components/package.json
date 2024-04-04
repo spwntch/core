@@ -1,6 +1,5 @@
 {
-  "name": "@/react-components",
-  "version": "0.2.13",
+  "name": "@spwntch/react-components",
   "main": "./dist/index.js",
   "files": [
     "dist"
