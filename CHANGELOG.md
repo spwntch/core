@@ -1,3 +1,14 @@
+## 0.22.8 (2024-04-04)
+
+
+### 🚀 Features
+
+- **workspace-generator:** Add @spwntch/components dependency and import ReactComponents ([39a96ad](https://github.com/spwntch/workspace-generator/commit/39a96ad))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.22.7 (2024-04-04)
 
 This was a version bump only, there were no code changes.
