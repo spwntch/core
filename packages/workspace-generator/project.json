@@ -3,14 +3,6 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/workspace-generator/src",
   "projectType": "library",
-  "release": {
-    "version": {
-      "generatorOptions": {
-        "packageRoot": "{projectRoot}",
-        "currentVersionResolver": "git-tag"
-      }
-    }
-  },
   "tags": [],
   "targets": {
     "build": {
@@ -43,11 +35,6 @@
             "output": "."
           }
         ]
-      }
-    },
-    "nx-release-publish": {
-      "options": {
-        "packageRoot": "{projectRoot}"
       }
     },
     "lint": {
