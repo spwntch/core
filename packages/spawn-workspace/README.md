@@ -2,7 +2,7 @@
 
 Generate a new Spawntech workspace
 
-> **This package is currently pre-release.**
+> ### This package is currently pre-release.
 
 ## What is it?
 
