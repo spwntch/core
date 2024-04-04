@@ -1,9 +1,9 @@
-import { ReactComponents } from '@spwntch/components';
+import { Button } from '@spwntch/components';
 
 export default function Index() {
   return (
     <div>
-      <ReactComponents />
+      <Button>Click me</Button>
     </div>
   );
 }
