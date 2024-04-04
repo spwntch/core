@@ -1,3 +1,7 @@
+## 0.22.1 (2024-04-04)
+
+This was a version bump only, there were no code changes.
+
 ## 0.22.0 (2024-04-04)
 
 This release pushes our repo version numbers beyond that of @spwntch/spwn, making this repo a candidate for being our master monorepo.
