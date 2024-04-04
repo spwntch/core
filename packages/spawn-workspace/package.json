@@ -2,7 +2,9 @@
   "name": "spawn-workspace",
   "type": "commonjs",
   "files": [
-    "dist"
+    "dist",
+    "!dist/README.md",
+    "!dist/package.json"
   ],
   "bin": {
     "spawn-workspace": "./dist/bin/index.js"
