@@ -1,3 +1,20 @@
+## 0.27.0 (2024-04-04)
+
+
+### 🚀 Features
+
+- **spawn-workspace:** give an inital name of spawned-workspace ([597d462](https://github.com/spwntch/workspace-generator/commit/597d462))
+- **workspace-generator:** adds a compoents folder in the generated app for client-components ([646d39b](https://github.com/spwntch/workspace-generator/commit/646d39b))
+- **workspace-generator:** 2 buttons in a flex-col ([3704027](https://github.com/spwntch/workspace-generator/commit/3704027))
+
+### 🩹 Fixes
+
+- **workspace-generator:** remove references to ../../apps/getting-started-docs in lib's tssconfig template ([5b7c3ed](https://github.com/spwntch/workspace-generator/commit/5b7c3ed))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.26.0 (2024-04-04)
 
 
