@@ -88,5 +88,12 @@
       }
     }
   },
-  "nxCloudAccessToken": "MWYyMTk2NTItNDMzNi00OGE3LTljZmQtNDEzZTZmZTBmMjgzfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MWYyMTk2NTItNDMzNi00OGE3LTljZmQtNDEzZTZmZTBmMjgzfHJlYWQtd3JpdGU=",
+  "generators": {
+    "@nx/react": {
+      "library": {
+        "unitTestRunner": "none"
+      }
+    }
+  }
 }
