@@ -3,6 +3,7 @@ const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  presets: [require('../tailwind/src/lib/tailwind.presets')],
   content: [
     join(
       __dirname,
