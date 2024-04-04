@@ -1,9 +1,8 @@
 import {
   addProjectConfiguration,
-  formatFiles,
   generateFiles,
   Tree,
-  updateJson,
+  updateJson
 } from '@nx/devkit';
 import * as path from 'path';
 import { GettingStartedDocsGeneratorSchema } from './schema';
