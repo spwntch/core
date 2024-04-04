@@ -1,3 +1,14 @@
+## 0.22.2 (2024-04-04)
+
+
+### 🩹 Fixes
+
+- add a ts path for @/tailwind/* ([5f6a532](https://github.com/spwntch/workspace-generator/commit/5f6a532))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.22.1 (2024-04-04)
 
 This was a version bump only, there were no code changes.
