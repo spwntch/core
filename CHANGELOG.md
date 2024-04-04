@@ -1,3 +1,15 @@
+## 0.25.0 (2024-04-04)
+
+
+### 🚀 Features
+
+- add a react storybook and showc button sotries ([8386798](https://github.com/spwntch/workspace-generator/commit/8386798))
+- add spwn brand assets as well as webp generator script ([abd24cb](https://github.com/spwntch/workspace-generator/commit/abd24cb))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.24.1 (2024-04-04)
 
 This was a version bump only, there were no code changes.
