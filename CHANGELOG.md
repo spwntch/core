@@ -1,3 +1,15 @@
+## 0.24.0 (2024-04-04)
+
+
+### 🚀 Features
+
+- **react-components:** add shadcn/ui setup ([c411b7e](https://github.com/spwntch/workspace-generator/commit/c411b7e))
+- **react-components:** add shadcn/ui button ([5734bd6](https://github.com/spwntch/workspace-generator/commit/5734bd6))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.23.0 (2024-04-04)
 
 

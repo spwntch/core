@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/components",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -23,5 +23,13 @@
     "sandbox"
   ],
   "author": "spwntch",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.360.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
+  }
 }
