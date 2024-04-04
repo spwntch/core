@@ -1,5 +1,6 @@
 {
   "name": "@spwntch/components",
+  "version": "0.22.1",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -22,6 +23,5 @@
     "sandbox"
   ],
   "author": "spwntch",
-  "license": "MIT",
-  "version": "0.22.1"
+  "license": "MIT"
 }

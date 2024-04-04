@@ -10,15 +10,30 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/react-components": ["packages/react-components/src/index.ts"],
-      "@/tailwind": ["packages/tailwind/src/index.js"],
-      "@/workspace-generator": ["packages/workspace-generator/src/index.ts"]
+      "@/react-components": [
+        "packages/react-components/src/index.ts"
+      ],
+      "@/tailwind": [
+        "packages/tailwind/src/index.js"
+      ],
+      "@/tailwind/*": [
+        "packages/tailwind/src/*"
+      ],
+      "@/workspace-generator": [
+        "packages/workspace-generator/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

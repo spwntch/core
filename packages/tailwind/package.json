@@ -19,5 +19,8 @@
     "sandbox"
   ],
   "author": "spwntch",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  }
 }
