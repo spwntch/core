@@ -1,3 +1,20 @@
+## 0.2.10 (2024-04-04)
+
+
+### 🚀 Features
+
+- **react-components:** add boilerplate vite react lib ([462024a](https://github.com/spwntch/workspace-generator/commit/462024a))
+- **react-components:** add tailwind basics ([679cd3e](https://github.com/spwntch/workspace-generator/commit/679cd3e))
+- **react-components:** add @/tailwind exports ([1df1e56](https://github.com/spwntch/workspace-generator/commit/1df1e56))
+
+### 🩹 Fixes
+
+- **tailwind:** copying over from spwn monorepo appears to work ([f1e6376](https://github.com/spwntch/workspace-generator/commit/f1e6376))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.2.9 (2024-04-04)
 
 This was a version bump only, there were no code changes.
