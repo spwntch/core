@@ -64,7 +64,9 @@
     },
     {
       "plugin": "@nx/vite/plugin",
+      
       "options": {
+        "dependsOn": ["^build"],
         "buildTargetName": "build",
         "previewTargetName": "preview",
         "testTargetName": "test",
