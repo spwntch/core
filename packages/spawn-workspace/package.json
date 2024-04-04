@@ -1,6 +1,6 @@
 {
   "name": "spawn-workspace",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "type": "commonjs",
   "files": [
     "dist",
