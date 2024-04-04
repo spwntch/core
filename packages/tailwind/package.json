@@ -1,0 +1,23 @@
+{
+  "name": "@spwntch/tailwind",
+  "private": true,
+  "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "require": "./src/index.js"
+    },
+    "./styles": {
+      "default": "./src/tailwind.css"
+    }
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "sandbox"
+  ],
+  "author": "spwntch",
+  "license": "MIT"
+}
