@@ -6,6 +6,9 @@
   "tags": ["tech:react"],
   "// targets": "to see all targets run: nx show project react-components --web",
   "targets": {
+    "build": {
+      "dependsOn": ["^build"]
+    },
     "add-shad": {
       "executor": "nx:run-commands",
       "options": {
