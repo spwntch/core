@@ -26,7 +26,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../dist/packages/react-components',
+    outDir: './dist',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -42,7 +42,12 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom', 'react/jsx-runtime', '@/tailwind/tailwind.css'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        '@/tailwind/tailwind.css',
+      ],
     },
   },
 });
