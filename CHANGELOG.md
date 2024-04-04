@@ -1,3 +1,7 @@
+## 0.24.1 (2024-04-04)
+
+This was a version bump only, there were no code changes.
+
 ## 0.24.0 (2024-04-04)
 
 
@@ -12,17 +16,16 @@
 
 ## 0.23.0 (2024-04-04)
 
-
 ### 🚀 Features
 
 - **workspace-generator:** Add @spwntch/components dependency and import ReactComponents ([39a96ad](https://github.com/spwntch/workspace-generator/commit/39a96ad))
 
 ### 🩹 Fixes
 
-- add a ts path for @/tailwind/* ([5f6a532](https://github.com/spwntch/workspace-generator/commit/5f6a532))
+- add a ts path for @/tailwind/\* ([5f6a532](https://github.com/spwntch/workspace-generator/commit/5f6a532))
 - **rewact-components:** Update welcome message in ReactComponents component ([0bf4a60](https://github.com/spwntch/workspace-generator/commit/0bf4a60))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -48,7 +51,6 @@ This was a version bump only, there were no code changes.
 
 ## 0.2.10 (2024-04-04)
 
-
 ### 🚀 Features
 
 - **react-components:** add boilerplate vite react lib ([462024a](https://github.com/spwntch/workspace-generator/commit/462024a))
@@ -59,7 +61,7 @@ This was a version bump only, there were no code changes.
 
 - **tailwind:** copying over from spwn monorepo appears to work ([f1e6376](https://github.com/spwntch/workspace-generator/commit/f1e6376))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -81,34 +83,31 @@ This was a version bump only, there were no code changes.
 
 ## 0.2.4 (2024-04-03)
 
-
 ### 🩹 Fixes
 
-- **workspace-generator:** add .next/types/**/*.ts to tsconfig includes ([3f2685b](https://github.com/spwntch/workspace-generator/commit/3f2685b))
+- **workspace-generator:** add .next/types/\*_/_.ts to tsconfig includes ([3f2685b](https://github.com/spwntch/workspace-generator/commit/3f2685b))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.2.3 (2024-04-03)
 
-
 ### 🩹 Fixes
 
 - a better subline for npm ([0425445](https://github.com/spwntch/workspace-generator/commit/0425445))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.2.2 (2024-04-03)
 
-
 ### 🩹 Fixes
 
 - **workspace-generator:** update generated files to use correct app name ([8ceaa1d](https://github.com/spwntch/workspace-generator/commit/8ceaa1d))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -117,7 +116,6 @@ This was a version bump only, there were no code changes.
 This was a version bump only, there were no code changes.
 
 ## 0.2.0 (2024-04-03)
-
 
 ### 🚀 Features
 
@@ -130,12 +128,11 @@ This was a version bump only, there were no code changes.
 - **workspace-generator:** note projectRoot as '.' ([90b9028](https://github.com/spwntch/workspace-generator/commit/90b9028))
 - **workspace-generator:** update generated files to use correct app name ([f61e8fb](https://github.com/spwntch/workspace-generator/commit/f61e8fb))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.1.3 (2024-04-03)
-
 
 ### 🚀 Features
 
@@ -147,11 +144,9 @@ This was a version bump only, there were no code changes.
 
 - **workspace-generator:** note projectRoot as '.' ([90b9028](https://github.com/spwntch/workspace-generator/commit/90b9028))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
-
-
 
 ## 0.1.2 (2024-04-02)
 
