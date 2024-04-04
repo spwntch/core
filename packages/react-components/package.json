@@ -22,5 +22,6 @@
     "sandbox"
   ],
   "author": "spwntch",
-  "license": "MIT"
+  "license": "MIT",
+  "version": "0.2.10"
 }
