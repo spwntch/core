@@ -46,7 +46,7 @@ export default defineConfig({
         'react',
         'react-dom',
         'react/jsx-runtime',
-        '@spwntch/tailwind/tailwind.css',
+        '@spwntch/tailwind/styles',
       ],
     },
   },

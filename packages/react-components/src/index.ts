@@ -1,2 +1,2 @@
-import '@spwntch/tailwind/tailwind.css';
+import '@spwntch/tailwind/styles';
 export * from './lib/react-components';
