@@ -1,5 +1,5 @@
 {
-  "name": "@spwntch/react-components",
+  "name": "@spwntch/components",
   "main": "./dist/index.js",
   "files": [
     "dist"
