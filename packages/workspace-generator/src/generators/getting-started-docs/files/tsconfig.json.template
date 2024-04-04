@@ -23,8 +23,6 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../../apps/getting-started-docs/.next/types/**/*.ts",
-    "../../dist/apps/getting-started-docs/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],

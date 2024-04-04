@@ -1,0 +1,12 @@
+'use client';
+
+import { Button } from '@spwntch/components';
+
+export const Home = () => {
+  return (
+    <div className="p-4 flex flex-col gap-3 w-fit">
+      <Button>Click me</Button>
+      <Button>No, click me</Button>
+    </div>
+  );
+};
