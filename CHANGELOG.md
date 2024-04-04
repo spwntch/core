@@ -1,3 +1,19 @@
+## 0.23.0 (2024-04-04)
+
+
+### 🚀 Features
+
+- **workspace-generator:** Add @spwntch/components dependency and import ReactComponents ([39a96ad](https://github.com/spwntch/workspace-generator/commit/39a96ad))
+
+### 🩹 Fixes
+
+- add a ts path for @/tailwind/* ([5f6a532](https://github.com/spwntch/workspace-generator/commit/5f6a532))
+- **rewact-components:** Update welcome message in ReactComponents component ([0bf4a60](https://github.com/spwntch/workspace-generator/commit/0bf4a60))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.22.1 (2024-04-04)
 
 This was a version bump only, there were no code changes.
