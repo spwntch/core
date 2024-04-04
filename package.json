@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "local-registry": "pnpm dlx nx local-registry",
-    "spawn-workspace": "pnpm dlx nx run spawn"
+    "spawn-workspace": "pnpm dlx nx run spawn",
+    "add-shad": "pnpm dlx nx run react-components:add-shad"
   },
   "private": true,
   "dependencies": {
