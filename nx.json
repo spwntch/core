@@ -64,7 +64,7 @@
     },
     {
       "plugin": "@nx/vite/plugin",
-      
+
       "options": {
         "buildTargetName": "build",
         "previewTargetName": "preview",
@@ -93,6 +93,13 @@
   "generators": {
     "@nx/react": {
       "library": {
+        "bundler": "vite",
+        "unitTestRunner": "none"
+      }
+    },
+    "@nx/next": {
+      "library": {
+        "bundler": "vite",
         "unitTestRunner": "none"
       }
     }
