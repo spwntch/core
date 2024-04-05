@@ -1,4 +1,6 @@
 @import '@spwntch/components/styles';
+@import '@spwntch/next/styles';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
