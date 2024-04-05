@@ -4,7 +4,7 @@
 
 ## What's in here?
 
-This library includes all of Spawntech's base `react.js` capability, including:
+This library includes all of Spawntech's base `react.js` components, including:
 
 ### Base Components
 
