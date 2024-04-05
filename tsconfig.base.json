@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@/next-shell": ["packages/next-shell/src/index.ts"],
+      "@/next-shell/server": ["packages/next-shell/src/server.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
       "@/tailwind": ["packages/tailwind/src/index.js"],
