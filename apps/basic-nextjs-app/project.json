@@ -1,0 +1,9 @@
+{
+  "name": "basic-nextjs-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/basic-nextjs-app",
+  "projectType": "application",
+  "tags": ["tech:next"],
+  "// targets": "to see all targets run: nx show project basic-nextjs-app --web",
+  "targets": {}
+}
