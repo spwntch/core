@@ -1,3 +1,21 @@
+## 0.28.0 (2024-04-05)
+
+
+### 🚀 Features
+
+- **next-shell:** adds a boilerplate nextjs lb ([2791305](https://github.com/spwntch/workspace-generator/commit/2791305))
+- **next-shell:** replace boilerplate with providers ([5a1508b](https://github.com/spwntch/workspace-generator/commit/5a1508b))
+- **workspace-generator:** introduce @spwntch/shell and add ShellProvider ([1026201](https://github.com/spwntch/workspace-generator/commit/1026201))
+- **workspace-generator:** add some assets to generated workspace ([5c41e36](https://github.com/spwntch/workspace-generator/commit/5c41e36))
+
+### 🩹 Fixes
+
+- **workspace-generator:** add template suffix to files to avoid build errors ([d0854df](https://github.com/spwntch/workspace-generator/commit/d0854df))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.27.0 (2024-04-04)
 
 
