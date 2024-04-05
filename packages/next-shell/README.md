@@ -1,7 +1,19 @@
-# next-shell
+# Spawntech's Nextjs Shell Library
 
-This library was generated with [Nx](https://nx.dev).
+> ### This package is currently pre-release.
 
-## Running unit tests
+## What's in here?
 
-Run `nx test next-shell` to execute the unit tests via [Vitest](https://vitest.dev/).
+This library includes all of Spawntech's `next.js` providers and components required to set up user interface shells for both websites, apps and landing pages.
+
+### Providers
+
+> **TODO**
+
+### Server Components
+
+> **TODO**
+
+### Client Components
+
+> **TODO**

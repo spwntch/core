@@ -202,7 +202,11 @@ importers:
         specifier: ^1.3.1
         version: 1.4.0(@types/node@18.16.9)(@vitest/ui@1.4.0)(jsdom@22.1.0)(less@4.1.3)(stylus@0.59.0)
 
-  packages/next-shell: {}
+  packages/next-shell:
+    dependencies:
+      next-themes:
+        specifier: ^0.3.0
+        version: 0.3.0(react-dom@18.2.0)(react@18.2.0)
 
   packages/react-components:
     dependencies:
@@ -12602,6 +12606,16 @@ packages:
   /neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
+
+  /next-themes@0.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+      react-dom: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /next@14.0.4(@babel/core@7.24.4)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-qbwypnM7327SadwFtxXnQdGiKpkuhaRLE2uq62/nRul9cj9KhQ5LhHmlziTNqUidZotw/Q1I9OjirBROdUJNgA==}
