@@ -79,16 +79,6 @@
       }
     }
   ],
-  "release": {
-    "version": {
-      "preVersionCommand": "pnpm dlx nx run-many -t build",
-      "generatorOptions": {
-        "packageRoot": "{projectRoot}",
-        "currentVersionResolver": "git-tag"
-      }
-    }
-  },
-  "nxCloudAccessToken": "MWYyMTk2NTItNDMzNi00OGE3LTljZmQtNDEzZTZmZTBmMjgzfHJlYWQtd3JpdGU=",
   "generators": {
     "@nx/react": {
       "library": {
@@ -106,5 +96,15 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "release": {
+    "version": {
+      "preVersionCommand": "pnpm dlx nx run-many -t build",
+      "generatorOptions": {
+        "packageRoot": "{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "nxCloudAccessToken": "MWYyMTk2NTItNDMzNi00OGE3LTljZmQtNDEzZTZmZTBmMjgzfHJlYWQtd3JpdGU="
 }
