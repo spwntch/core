@@ -1,3 +1,17 @@
+## 0.28.1 (2024-04-05)
+
+
+### 🚀 Features
+
+- adds a basic-nextjs-app ([a86b5c2](https://github.com/spwntch/workspace-generator/commit/a86b5c2))
+- **workspace-generator:** instead of a Spawntech app, generate a standard nextjs app ([3ea1a0a](https://github.com/spwntch/workspace-generator/commit/3ea1a0a))
+- **workspace-generator:** add generator name variable as name in project.json ([e386f15](https://github.com/spwntch/workspace-generator/commit/e386f15))
+- **workspace-generator:** add more files from existing config into generated-workspace ([f04d124](https://github.com/spwntch/workspace-generator/commit/f04d124))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.28.0 (2024-04-05)
 
 
