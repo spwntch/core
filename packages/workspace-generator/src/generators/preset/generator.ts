@@ -26,6 +26,7 @@ export async function presetGenerator(
   const projectRoot = `.`;
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
+  
 
   addDependenciesToPackageJson(
     tree,
