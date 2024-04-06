@@ -14,8 +14,7 @@
       "x-prompt": "What would you like to name your new workspace?"
     },
     "addDocs": {
-      "type": "boolean",
-      "default": false
+      "type": "boolean"
     }
   },
   "required": ["name"]
