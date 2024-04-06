@@ -45,7 +45,7 @@ Thumbs.db
 .nx/cache
 
 # Generated output
-spawned-workspace
+# spawned-workspace
 
 # Next.js
 .next
