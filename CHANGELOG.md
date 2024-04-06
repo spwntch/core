@@ -1,3 +1,14 @@
+## 0.28.4 (2024-04-06)
+
+
+### 🩹 Fixes
+
+- **workspace-generator:** Fix tsconfig.json.template to include .next/types/**/*.ts ([0acf310](https://github.com/spwntch/workspace-generator/commit/0acf310))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.28.3 (2024-04-06)
 
 This was a version bump only, there were no code changes.
