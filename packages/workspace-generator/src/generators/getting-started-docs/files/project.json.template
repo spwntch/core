@@ -1,9 +1,9 @@
 {
   "name": "getting-started-docs",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/getting-started-docs",
+  "sourceRoot": "apps/gettng-started-docs",
   "projectType": "application",
-  "tags": ["tech:next"],
+  "tags": [],
   "// targets": "to see all targets run: nx show project getting-started-docs --web",
   "targets": {}
 }

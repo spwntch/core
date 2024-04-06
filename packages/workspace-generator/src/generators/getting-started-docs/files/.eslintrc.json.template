@@ -3,7 +3,7 @@
     "plugin:@nx/react-typescript",
     "next",
     "next/core-web-vitals",
-    "../../.eslintrc.base.json"
+    "../../.eslintrc.json"
   ],
   "ignorePatterns": ["!**/*", ".next/**/*"],
   "overrides": [
@@ -12,7 +12,7 @@
       "rules": {
         "@next/next/no-html-link-for-pages": [
           "error",
-          "apps/getting-started-docs/pages"
+          "apps/gettng-started-docs/pages"
         ]
       }
     },
@@ -23,6 +23,12 @@
     {
       "files": ["*.js", "*.jsx"],
       "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      }
     }
   ]
 }

@@ -15,22 +15,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "types": ["jest", "node"]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../../apps/getting-started-docs/.next/types/**/*.ts",
-    "../../dist/apps/getting-started-docs/.next/types/**/*.ts",
-    "next-env.d.ts",
-    ".next/types/**/*.ts"
+    "../../apps/gettng-started-docs/.next/types/**/*.ts",
+    "../../dist/apps/gettng-started-docs/.next/types/**/*.ts",
+    "next-env.d.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]
 }
