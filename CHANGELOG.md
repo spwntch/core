@@ -1,3 +1,19 @@
+## 0.28.2 (2024-04-06)
+
+
+### 🚀 Features
+
+- **workspace-generator:** adds a basic files system to the generated project ([1516582](https://github.com/spwntch/workspace-generator/commit/1516582))
+- **workspace-generator:** spawn the most basic nx workspace ([fa61fa8](https://github.com/spwntch/workspace-generator/commit/fa61fa8))
+
+### 🩹 Fixes
+
+- **workspace-generator:** fix package versions ([f608047](https://github.com/spwntch/workspace-generator/commit/f608047))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.28.1 (2024-04-05)
 
 
