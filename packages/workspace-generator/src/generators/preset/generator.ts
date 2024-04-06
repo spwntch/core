@@ -7,7 +7,6 @@ import {
 import * as path from 'path';
 import { PresetGeneratorSchema } from './schema';
 
-import gettingStartedDocsGenerator from '../getting-started-docs/generator';
 import { spinner } from '@clack/prompts';
 
 export async function presetGenerator(
