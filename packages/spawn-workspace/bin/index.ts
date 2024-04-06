@@ -18,14 +18,12 @@ async function main() {
           return 'Please provide a name for the workspace';
       },
     })) as string;
-    // if (!name) throw new Error('Please provide a name for the workspace');
   }
 
-  // const addDocs = await confirm({
-  //   message: 'Would you like to add Getting Started docs?',
-  //   initialValue: true,
-  // });
-  
+  const addDocs = await confirm({
+    message: 'Would you like to add Getting Started docs?',
+    initialValue: true,
+  });
 
   console.log(`
 
@@ -44,7 +42,7 @@ async function main() {
       name,
       nxCloud: 'skip',
       packageManager: 'npm',
-      // addDocs,
+      addDocs,
     }
   );
 
