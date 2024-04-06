@@ -15,8 +15,7 @@
     },
     "addDocs": {
       "type": "boolean",
-      "default": false,
-      // "x-prompt": "Would you like to add Getting Started docs?"
+      "default": false
     }
   },
   "required": ["name"]
