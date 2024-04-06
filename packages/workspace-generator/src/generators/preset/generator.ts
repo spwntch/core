@@ -23,31 +23,31 @@ export async function presetGenerator(
     // gettingStartedDocsGenerator(tree, { name });
   }
 
-  // const projectRoot = `.`;
-  // generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
-  // await formatFiles(tree);
+  const projectRoot = `.`;
+  generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
+  await formatFiles(tree);
 
-  // addDependenciesToPackageJson(
-  //   tree,
-  //   {
+  addDependenciesToPackageJson(
+    tree,
+    {
   //     '@spwntch/components': 'latest',
   //     '@spwntch/shell': 'latest',
-  //     next: '14.0.4',
-  //     react: '18.2.0',
-  //     'react-dom': '18.2.0',
+      next: '14.0.4',
+      react: '18.2.0',
+      'react-dom': '18.2.0',
   //     tslib: '^2.3.0',
-  //   },
-  //   {
+    },
+    {
   //     '@nx/eslint': '18.2.2',
   //     '@nx/eslint-plugin': '18.2.2',
   //     '@nx/jest': '18.2.2',
   //     '@nx/js': '18.2.2',
-  //     '@nx/next': '18.2.2',
+      '@nx/next': '18.2.3',
   //     '@nx/react': '18.2.2',
   //     '@nx/storybook': '18.2.2',
   //     '@nx/vite': '18.2.2',
   //     '@nx/web': '18.2.2',
-  //     '@nx/workspace': '18.2.2',
+      '@nx/workspace': '18.2.3',
   //     '@storybook/addon-essentials': '^8.0.4',
   //     '@storybook/addon-interactions': '^8.0.4',
   //     '@storybook/addon-themes': '^8.0.4',
@@ -82,7 +82,7 @@ export async function presetGenerator(
   //     jest: '^29.4.1',
   //     'jest-environment-jsdom': '^29.4.1',
   //     jsdom: '~22.1.0',
-  //     nx: '18.2.2',
+      nx: '18.2.3',
   //     postcss: '8.4.21',
   //     prettier: '^2.6.2',
   //     storybook: '^8.0.4',
@@ -94,8 +94,8 @@ export async function presetGenerator(
   //     vite: '~5.0.0',
   //     'vite-plugin-dts': '~3.8.1',
   //     vitest: '^1.3.1',
-  //   }
-  // );
+    }
+  );
 
   return installation.stop('Done');
 }
