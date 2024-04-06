@@ -1,9 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Environment Variables
-.env
-.env.local
-
 # compiled output
 dist
 tmp
@@ -43,13 +39,3 @@ testem.log
 Thumbs.db
 
 .nx/cache
-
-# Generated output
-# spawned-workspace
-
-# Next.js
-.next
-out
-
-
-storybook-static
