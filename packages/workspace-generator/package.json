@@ -12,7 +12,7 @@
   "generators": "./dist/generators.json",
   "dependencies": {
     "@clack/prompts": "^0.7.0",
-    "@nx/devkit": "18.2.2",
+    "@nx/devkit": "18.2.3",
     "tslib": "^2.3.0"
   }
 }
