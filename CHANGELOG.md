@@ -1,3 +1,21 @@
+## 0.28.5 (2024-04-07)
+
+
+### 🚀 Features
+
+- **workspace-generator:** add tailwind capability to app ([d6c5e0d](https://github.com/spwntch/workspace-generator/commit/d6c5e0d))
+- **workspace-generator:** add spwntch deps and import spwntch styles ([c3931c5](https://github.com/spwntch/workspace-generator/commit/c3931c5))
+
+### 🩹 Fixes
+
+- **workspace-generator:** fix typos in generated files ([3dd5fe8](https://github.com/spwntch/workspace-generator/commit/3dd5fe8))
+- **workspace-generator:** comment out Providers to get app working ([34cf1c9](https://github.com/spwntch/workspace-generator/commit/34cf1c9))
+- **workspace-generator:** add Provider back into Layout ([b2e290c](https://github.com/spwntch/workspace-generator/commit/b2e290c))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.28.4 (2024-04-06)
 
 
