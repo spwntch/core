@@ -55,8 +55,7 @@ import type { Meta, StoryObj } from '@storybook/react';
  *  ```
  
  *
- * > PRO TIP: If you're a paying **spawntech** client, you're probably already using our `ShellProvider`. If so, there is no need to use `BrandProvider` independently as its already included.
- * >
+ * > PRO TIP: Rather use our `ShellProvider`. If you do, the `BrandProvider` is already included.
  
  */
 const meta: Meta<typeof BrandProvider> = {
