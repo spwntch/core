@@ -1,8 +1,19 @@
 import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
-  stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  staticDirs: [
+    { from: '../../../assets/spwn/brand/public', to: '/brand' },
+    // { from: '../../../assets/storybook/public', to: '/images' },
+  ],
+  docs: {
+    autodocs: 'tag',
+  },
+  stories: ['../src/stories/**/!(_)*.@(mdx|stories.@(js|jsx|ts|tsx))'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-themes',
+  ],
   framework: {
     name: '@storybook/nextjs',
     options: {
@@ -14,7 +25,3 @@ const config: StorybookConfig = {
 };
 
 export default config;
-
-// To customize your Vite configuration you can use the viteFinal field.
-// Check https://storybook.js.org/docs/react/builders/vite#configuration
-// and https://nx.dev/recipes/storybook/custom-builder-configs
