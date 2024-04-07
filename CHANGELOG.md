@@ -1,3 +1,21 @@
+## 0.28.6 (2024-04-07)
+
+
+### 🚀 Features
+
+- **next-storybook:** add aboilerplate nextjs project to house our storybook ([87ed7ea](https://github.com/spwntch/workspace-generator/commit/87ed7ea))
+- **next-storybook:** add storybook configuration ([1623322](https://github.com/spwntch/workspace-generator/commit/1623322))
+- **next-storybook:** add a fist story, for BrandProvider ([5d04d7b](https://github.com/spwntch/workspace-generator/commit/5d04d7b))
+- **next-storybook:** add spawntech brand to next-storybook ([db6ef91](https://github.com/spwntch/workspace-generator/commit/db6ef91))
+- **next-storybook:** add a fist story, for BrandProvider ([179ec57](https://github.com/spwntch/workspace-generator/commit/179ec57))
+- **nextg-storybook:** add spawntech brand to next-storybook ([1723f7f](https://github.com/spwntch/workspace-generator/commit/1723f7f))
+- **react-storybook:** export doc-templates from lib ([1a16e32](https://github.com/spwntch/workspace-generator/commit/1a16e32))
+- **react-storybook:** export doc-templates from lib ([dd3ee85](https://github.com/spwntch/workspace-generator/commit/dd3ee85))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.28.5 (2024-04-07)
 
 
