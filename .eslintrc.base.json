@@ -10,7 +10,7 @@
           "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": ["@/tailwind"],
+            "allow": ["@/tailwind", "@/react-storybook"],
             "depConstraints": [
               {
                 "sourceTag": "*",

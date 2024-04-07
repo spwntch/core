@@ -1,4 +1,5 @@
 import { BrandProvider,  } from '@/next-shell';
+import { BasicDocs } from '@/react-storybook';
 import type { Meta, StoryObj } from '@storybook/react';
 
 /**
@@ -59,7 +60,7 @@ import type { Meta, StoryObj } from '@storybook/react';
  
  */
 const meta: Meta<typeof BrandProvider> = {
-  // parameters: { docs: { page: BasicDocs } },
+  parameters: { docs: { page: BasicDocs } },
   tags: ['autodocs'],
   component: BrandProvider,
   args: {
