@@ -20,7 +20,7 @@ export async function presetGenerator(
   const { name, addDocs } = options;
 
   if (addDocs) {
-  gettingStartedDocsGenerator(tree, { name });
+    gettingStartedDocsGenerator(tree, { name });
   }
 
   const projectRoot = `.`;
@@ -30,6 +30,8 @@ export async function presetGenerator(
   addDependenciesToPackageJson(
     tree,
     {
+      '@spwntch/shell': 'latest',
+      '@spwntch/components': 'latest',
       next: '14.0.4',
       react: '18.2.0',
       'react-dom': '18.2.0',
@@ -52,6 +54,7 @@ export async function presetGenerator(
       '@types/react-dom': '18.2.14',
       '@typescript-eslint/eslint-plugin': '^7.3.0',
       '@typescript-eslint/parser': '^7.3.0',
+      autoprefixer: '10.4.13',
       'babel-jest': '^29.4.1',
       eslint: '~8.57.0',
       'eslint-config-next': '14.0.4',
@@ -63,7 +66,9 @@ export async function presetGenerator(
       jest: '^29.4.1',
       'jest-environment-jsdom': '^29.4.1',
       nx: '18.2.3',
+      postcss: '8.4.21',
       prettier: '^2.6.2',
+      tailwindcss: '3.2.7',
       'ts-jest': '^29.1.0',
       'ts-node': '10.9.1',
       typescript: '~5.4.2',
