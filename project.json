@@ -10,7 +10,7 @@
         "storage": "tmp/local-registry/storage"
       }
     },
-    "spawn": {
+    "spawn-workspace": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [

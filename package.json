@@ -6,7 +6,8 @@
     "webp": "tools/scripts/webp.sh ",
     "local-registry": "pnpm dlx nx local-registry",
     "spawn-workspace": "pnpm dlx nx run spawn",
-    "add-shad": "pnpm dlx nx run react-components:add-shad"
+    "add-shad": "pnpm dlx nx run react-components:add-shad",
+    "ci": "pnpm dlx nx run-many -t lint test build build-storybook"
   },
   "private": true,
   "dependencies": {
