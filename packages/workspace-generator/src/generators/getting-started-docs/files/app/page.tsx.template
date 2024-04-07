@@ -5,6 +5,6 @@ export default function Index() {
    * Note: The corresponding styles are in the ./index.none file.
    */
   return (
-    <p className="text-5xl text-red-500 animiate-pulse>Tailwind works!!!</p>
+    <p className="text-5xl text-red-500 animiate-pulse">Tailwind works!!!</p>
   );
 }
