@@ -23,5 +23,5 @@ npm i
 Assuming you opted in to the generation of Spawntech's **Getting Started Docs**,
 
 ```bash
-npm run docs
+npm run docs:serve
 ```

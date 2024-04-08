@@ -79,7 +79,9 @@ export async function presetGenerator(
     gettingStartedDocsGenerator(tree, { name });
     updateJson(tree, 'package.json', (json) => {
       json.scripts = json.scripts || {};
-      json.scripts.docs = 'npx nx run getting-started-docs:dev --port 3001';
+      json.scripts['docs:build'] = 'npx nx run getting-started-docs:build';
+      json.scripts['docs:serve'] =
+        'npm run docs:build && npx nx run getting-started-docs:dev --port 3001';
       return json;
     });
   }
