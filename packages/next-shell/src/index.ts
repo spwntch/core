@@ -2,4 +2,4 @@
 import '@/tailwind/tailwind.css';
 export * from './lib/client-components';
 export * from './lib/providers';
-
+export * from './lib/server-components';
