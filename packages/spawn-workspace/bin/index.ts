@@ -53,6 +53,7 @@ Find it at ${directory}.
 Next steps:
   > cd ${name}
   > npm install
+  ${addDocs ? '> npm run docs:serve' : ''}
   `);
 }
 
