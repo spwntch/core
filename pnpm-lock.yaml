@@ -282,9 +282,6 @@ importers:
       '@nx/devkit':
         specifier: 18.2.3
         version: 18.2.3(nx@18.2.3)
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
