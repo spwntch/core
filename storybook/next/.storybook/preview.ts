@@ -1,7 +1,7 @@
 // import '@/tailwind/tailwind.css'
 
 import { Decorator, Parameters } from '@storybook/react';
-// import { withThemeToggle } from '../src/lib/decorators';
+import { withThemeToggle } from '../src/lib/decorators';
 
 export const parameters: Parameters = {
   backgrounds: {
@@ -23,7 +23,6 @@ export const parameters: Parameters = {
       ],
     },
   },
-  // controls: { exclude: ['children'] },
 };
 
-// export const decorators: Decorator[] = [withThemeToggle];
+export const decorators: Decorator[] = [withThemeToggle];
