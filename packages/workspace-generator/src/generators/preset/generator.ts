@@ -3,6 +3,7 @@ import {
   formatFiles,
   generateFiles,
   Tree,
+  updateJson,
 } from '@nx/devkit';
 import * as path from 'path';
 import { PresetGeneratorSchema } from './schema';
@@ -24,6 +25,11 @@ export async function presetGenerator(
 
   if (addDocs) {
     gettingStartedDocsGenerator(tree, { name });
+    updateJson(tree, 'package.json', (json) => {
+      json.scripts = json.scripts || {};
+      json.scripts.docs = 'npx nx run getting-started-docs:dev --port 3001';
+      return json;
+    });
   }
 
   const projectRoot = `.`;
