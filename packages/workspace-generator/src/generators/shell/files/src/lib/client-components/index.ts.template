@@ -1,1 +1,1 @@
-export * from './regular-footer';
+export * from './landing-page-shell';
