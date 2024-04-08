@@ -1,0 +1,9 @@
+{
+  "name": "getting-started-docs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/generator-templates",
+  "projectType": "application",
+  "tags": ["tech:next"],
+  "// targets": "to see all targets run: nx show project getting-started-docs --web",
+  "targets": {}
+}
