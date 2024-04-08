@@ -1,3 +1,4 @@
+"use client";
 import { About } from "./about";
 
 export const RegularFooter = () => {

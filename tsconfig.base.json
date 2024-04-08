@@ -10,21 +10,45 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/next-shell": ["packages/next-shell/src/index.ts"],
-      "@/next-shell/server": ["packages/next-shell/src/server.ts"],
-      "@/next-storybook": ["storybook/next/src/index.ts"],
-      "@/next-storybook/server": ["storybook/next/src/server.ts"],
-      "@/react-components": ["packages/react-components/src/index.ts"],
-      "@/react-storybook": ["storybook/react/src/index.ts"],
-      "@/tailwind": ["packages/tailwind/src/index.js"],
-      "@/tailwind/*": ["packages/tailwind/src/*"],
-      "@/workspace-generator": ["packages/workspace-generator/src/index.ts"]
+      "@/next-shell": [
+        "packages/next-shell/src/index.ts"
+      ],
+      "@/next-shell/server": [
+        "packages/next-shell/src/server.ts"
+      ],
+      "@/next-storybook": [
+        "storybook/next/src/index.ts"
+      ],
+      "@/next-storybook/server": [
+        "storybook/next/src/server.ts"
+      ],
+      "@/react-components": [
+        "packages/react-components/src/index.ts"
+      ],
+      "@/react-storybook": [
+        "storybook/react/src/index.ts"
+      ],
+      "@/tailwind": [
+        "packages/tailwind/src/index.js"
+      ],
+      "@/tailwind/*": [
+        "packages/tailwind/src/*"
+      ],
+      "@/workspace-generator": [
+        "packages/workspace-generator/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
