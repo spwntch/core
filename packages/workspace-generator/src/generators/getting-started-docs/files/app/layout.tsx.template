@@ -1,4 +1,4 @@
-import { LandingPageShell } from '@/shell/server';
+import { LandingPageShell } from '@spwntch/shell/server';
 import './global.css';
 import Providers from './providers';
 
