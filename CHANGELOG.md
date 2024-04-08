@@ -1,3 +1,38 @@
+## 0.29.0 (2024-04-08)
+
+
+### 🚀 Features
+
+- **next-shell:** adds a logo component + stories ([1ba32d2](https://github.com/spwntch/workspace-generator/commit/1ba32d2))
+- **next-shell:** add a starter regular-footer. talwind defs not workin next-storybook ([6129045](https://github.com/spwntch/workspace-generator/commit/6129045))
+- **next-storybook:** add aboilerplate nextjs project to house our storybook ([87ed7ea](https://github.com/spwntch/workspace-generator/commit/87ed7ea))
+- **next-storybook:** add storybook configuration ([1623322](https://github.com/spwntch/workspace-generator/commit/1623322))
+- **next-storybook:** add a fist story, for BrandProvider ([5d04d7b](https://github.com/spwntch/workspace-generator/commit/5d04d7b))
+- **next-storybook:** add spawntech brand to next-storybook ([db6ef91](https://github.com/spwntch/workspace-generator/commit/db6ef91))
+- **next-storybook:** add a fist story, for BrandProvider ([179ec57](https://github.com/spwntch/workspace-generator/commit/179ec57))
+- **next-storybook:** add decorator for theme toggle ([85ab76e](https://github.com/spwntch/workspace-generator/commit/85ab76e))
+- **nextg-storybook:** add spawntech brand to next-storybook ([1723f7f](https://github.com/spwntch/workspace-generator/commit/1723f7f))
+- **react-storybook:** export doc-templates from lib ([1a16e32](https://github.com/spwntch/workspace-generator/commit/1a16e32))
+- **react-storybook:** export doc-templates from lib ([dd3ee85](https://github.com/spwntch/workspace-generator/commit/dd3ee85))
+- **workspace-generator:** add tailwind capability to app ([d6c5e0d](https://github.com/spwntch/workspace-generator/commit/d6c5e0d))
+- **workspace-generator:** add spwntch deps and import spwntch styles ([c3931c5](https://github.com/spwntch/workspace-generator/commit/c3931c5))
+- **workspace-generator:** add a client component to house the regular footer from @spwntch/shell ([1c48277](https://github.com/spwntch/workspace-generator/commit/1c48277))
+- **workspace-generator:** add generator defaults to generated nx.json ([edd81e6](https://github.com/spwntch/workspace-generator/commit/edd81e6))
+- **workspace-generator:** Generated app consumes generated lib ([754eb10](https://github.com/spwntch/workspace-generator/commit/754eb10))
+- **workspace-gnerator:** add a generator for a nextjs shell lib ([f9940a9](https://github.com/spwntch/workspace-generator/commit/f9940a9))
+
+### 🩹 Fixes
+
+- **next-shell:** add "use client" directive to regular-footer ([e1b0621](https://github.com/spwntch/workspace-generator/commit/e1b0621))
+- **workspace-generator:** fix typos in generated files ([3dd5fe8](https://github.com/spwntch/workspace-generator/commit/3dd5fe8))
+- **workspace-generator:** comment out Providers to get app working ([34cf1c9](https://github.com/spwntch/workspace-generator/commit/34cf1c9))
+- **workspace-generator:** add Provider back into Layout ([b2e290c](https://github.com/spwntch/workspace-generator/commit/b2e290c))
+- **workspace-generator:** replace boilerplate files with actual next lib ([8ed768a](https://github.com/spwntch/workspace-generator/commit/8ed768a))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.28.6 (2024-04-07)
 
 
