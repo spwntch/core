@@ -1,3 +1,4 @@
+import RegularFooter from '../components/regular-footer';
 import './global.css';
 import Providers from './providers';
 
@@ -15,7 +16,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-        {children}
+          {children}
+          <RegularFooter />
         </Providers>
       </body>
     </html>
