@@ -3,6 +3,7 @@ import {
   formatFiles,
   generateFiles,
   Tree,
+  updateJson,
 } from '@nx/devkit';
 import * as path from 'path';
 import { PresetGeneratorSchema } from './schema';
@@ -19,12 +20,6 @@ export async function presetGenerator(
   installation.start('Adding awesomeness to your workspace...');
 
   const { name, addDocs } = options;
-
-  shellGenerator(tree, {});
-
-  if (addDocs) {
-    gettingStartedDocsGenerator(tree, { name });
-  }
 
   const projectRoot = `.`;
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
@@ -77,6 +72,19 @@ export async function presetGenerator(
       typescript: '~5.4.2',
     }
   );
+
+  shellGenerator(tree, {});
+
+  if (addDocs) {
+    gettingStartedDocsGenerator(tree, { name });
+    updateJson(tree, 'package.json', (json) => {
+      json.scripts = json.scripts || {};
+      json.scripts['docs:build'] = 'npx nx run getting-started-docs:build';
+      json.scripts['docs:serve'] =
+        'npm run docs:build && npx nx run getting-started-docs:dev --port 3001';
+      return json;
+    });
+  }
 
   return installation.stop('Done');
 }

@@ -19,12 +19,6 @@ export async function gettingStartedDocsGenerator(
     targets: {},
   });
 
-  updateJson(tree, 'package.json', (json) => {
-    json.scripts = json.scripts || {};
-    json.scripts.docs = 'npx nx run getting-started-docs:dev --port 3001';
-    return json;
-  });
-
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
 }
 
