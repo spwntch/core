@@ -1,4 +1,4 @@
-import RegularFooter from '../components/regular-footer';
+import { RegularFooter } from '@/shell';
 import './global.css';
 import Providers from './providers';
 

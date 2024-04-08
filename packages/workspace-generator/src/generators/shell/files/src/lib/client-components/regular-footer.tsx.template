@@ -1,0 +1,2 @@
+'use client';
+export { RegularFooter } from '@spwntch/shell';
