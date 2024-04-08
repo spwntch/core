@@ -1,7 +1,7 @@
 // import { BrandProvider, NavProvider, ShellProvider } from '@/react-shell';
-import { BrandProvider } from '@/next-shell';
+import { BrandProvider, ShellProvider } from '@/next-shell';
 import { Decorator } from '@storybook/react';
-import { brand } from '../config';
+import { brand, primaryNav } from '../config';
 import { withThemeByClassName } from '@storybook/addon-themes';
 
 export const withThemeToggle: Decorator = withThemeByClassName({
@@ -24,8 +24,8 @@ export const withBrandProvider: Decorator = (Story) => (
 //   </NavProvider>
 // );
 
-// export const withShellProvider: Decorator = (Story) => (
-//   <ShellProvider brand={brand} navItems={primaryNav}>
-//     <Story />
-//   </ShellProvider>
-// );
+export const withShellProvider: Decorator = (Story) => (
+  <ShellProvider brand={brand} navItems={primaryNav}>
+    <Story />
+  </ShellProvider>
+);
