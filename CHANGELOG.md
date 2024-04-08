@@ -1,3 +1,20 @@
+## 0.30.2 (2024-04-08)
+
+
+### 🚀 Features
+
+- **workspace-generator:** add logo to generated pagfe ([2c1a3be](https://github.com/spwntch/workspace-generator/commit/2c1a3be))
+- **workspace-generator:** a good enough wireframe for the getting-started page ([e22788b](https://github.com/spwntch/workspace-generator/commit/e22788b))
+
+### 🩹 Fixes
+
+- **getting-started-docs:** remove api rotes for lint success ([0d491b4](https://github.com/spwntch/workspace-generator/commit/0d491b4))
+- **workspace-generator:** move lib+app generation to after workspace setup ([2669f44](https://github.com/spwntch/workspace-generator/commit/2669f44))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.30.1 (2024-04-08)
 
 
