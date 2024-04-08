@@ -24,6 +24,12 @@
       "@/next-shell/server": [
         "packages/next-shell/src/server.ts"
       ],
+      "@/next-storybook": [
+        "storybook/next/src/index.ts"
+      ],
+      "@/next-storybook/server": [
+        "storybook/next/src/server.ts"
+      ],
       "@/react-components": [
         "packages/react-components/src/index.ts"
       ],

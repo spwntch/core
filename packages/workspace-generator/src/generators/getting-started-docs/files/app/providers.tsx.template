@@ -1,0 +1,14 @@
+'use client';
+import { ShellProvider } from '@spwntch/shell';
+import React, { PropsWithChildren } from 'react';
+import { brand, primaryNav } from '../config';
+
+const Providers = ({ children }: PropsWithChildren) => {
+  return (
+    <ShellProvider brand={brand} navItems={primaryNav} defaultTheme="dark">
+      {children}
+    </ShellProvider>
+  );
+};
+
+export default Providers;

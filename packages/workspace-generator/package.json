@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/workspace-generator",
-  "version": "0.28.4",
+  "version": "0.28.6",
   "type": "commonjs",
   "files": [
     "dist",
@@ -11,8 +11,9 @@
   "typings": "./dist/src/index.d.ts",
   "generators": "./dist/generators.json",
   "dependencies": {
-    "@clack/prompts": "^0.7.0",
     "@nx/devkit": "18.2.3",
+    "@clack/prompts": "^0.7.0",
+    "react": "18.2.0",
     "tslib": "^2.3.0"
   }
 }
