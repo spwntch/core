@@ -1,5 +1,8 @@
 "use client";
 import { About } from "./about";
+import { Contact } from "./contact";
+import { Legal } from "./legal";
+import { Social } from "./social";
 
 export const RegularFooter = () => {
   return (
@@ -16,11 +19,11 @@ export const RegularFooter = () => {
       <div className="container mx-auto px-4  ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           <About />
-          {/* <Contact /> */}
-          {/* <Social /> */}
+          <Contact />
+          <Social />
         </div>
         <hr />
-        {/* <Legal /> */}
+        <Legal />
       </div>
     </footer>
   );

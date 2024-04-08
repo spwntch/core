@@ -24,6 +24,7 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
+    "lucide-react": "^0.360.0",
     "next-themes": "^0.3.0"
   }
 }
