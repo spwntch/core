@@ -21,17 +21,6 @@ export async function presetGenerator(
 
   const { name, addDocs } = options;
 
-  shellGenerator(tree, {});
-
-  if (addDocs) {
-    gettingStartedDocsGenerator(tree, { name });
-    updateJson(tree, 'package.json', (json) => {
-      json.scripts = json.scripts || {};
-      json.scripts.docs = 'npx nx run getting-started-docs:dev --port 3001';
-      return json;
-    });
-  }
-
   const projectRoot = `.`;
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
@@ -83,6 +72,17 @@ export async function presetGenerator(
       typescript: '~5.4.2',
     }
   );
+
+  shellGenerator(tree, {});
+
+  if (addDocs) {
+    gettingStartedDocsGenerator(tree, { name });
+    updateJson(tree, 'package.json', (json) => {
+      json.scripts = json.scripts || {};
+      json.scripts.docs = 'npx nx run getting-started-docs:dev --port 3001';
+      return json;
+    });
+  }
 
   return installation.stop('Done');
 }
