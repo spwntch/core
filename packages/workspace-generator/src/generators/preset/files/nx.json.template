@@ -38,7 +38,17 @@
     }
   ],
   "generators": {
+    "@nx/react": {
+      "library": {
+        "bundler": "vite",
+        "unitTestRunner": "none"
+      }
+    },
     "@nx/next": {
+      "library": {
+        "bundler": "vite",
+        "unitTestRunner": "none"
+      },
       "application": {
         "style": "none",
         "linter": "eslint"
