@@ -213,6 +213,9 @@ importers:
 
   packages/next-shell:
     dependencies:
+      lucide-react:
+        specifier: ^0.360.0
+        version: 0.360.0(react@18.2.0)
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.2.0)(react@18.2.0)
