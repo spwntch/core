@@ -1,11 +1,14 @@
-## 0.28.4 (2024-04-06)
+## 0.28.6 (2024-04-08)
 
+This was a version bump only, there were no code changes.
+
+## 0.28.4 (2024-04-06)
 
 ### 🩹 Fixes
 
-- **workspace-generator:** Fix tsconfig.json.template to include .next/types/**/*.ts ([0acf310](https://github.com/spwntch/workspace-generator/commit/0acf310))
+- **workspace-generator:** Fix tsconfig.json.template to include .next/types/\*_/_.ts ([0acf310](https://github.com/spwntch/workspace-generator/commit/0acf310))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -14,7 +17,6 @@
 This was a version bump only, there were no code changes.
 
 ## 0.28.2 (2024-04-06)
-
 
 ### 🚀 Features
 
@@ -25,12 +27,11 @@ This was a version bump only, there were no code changes.
 
 - **workspace-generator:** fix package versions ([f608047](https://github.com/spwntch/workspace-generator/commit/f608047))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.28.1 (2024-04-05)
-
 
 ### 🚀 Features
 
@@ -39,12 +40,11 @@ This was a version bump only, there were no code changes.
 - **workspace-generator:** add generator name variable as name in project.json ([e386f15](https://github.com/spwntch/workspace-generator/commit/e386f15))
 - **workspace-generator:** add more files from existing config into generated-workspace ([f04d124](https://github.com/spwntch/workspace-generator/commit/f04d124))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.28.0 (2024-04-05)
-
 
 ### 🚀 Features
 
@@ -57,12 +57,11 @@ This was a version bump only, there were no code changes.
 
 - **workspace-generator:** add template suffix to files to avoid build errors ([d0854df](https://github.com/spwntch/workspace-generator/commit/d0854df))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.27.0 (2024-04-04)
-
 
 ### 🚀 Features
 
@@ -74,30 +73,28 @@ This was a version bump only, there were no code changes.
 
 - **workspace-generator:** remove references to ../../apps/getting-started-docs in lib's tssconfig template ([5b7c3ed](https://github.com/spwntch/workspace-generator/commit/5b7c3ed))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.26.0 (2024-04-04)
 
-
 ### 🚀 Features
 
 - **react-components:** add all ui and typography components ([1abfe47](https://github.com/spwntch/workspace-generator/commit/1abfe47))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.25.0 (2024-04-04)
-
 
 ### 🚀 Features
 
 - add a react storybook and showc button sotries ([8386798](https://github.com/spwntch/workspace-generator/commit/8386798))
 - add spwn brand assets as well as webp generator script ([abd24cb](https://github.com/spwntch/workspace-generator/commit/abd24cb))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -107,13 +104,12 @@ This was a version bump only, there were no code changes.
 
 ## 0.24.0 (2024-04-04)
 
-
 ### 🚀 Features
 
 - **react-components:** add shadcn/ui setup ([c411b7e](https://github.com/spwntch/workspace-generator/commit/c411b7e))
 - **react-components:** add shadcn/ui button ([5734bd6](https://github.com/spwntch/workspace-generator/commit/5734bd6))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
