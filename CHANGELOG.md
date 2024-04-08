@@ -1,3 +1,14 @@
+## 0.30.0 (2024-04-08)
+
+
+### 🚀 Features
+
+- **next-shell:** footer gets more detail ([86d8810](https://github.com/spwntch/workspace-generator/commit/86d8810))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.29.0 (2024-04-08)
 
 
