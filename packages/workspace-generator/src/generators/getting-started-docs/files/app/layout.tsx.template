@@ -1,4 +1,4 @@
-import { RegularFooter } from '@/shell';
+import { LandingPageShell } from '@/shell/server';
 import './global.css';
 import Providers from './providers';
 
@@ -16,8 +16,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-          {children}
-          <RegularFooter />
+          <LandingPageShell>
+            {children}
+          </LandingPageShell>
         </Providers>
       </body>
     </html>
