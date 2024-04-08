@@ -9,6 +9,7 @@ import { PresetGeneratorSchema } from './schema';
 
 import { spinner } from '@clack/prompts';
 import gettingStartedDocsGenerator from '../getting-started-docs/generator';
+import shellGenerator from '../shell/generator';
 
 export async function presetGenerator(
   tree: Tree,
@@ -18,6 +19,8 @@ export async function presetGenerator(
   installation.start('Adding awesomeness to your workspace...');
 
   const { name, addDocs } = options;
+
+  shellGenerator(tree, {});
 
   if (addDocs) {
     gettingStartedDocsGenerator(tree, { name });

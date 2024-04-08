@@ -26,7 +26,6 @@ export async function gettingStartedDocsGenerator(
   });
 
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
-  // await formatFiles(tree);
 }
 
 export default gettingStartedDocsGenerator;
