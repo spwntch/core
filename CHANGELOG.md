@@ -1,3 +1,23 @@
+## 0.30.1 (2024-04-08)
+
+
+### 🚀 Features
+
+- **next-shell:** add a most basic landing-page-shell ([963d9de](https://github.com/spwntch/workspace-generator/commit/963d9de))
+- **workspace-generator:** consume LandingPageShell in app Layout ([38e3555](https://github.com/spwntch/workspace-generator/commit/38e3555))
+
+### 🩹 Fixes
+
+- linting issues ([a9c77f7](https://github.com/spwntch/workspace-generator/commit/a9c77f7))
+- **workspace-generator:** correct import path for LandingPageShell ([31adf6d](https://github.com/spwntch/workspace-generator/commit/31adf6d))
+- **workspace-generator:** update import opath for LandingPageShell ([fd7a2d0](https://github.com/spwntch/workspace-generator/commit/fd7a2d0))
+- **workspace-generator:** use components in generated app to get it rendering ([b60d017](https://github.com/spwntch/workspace-generator/commit/b60d017))
+- **workspace-generator:** a richer LandingPage component ([a181f8e](https://github.com/spwntch/workspace-generator/commit/a181f8e))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.30.0 (2024-04-08)
 
 
