@@ -1,3 +1,15 @@
+## 0.30.3 (2024-04-09)
+
+
+### 🚀 Features
+
+- **getting-started-docs:** add tailwind support ([86c652f](https://github.com/spwntch/spwn/commit/86c652f))
+- **tailwind:** make library publishable ([b715009](https://github.com/spwntch/spwn/commit/b715009))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.30.2 (2024-04-08)
 
 
