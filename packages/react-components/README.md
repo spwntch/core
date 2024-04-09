@@ -59,7 +59,7 @@ This library includes all of Spawntech's base `react.js` components, including:
 1. Install the package
 
 ```
-npm i @spwntch/react-components
+npm i @spwntch/components
 ```
 
 2. Import package styles
@@ -67,7 +67,7 @@ npm i @spwntch/react-components
 ```
 // app/globals.css
 
-@import "@spwntch/react-components/styles";
+@import "@spwntch/components/styles";
 
 ```
 
