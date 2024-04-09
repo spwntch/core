@@ -1,6 +1,8 @@
 {
   "name": "@spwntch/tailwind",
   "version": "0.30.4",
+  "author": "spwntch",
+  "license": "MIT",
   "main": "./src/index.js",
   "files": [
     "src"
@@ -21,8 +23,6 @@
     "vite",
     "sandbox"
   ],
-  "author": "spwntch",
-  "license": "MIT",
   "dependencies": {
     "tailwindcss-animate": "^1.0.7"
   }
