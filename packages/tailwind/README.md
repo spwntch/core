@@ -12,6 +12,47 @@ Spawntech's Tailwind default is a library that provides a set of pre-configured 
 - Responsive design support
 - works with all Spawntech component libraries.
 
-## Installation
+## Getting Started
 
-To install Spawntech's Tailwind default, you can use npm or yarn:
+1. Install the package
+
+```
+npm i @spwntch/tailwind
+```
+
+2. Consume the presets
+
+```
+// tailwind.config.js (in an nx monorepo)
+
+const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+const { join } = require('path');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  presets: [require('@spwntch/tailwind/presets')],
+  content: [
+    join(
+      __dirname,
+      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+    ),
+    ...createGlobPatternsForDependencies(__dirname),
+  ],
+
+  plugins: [],
+};
+
+};
+
+
+```
+
+3. Consume the styles
+
+```
+// global.css (in a next.js app)
+
+@Import '@spwntch/tailwind/styles';
+
+
+```
