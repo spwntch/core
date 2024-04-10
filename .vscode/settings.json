@@ -2,5 +2,11 @@
   "eslint.validate": [
     "json"
   ],
-  "workbench.panel.defaultLocation": "left"
+  "workbench.panel.defaultLocation": "left",
+  "workbench.editor.showTabs": "none",
+  "editor.snippetSuggestions": "top",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "Anonymous Pro, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 15
 }
