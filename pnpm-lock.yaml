@@ -280,8 +280,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0
       '@nx/devkit':
-        specifier: 18.2.3
-        version: 18.2.3(nx@18.2.4)
+        specifier: 18.2.4
+        version: 18.2.4(nx@18.2.4)
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -2784,21 +2784,12 @@ packages:
       - verdaccio
     dev: true
 
-  /@nrwl/devkit@18.2.3(nx@18.2.4):
-    resolution: {integrity: sha512-BJQdPmXFze7g4zsHhwSTssAcm/hvl0rXbIzZYQxncsVU4d+Fx0GS3JYBZ+9EcfnCeAEb10jGvn7Rfk+0okMmOw==}
-    dependencies:
-      '@nx/devkit': 18.2.3(nx@18.2.4)
-    transitivePeerDependencies:
-      - nx
-    dev: false
-
   /@nrwl/devkit@18.2.4(nx@18.2.4):
     resolution: {integrity: sha512-dLK8MMb3eEFWlhtI1kNDNbWIT1Xbrgg3eAQ+Ix/N5JDbxJkJhE28WsIJgQb1NTwe/N87O5JtOpxz4/TsSLJCsQ==}
     dependencies:
       '@nx/devkit': 18.2.4(nx@18.2.4)
     transitivePeerDependencies:
       - nx
-    dev: true
 
   /@nrwl/eslint-plugin-nx@18.2.4(@swc-node/register@1.8.0)(@swc/core@1.3.107)(@types/node@18.16.9)(@typescript-eslint/parser@7.6.0)(eslint-config-prettier@9.1.0)(eslint@8.57.0)(nx@18.2.4)(typescript@5.4.4)(verdaccio@5.30.3):
     resolution: {integrity: sha512-hRHXkD9eAw9METYnlQiJUMNX04ofWN457JDhOMTvO1ympBO9pzKOT5XNX1oPcuiXpkYEIQRJxfPmoAhckbld8w==}
@@ -3073,22 +3064,6 @@ packages:
       - verdaccio
     dev: true
 
-  /@nx/devkit@18.2.3(nx@18.2.4):
-    resolution: {integrity: sha512-dugw9Jm3Og28uwGee94P3KYkqiUV7J8RgibOQjQG4J2Vt3DPBNEGSgBD72qKkzpioEo+XSVUkn9h3GrdmnRU+Q==}
-    peerDependencies:
-      nx: '>= 16 <= 18'
-    dependencies:
-      '@nrwl/devkit': 18.2.3(nx@18.2.4)
-      ejs: 3.1.9
-      enquirer: 2.3.6
-      ignore: 5.3.1
-      nx: 18.2.4(@swc-node/register@1.8.0)(@swc/core@1.3.107)
-      semver: 7.6.0
-      tmp: 0.2.3
-      tslib: 2.6.2
-      yargs-parser: 21.1.1
-    dev: false
-
   /@nx/devkit@18.2.4(nx@18.2.4):
     resolution: {integrity: sha512-Ws3BcA/aeXuwsCQ5e7PYy2H7DswareTOEfgs7izxNyGugpydktVH9DZZTOFNDsc06yzgvyTucDbDQ+JsrJ9PcQ==}
     peerDependencies:
@@ -3103,7 +3078,6 @@ packages:
       tmp: 0.2.3
       tslib: 2.6.2
       yargs-parser: 21.1.1
-    dev: true
 
   /@nx/eslint-plugin@18.2.4(@swc-node/register@1.8.0)(@swc/core@1.3.107)(@types/node@18.16.9)(@typescript-eslint/parser@7.6.0)(eslint-config-prettier@9.1.0)(eslint@8.57.0)(nx@18.2.4)(typescript@5.4.4)(verdaccio@5.30.3):
     resolution: {integrity: sha512-FxWu8aZITz8dBNsNyaCUAHq9X7W0782ReQD6pqHxX6q19G4PiqphE4DtivNwotBYoDsnYqWZII68tBGIIn3h6w==}
