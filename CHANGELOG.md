@@ -1,3 +1,18 @@
+## 0.30.4 (2024-04-10)
+
+
+### 🚀 Features
+
+- **getting-started-docs:** add boilerplate app ([a808305](https://github.com/spwntch/spwn/commit/a808305))
+- **getting-started-docs:** add tailwind support ([3941bb1](https://github.com/spwntch/spwn/commit/3941bb1))
+- **spawn-workspace:** improve outro ([5d320b9](https://github.com/spwntch/spwn/commit/5d320b9))
+- **spawn-workspace:** a final instauction ([809387f](https://github.com/spwntch/spwn/commit/809387f))
+- **tailwind:** make library publishable ([1c2f21f](https://github.com/spwntch/spwn/commit/1c2f21f))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.30.3 (2024-04-09)
 
 This was a version bump only, there were no code changes.
