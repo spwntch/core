@@ -256,6 +256,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.2.7)
 
+  packages/react-shell: {}
+
   packages/spawn-workspace:
     dependencies:
       '@clack/prompts':
