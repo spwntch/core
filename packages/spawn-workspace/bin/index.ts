@@ -49,6 +49,11 @@ async function main() {
   outro(`
 Your new Spawntech workspace is all set 🎉.
 Find it at ${directory}.
+
+Next steps:
+  > cd ${name}
+  > npm install
+  ${addDocs ? '> npm run docs:serve' : ''}
   `);
 }
 

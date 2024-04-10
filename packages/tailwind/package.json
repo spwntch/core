@@ -1,6 +1,8 @@
 {
   "name": "@spwntch/tailwind",
-  "private": true,
+  "version": "0.30.3",
+  "author": "spwntch",
+  "license": "MIT",
   "main": "./src/index.js",
   "files": [
     "src"
@@ -11,6 +13,9 @@
     },
     "./styles": {
       "default": "./src/tailwind.css"
+    },
+    "./presets": {
+      "default": "./src/lib/tailwind.presets.js"
     }
   },
   "keywords": [
@@ -18,8 +23,6 @@
     "vite",
     "sandbox"
   ],
-  "author": "spwntch",
-  "license": "MIT",
   "dependencies": {
     "tailwindcss-animate": "^1.0.7"
   }

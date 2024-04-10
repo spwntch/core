@@ -8,7 +8,6 @@ on:
       - '**'
       - '!preview'
       - '!main'
-  pull_request:
 
 permissions:
   actions: read
