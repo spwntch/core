@@ -11,7 +11,7 @@
   "typings": "./dist/src/index.d.ts",
   "generators": "./dist/generators.json",
   "dependencies": {
-    "@nx/devkit": "18.2.3",
+    "@nx/devkit": "18.2.4",
     "@clack/prompts": "^0.7.0",
     "tslib": "^2.3.0"
   }
