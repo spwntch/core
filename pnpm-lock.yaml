@@ -256,7 +256,11 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.2.7)
 
-  packages/react-shell: {}
+  packages/react-shell:
+    dependencies:
+      '@spwntch/components':
+        specifier: ~0.30.4
+        version: link:../react-components
 
   packages/spawn-workspace:
     dependencies:
