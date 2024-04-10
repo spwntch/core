@@ -1,4 +1,6 @@
+// import { LandingPageShell } from '@spwntch/shell';
 import './global.css';
+// import Providers from './providers';
 
 export const metadata = {
   title: 'Welcome to getting-started-docs',
@@ -12,7 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="p-2">
+        {/* <Providers> */}
+          {/* <LandingPageShell> */}
+            {children}
+          {/* </LandingPageShell> */}
+          {/* </Providers> */}
+      </body>
     </html>
   );
 }
