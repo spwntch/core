@@ -1,7 +1,3 @@
-# react-shell
+# Spawntech's React Shell Library
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test react-shell` to execute the unit tests via [Vitest](https://vitest.dev/).
+> ### This package is currently pre-release.
