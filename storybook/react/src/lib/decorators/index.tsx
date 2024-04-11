@@ -1,5 +1,7 @@
+import { BrandProvider, ShellProvider } from '@/react-shell';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Decorator } from '@storybook/react';
+import { brand, primaryNav } from '../config';
 
 export const withThemeToggle: Decorator = withThemeByClassName({
   themes: {
@@ -8,3 +10,15 @@ export const withThemeToggle: Decorator = withThemeByClassName({
   },
   defaultTheme: 'light',
 });
+export const withBrandProvider: Decorator = (Story) => (
+  <BrandProvider brand={brand}>
+    <Story />
+  </BrandProvider>
+);
+
+
+export const withShellProvider: Decorator = (Story) => (
+  <ShellProvider brand={brand} navItems={primaryNav}>
+    <Story />
+  </ShellProvider>
+);

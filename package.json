@@ -3,15 +3,25 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "rm:dist": "find . -name 'dist' -type d -prune -exec rm -rf '{}' +",
+    "rm:node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "rm:tmp": "rm -rf tmp",
+    "clean": "pnpm run rm:dist && pnpm run rm:node-modules && pnpm run rm:tmp",
+    "build": "pnpm dlx nx run-many -t build",
+    "release": "pnpm dlx nx release --skip-publish",
+    "publish": "pnpm dlx nx release publish",
+    "storybook": "pnpm dlx nx run react-storybook:storybook",
     "docs": "pnpm dlx nx run getting-started-docs:dev",
     "webp": "tools/scripts/webp.sh ",
-    "local-registry": "pnpm dlx nx local-registry",
+    "registry": "pnpm dlx nx local-registry",
     "spawn-workspace": "pnpm dlx nx run spawn-workspace",
     "add-shad": "pnpm dlx nx run react-components:add-shad",
     "ci": "pnpm dlx nx run-many -t lint test build build-storybook"
   },
   "private": true,
   "dependencies": {
+    "@spwntch/components": "workspace:~0.30.5",
+    "@spwntch/shell": "workspace:~0.30.5",
     "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -86,4 +96,3 @@
     "includedScripts": []
   }
 }
-

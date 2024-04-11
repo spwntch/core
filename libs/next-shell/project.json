@@ -1,0 +1,9 @@
+{
+  "name": "next-shell",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/next-shell/src",
+  "projectType": "library",
+  "tags": ["tech:next"],
+  "// targets": "to see all targets run: nx show project next-shell --web",
+  "targets": {}
+}
