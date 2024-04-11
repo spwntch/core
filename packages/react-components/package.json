@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/components",
-  "version": "0.30.4",
+  "version": "0.30.5",
   "main": "./dist/index.js",
   "files": [
     "dist"
