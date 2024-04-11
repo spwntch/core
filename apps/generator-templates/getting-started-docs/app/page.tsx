@@ -4,5 +4,5 @@ export default function Index() {
    *
    * Note: The corresponding styles are in the ./index.none file.
    */
-  return <div className="text-5xl text-primary">Hello, Tailwind</div>;
+  return <div className="h-full flex justify-center items-center text-5xl text-primary">Hello, Tailwind</div>;
 }
