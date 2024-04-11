@@ -34,7 +34,7 @@ export const NavToolbar = ({ items = [] }: ITopNavProps) => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {navItems.map((item) => pickNavItem(item))}
+        {items.map((item) => pickNavItem(item))}
       </NavigationMenuList>
     </NavigationMenu>
   );

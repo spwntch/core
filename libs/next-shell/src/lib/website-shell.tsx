@@ -28,9 +28,9 @@ export interface SiteShellProps {
 }
 
 export const WebsiteShell = ({
-  underContruction,
+  // underContruction,
   navbar,
-  displayShellInfo,
+  // displayShellInfo,
   children,
 }: SiteShellProps & PropsWithChildren) => {
   return (

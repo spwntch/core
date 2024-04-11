@@ -1,10 +1,5 @@
 import { NavigationMenu, NavigationMenuList } from '@/react-components';
-import {
-  INavItem,
-  INavLink,
-  INavMenu,
-  useNav,
-} from '../../../../../../packages/react-shell/src/lib/providers/nav-provider';
+import { INavItem, INavLink, INavMenu, useNav } from '@/react-shell';
 import { NavMenuLink } from './nav-menu-link';
 import { NavSubMenu } from './nav-sub-menu';
 // import { NavMenuItem } from './nav-item';
@@ -20,7 +15,7 @@ export interface INavMenuProps {
 
 export const NavMenu = ({
   items = [],
-  omitHome = false,
+  // omitHome = false,
   onSelectLink,
 }: INavMenuProps) => {
   const { navItems } = useNav();
@@ -53,7 +48,7 @@ export const NavMenu = ({
       className="pl-1 max-w-none justify-start"
     >
       <NavigationMenuList className="flex-col max-w-none w-[210px] ">
-        {navItems.map((item) => pickNavItem(item))}
+        {items.map((item) => pickNavItem(item))}
       </NavigationMenuList>
     </NavigationMenu>
   );
