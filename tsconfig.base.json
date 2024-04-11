@@ -17,8 +17,6 @@
     "paths": {
       "@/delete-next-shell": ["packages/next-shell/src/index.ts"],
       "@/delete-next-shell/server": ["packages/next-shell/src/server.ts"],
-      "@/delete-next-storybook": ["storybook/next/src/index.ts"],
-      "@/delete-next-storybook/server": ["storybook/next/src/server.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
