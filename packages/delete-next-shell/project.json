@@ -1,0 +1,9 @@
+{
+  "name": "delete-next-shell",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/delete-next-shell/src",
+  "projectType": "library",
+  "tags": ["tech:next"],
+  "// targets": "to see all targets run: nx show project delete-next-shell --web",
+  "targets": {}
+}

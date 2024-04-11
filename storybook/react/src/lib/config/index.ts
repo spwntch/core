@@ -1,4 +1,4 @@
-import { IBrand, INavItem } from '@/next-shell';
+import { IBrand, INavItem } from '@/delete-next-shell';
 
 export const brand: IBrand = {
   logoUrl: {
