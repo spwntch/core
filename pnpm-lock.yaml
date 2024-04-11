@@ -231,6 +231,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.33)(react@18.2.0)
+      '@spwntch/tailwind':
+        specifier: ~0.30.4
+        version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
