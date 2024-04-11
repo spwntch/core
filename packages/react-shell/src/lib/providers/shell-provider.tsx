@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import { PropsWithChildren } from 'react';
 // import { AuthBackends } from './auth-backend-provider';
-import { BrandProvider, IBrand } from './brand-provider';
+import { BrandProvider, IBrand } from '../components/brand/brand-provider';
 import { INavItem, NavProvider } from './nav-provider';
 
 export interface IShellProviderProps {
