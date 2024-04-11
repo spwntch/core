@@ -13,7 +13,7 @@
     "storybook": "pnpm dlx nx run react-storybook:storybook",
     "docs": "pnpm dlx nx run getting-started-docs:dev",
     "webp": "tools/scripts/webp.sh ",
-    "local-registry": "pnpm dlx nx local-registry",
+    "registry": "pnpm dlx nx local-registry",
     "spawn-workspace": "pnpm dlx nx run spawn-workspace",
     "add-shad": "pnpm dlx nx run react-components:add-shad",
     "ci": "pnpm dlx nx run-many -t lint test build build-storybook"
