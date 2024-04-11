@@ -15,10 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/delete-next-shell": ["packages/delete-next-shell/src/index.ts"],
-      "@/delete-next-shell/server": [
-        "packages/delete-next-shell/src/server.ts"
-      ],
       "@/next-shell": ["libs/next-shell/src/index.ts"],
       "@/next-shell/server": ["libs/next-shell/src/server.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],

@@ -39,7 +39,7 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **delete-next-shell:** add a most basic landing-page-shell ([963d9de](https://github.com/spwntch/workspace-generator/commit/963d9de))
+- **next-shell:** add a most basic landing-page-shell ([963d9de](https://github.com/spwntch/workspace-generator/commit/963d9de))
 - **workspace-generator:** consume LandingPageShell in app Layout ([38e3555](https://github.com/spwntch/workspace-generator/commit/38e3555))
 
 ### 🩹 Fixes
@@ -59,7 +59,7 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **delete-next-shell:** footer gets more detail ([86d8810](https://github.com/spwntch/workspace-generator/commit/86d8810))
+- **next-shell:** footer gets more detail ([86d8810](https://github.com/spwntch/workspace-generator/commit/86d8810))
 
 ### ❤️  Thank You
 
@@ -70,8 +70,8 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **delete-next-shell:** adds a logo component + stories ([1ba32d2](https://github.com/spwntch/workspace-generator/commit/1ba32d2))
-- **delete-next-shell:** add a starter regular-footer. talwind defs not workin next-storybook ([6129045](https://github.com/spwntch/workspace-generator/commit/6129045))
+- **next-shell:** adds a logo component + stories ([1ba32d2](https://github.com/spwntch/workspace-generator/commit/1ba32d2))
+- **next-shell:** add a starter regular-footer. talwind defs not workin next-storybook ([6129045](https://github.com/spwntch/workspace-generator/commit/6129045))
 - **next-storybook:** add aboilerplate nextjs project to house our storybook ([87ed7ea](https://github.com/spwntch/workspace-generator/commit/87ed7ea))
 - **next-storybook:** add storybook configuration ([1623322](https://github.com/spwntch/workspace-generator/commit/1623322))
 - **next-storybook:** add a fist story, for BrandProvider ([5d04d7b](https://github.com/spwntch/workspace-generator/commit/5d04d7b))
@@ -90,7 +90,7 @@ This was a version bump only, there were no code changes.
 
 ### 🩹 Fixes
 
-- **delete-next-shell:** add "use client" directive to regular-footer ([e1b0621](https://github.com/spwntch/workspace-generator/commit/e1b0621))
+- **next-shell:** add "use client" directive to regular-footer ([e1b0621](https://github.com/spwntch/workspace-generator/commit/e1b0621))
 - **workspace-generator:** fix typos in generated files ([3dd5fe8](https://github.com/spwntch/workspace-generator/commit/3dd5fe8))
 - **workspace-generator:** comment out Providers to get app working ([34cf1c9](https://github.com/spwntch/workspace-generator/commit/34cf1c9))
 - **workspace-generator:** add Provider back into Layout ([b2e290c](https://github.com/spwntch/workspace-generator/commit/b2e290c))
@@ -186,8 +186,8 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **delete-next-shell:** adds a boilerplate nextjs lb ([2791305](https://github.com/spwntch/workspace-generator/commit/2791305))
-- **delete-next-shell:** replace boilerplate with providers ([5a1508b](https://github.com/spwntch/workspace-generator/commit/5a1508b))
+- **next-shell:** adds a boilerplate nextjs lb ([2791305](https://github.com/spwntch/workspace-generator/commit/2791305))
+- **next-shell:** replace boilerplate with providers ([5a1508b](https://github.com/spwntch/workspace-generator/commit/5a1508b))
 - **workspace-generator:** introduce @spwntch/shell and add ShellProvider ([1026201](https://github.com/spwntch/workspace-generator/commit/1026201))
 - **workspace-generator:** add some assets to generated workspace ([5c41e36](https://github.com/spwntch/workspace-generator/commit/5c41e36))
 

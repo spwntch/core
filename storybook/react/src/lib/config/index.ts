@@ -1,4 +1,4 @@
-import { IBrand, INavItem } from '@/delete-next-shell';
+import { IBrand, INavItem } from '@/react-shell';
 
 export const brand: IBrand = {
   logoUrl: {
