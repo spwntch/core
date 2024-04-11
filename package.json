@@ -10,6 +10,7 @@
     "build": "pnpm dlx nx run-many -t build",
     "release": "pnpm dlx nx release --skip-publish",
     "publish": "pnpm dlx nx release publish",
+    "storybook": "pnpm dlx nx run react-storybook:storybook",
     "docs": "pnpm dlx nx run getting-started-docs:dev",
     "webp": "tools/scripts/webp.sh ",
     "local-registry": "pnpm dlx nx local-registry",
