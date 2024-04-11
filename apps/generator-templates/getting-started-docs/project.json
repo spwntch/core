@@ -5,5 +5,17 @@
   "projectType": "application",
   "tags": ["tech:next"],
   "// targets": "to see all targets run: nx show project getting-started-docs --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "options": {
+        "assets": [
+          {
+            "input": "assets/spwn/brand/public",
+            "glob": "*.webp",
+            "output": "brand"
+          }
+        ],
+      }
+    }
+  }
 }
