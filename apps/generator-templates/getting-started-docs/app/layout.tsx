@@ -1,4 +1,4 @@
-import { LandingPageShell } from '@/next-shell';
+import { WebsiteShell } from '@/next-shell';
 import './global.css';
 import { Providers } from './providers';
 
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <LandingPageShell>{children}</LandingPageShell>
+          <WebsiteShell>{children}</WebsiteShell>
         </Providers>
       </body>
     </html>
