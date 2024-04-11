@@ -91,7 +91,6 @@
     },
     "@nx/next": {
       "library": {
-        // "bundler": "vite",
         "unitTestRunner": "none"
       },
       "application": {
