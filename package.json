@@ -20,6 +20,7 @@
   },
   "private": true,
   "dependencies": {
+    "@spwntch/tailwind": "workspace:~0.30.5",
     "@spwntch/components": "workspace:~0.30.5",
     "@spwntch/shell": "workspace:~0.30.5",
     "next": "14.0.4",
