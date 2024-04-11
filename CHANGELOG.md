@@ -1,3 +1,18 @@
+## 0.30.5 (2024-04-11)
+
+
+### 🚀 Features
+
+- **next-shell:** next-shell now exists as a lib ([2921444](https://github.com/spwntch/spwn/commit/2921444))
+- **next-shell:** add landing page shell as server component ([0f7606a](https://github.com/spwntch/spwn/commit/0f7606a))
+- **react-shell:** add boilerplate lib ([6fded24](https://github.com/spwntch/spwn/commit/6fded24))
+- **react-shell:** adc tailwind ([3f0fd5b](https://github.com/spwntch/spwn/commit/3f0fd5b))
+- **react-shell:** copy components from next-shell ([0a0ac97](https://github.com/spwntch/spwn/commit/0a0ac97))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.30.4 (2024-04-10)
 
 
