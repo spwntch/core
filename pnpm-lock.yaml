@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@spwntch/components':
+        specifier: workspace:~0.30.5
+        version: link:packages/react-components
+      '@spwntch/shell':
+        specifier: workspace:~0.30.5
+        version: link:packages/react-shell
       next:
         specifier: 14.0.4
         version: 14.0.4(@babel/core@7.24.4)(react-dom@18.2.0)(react@18.2.0)
@@ -232,7 +238,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.33)(react@18.2.0)
       '@spwntch/tailwind':
-        specifier: ~0.30.4
+        specifier: ~0.30.5
         version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
@@ -253,10 +259,10 @@ importers:
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.30.4
+        specifier: ~0.30.5
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: ~0.30.4
+        specifier: ~0.30.5
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
