@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.30.5
+        specifier: workspace:~0.30.5
         version: link:packages/react-components
       '@spwntch/shell':
-        specifier: ~0.30.5
+        specifier: workspace:~0.30.5
         version: link:packages/react-shell
       '@spwntch/tailwind':
-        specifier: ~0.30.5
+        specifier: workspace:~0.30.5
         version: link:packages/tailwind
       next:
         specifier: 14.0.4

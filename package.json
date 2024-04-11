@@ -20,9 +20,9 @@
   },
   "private": true,
   "dependencies": {
-    "@spwntch/tailwind": "~0.30.5",
-    "@spwntch/components": "~0.30.5",
-    "@spwntch/shell": "~0.30.5",
+    "@spwntch/tailwind": "workspace:~0.30.5",
+    "@spwntch/components": "workspace:~0.30.5",
+    "@spwntch/shell": "workspace:~0.30.5",
     "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
