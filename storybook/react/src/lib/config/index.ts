@@ -9,6 +9,7 @@ export const brand: IBrand = {
     light: '/brand/mark-primary.webp',
     dark: '/brand/mark-dark.webp',
   },
+  tagline: '{ experience in code }',
   about: {
     body: 'Spawntech specializes in agile software development with a robust UX focus, leveraging reusable Node.js libraries to deliver custom, efficient solutions. We champion innovation and a seamless user experience, ensuring our clients stay ahead in the digital race.',
   },
