@@ -1,20 +1,4 @@
-## 0.30.5 (2024-04-11)
-
-
-### 🚀 Features
-
-- **next-shell:** next-shell now exists as a lib ([2921444](https://github.com/spwntch/spwn/commit/2921444))
-- **next-shell:** add landing page shell as server component ([0f7606a](https://github.com/spwntch/spwn/commit/0f7606a))
-- **react-shell:** add boilerplate lib ([6fded24](https://github.com/spwntch/spwn/commit/6fded24))
-- **react-shell:** adc tailwind ([3f0fd5b](https://github.com/spwntch/spwn/commit/3f0fd5b))
-- **react-shell:** copy components from next-shell ([0a0ac97](https://github.com/spwntch/spwn/commit/0a0ac97))
-
-### ❤️  Thank You
-
-- zpydee @zpydee
-
 ## 0.30.4 (2024-04-10)
-
 
 ### 🚀 Features
 
@@ -24,7 +8,7 @@
 - **spawn-workspace:** a final instauction ([809387f](https://github.com/spwntch/spwn/commit/809387f))
 - **tailwind:** make library publishable ([1c2f21f](https://github.com/spwntch/spwn/commit/1c2f21f))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -33,7 +17,6 @@
 This was a version bump only, there were no code changes.
 
 ## 0.30.2 (2024-04-08)
-
 
 ### 🚀 Features
 
@@ -45,12 +28,11 @@ This was a version bump only, there were no code changes.
 - **getting-started-docs:** remove api rotes for lint success ([0d491b4](https://github.com/spwntch/workspace-generator/commit/0d491b4))
 - **workspace-generator:** move lib+app generation to after workspace setup ([2669f44](https://github.com/spwntch/workspace-generator/commit/2669f44))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.30.1 (2024-04-08)
-
 
 ### 🚀 Features
 
@@ -65,23 +47,21 @@ This was a version bump only, there were no code changes.
 - **workspace-generator:** use components in generated app to get it rendering ([b60d017](https://github.com/spwntch/workspace-generator/commit/b60d017))
 - **workspace-generator:** a richer LandingPage component ([a181f8e](https://github.com/spwntch/workspace-generator/commit/a181f8e))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.30.0 (2024-04-08)
 
-
 ### 🚀 Features
 
 - **next-shell:** footer gets more detail ([86d8810](https://github.com/spwntch/workspace-generator/commit/86d8810))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.29.0 (2024-04-08)
-
 
 ### 🚀 Features
 
@@ -111,12 +91,11 @@ This was a version bump only, there were no code changes.
 - **workspace-generator:** add Provider back into Layout ([b2e290c](https://github.com/spwntch/workspace-generator/commit/b2e290c))
 - **workspace-generator:** replace boilerplate files with actual next lib ([8ed768a](https://github.com/spwntch/workspace-generator/commit/8ed768a))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.28.6 (2024-04-07)
-
 
 ### 🚀 Features
 
@@ -129,12 +108,11 @@ This was a version bump only, there were no code changes.
 - **react-storybook:** export doc-templates from lib ([1a16e32](https://github.com/spwntch/workspace-generator/commit/1a16e32))
 - **react-storybook:** export doc-templates from lib ([dd3ee85](https://github.com/spwntch/workspace-generator/commit/dd3ee85))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.28.5 (2024-04-07)
-
 
 ### 🚀 Features
 
@@ -147,18 +125,17 @@ This was a version bump only, there were no code changes.
 - **workspace-generator:** comment out Providers to get app working ([34cf1c9](https://github.com/spwntch/workspace-generator/commit/34cf1c9))
 - **workspace-generator:** add Provider back into Layout ([b2e290c](https://github.com/spwntch/workspace-generator/commit/b2e290c))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.28.4 (2024-04-06)
 
-
 ### 🩹 Fixes
 
-- **workspace-generator:** Fix tsconfig.json.template to include .next/types/**/*.ts ([0acf310](https://github.com/spwntch/workspace-generator/commit/0acf310))
+- **workspace-generator:** Fix tsconfig.json.template to include .next/types/\*_/_.ts ([0acf310](https://github.com/spwntch/workspace-generator/commit/0acf310))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -167,7 +144,6 @@ This was a version bump only, there were no code changes.
 This was a version bump only, there were no code changes.
 
 ## 0.28.2 (2024-04-06)
-
 
 ### 🚀 Features
 
@@ -178,12 +154,11 @@ This was a version bump only, there were no code changes.
 
 - **workspace-generator:** fix package versions ([f608047](https://github.com/spwntch/workspace-generator/commit/f608047))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.28.1 (2024-04-05)
-
 
 ### 🚀 Features
 
@@ -192,12 +167,11 @@ This was a version bump only, there were no code changes.
 - **workspace-generator:** add generator name variable as name in project.json ([e386f15](https://github.com/spwntch/workspace-generator/commit/e386f15))
 - **workspace-generator:** add more files from existing config into generated-workspace ([f04d124](https://github.com/spwntch/workspace-generator/commit/f04d124))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.28.0 (2024-04-05)
-
 
 ### 🚀 Features
 
@@ -210,12 +184,11 @@ This was a version bump only, there were no code changes.
 
 - **workspace-generator:** add template suffix to files to avoid build errors ([d0854df](https://github.com/spwntch/workspace-generator/commit/d0854df))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.27.0 (2024-04-04)
-
 
 ### 🚀 Features
 
@@ -227,30 +200,28 @@ This was a version bump only, there were no code changes.
 
 - **workspace-generator:** remove references to ../../apps/getting-started-docs in lib's tssconfig template ([5b7c3ed](https://github.com/spwntch/workspace-generator/commit/5b7c3ed))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.26.0 (2024-04-04)
 
-
 ### 🚀 Features
 
 - **react-components:** add all ui and typography components ([1abfe47](https://github.com/spwntch/workspace-generator/commit/1abfe47))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.25.0 (2024-04-04)
-
 
 ### 🚀 Features
 
 - add a react storybook and showc button sotries ([8386798](https://github.com/spwntch/workspace-generator/commit/8386798))
 - add spwn brand assets as well as webp generator script ([abd24cb](https://github.com/spwntch/workspace-generator/commit/abd24cb))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -260,13 +231,12 @@ This was a version bump only, there were no code changes.
 
 ## 0.24.0 (2024-04-04)
 
-
 ### 🚀 Features
 
 - **react-components:** add shadcn/ui setup ([c411b7e](https://github.com/spwntch/workspace-generator/commit/c411b7e))
 - **react-components:** add shadcn/ui button ([5734bd6](https://github.com/spwntch/workspace-generator/commit/5734bd6))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
