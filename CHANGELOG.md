@@ -1,3 +1,32 @@
+## 0.31.0 (2024-04-12)
+
+
+### 🚀 Features
+
+- add sample-site app ([9dbd8c3](https://github.com/spwntch/spwn/commit/9dbd8c3))
+- **getting-started-docs:** a nice looking wireframe ([a315328](https://github.com/spwntch/spwn/commit/a315328))
+- **getting-started-docs:** show under-construction ([4188df8](https://github.com/spwntch/spwn/commit/4188df8))
+- **next-shell:** add nav components ([bba49df](https://github.com/spwntch/spwn/commit/bba49df))
+- **next-shell:** add a WebsiteShell ([89adc79](https://github.com/spwntch/spwn/commit/89adc79))
+- **next-storybook:** add next-storybbok back in ([5f9e23f](https://github.com/spwntch/spwn/commit/5f9e23f))
+- **react-shell:** adds in-progress navbars ([688c71d](https://github.com/spwntch/spwn/commit/688c71d))
+- **react-shell:** add a theme toggle button ([4fb54c7](https://github.com/spwntch/spwn/commit/4fb54c7))
+- **react-shell:** add under-construction componeny ([da4bec1](https://github.com/spwntch/spwn/commit/da4bec1))
+
+### 🩹 Fixes
+
+- some minor page layout improvements on both aps ([a49eebd](https://github.com/spwntch/spwn/commit/a49eebd))
+- remove api route from both apps ([f6f48b2](https://github.com/spwntch/spwn/commit/f6f48b2))
+- **getting-started-docs:** lose eliipses for build ([368726e](https://github.com/spwntch/spwn/commit/368726e))
+- **getting-started-docs:** replace ellipsis with rocket ([a8ddc1f](https://github.com/spwntch/spwn/commit/a8ddc1f))
+- **next-shell:** add container to shell ([ba27e45](https://github.com/spwntch/spwn/commit/ba27e45))
+- **react-shell:** try get logo to display ([f72eb6f](https://github.com/spwntch/spwn/commit/f72eb6f))
+- **react-shell:** hide nav components for a more complete look ([ad15d58](https://github.com/spwntch/spwn/commit/ad15d58))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.30.5 (2024-04-11)
 
 
