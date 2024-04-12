@@ -16,9 +16,16 @@ export const withBrandProvider: Decorator = (Story) => (
   </BrandProvider>
 );
 
-
 export const withShellProvider: Decorator = (Story) => (
-  <ShellProvider brand={brand} navItems={primaryNav}>
+  <div className="w-screen container">
+    <ShellProvider brand={brand} navItems={primaryNav}>
+      <Story />
+    </ShellProvider>
+  </div>
+);
+
+export const withFlexRowWrap: Decorator = (Story) => (
+  <div className="flex flex-wrap gap-8">
     <Story />
-  </ShellProvider>
+  </div>
 );
