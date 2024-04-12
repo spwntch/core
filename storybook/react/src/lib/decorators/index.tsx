@@ -22,3 +22,9 @@ export const withShellProvider: Decorator = (Story) => (
     <Story />
   </ShellProvider>
 );
+
+export const withFlexRowWrap: Decorator = (Story) => (
+  <div className="flex flex-wrap gap-8">
+    <Story />
+  </div>
+);
