@@ -22,7 +22,8 @@
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
       "@/tailwind": ["packages/tailwind/src/index.js"],
-      "@/tailwind/*": ["packages/tailwind/src/*"],
+      "@/tailwind/presets": ["packages/tailwind/src/lib/tailwind.presets.js"],
+      "@/tailwind/styles": ["packages/tailwind/src/tailwind.css"],
       "@/workspace-generator": ["packages/workspace-generator/src/index.ts"]
     }
   },
