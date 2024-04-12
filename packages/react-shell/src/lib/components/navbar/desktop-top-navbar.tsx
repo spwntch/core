@@ -33,7 +33,6 @@ export const DesktopTopNavbar = ({
                 : 'justify-center'
             )}
           >
-            NavToolbar
             {/* <NavToolbar /> */}
           </nav>
         </div>
@@ -50,11 +49,11 @@ export const DesktopTopNavbar = ({
             </Button> */}
           </ButtonGroup>
         </div>
-        <div className="ml-2 block md:hidden">
+        {/* <div className="ml-2 block md:hidden">
           <ButtonGroup>
             <MobileNavDrawer />
           </ButtonGroup>
-        </div>
+        </div> */}
       </div>
     </header>
   );
