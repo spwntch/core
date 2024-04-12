@@ -1,0 +1,9 @@
+{
+  "name": "next-storybook",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "storybook/next/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project next-storybook --web",
+  "targets": {}
+}
