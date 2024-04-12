@@ -17,7 +17,6 @@
     "paths": {
       "@/next-shell": ["libs/next-shell/src/index.ts"],
       "@/next-shell/server": ["libs/next-shell/src/server.ts"],
-      "@/next-storybook": ["storybook/next/src/index.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
