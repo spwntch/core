@@ -4,7 +4,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof WebsiteShell> = {
   component: WebsiteShell,
-  tags: ['autodocs'],
   parameters: { docs: { page: BasicDocs } },
   decorators: [withShellProvider],
   args: {
@@ -14,4 +13,4 @@ const meta: Meta<typeof WebsiteShell> = {
 export default meta;
 type Story = StoryObj<typeof WebsiteShell>;
 
-export const Example: Story = {};
+export const websiteShell: Story = {};

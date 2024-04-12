@@ -1,7 +1,8 @@
-import '@/tailwind/styles';
+// import '@/tailwind/styles';
+import './styles.css';
 
-import { Decorator, Parameters } from '@storybook/react';
 import { withThemeToggle } from '@/react-storybook';
+import { Decorator, Parameters } from '@storybook/react';
 
 export const parameters: Parameters = {
   backgrounds: {
