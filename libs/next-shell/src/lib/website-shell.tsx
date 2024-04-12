@@ -34,7 +34,7 @@ export const WebsiteShell = ({
   children,
 }: SiteShellProps & PropsWithChildren) => {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col container">
       <DesktopTopNavbar
         classNames={navbar?.classNames}
         navAlignment={navbar?.alignment}
