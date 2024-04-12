@@ -1,16 +1,27 @@
 import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
-  stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  staticDirs: [
+    { from: '../../../assets/spwn/brand/public', to: '/brand' },
+    // { from: '../../../assets/storybook/public', to: '/images' },
+  ],
+  docs: {
+    autodocs: 'tag',
+  },
+  stories: ['../src/stories/**/!(_)*.@(mdx|stories.@(js|jsx|ts|tsx))'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-themes',
+  ],
   framework: {
     name: '@storybook/nextjs',
-    options: {},
+    options: {
+      builder: {
+        viteConfigPath: 'vite.config.ts',
+      },
+    },
   },
 };
 
 export default config;
-
-// To customize your webpack configuration you can use the webpackFinal field.
-// Check https://storybook.js.org/docs/react/builders/webpack#extending-storybooks-webpack-config
-// and https://nx.dev/recipes/storybook/custom-builder-configs
