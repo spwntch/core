@@ -17,9 +17,9 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/nextjs',
     options: {
-      builder: {
-        viteConfigPath: 'vite.config.ts',
-      },
+      // builder: {
+      //   viteConfigPath: 'vite.config.ts',
+      // },
     },
   },
 };
