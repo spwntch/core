@@ -16,11 +16,12 @@ export const withBrandProvider: Decorator = (Story) => (
   </BrandProvider>
 );
 
-
 export const withShellProvider: Decorator = (Story) => (
-  <ShellProvider brand={brand} navItems={primaryNav}>
-    <Story />
-  </ShellProvider>
+  <div className="w-screen container">
+    <ShellProvider brand={brand} navItems={primaryNav}>
+      <Story />
+    </ShellProvider>
+  </div>
 );
 
 export const withFlexRowWrap: Decorator = (Story) => (
