@@ -1,8 +1,0 @@
-'use client';
-import { LandingPageShell as SpwnLandingPageShell } from '@spwntch/shell';
-
-import { PropsWithChildren } from 'react';
-
-export const LandingPageShell = (props: PropsWithChildren) => {
-  return <SpwnLandingPageShell {...props} />;
-};
