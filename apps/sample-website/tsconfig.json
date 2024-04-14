@@ -1,5 +1,5 @@
 {
-  "extends": "../../../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
@@ -22,15 +22,10 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../../../apps/generator-templates/getting-started-docs/.next/types/**/*.ts",
-    "../../../dist/apps/generator-templates/getting-started-docs/.next/types/**/*.ts",
+    "../../apps/generator-templates/sample-website/.next/types/**/*.ts",
+    "../../dist/apps/generator-templates/sample-website/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]
 }
