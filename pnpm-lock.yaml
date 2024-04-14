@@ -241,8 +241,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.33)(react@18.2.0)
       '@spwntch/tailwind':
-        specifier: ~0.30.4
-        version: 0.30.5(tailwindcss@3.2.7)
+        specifier: ~0.32.0
+        version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -262,11 +262,11 @@ importers:
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.31.0
-        version: 0.31.6(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7)
+        specifier: ~0.32.0
+        version: link:../react-components
       '@spwntch/tailwind':
-        specifier: ~0.30.4
-        version: 0.30.5(tailwindcss@3.2.7)
+        specifier: ~0.32.0
+        version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
         version: 0.360.0(react@18.2.0)
@@ -4545,37 +4545,6 @@ packages:
     dependencies:
       '@sinonjs/commons': 3.0.1
     dev: true
-
-  /@spwntch/components@0.31.6(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.2.7):
-    resolution: {integrity: sha512-e2ynrwUAZMfHtp85EXAmOrhpBl07N44T/mcw7OLsMyYEq4qABnWE/5QaNk03d7Tjz/HBCIVzAxJdCCjfcPC28w==}
-    dependencies:
-      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-dropdown-menu': 2.0.6(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-menubar': 1.0.4(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-navigation-menu': 1.1.4(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.33)(react@18.2.0)
-      '@spwntch/tailwind': 0.30.5(tailwindcss@3.2.7)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.0
-      lucide-react: 0.360.0(react@18.2.0)
-      tailwind-merge: 2.2.2
-      tailwindcss-animate: 1.0.7(tailwindcss@3.2.7)
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-      - react
-      - react-dom
-      - tailwindcss
-    dev: false
-
-  /@spwntch/tailwind@0.30.5(tailwindcss@3.2.7):
-    resolution: {integrity: sha512-opcYShHobANJEPixDcDA1XDxE/e9WOgZopXWlQOFiY1q9zYhV2lRqOUDf6xy9fN48joVSY9r+7Zyw8zhr1eP4w==}
-    dependencies:
-      tailwindcss-animate: 1.0.7(tailwindcss@3.2.7)
-    transitivePeerDependencies:
-      - tailwindcss
-    dev: false
 
   /@storybook/addon-actions@8.0.6:
     resolution: {integrity: sha512-3R/d2Td6+yeR+UnyCAeZ4tuiRGSm+6gKUQP9vB1bvEFQGuFBrV+zs3eakcYegOqZu3IXuejgaB0Knq987gUL5A==}
