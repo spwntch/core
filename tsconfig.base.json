@@ -22,8 +22,7 @@
       "@/react-storybook": ["storybook/react/src/index.ts"],
       "@/tailwind": ["packages/tailwind/src/index.js"],
       "@/tailwind/presets": ["packages/tailwind/src/lib/tailwind.presets.js"],
-      "@/tailwind/styles": ["packages/tailwind/src/tailwind.css"],
-      "@/workspace-generator": ["packages/workspace-generator/src/index.ts"]
+      "@/tailwind/styles": ["packages/tailwind/src/tailwind.css"]
     }
   },
   "exclude": ["node_modules", "tmp"]

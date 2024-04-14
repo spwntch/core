@@ -1,0 +1,20 @@
+{
+  "name": "sample-website",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sample-website",
+  "projectType": "application",
+  "tags": ["tech:next"],
+  "targets": {
+    "build": {
+      "options": {
+        "assets": [
+          {
+            "input": "assets/spwn/brand/public",
+            "glob": "*.webp",
+            "output": "brand"
+          }
+        ]
+      }
+    }
+  }
+}
