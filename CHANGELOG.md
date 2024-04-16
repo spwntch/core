@@ -1,3 +1,16 @@
+## 0.32.2 (2024-04-16)
+
+
+### 🩹 Fixes
+
+- import @/tailwind/styles in component packafges ([b130dc8](https://github.com/spwntch/spwn/commit/b130dc8))
+- **react-components:** import from '../../tailwind/src/tailwind.css' to get component's displaying ([c20f671](https://github.com/spwntch/spwn/commit/c20f671))
+- **storybook:** affect changes to get build and serve ([db3155e](https://github.com/spwntch/spwn/commit/db3155e))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.31.0 (2024-04-12)
 
 
