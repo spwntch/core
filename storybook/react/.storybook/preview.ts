@@ -1,4 +1,4 @@
-import '@/tailwind/tailwind.css';
+import '@/tailwind/tailwind.css'
 
 import { Decorator, Parameters } from '@storybook/react';
 import { withThemeToggle } from '../src/lib/decorators';
