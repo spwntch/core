@@ -1,9 +1,11 @@
-import { UnderConstruction } from '@/next-shell';
+import UnderConstruction from '../components/under-construction';
 
-export default function Index() {
+const Index = () => {
   return (
     <div className="h-full text-center">
-      <UnderConstruction>Your website home page goes here 🚀</UnderConstruction>
+      <UnderConstruction>Your docs go here 📖🚀</UnderConstruction>
     </div>
   );
-}
+};
+
+export default Index;
