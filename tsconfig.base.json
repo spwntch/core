@@ -20,9 +20,7 @@
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
-      "@/tailwind": ["packages/tailwind/src/index.js"],
-      "@/tailwind/presets": ["packages/tailwind/src/lib/tailwind.presets.js"],
-      "@/tailwind/styles": ["packages/tailwind/src/tailwind.css"]
+      "@/tailwind/*": ["packages/tailwind/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
