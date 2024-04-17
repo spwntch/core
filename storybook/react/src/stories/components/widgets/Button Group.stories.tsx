@@ -9,7 +9,6 @@ import { BasicDocs } from '../../../lib/docs-templates';
  */
 const meta: Meta<typeof ButtonGroup> = {
   component: ButtonGroup,
-  tags: ['autodocs'],
   parameters: { docs: { page: BasicDocs } },
   decorators: [withFlexRowWrap],
   args: {
@@ -24,5 +23,4 @@ const meta: Meta<typeof ButtonGroup> = {
 export default meta;
 type Story = StoryObj<typeof ButtonGroup>;
 
-export const Primary: Story = {};
-export const Stacked: Story = { args: { stacked: true } };
+export const buttonGroup: Story = {};

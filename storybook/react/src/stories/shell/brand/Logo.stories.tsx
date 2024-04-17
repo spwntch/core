@@ -8,22 +8,11 @@ import { BasicDocs } from '../../../lib/docs-templates';
  */
 const meta: Meta<typeof Logo> = {
   component: Logo,
-  tags: ['autodocs'],
   parameters: { docs: { page: BasicDocs } },
   decorators: [withBrandProvider],
 };
 export default meta;
 type Story = StoryObj<typeof Logo>;
 
-export const Primary: Story = {
-  name: 'In Light Mode',
-};
-
-export const Dark: Story = {
-  name: 'In Dark Mode',
-  parameters: {
-    themes: {
-      themeOverride: 'dark',
-    },
-  },
+export const logo: Story = {
 };
