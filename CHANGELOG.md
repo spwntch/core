@@ -1,3 +1,18 @@
+## 0.34.0 (2024-04-17)
+
+
+### 🚀 Features
+
+- **getting-started-docs:** adds some custom home page content ([478c935](https://github.com/spwntch/spwn/commit/478c935))
+
+### 🩹 Fixes
+
+- **getting-started-docs:** justifies text left ([0f5ab0d](https://github.com/spwntch/spwn/commit/0f5ab0d))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.33.1 (2024-04-17)
 
 
