@@ -14,7 +14,7 @@ import {
 
 export const HomePage = () => {
   return (
-    <div className="flex flex-col justify-center text-5xl text-primary p-8">
+    <div className="flex flex-col justify-center text-5xl text-primary p-8 text-left">
       {/* <Logo className="w-fit mb-16" /> */}
       <H1 className="mb-4">You're all set! 🚀</H1>
 
