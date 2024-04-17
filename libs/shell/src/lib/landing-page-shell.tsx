@@ -3,9 +3,9 @@ import { RegularFooter } from '@/react-shell';
 import { PropsWithChildren } from 'react';
 
 /**
- * Props for the SiteShell component.
+ * Props for the LandingPage component.
  */
-export interface SiteShellProps {
+export interface LandingPageProps {
   underContruction?: boolean;
   /**
    * Determines whether to display shell information.
@@ -17,7 +17,7 @@ export const LandingPageShell = ({
   // underContruction,
   // displayShellInfo,
   children,
-}: SiteShellProps & PropsWithChildren) => {
+}: LandingPageProps & PropsWithChildren) => {
   return (
     <div className="h-screen flex flex-col container">
       <main className="h-full flex flex-col overflow-y">

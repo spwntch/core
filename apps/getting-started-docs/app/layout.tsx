@@ -1,7 +1,7 @@
 import { LandingPageShell, ShellProvider } from '@/shell';
 import type { Metadata } from 'next';
+import { brand } from '../config';
 import './global.css';
-import { brand, primaryNav } from '../config';
 
 export const metadata: Metadata = {
   title: 'Spawntech Website Sample',
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <ShellProvider brand={brand} navItems={primaryNav}>
+        <ShellProvider brand={brand}>
           <LandingPageShell>{children}</LandingPageShell>
         </ShellProvider>
       </body>
