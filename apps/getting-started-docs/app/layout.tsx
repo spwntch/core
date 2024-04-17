@@ -1,6 +1,5 @@
+import { LandingPageShell, ShellProvider } from '@/shell';
 import type { Metadata } from 'next';
-import Shell from '../components/shell';
-import ShellProvider from '../components/shell-provider';
 import './global.css';
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ShellProvider>
-          <Shell>{children}</Shell>
+          <LandingPageShell>{children}</LandingPageShell>
         </ShellProvider>
       </body>
     </html>
