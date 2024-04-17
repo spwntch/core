@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/next-shell": ["libs/next-shell/src/index.ts"],
-      "@/next-shell/server": ["libs/next-shell/src/server.ts"],
+      "@/shell": ["libs/shell/src/index.ts"],
+      "@/shell/server": ["libs/shell/src/server.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
