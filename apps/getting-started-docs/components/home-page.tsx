@@ -4,7 +4,7 @@ import React from 'react';
 export const HomePage = () => {
   return (
     <UnderConstruction>
-      <p>A brand news home page goes here</p>
+      <p>A brand new home page goes here for getting-started-docs</p>
     </UnderConstruction>
   );
 };
