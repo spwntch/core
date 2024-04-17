@@ -1,3 +1,14 @@
+## 0.33.1 (2024-04-17)
+
+
+### 🚀 Features
+
+- **getting-started-docs:** adds custom components for the app ([cb95d68](https://github.com/spwntch/spwn/commit/cb95d68))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.33.0 (2024-04-17)
 
 
