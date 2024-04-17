@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/shell": ["libs/shell/src/index.ts"],
-      "@/shell/server": ["libs/shell/src/server.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
+      "@/shell": ["libs/shell/src/index.ts"],
+      "@/shell/server": ["libs/shell/src/server.ts"],
       "@/tailwind/*": ["packages/tailwind/src/*"]
     }
   },

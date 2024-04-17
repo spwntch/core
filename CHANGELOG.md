@@ -1,3 +1,22 @@
+## 0.33.0 (2024-04-17)
+
+
+### 🚀 Features
+
+- uses @/shell (no renamed from @/next-shell) lib for site ([d80e451](https://github.com/spwntch/spwn/commit/d80e451))
+- **getting-started-docs:** modify sample website to get to a nice getting-started-docs starter ([6b3c982](https://github.com/spwntch/spwn/commit/6b3c982))
+- **getting-started-docs:** also uses @/shell lib ([e688b4d](https://github.com/spwntch/spwn/commit/e688b4d))
+- **sample-website:** replicates generated sample-website with some notes ([8f6cd52](https://github.com/spwntch/spwn/commit/8f6cd52))
+- **shell:** an improved landing page shell ([27c19de](https://github.com/spwntch/spwn/commit/27c19de))
+
+### 🩹 Fixes
+
+- **sample-website:** fix linting error ([2a994b2](https://github.com/spwntch/spwn/commit/2a994b2))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.32.2 (2024-04-16)
 
 ### 🩹 Fixes
