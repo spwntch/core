@@ -1,26 +1,24 @@
 ## 0.32.2 (2024-04-16)
 
-
 ### 🩹 Fixes
 
 - import @/tailwind/styles in component packafges ([b130dc8](https://github.com/spwntch/spwn/commit/b130dc8))
 - **react-components:** import from '../../tailwind/src/tailwind.css' to get component's displaying ([c20f671](https://github.com/spwntch/spwn/commit/c20f671))
 - **storybook:** affect changes to get build and serve ([db3155e](https://github.com/spwntch/spwn/commit/db3155e))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.31.0 (2024-04-12)
-
 
 ### 🚀 Features
 
 - add sample-site app ([9dbd8c3](https://github.com/spwntch/spwn/commit/9dbd8c3))
 - **getting-started-docs:** a nice looking wireframe ([a315328](https://github.com/spwntch/spwn/commit/a315328))
 - **getting-started-docs:** show under-construction ([4188df8](https://github.com/spwntch/spwn/commit/4188df8))
-- **next-shell:** add nav components ([bba49df](https://github.com/spwntch/spwn/commit/bba49df))
-- **next-shell:** add a WebsiteShell ([89adc79](https://github.com/spwntch/spwn/commit/89adc79))
+- **shell:** add nav components ([bba49df](https://github.com/spwntch/spwn/commit/bba49df))
+- **shell:** add a WebsiteShell ([89adc79](https://github.com/spwntch/spwn/commit/89adc79))
 - **next-storybook:** add next-storybbok back in ([5f9e23f](https://github.com/spwntch/spwn/commit/5f9e23f))
 - **react-shell:** adds in-progress navbars ([688c71d](https://github.com/spwntch/spwn/commit/688c71d))
 - **react-shell:** add a theme toggle button ([4fb54c7](https://github.com/spwntch/spwn/commit/4fb54c7))
@@ -32,28 +30,27 @@
 - remove api route from both apps ([f6f48b2](https://github.com/spwntch/spwn/commit/f6f48b2))
 - **getting-started-docs:** lose eliipses for build ([368726e](https://github.com/spwntch/spwn/commit/368726e))
 - **getting-started-docs:** replace ellipsis with rocket ([a8ddc1f](https://github.com/spwntch/spwn/commit/a8ddc1f))
-- **next-shell:** add container to shell ([ba27e45](https://github.com/spwntch/spwn/commit/ba27e45))
+- **shell:** add container to shell ([ba27e45](https://github.com/spwntch/spwn/commit/ba27e45))
 - **react-shell:** try get logo to display ([f72eb6f](https://github.com/spwntch/spwn/commit/f72eb6f))
 - **react-shell:** hide nav components for a more complete look ([ad15d58](https://github.com/spwntch/spwn/commit/ad15d58))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.30.5 (2024-04-11)
 
-
 ### 🚀 Features
 
 - consuming @spwntch/tailwind ([117f78e](https://github.com/spwntch/spwn/commit/117f78e))
-- **next-shell:** next-shell now exists as a lib ([2921444](https://github.com/spwntch/spwn/commit/2921444))
-- **next-shell:** add landing page shell as server component ([0f7606a](https://github.com/spwntch/spwn/commit/0f7606a))
-- **next-shell:** next shell export Shell + ShellProvider ([b90efcb](https://github.com/spwntch/spwn/commit/b90efcb))
+- **shell:** shell now exists as a lib ([2921444](https://github.com/spwntch/spwn/commit/2921444))
+- **shell:** add landing page shell as server component ([0f7606a](https://github.com/spwntch/spwn/commit/0f7606a))
+- **shell:** next shell export Shell + ShellProvider ([b90efcb](https://github.com/spwntch/spwn/commit/b90efcb))
 - **react-shell:** add boilerplate lib ([6fded24](https://github.com/spwntch/spwn/commit/6fded24))
 - **react-shell:** adc tailwind ([3f0fd5b](https://github.com/spwntch/spwn/commit/3f0fd5b))
-- **react-shell:** copy components from next-shell ([0a0ac97](https://github.com/spwntch/spwn/commit/0a0ac97))
+- **react-shell:** copy components from shell ([0a0ac97](https://github.com/spwntch/spwn/commit/0a0ac97))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -95,7 +92,7 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **next-shell:** add a most basic landing-page-shell ([963d9de](https://github.com/spwntch/workspace-generator/commit/963d9de))
+- **shell:** add a most basic landing-page-shell ([963d9de](https://github.com/spwntch/workspace-generator/commit/963d9de))
 - **workspace-generator:** consume LandingPageShell in app Layout ([38e3555](https://github.com/spwntch/workspace-generator/commit/38e3555))
 
 ### 🩹 Fixes
@@ -114,7 +111,7 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **next-shell:** footer gets more detail ([86d8810](https://github.com/spwntch/workspace-generator/commit/86d8810))
+- **shell:** footer gets more detail ([86d8810](https://github.com/spwntch/workspace-generator/commit/86d8810))
 
 ### ❤️ Thank You
 
@@ -124,8 +121,8 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **next-shell:** adds a logo component + stories ([1ba32d2](https://github.com/spwntch/workspace-generator/commit/1ba32d2))
-- **next-shell:** add a starter regular-footer. talwind defs not workin next-storybook ([6129045](https://github.com/spwntch/workspace-generator/commit/6129045))
+- **shell:** adds a logo component + stories ([1ba32d2](https://github.com/spwntch/workspace-generator/commit/1ba32d2))
+- **shell:** add a starter regular-footer. talwind defs not workin next-storybook ([6129045](https://github.com/spwntch/workspace-generator/commit/6129045))
 - **next-storybook:** add aboilerplate nextjs project to house our storybook ([87ed7ea](https://github.com/spwntch/workspace-generator/commit/87ed7ea))
 - **next-storybook:** add storybook configuration ([1623322](https://github.com/spwntch/workspace-generator/commit/1623322))
 - **next-storybook:** add a fist story, for BrandProvider ([5d04d7b](https://github.com/spwntch/workspace-generator/commit/5d04d7b))
@@ -144,7 +141,7 @@ This was a version bump only, there were no code changes.
 
 ### 🩹 Fixes
 
-- **next-shell:** add "use client" directive to regular-footer ([e1b0621](https://github.com/spwntch/workspace-generator/commit/e1b0621))
+- **shell:** add "use client" directive to regular-footer ([e1b0621](https://github.com/spwntch/workspace-generator/commit/e1b0621))
 - **workspace-generator:** fix typos in generated files ([3dd5fe8](https://github.com/spwntch/workspace-generator/commit/3dd5fe8))
 - **workspace-generator:** comment out Providers to get app working ([34cf1c9](https://github.com/spwntch/workspace-generator/commit/34cf1c9))
 - **workspace-generator:** add Provider back into Layout ([b2e290c](https://github.com/spwntch/workspace-generator/commit/b2e290c))
@@ -234,8 +231,8 @@ This was a version bump only, there were no code changes.
 
 ### 🚀 Features
 
-- **next-shell:** adds a boilerplate nextjs lb ([2791305](https://github.com/spwntch/workspace-generator/commit/2791305))
-- **next-shell:** replace boilerplate with providers ([5a1508b](https://github.com/spwntch/workspace-generator/commit/5a1508b))
+- **shell:** adds a boilerplate nextjs lb ([2791305](https://github.com/spwntch/workspace-generator/commit/2791305))
+- **shell:** replace boilerplate with providers ([5a1508b](https://github.com/spwntch/workspace-generator/commit/5a1508b))
 - **workspace-generator:** introduce @spwntch/shell and add ShellProvider ([1026201](https://github.com/spwntch/workspace-generator/commit/1026201))
 - **workspace-generator:** add some assets to generated workspace ([5c41e36](https://github.com/spwntch/workspace-generator/commit/5c41e36))
 

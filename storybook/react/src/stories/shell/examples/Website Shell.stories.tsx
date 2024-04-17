@@ -1,4 +1,4 @@
-import { UnderConstruction, WebsiteShell } from '@/next-shell';
+import { UnderConstruction, WebsiteShell } from '@/shell';
 import { BasicDocs, withShellProvider } from '@/react-storybook';
 import type { Meta, StoryObj } from '@storybook/react';
 
