@@ -9,3 +9,5 @@ Just get started. It's easy. You'll be guided as you go along.
 ```bash
 pnpm dlx spawn-workspace
 ```
+
+> There is still much to document here...
