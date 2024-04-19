@@ -1,7 +1,0 @@
-/* In a generated app, you'll need to add the following. */
-/* @import '@spwntch/components/styles'; */
-/* @import '@spwntch/shell/styles'; */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
