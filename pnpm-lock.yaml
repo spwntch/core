@@ -8,15 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@spwntch/components':
-        specifier: workspace:~
-        version: link:packages/react-components
-      '@spwntch/shell':
-        specifier: workspace:~
-        version: link:packages/react-shell
-      '@spwntch/tailwind':
-        specifier: workspace:~
-        version: link:packages/tailwind
       next:
         specifier: 14.0.4
         version: 14.0.4(@babel/core@7.24.4)(react-dom@18.2.0)(react@18.2.0)
