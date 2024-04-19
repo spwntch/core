@@ -12,8 +12,6 @@
     "release": "pnpm dlx nx release",
     "publish": "pnpm dlx nx release publish",
     "storybook": "pnpm dlx nx run react-storybook:storybook",
-    "docs": "pnpm dlx nx run getting-started-docs:dev",
-    "site": "pnpm dlx nx run sample-website:dev",
     "webp": "tools/scripts/webp.sh ",
     "registry": "pnpm dlx nx local-registry",
     "spawn-workspace": "pnpm dlx nx run spawn-workspace",
@@ -99,4 +97,3 @@
     "includedScripts": []
   }
 }
-
