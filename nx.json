@@ -95,7 +95,9 @@
       },
       "application": {
         "style": "none",
-        "linter": "eslint"
+        "linter": "eslint",
+        "e2eTestRunner": "none",
+        "unitTestRunner": "none"
       }
     }
   },
@@ -108,5 +110,4 @@
       }
     }
   }
-  // "nxCloudAccessToken": "MWYyMTk2NTItNDMzNi00OGE3LTljZmQtNDEzZTZmZTBmMjgzfHJlYWQtd3JpdGU="
 }
