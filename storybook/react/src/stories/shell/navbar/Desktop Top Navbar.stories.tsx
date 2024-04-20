@@ -14,4 +14,5 @@ const meta: Meta<typeof DesktopTopNavbar> = {
 export default meta;
 type Story = StoryObj<typeof DesktopTopNavbar>;
 
-export const desktopTopNavbar: Story = {};
+export const standard: Story = {};
+export const withGithub: Story = {args: {githubUrl: 'https://github.com/spwntch'}};
