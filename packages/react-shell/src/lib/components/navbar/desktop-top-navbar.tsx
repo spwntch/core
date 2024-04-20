@@ -1,6 +1,6 @@
 import { ButtonGroup, cn } from '@/react-components';
 import { Logo } from '../brand';
-import { ThemeToggleButton } from '../buttons';
+import { GithubButton, ThemeToggleButton } from '../buttons';
 import { MobileNavDrawer } from './mobile-nav-drawer';
 
 interface IDesktopTopNavbarProps {
@@ -8,6 +8,7 @@ interface IDesktopTopNavbarProps {
   logoHeight?: number;
   navAlignment?: 'start' | 'center' | 'end';
   disableThemeToggle?: boolean;
+  githubUrl?: string;
 }
 
 export const DesktopTopNavbar = ({
@@ -15,6 +16,7 @@ export const DesktopTopNavbar = ({
   logoHeight,
   navAlignment,
   disableThemeToggle = false,
+  githubUrl,
 }: IDesktopTopNavbarProps) => {
   return (
     <header className={cn('sticky top-0 z-50', classNames)}>
@@ -48,6 +50,9 @@ export const DesktopTopNavbar = ({
               <LogIn />
             </Button> */}
           </ButtonGroup>
+        </div>
+        <div className="ml-2">
+          {githubUrl && <GithubButton url={githubUrl} />}
         </div>
         {/* <div className="ml-2 block md:hidden">
           <ButtonGroup>
