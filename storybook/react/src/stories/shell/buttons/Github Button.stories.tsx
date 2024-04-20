@@ -11,7 +11,7 @@ const meta: Meta<typeof GithubButton> = {
   parameters: { docs: { page: NoControlsDocs } },
   decorators: [withShellProvider],
   args: {
-    url: 'https:github.com/spwntch'
+    url: 'https://github.com/spwntch'
   }
 };
 export default meta;
