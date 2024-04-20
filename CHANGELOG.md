@@ -1,3 +1,16 @@
+## 0.37.0 (2024-04-20)
+
+
+### 🚀 Features
+
+- adds a non-functional toolbar nav ([a3a8a35](https://github.com/spwntch/spwn/commit/a3a8a35))
+- adds non-functional mobile nav menu ([663dbf9](https://github.com/spwntch/spwn/commit/663dbf9))
+- adds under-contruction-footer ([8852a42](https://github.com/spwntch/spwn/commit/8852a42))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.36.0 (2024-04-20)
 
 
