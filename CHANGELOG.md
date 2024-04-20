@@ -1,3 +1,15 @@
+## 0.36.0 (2024-04-20)
+
+
+### 🚀 Features
+
+- adds a github button ([403b82b](https://github.com/spwntch/spwn/commit/403b82b))
+- adds gihub support to navbar ([0061ff3](https://github.com/spwntch/spwn/commit/0061ff3))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.35.1 (2024-04-20)
 
 This was a version bump only, there were no code changes.
