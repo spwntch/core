@@ -13,6 +13,7 @@ import { Menu } from 'lucide-react';
 import { useState } from 'react';
 import { Logo } from '../brand/logo';
 import { Tagline } from '../brand/tagline';
+import { NavMenu } from '../nav/nav-menu';
 
 export const MobileNavDrawer = () => {
   const [open, setOpen] = useState(false);
@@ -35,7 +36,7 @@ export const MobileNavDrawer = () => {
           </SheetDescription>
         </SheetHeader>
         <DropdownMenuSeparator className="mt-4" />
-        {/* <NavMenu onSelectLink={() => setOpen(false)} /> */}
+        <NavMenu onSelectLink={() => setOpen(false)} />
       </SheetContent>
     </Sheet>
   );

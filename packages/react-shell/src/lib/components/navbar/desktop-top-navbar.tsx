@@ -2,6 +2,7 @@ import { ButtonGroup, cn } from '@/react-components';
 import { Logo } from '../brand';
 import { GithubButton, ThemeToggleButton } from '../buttons';
 import { MobileNavDrawer } from './mobile-nav-drawer';
+import { NavToolbar } from '../nav';
 
 interface IDesktopTopNavbarProps {
   classNames?: string;
@@ -35,7 +36,7 @@ export const DesktopTopNavbar = ({
                 : 'justify-center'
             )}
           >
-            {/* <NavToolbar /> */}
+            <NavToolbar />
           </nav>
         </div>
         <div>
@@ -54,11 +55,11 @@ export const DesktopTopNavbar = ({
         <div className="ml-2">
           {githubUrl && <GithubButton url={githubUrl} />}
         </div>
-        {/* <div className="ml-2 block md:hidden">
+        <div className="ml-2 block md:hidden">
           <ButtonGroup>
             <MobileNavDrawer />
           </ButtonGroup>
-        </div> */}
+        </div>
       </div>
     </header>
   );

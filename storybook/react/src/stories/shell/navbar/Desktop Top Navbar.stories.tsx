@@ -2,6 +2,7 @@ import { DesktopTopNavbar } from '@/react-shell';
 import type { Meta, StoryObj } from '@storybook/react';
 import { withShellProvider } from '../../../lib/decorators';
 import { NoControlsDocs } from '../../../lib/docs-templates';
+import { themes } from '@storybook/theming';
 
 /**
  * Renders a site footer component.
@@ -15,4 +16,8 @@ export default meta;
 type Story = StoryObj<typeof DesktopTopNavbar>;
 
 export const standard: Story = {};
-export const withGithub: Story = {args: {githubUrl: 'https://github.com/spwntch'}};
+
+export const withGithub: Story = {
+  args: { githubUrl: 'https://github.com/spwntch' },
+  parameters: { themes: { themeOverride: 'dark' } },
+};
