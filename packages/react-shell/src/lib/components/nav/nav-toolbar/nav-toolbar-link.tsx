@@ -7,13 +7,20 @@ import { INavLink } from '../../../providers/nav-provider';
 
 type INavToolbarLinkProps = INavLink;
 
-export const NavToolbarLink = ({ label, href }: INavToolbarLinkProps) => {
+export const NavToolbarLink = ({
+  label,
+  onSelect,
+  href,
+}: INavToolbarLinkProps) => {
   return (
     <NavigationMenuItem>
       {/* <Link href={href}> */}
-        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-          {label}
-        </NavigationMenuLink>
+      <NavigationMenuLink
+        className={navigationMenuTriggerStyle()}
+        onSelect={onSelect}
+      >
+        {label}
+      </NavigationMenuLink>
       {/* </Link> */}
     </NavigationMenuItem>
   );

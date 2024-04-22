@@ -1,5 +1,10 @@
 import { NavigationMenu, NavigationMenuList } from '@spwntch/components';
-import { INavItem, INavLink, INavMenu, useNav } from '../../../providers/nav-provider';
+import {
+  INavItem,
+  INavLink,
+  INavMenu,
+  useNav,
+} from '../../../providers/nav-provider';
 import { NavToolbarMenu } from './nav-toolbar-menu';
 import { NavToolbarLink } from './nav-toolbar-link';
 
@@ -10,7 +15,7 @@ export interface ITopNavProps {
   items?: INavItem[];
 }
 
-export const NavToolbar = ({ items  }: ITopNavProps) => {
+export const NavToolbar = ({ items }: ITopNavProps) => {
   const { navItems } = useNav();
 
   items = items || navItems;
@@ -27,6 +32,7 @@ export const NavToolbar = ({ items  }: ITopNavProps) => {
       <NavToolbarLink
         key={(item as INavLink).href || ''}
         {...(item as INavLink)}
+        onSelect={(e) => console.log(e)}
       />
     );
   };
