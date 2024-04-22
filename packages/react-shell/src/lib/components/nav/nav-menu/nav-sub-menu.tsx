@@ -7,9 +7,10 @@ import {
 import { NavSubMenuLink } from './nav-sub-menu-link';
 import { INavLink, INavMenu } from '../../../providers/nav-provider';
 
-type ITopNavMenuProps = INavMenu;
-
-export const NavSubMenu = ({ label, children, onSelect }: ITopNavMenuProps) => {
+interface INavSubMenuProps extends INavMenu {
+  onLinkTo: (href: string) => void;
+}
+export const NavSubMenu = ({ label, children, onLinkTo }: INavSubMenuProps) => {
   const pickMenuItem = (item: INavMenu) => {
     // ONLY IF WE HAVE SUBMENU...
     // FOR NOW, WE DON'T...
@@ -21,7 +22,7 @@ export const NavSubMenu = ({ label, children, onSelect }: ITopNavMenuProps) => {
       <NavSubMenuLink
         key={(item as INavLink).href}
         {...(item as INavLink)}
-        onSelect={onSelect}
+        onLinkTo={onLinkTo}
       />
     );
   };
