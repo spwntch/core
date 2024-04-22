@@ -31,15 +31,15 @@ export const MobileNavDrawer = ({ onLinkTo }: IMobileNavDrawerProps) => {
         </Button>
       </SheetTrigger>
       <SheetContent className="w-[260px]">
-        {/* <SheetHeader className="pt-2">
+        <SheetHeader className="pt-2">
           <SheetTitle>
             <Logo width={180} className="mx-auto" />
           </SheetTitle>
           <SheetDescription className="text-center">
             <Tagline />
           </SheetDescription>
-        </SheetHeader> */}
-        {/* <DropdownMenuSeparator className="mt-4" /> */}
+        </SheetHeader>
+        <DropdownMenuSeparator className="mt-4" />
         {/* <NavMenu
           onLinkTo={(href) => {
             setOpen(false);
