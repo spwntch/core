@@ -2,7 +2,7 @@ import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuTrigger,
-} from '@spwntch/components';
+} from '@/react-components';
 import { NavToolbarMenuLink } from './nav-toolbar-menu-link';
 import { INavLink, INavMenu } from '../../../providers/nav-provider';
 
@@ -10,7 +10,11 @@ interface ITopNavMenuProps extends INavMenu {
   onLinkTo: (href: string) => void;
 }
 
-export const NavToolbarMenu = ({ label, onLinkTo, children }: ITopNavMenuProps) => {
+export const NavToolbarMenu = ({
+  label,
+  onLinkTo,
+  children,
+}: ITopNavMenuProps) => {
   const pickMenuItem = (item: INavMenu) => {
     // ONLY IF WE HAVE SUBMENU...
     // FOR NOW, WE DON'T...

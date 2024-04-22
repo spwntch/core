@@ -2,7 +2,7 @@ import {
   Muted,
   NavigationMenuItem,
   NavigationMenuLink,
-} from '@spwntch/components';
+} from '@/react-components';
 // import Link from 'next/link';
 import { INavLink } from '../../../providers/nav-provider';
 

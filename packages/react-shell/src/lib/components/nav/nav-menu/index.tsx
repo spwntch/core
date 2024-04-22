@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuList } from '@spwntch/components';
+import { NavigationMenu, NavigationMenuList } from '@/react-components';
 import {
   INavItem,
   INavLink,

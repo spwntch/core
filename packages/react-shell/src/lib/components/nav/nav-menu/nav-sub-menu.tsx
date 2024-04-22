@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@spwntch/components';
+} from '@/react-components';
 import { NavSubMenuLink } from './nav-sub-menu-link';
 import { INavLink, INavMenu } from '../../../providers/nav-provider';
 
