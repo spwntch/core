@@ -1,3 +1,21 @@
+## 0.39.0 (2024-04-22)
+
+
+### 🚀 Features
+
+- adds nav toolbar menu support ([6961c2b](https://github.com/spwntch/spwn/commit/6961c2b))
+- adds onLinkto to NavMenuSubLink ([bfbfa13](https://github.com/spwntch/spwn/commit/bfbfa13))
+- mobile nav menu gets  sub-menu ([112ee68](https://github.com/spwntch/spwn/commit/112ee68))
+
+### 🩹 Fixes
+
+- adds aschild prop to nav-menu-sub-link Navigation MenueIte ([67d7062](https://github.com/spwntch/spwn/commit/67d7062))
+- this should be the correct asChild strategy ([25fe00f](https://github.com/spwntch/spwn/commit/25fe00f))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.38.1 (2024-04-22)
 
 
