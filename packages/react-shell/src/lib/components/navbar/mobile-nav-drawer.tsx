@@ -15,7 +15,11 @@ import { Logo } from '../brand/logo';
 import { Tagline } from '../brand/tagline';
 import { NavMenu } from '../nav/nav-menu';
 
-export const MobileNavDrawer = () => {
+interface IMobileNavDrawerProps {
+  onLinkTo: (href: string) => void;
+}
+
+export const MobileNavDrawer = ({ onLinkTo }: IMobileNavDrawerProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -36,7 +40,12 @@ export const MobileNavDrawer = () => {
           </SheetDescription>
         </SheetHeader>
         <DropdownMenuSeparator className="mt-4" />
-        <NavMenu onSelectLink={() => setOpen(false)} />
+        <NavMenu
+          onLinkTo={(href) => {
+            setOpen(false);
+            onLinkTo(href);
+          }}
+        />
       </SheetContent>
     </Sheet>
   );
