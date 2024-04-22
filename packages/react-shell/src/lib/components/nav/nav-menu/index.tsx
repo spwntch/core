@@ -1,7 +1,10 @@
 import { NavigationMenu, NavigationMenuList } from '@spwntch/components';
+import {
+  INavItem,
+  INavLink,
+  useNav
+} from '../../../providers/nav-provider';
 import { NavMenuLink } from './nav-menu-link';
-import { NavSubMenu } from './nav-sub-menu';
-import { INavItem, INavLink, INavMenu, useNav } from '../../../providers/nav-provider';
 // import { NavMenuItem } from './nav-item';
 
 export interface INavMenuProps {
@@ -10,34 +13,33 @@ export interface INavMenuProps {
    */
   items?: INavItem[];
   omitHome?: boolean;
-  onSelectLink?: (event: Event) => void;
+  onLinkTo: (href: string) => void;
 }
 
 export const NavMenu = ({
   items,
   // omitHome = false,
-  onSelectLink,
+  onLinkTo,
 }: INavMenuProps) => {
   const { navItems } = useNav();
 
   items = items || navItems;
 
   const pickNavItem = (item: INavItem) => {
-    if ((item as INavMenu).children) {
-      // return null;
-      return (
-        <NavSubMenu
-          key={(item as INavMenu).label || ''}
-          {...(item as INavMenu)}
-          onSelect={onSelectLink}
-        />
-      );
-    }
+    // if ((item as INavMenu).children) {
+    //   return (
+    //     <NavSubMenu
+    //       key={(item as INavMenu).label || ''}
+    //       {...(item as INavMenu)}
+    //       onSelect={onSelectLink}
+    //     />
+    //   );
+    // }
     return (
       <NavMenuLink
         key={(item as INavLink).href || ''}
         {...(item as INavLink)}
-        onSelect={onSelectLink}
+        onLinkTo={onLinkTo}
       />
     );
   };

@@ -25,7 +25,11 @@ export const DesktopTopNavbar = ({
     <header className={cn('sticky top-0 z-50', classNames)}>
       <div className=" flex py-1 px-4 items-center">
         {/* <Link className="py-1 " href="/">*/}
-        <Logo height={logoHeight || 36} className='cursor-pointer' onClick={() => onLinkTo('/')} />
+        <Logo
+          height={logoHeight || 36}
+          className="cursor-pointer"
+          onClick={() => onLinkTo('/')}
+        />
         {/* </Link> */}
         <div className="flex-1">
           <nav
@@ -59,7 +63,7 @@ export const DesktopTopNavbar = ({
         </div>
         <div className="ml-2 block md:hidden">
           <ButtonGroup>
-            <MobileNavDrawer />
+            <MobileNavDrawer onLinkTo={onLinkTo}/>
           </ButtonGroup>
         </div>
       </div>

@@ -9,8 +9,8 @@ type INavToolbarLinkProps = INavLink;
 
 export const NavToolbarLink = ({
   label,
-  onLinkTo,
   href,
+  onLinkTo,
 }: INavToolbarLinkProps) => {
   return (
     <NavigationMenuItem className='cursor-pointer'>
