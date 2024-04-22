@@ -35,8 +35,8 @@ export const MobileNavDrawer = ({ onLinkTo }: IMobileNavDrawerProps) => {
           <SheetTitle>
             <Logo width={180} className="mx-auto" />
           </SheetTitle>
-          <SheetDescription className="text-center">
-            {/* <Tagline /> */}
+          <SheetDescription asChild className="text-center">
+            <Tagline />
           </SheetDescription>
         </SheetHeader>
         <DropdownMenuSeparator className="mt-4" />
