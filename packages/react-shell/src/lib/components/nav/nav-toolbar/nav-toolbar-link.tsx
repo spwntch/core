@@ -13,15 +13,13 @@ export const NavToolbarLink = ({
   href,
 }: INavToolbarLinkProps) => {
   return (
-    <NavigationMenuItem>
-      {/* <Link href={href}> */}
+    <NavigationMenuItem className='cursor-pointer'>
       <NavigationMenuLink
         className={navigationMenuTriggerStyle()}
         onSelect={() => onLinkTo(href)}
       >
         {label}
       </NavigationMenuLink>
-      {/* </Link> */}
     </NavigationMenuItem>
   );
 };
