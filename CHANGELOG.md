@@ -1,3 +1,14 @@
+## 0.38.1 (2024-04-22)
+
+
+### 🚀 Features
+
+- adds basic nav-menu link support ([d49adc0](https://github.com/spwntch/spwn/commit/d49adc0))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.38.0 (2024-04-22)
 
 
