@@ -10,6 +10,7 @@ interface IDesktopTopNavbarProps {
   navAlignment?: 'start' | 'center' | 'end';
   disableThemeToggle?: boolean;
   githubUrl?: string;
+  onLinkTo: (href: string) => void;
 }
 
 export const DesktopTopNavbar = ({
@@ -18,6 +19,7 @@ export const DesktopTopNavbar = ({
   navAlignment,
   disableThemeToggle = false,
   githubUrl,
+  onLinkTo
 }: IDesktopTopNavbarProps) => {
   return (
     <header className={cn('sticky top-0 z-50', classNames)}>
@@ -36,7 +38,7 @@ export const DesktopTopNavbar = ({
                 : 'justify-center'
             )}
           >
-            <NavToolbar />
+            <NavToolbar onLinkTo={onLinkTo}/>
           </nav>
         </div>
         <div>

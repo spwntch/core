@@ -9,7 +9,7 @@ type INavToolbarLinkProps = INavLink;
 
 export const NavToolbarLink = ({
   label,
-  onSelect,
+  onLinkTo,
   href,
 }: INavToolbarLinkProps) => {
   return (
@@ -17,7 +17,7 @@ export const NavToolbarLink = ({
       {/* <Link href={href}> */}
       <NavigationMenuLink
         className={navigationMenuTriggerStyle()}
-        onSelect={onSelect}
+        onSelect={() => onLinkTo(href)}
       >
         {label}
       </NavigationMenuLink>

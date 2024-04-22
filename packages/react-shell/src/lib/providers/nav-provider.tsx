@@ -36,6 +36,7 @@ export interface INavLink {
    */
   active?: boolean;
   onSelect?: (event: Event) => void;
+  onLinkTo: (href: string) => void;
 }
 
 export type INavItem = INavLink | INavMenu;
