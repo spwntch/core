@@ -1,6 +1,12 @@
-import { NavigationMenu, NavigationMenuList } from '@spwntch/components';
-import { INavItem, INavLink, useNav } from '../../../providers/nav-provider';
+import { NavigationMenu, NavigationMenuList } from '@/react-components';
+import {
+  INavItem,
+  INavLink,
+  INavMenu,
+  useNav,
+} from '../../../providers/nav-provider';
 import { NavToolbarLink } from './nav-toolbar-link';
+import { NavToolbarMenu } from './nav-toolbar-menu';
 
 export interface ITopNavProps {
   /**
@@ -17,13 +23,14 @@ export const NavToolbar = ({ items, onLinkTo }: ITopNavProps) => {
   items = items || navItems;
 
   const pickNavItem = (item: INavItem) => {
-    // if ((item as INavMenu).children)
-    //   return (
-    //     <NavToolbarMenu
-    //       key={(item as INavMenu).label || ''}
-    //       {...(item as INavMenu)}
-    //     />
-    //   );
+    if ((item as INavMenu).children)
+      return (
+        <NavToolbarMenu
+          key={(item as INavMenu).label || ''}
+          {...(item as INavMenu)}
+          onLinkTo={onLinkTo}
+        />
+      );
     return (
       <NavToolbarLink
         key={(item as INavLink).href || ''}

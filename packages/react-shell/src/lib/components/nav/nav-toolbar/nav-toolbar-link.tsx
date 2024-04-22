@@ -2,7 +2,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
-} from '@spwntch/components';
+} from '@/react-components';
 import { INavLink } from '../../../providers/nav-provider';
 
 type INavToolbarLinkProps = INavLink;
