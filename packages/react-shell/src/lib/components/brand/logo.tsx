@@ -17,14 +17,15 @@ export interface ILogoProps {
    * The height of the logo image in pixels. Defaults to 80. If not provided, it will be calculated based on the width.
    */
   height?: number;
+  onClick?: () => void;
 }
 
 export const Logo = forwardRef<HTMLImageElement, ILogoProps>(
-  ({ className, altText = 'Logo', width, height = 40 }, ref) => {
+  ({ className, altText = 'Logo', width, height = 40, onClick }, ref) => {
     const brand = useBrand();
 
     return (
-      <div className={cn(' w-fit h-fit', className)}>
+      <div className={cn(' w-fit h-fit', className)} onClick={onClick}>
         {brand.logoUrl?.light && (
           <img
             ref={ref}

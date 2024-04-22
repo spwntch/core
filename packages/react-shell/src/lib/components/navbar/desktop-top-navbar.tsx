@@ -19,13 +19,13 @@ export const DesktopTopNavbar = ({
   navAlignment,
   disableThemeToggle = false,
   githubUrl,
-  onLinkTo
+  onLinkTo,
 }: IDesktopTopNavbarProps) => {
   return (
     <header className={cn('sticky top-0 z-50', classNames)}>
       <div className=" flex py-1 px-4 items-center">
         {/* <Link className="py-1 " href="/">*/}
-        <Logo height={logoHeight || 36} />
+        <Logo height={logoHeight || 36} onClick={() => onLinkTo('/')} />
         {/* </Link> */}
         <div className="flex-1">
           <nav
@@ -38,7 +38,7 @@ export const DesktopTopNavbar = ({
                 : 'justify-center'
             )}
           >
-            <NavToolbar onLinkTo={onLinkTo}/>
+            <NavToolbar onLinkTo={onLinkTo} />
           </nav>
         </div>
         <div>
