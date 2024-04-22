@@ -1,3 +1,20 @@
+## 0.38.0 (2024-04-22)
+
+
+### 🚀 Features
+
+- adds onLinkTo prop that trigger on a link click ([24fce4b](https://github.com/spwntch/spwn/commit/24fce4b))
+- toolbar logo should nav to / ([ef58c8b](https://github.com/spwntch/spwn/commit/ef58c8b))
+
+### 🩹 Fixes
+
+- remove pathname from under-construction ([1a0030d](https://github.com/spwntch/spwn/commit/1a0030d))
+- adds cursor-pointer ([31d3e66](https://github.com/spwntch/spwn/commit/31d3e66))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.37.0 (2024-04-20)
 
 
