@@ -16,7 +16,6 @@ export const NavSubMenuLink = ({
   return (
     <li className="ml-2">
       <NavigationMenuItem>
-        {/* <Link href={href}> */}
         <NavigationMenuLink
           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foregrouns"
           onSelect={onSelect}
@@ -26,7 +25,6 @@ export const NavSubMenuLink = ({
             {description}
           </Muted>
         </NavigationMenuLink>
-        {/* </Link> */}
       </NavigationMenuItem>
     </li>
   );
