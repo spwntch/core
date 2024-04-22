@@ -40,12 +40,12 @@ export const MobileNavDrawer = ({ onLinkTo }: IMobileNavDrawerProps) => {
           </SheetDescription>
         </SheetHeader>
         <DropdownMenuSeparator className="mt-4" />
-        <NavMenu
+        {/* <NavMenu
           onLinkTo={(href) => {
             setOpen(false);
             onLinkTo(href);
           }}
-        />
+        /> */}
       </SheetContent>
     </Sheet>
   );
