@@ -1,3 +1,14 @@
+## 0.41.0 (2024-04-23)
+
+
+### 🚀 Features
+
+- updates github images and main readme. ([890fa84](https://github.com/spwntch/core/commit/890fa84))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.40.0 (2024-04-22)
 
 This was a version bump only, there were no code changes.

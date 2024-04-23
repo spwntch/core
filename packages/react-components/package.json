@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/components",
-  "version": "0.40.0",
+  "version": "0.41.0",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -32,7 +32,7 @@
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
-    "@spwntch/tailwind": "~0.40.0",
+    "@spwntch/tailwind": "~0.41.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.360.0",
     "tailwind-merge": "^2.2.1",
