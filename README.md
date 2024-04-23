@@ -1,4 +1,4 @@
-# @spwntch/spwn
+# @spwntch/core
 
 <img src="assets/spwn/github/public/spwntch-core-social-preview.webp" alt="drawing" width="100%" />
 
