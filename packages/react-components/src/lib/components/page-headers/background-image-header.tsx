@@ -1,21 +1,17 @@
-import { PropsWithChildren } from 'react';
-// import BackgroundImageContainer from '../containers/background-image-container';
-import { IAttributableImage, IPageSectionContent } from '../../types';
+import { forwardRef } from 'react';
+import { IAttributableImage } from '../../types';
 import { BackgroundImageContainer } from '../containers';
-import { BasicPageHeader } from './basic-page-header';
+import { Badge } from '../ui';
+import { BasicHeader, BasicHeaderProps } from './basic-header';
 
-interface IBackgroundImageHeaderProps {
-  className?: string;
+interface BackgroundImageHeaderProps extends BasicHeaderProps {
   image: IAttributableImage;
-  content: IPageSectionContent;
 }
 
-export const BackgroundImageHeader = ({
-  className,
-  image,
-  content,
-  children,
-}: IBackgroundImageHeaderProps & PropsWithChildren) => {
+export const BackgroundImageHeader = forwardRef<
+  HTMLDivElement,
+  BackgroundImageHeaderProps
+>(({ className, image, header, children }) => {
   return (
     <BackgroundImageContainer
       src={image.src}
@@ -23,17 +19,16 @@ export const BackgroundImageHeader = ({
       showBackgroundPattern
       darkenImage
     >
-      <BasicPageHeader content={content} className="text-left">
-        {/* <p>{image.src}</p> */}
+      <BasicHeader header={header} className="text-left">
         {children}
-      </BasicPageHeader>
-      {/* {content.tags && (
+      </BasicHeader>
+      {header.tags && (
         <div className="mx-auto flex flex-wrap gap-2 mb-6">
-          {content.tags.map((tag) => (
+          {header.tags.map((tag) => (
             <Badge>{tag}</Badge>
           ))}
         </div>
-      )} */}
+      )}
     </BackgroundImageContainer>
   );
-};
+});
