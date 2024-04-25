@@ -12,7 +12,7 @@ const meta: Meta<typeof StackedImageHeader> = {
       heading: 'Blog',
       subHeading: 'The latest from our team',
       body: `We're always learning and growing. Here's what we've been up to lately.`,
-    },
+    }
   },
   // tags: ['autodocs'],
 };

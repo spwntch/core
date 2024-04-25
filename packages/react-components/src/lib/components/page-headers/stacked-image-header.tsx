@@ -1,24 +1,21 @@
 'use client';
-import { PropsWithChildren } from 'react';
-import BackgroundImageContainer from '../containers/background-image-container';
-import { BasicPageHeader } from './basic-page-header';
-import { IAttributableImage, IPageSectionContent } from '../../types';
+import { forwardRef } from 'react';
+import { IAttributableImage } from '../../types';
 import { cn } from '../../utils';
+import BackgroundImageContainer from '../containers/background-image-container';
+import { BasicPageHeader, BasicPageHeaderProps } from './basic-page-header';
 
-interface IBackgroundImageHeaderProps {
-  className?: string;
+interface StackedImageHeaderProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    BasicPageHeaderProps {
   reverse?: boolean;
   image: IAttributableImage;
-  header: IPageSectionContent;
 }
 
-export const StackedImageHeader = ({
-  className,
-  reverse = false,
-  image,
-  header,
-  children,
-}: IBackgroundImageHeaderProps & PropsWithChildren) => {
+export const StackedImageHeader = forwardRef<
+  HTMLDivElement,
+  StackedImageHeaderProps
+>(({ className, reverse = false, image, header, children }) => {
   return (
     <div className={cn('flex flex-col', reverse && 'flex-col-reverse')}>
       <BackgroundImageContainer
@@ -38,4 +35,4 @@ export const StackedImageHeader = ({
       )} */}
     </div>
   );
-};
+});

@@ -1,21 +1,19 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, forwardRef } from 'react';
 // import BackgroundImageContainer from '../containers/background-image-container';
-import { IAttributableImage, IPageSectionContent } from '../../types';
+import { IAttributableImage } from '../../types';
 import { BackgroundImageContainer } from '../containers';
-import { BasicPageHeader } from './basic-page-header';
+import { BasicPageHeader, BasicPageHeaderProps } from './basic-page-header';
 
-interface IBackgroundImageHeaderProps {
-  className?: string;
+interface BackgroundImageHeaderProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    BasicPageHeaderProps {
   image: IAttributableImage;
-  header: IPageSectionContent;
 }
 
-export const BackgroundImageHeader = ({
-  className,
-  image,
-  header,
-  children,
-}: IBackgroundImageHeaderProps & PropsWithChildren) => {
+export const BackgroundImageHeader = forwardRef<
+  HTMLDivElement,
+  BackgroundImageHeaderProps
+>(({ className, image, header, children }) => {
   return (
     <BackgroundImageContainer
       src={image.src}
@@ -36,4 +34,4 @@ export const BackgroundImageHeader = ({
       )} */}
     </BackgroundImageContainer>
   );
-};
+});
