@@ -16,7 +16,7 @@ export const parameters: Parameters = {
   controls: { exclude: ['children'] },
   options: {
     storySort: {
-      order: ['Introduction', 'Tailwind', 'components', 'shell'],
+      order: ['Introduction', 'Tech Stack', 'Tailwind', 'components', 'shell'],
     },
   },
   // controls: { exclude: ['children'] },
