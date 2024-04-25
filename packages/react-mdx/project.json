@@ -1,0 +1,13 @@
+{
+  "name": "react-mdx",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-mdx/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project react-mdx --web",
+  "targets": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  }
+}

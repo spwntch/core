@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/react-components": ["packages/react-components/src/index.ts"],
+      "@/react-mdx": ["packages/react-mdx/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
       "@/tailwind/*": ["packages/tailwind/src/*"]
