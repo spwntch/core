@@ -1,10 +1,10 @@
 import { BackgroundImageContainer } from '@/react-components';
 import type { Meta, StoryObj } from '@storybook/react';
-import { withFullWidth } from '../../../lib/decorators';
+import { withFullPage } from '../../../lib/decorators';
 
 const meta: Meta<typeof BackgroundImageContainer> = {
   component: BackgroundImageContainer,
-  decorators: [withFullWidth],
+  decorators: [withFullPage],
   args: {},
   // tags: ['autodocs'],
 };
