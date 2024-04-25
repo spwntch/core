@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# in vercel, select "Run my Bash script" and run -> bash scripts/vercel-conditional-build.sh <NX_PROJECT_NAME>
+
 PROJECT_NAME=$1
 
 echo "⭐️ PROJECT NAME: $PROJECT_NAME"
