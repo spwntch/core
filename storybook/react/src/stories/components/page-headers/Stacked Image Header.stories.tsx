@@ -8,7 +8,7 @@ const meta: Meta<typeof StackedImageHeader> = {
   decorators: [withFullWidth],
   args: {
     image: {src: 'images/guy-sitting-at-tech-control-station.webp'},
-    content: {
+    header: {
       heading: 'Blog',
       subHeading: 'The latest from our team',
       body: `We're always learning and growing. Here's what we've been up to lately.`,

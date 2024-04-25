@@ -9,14 +9,14 @@ interface IBackgroundImageHeaderProps {
   className?: string;
   reverse?: boolean;
   image: IAttributableImage;
-  content: IPageSectionContent;
+  header: IPageSectionContent;
 }
 
 export const StackedImageHeader = ({
   className,
   reverse = false,
   image,
-  content,
+  header,
   children,
 }: IBackgroundImageHeaderProps & PropsWithChildren) => {
   return (
@@ -25,7 +25,7 @@ export const StackedImageHeader = ({
         src={image.src}
         className={className}
       ></BackgroundImageContainer>
-      <BasicPageHeader content={content}>
+      <BasicPageHeader header={header}>
         {/* <p>{image.src}</p> */}
         {children}
       </BasicPageHeader>

@@ -7,13 +7,13 @@ import { BasicPageHeader } from './basic-page-header';
 interface IBackgroundImageHeaderProps {
   className?: string;
   image: IAttributableImage;
-  content: IPageSectionContent;
+  header: IPageSectionContent;
 }
 
 export const BackgroundImageHeader = ({
   className,
   image,
-  content,
+  header,
   children,
 }: IBackgroundImageHeaderProps & PropsWithChildren) => {
   return (
@@ -23,7 +23,7 @@ export const BackgroundImageHeader = ({
       showBackgroundPattern
       darkenImage
     >
-      <BasicPageHeader content={content} className="text-left">
+      <BasicPageHeader header={header} className="text-left">
         {/* <p>{image.src}</p> */}
         {children}
       </BasicPageHeader>

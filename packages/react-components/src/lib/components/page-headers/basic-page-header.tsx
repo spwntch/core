@@ -1,25 +1,24 @@
-'use client';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, forwardRef } from 'react';
 import { IPageSectionContent } from '../../types';
 import { cn } from '../../utils';
 import { H1, H3, P } from '../typography';
 
-interface IPageHeaderProps {
-  content: IPageSectionContent;
+export interface PageHeaderProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    PropsWithChildren {
+  header: IPageSectionContent;
   className?: string;
 }
 
-export const BasicPageHeader = ({
-  content,
-  className,
-  children,
-}: IPageHeaderProps & PropsWithChildren) => {
-  return (
-    <div className={cn('text-center  w-full', className)}>
-      <H1 className="mt-6">{content.heading}</H1>
-      <H3 className="mt-4">{content.subHeading}</H3>
-      <P className="mb-8">{content.body}</P>
-      <div className="flex justify-center gap-8">{children}</div>
-    </div>
-  );
-};
+export const BasicPageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
+  ({ header, className, children }, ref) => {
+    return (
+      <div className={cn('text-center w-full', className)} ref={ref}>
+        <H1 className="mt-6">{header.heading}</H1>
+        <H3 className="mt-4">{header.subHeading}</H3>
+        <P className="mb-8">{header.body}</P>
+        <div className="flex justify-center gap-8">{children}</div>
+      </div>
+    );
+  }
+);
