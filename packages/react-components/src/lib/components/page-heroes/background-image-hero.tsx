@@ -10,7 +10,7 @@ interface BackgroundImageHeroProps extends BasicHeroProps {
 export const BackgroundImageHero = forwardRef<
   HTMLDivElement,
   BackgroundImageHeroProps
->(({ className, image, hero, children }) => {
+>(({ className, image, hero, children }, ref) => {
   return (
     <BackgroundImageContainer
       src={image.src}
@@ -18,7 +18,7 @@ export const BackgroundImageHero = forwardRef<
       showBackgroundPattern
       darkenImage
     >
-      <BasicHero hero={hero} className="text-left">
+      <BasicHero hero={hero} className="text-left" ref={ref}>
         {children}
       </BasicHero>
     </BackgroundImageContainer>

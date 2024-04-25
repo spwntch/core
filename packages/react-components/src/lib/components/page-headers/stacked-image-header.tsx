@@ -12,15 +12,14 @@ interface StackedImageHeaderProps extends BasicHeaderProps {
 export const StackedImageHeader = forwardRef<
   HTMLDivElement,
   StackedImageHeaderProps
->(({ className, reverse = false, image, header, children }) => {
+>(({ className, reverse = false, image, header, children }, ref) => {
   return (
     <div className={cn('flex flex-col', reverse && 'flex-col-reverse')}>
       <BackgroundImageContainer
         src={image.src}
         className={className}
       ></BackgroundImageContainer>
-      <BasicHeader header={header}>
-        {/* <p>{image.src}</p> */}
+      <BasicHeader header={header} ref={ref}>
         {children}
       </BasicHeader>
       {/* {content.tags && (

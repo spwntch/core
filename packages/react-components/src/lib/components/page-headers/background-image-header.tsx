@@ -11,7 +11,7 @@ interface BackgroundImageHeaderProps extends BasicHeaderProps {
 export const BackgroundImageHeader = forwardRef<
   HTMLDivElement,
   BackgroundImageHeaderProps
->(({ className, image, header, children }) => {
+>(({ className, image, header, children }, ref) => {
   return (
     <BackgroundImageContainer
       src={image.src}
@@ -19,7 +19,7 @@ export const BackgroundImageHeader = forwardRef<
       showBackgroundPattern
       darkenImage
     >
-      <BasicHeader header={header} className="text-left">
+      <BasicHeader header={header} className="text-left" ref={ref}>
         {children}
       </BasicHeader>
       {header.tags && (
