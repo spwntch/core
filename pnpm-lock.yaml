@@ -259,7 +259,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.33)(react@18.2.0)
       '@spwntch/tailwind':
-        specifier: ~0.42.2
+        specifier: ~0.43.0
         version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
@@ -282,10 +282,10 @@ importers:
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.42.2
+        specifier: ~0.43.0
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: ~0.42.2
+        specifier: ~0.43.0
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
