@@ -1,3 +1,19 @@
+## 0.42.1 (2024-04-25)
+
+
+### 🚀 Features
+
+- adds react-mdx package ([071027f](https://github.com/spwntch/core/commit/071027f))
+- adds a (interim) regular hero ([6962567](https://github.com/spwntch/core/commit/6962567))
+
+### 🩹 Fixes
+
+- remove utisl from react-mdx to get Introduction.mdx to display table ([e5c730f](https://github.com/spwntch/core/commit/e5c730f))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.42.0 (2024-04-25)
 
 
