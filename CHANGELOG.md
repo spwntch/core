@@ -1,3 +1,16 @@
+## 0.42.0 (2024-04-25)
+
+
+### 🚀 Features
+
+- exports getBaseUrl util function from @spwntch/shell ([a031865](https://github.com/spwntch/core/commit/a031865))
+- adds a collection of page-headers ([77e19dd](https://github.com/spwntch/core/commit/77e19dd))
+- adds a collection of page-headers ([d499388](https://github.com/spwntch/core/commit/d499388))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.41.1 (2024-04-23)
 
 This was a version bump only, there were no code changes.
