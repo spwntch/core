@@ -1,4 +1,4 @@
-import { PropsWithChildren, forwardRef } from 'react';
+import { forwardRef } from 'react';
 // import BackgroundImageContainer from '../containers/background-image-container';
 import { IAttributableImage } from '../../types';
 import { BackgroundImageContainer } from '../containers';

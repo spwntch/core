@@ -1,4 +1,3 @@
-'use client';
 import { forwardRef } from 'react';
 import { IAttributableImage } from '../../types';
 import { cn } from '../../utils';
