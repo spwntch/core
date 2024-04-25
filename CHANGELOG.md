@@ -1,3 +1,14 @@
+## 0.42.2 (2024-04-25)
+
+
+### 🩹 Fixes
+
+- add ref to some components missing it which use forwardRef ([d6e5e02](https://github.com/spwntch/core/commit/d6e5e02))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.42.1 (2024-04-25)
 
 
