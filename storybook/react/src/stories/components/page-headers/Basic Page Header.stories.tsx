@@ -1,8 +1,11 @@
 import { BasicPageHeader } from '@/react-components';
 import type { Meta, StoryObj } from '@storybook/react';
+import { withFullWidth } from '../../../lib/decorators';
 
 const meta: Meta<typeof BasicPageHeader> = {
   component: BasicPageHeader,
+  decorators: [withFullWidth],
+
   args: {
     content: {
       heading: 'Blog',

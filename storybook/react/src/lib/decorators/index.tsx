@@ -10,6 +10,12 @@ export const withThemeToggle: Decorator = withThemeByClassName({
   },
   defaultTheme: 'light',
 });
+
+export const withFullWidth: Decorator = (Story) => (
+  <div className="w-screen container">
+    <Story />
+  </div>
+);
 export const withBrandProvider: Decorator = (Story) => (
   <BrandProvider brand={brand}>
     <Story />
