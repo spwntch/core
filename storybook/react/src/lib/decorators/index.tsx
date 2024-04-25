@@ -16,6 +16,13 @@ export const withFullWidth: Decorator = (Story) => (
     <Story />
   </div>
 );
+
+export const withFullPage: Decorator = (Story) => (
+  <div className="w-screen h-screen container">
+    <Story />
+  </div>
+);
+
 export const withBrandProvider: Decorator = (Story) => (
   <BrandProvider brand={brand}>
     <Story />
