@@ -3,14 +3,14 @@ import { IPageSectionContent } from '../../types';
 import { cn } from '../../utils';
 import { H1, H3, P } from '../typography';
 
-export interface BasicPageHeaderProps
+export interface BasicHeaderProps
   extends React.HTMLAttributes<HTMLDivElement>,
     PropsWithChildren {
   header: IPageSectionContent;
   className?: string;
 }
 
-export const BasicPageHeader = forwardRef<HTMLDivElement, BasicPageHeaderProps>(
+export const BasicHeader = forwardRef<HTMLDivElement, BasicHeaderProps>(
   ({ header, className, children }, ref) => {
     return (
       <div className={cn('text-center w-full', className)} ref={ref}>

@@ -1,14 +1,13 @@
-import { RegularHero } from '@/react-components';
+import { BasicHero } from '@/react-components';
 import type { Meta, StoryObj } from '@storybook/react';
 import { withFullPage } from '../../../lib/decorators';
 
-const meta: Meta<typeof RegularHero> = {
-  component: RegularHero,
+const meta: Meta<typeof BasicHero> = {
+  component: BasicHero,
   decorators: [withFullPage],
 
   args: {
-    image: {src: 'images/guy-sitting-at-tech-control-station.webp'},
-    content: {
+    hero: {
       heading: 'Blog',
       subHeading: 'The latest from our team',
       body: `We're always learning and growing. Here's what we've been up to lately.`,
@@ -16,6 +15,6 @@ const meta: Meta<typeof RegularHero> = {
   },
 };
 export default meta;
-type Story = StoryObj<typeof RegularHero>;
+type Story = StoryObj<typeof BasicHero>;
 
-export const regularHero: Story = {};
+export const basicHero: Story = {};

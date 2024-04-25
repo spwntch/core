@@ -1,12 +1,10 @@
 import { forwardRef } from 'react';
-// import BackgroundImageContainer from '../containers/background-image-container';
 import { IAttributableImage } from '../../types';
 import { BackgroundImageContainer } from '../containers';
-import { BasicPageHeader, BasicPageHeaderProps } from './basic-page-header';
+import { Badge } from '../ui';
+import { BasicHeader, BasicHeaderProps } from './basic-header';
 
-interface BackgroundImageHeaderProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    BasicPageHeaderProps {
+interface BackgroundImageHeaderProps extends BasicHeaderProps {
   image: IAttributableImage;
 }
 
@@ -21,17 +19,16 @@ export const BackgroundImageHeader = forwardRef<
       showBackgroundPattern
       darkenImage
     >
-      <BasicPageHeader header={header} className="text-left">
-        {/* <p>{image.src}</p> */}
+      <BasicHeader header={header} className="text-left">
         {children}
-      </BasicPageHeader>
-      {/* {content.tags && (
+      </BasicHeader>
+      {header.tags && (
         <div className="mx-auto flex flex-wrap gap-2 mb-6">
-          {content.tags.map((tag) => (
+          {header.tags.map((tag) => (
             <Badge>{tag}</Badge>
           ))}
         </div>
-      )} */}
+      )}
     </BackgroundImageContainer>
   );
 });

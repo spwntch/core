@@ -12,10 +12,11 @@ export interface IPageSectionBullet {
 
 /**
  * Represents the content of a page section with a heading, optional subheading, body, and bullets.
- */
+*/
 export interface IPageSectionContent {
   heading: string;
   subHeading?: string;
   body?: string;
   bullets?: IPageSectionBullet[];
+  tags?: string[];
 }

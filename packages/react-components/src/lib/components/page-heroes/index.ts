@@ -1,1 +1,2 @@
-export * from './regular-hero';
+export * from './basic-hero';
+export * from './background-image-hero';
