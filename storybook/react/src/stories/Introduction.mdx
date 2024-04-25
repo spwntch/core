@@ -1,32 +1,67 @@
 import { Meta } from '@storybook/addon-docs';
+import { Table } from '@/react-mdx';
 
 <Meta />
 
 ![logo](/brand/logo-primary.webp)
 
-# Welcome to Spawntech's Component Library
+# Welcome to Spawntech's Open Source Component Library
 
-Welcome to the comprehensive guide for Spawntech's Component Libraries, where innovation meets efficiency in software development. Our suite, grounded in `shadcn/ui` and elegantly styled with TailwindCSS, is not just a toolkit but a testament to our deep expertise in User Experience (UX). We are dedicated to making software development not only more efficient but also more intuitive and user-centric.
+Welcome to Spawntech, where innovation meets efficiency in software development. Our component libraries, now fully open-sourced, are designed to empower developers with the tools to create outstanding user experiences with ease. Grounded in the principles of modern design and enhanced by our commitment to accessibility and usability, our libraries are your gateway to building better applications faster.
 
 ## Why Spawntech?
 
-Choosing Spawntech means selecting a partner who is deeply invested in the success of your project and the satisfaction of its users. Here's what sets us apart:
+Choosing Spawntech means opting for a partner committed to the success of your project and the enhancement of the user experience. Here’s how we stand out:
 
-- **Expertise in UX**: Our components are crafted with an in-depth understanding of UX best practices, ensuring they provide seamless and engaging user experiences. This expertise can significantly reduce the need for your own UX research and testing, saving time and resources.
-- **Rapid Development**: Accelerate the development process with ready-to-integrate components, moving your project from concept to launch more quickly.
-- **Cost Efficiency**: Our UX-driven approach minimizes the need for redesigns and iterations, cutting down unnecessary expenses. Additionally, by leveraging our components, you can potentially divide your development costs by five, making your project not only more efficient but also more economical.
-- **Customizability and Style**: With TailwindCSS, customizing your project's appearance is easy, allowing for a unique and cohesive brand identity.
-- **Enhanced Features**: Our components enhance `shadcn/ui` with added functionalities, offering a more comprehensive solution for any project requirement.
-- **Dramatic Cost Reduction**: Interested in drastically reducing your development costs? Contact us to learn how partnering with Spawntech can help you divide your development expenses by 80%, transforming your budgeting strategy and freeing up resources for other pivotal areas of your project. With great responsibility, comes great power.
+- **Open Source Excellence**: Every component in our library is open-sourced. This means full transparency, community-driven improvements, and continuous updates.
+- **Expertise in UX**: Crafted with a deep understanding of user needs, our components are intuitive, engaging, and designed to simplify development.
+- **Speed and Efficiency**: Accelerate your development cycles with components that integrate seamlessly, allowing you to move from concept to launch swiftly.
+- **Cost-Effective Development**: Our approach reduces the need for extensive redesigns and testing, significantly cutting down development costs.
+- **Customizability with Style**: Tailored to fit your branding with TailwindCSS, our components ensure consistency and elegance across your projects.
 
-## Our Libraries
+## Our Packages on npm
 
-We provide both public and private libraries to cater to a broad spectrum of development needs:
+<Table
+  headers={['Name', 'Description', 'Install Script']}
+  rows={[
+    [
+      '@spwntch/tailwind',
+      'Our Tailwind configuration for consistent styling across projects.',
+      'pnpm install @spwntch/tailwind',
+    ],
+    [
+      '@spwntch/components',
+      'Base UI components that serve as the building blocks for application interfaces.',
+      'pnpm install @spwntch/component',
+    ],
+    [
+      '@spwntch/shell',
+      'Components designed to compose the architecture of user interfaces, enabling flexible and scalable UI construction.',
+      'pnpm install @spwntch/shell',
+    ],
+    [
+      '@spwntch/mdx',
+      'Our collection of reusable MDX components for enhanced content delivery and presentation.',
+      'pnpm install @spwntch/mdx',
+    ],
+  ]}
+/>
 
-- **Public Libraries**: Available on npm, these libraries are easily accessible and ready to elevate your project with advanced components.
-- **Private Client Libraries**: Our exclusive libraries offer specialized functionalities tailored to your unique requirements, available with a license. For access, please [contact us](mailto:hello@spawntech.io).
+Where appropriate, we've documented the components within these libs in this storybook.
 
-### Public Libraries
+## Engage and Contribute
 
-### Private Client Libraries
+Being open-source, we thrive on collaboration. Get involved by contributing to our libraries, suggesting features, or providing feedback. Together, we can build something extraordinary.
 
+- **Community Driven**: Join our vibrant community on GitHub or participate in our discussions to share insights and get support.
+- **Continuous Learning**: Leverage our comprehensive documentation and resources to enhance your skills and knowledge in software development.
+
+## Get Started
+
+Dive into Spawntech's open-source libraries today:
+
+- [Explore the Storybook](https://docs.Spawntech.io/)
+- [Contribute on GitHub](https://github.com/spwntch)
+- [Join the Community Discussions](https://github.com/orgs/spwntch/discussions)
+
+Powered by [Nx](https://nx.dev), a smart monorepo approach for modern development environments.

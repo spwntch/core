@@ -1,0 +1,130 @@
+import { Meta } from '@storybook/addon-docs';
+import { Table } from '@/react-mdx';
+
+<Meta />
+
+# Embracing Tailwind CSS in Spawntech Libraries
+
+At Spawntech, we fully embrace Tailwind CSS's utility-first approach in our component libraries, aligning seamlessly with `shadcn/ui` for pragmatic, scalable UI design. Our implementations leverage Radix-UI to ensure that accessibility is at the forefront of every component we build.
+
+## Why Tailwind CSS?
+
+Tailwind CSS allows us to maintain style consistency with minimal effort, ensuring that our components are both beautiful and functionally robust. The utility-first framework makes it incredibly easy to customize components to fit any design specification directly in your markup.
+
+## Integrating with shadcn/ui and Radix-UI
+
+Our library's design philosophy is closely aligned with `shadcn/ui`, providing a cohesive experience for developers by combining our streamlined components with their comprehensive UI toolkit. Radix-UI's accessibility features are integrated into our components, ensuring that they meet the highest standards for accessibility.
+
+- **Tailwind CSS Documentation**: [Visit Tailwind CSS Docs](https://tailwindcss.com/docs)
+- **shadcn/ui Documentation**: [Learn More About shadcn/ui](https://github.com/shadcn/ui)
+- **Radix-UI for Accessibility**: [Explore Radix-UI](https://www.radix-ui.com/)
+
+## Importing Spawntech Libraries
+
+To use the Spawntech libraries effectively, include them in your project as follows:
+
+```bash
+pnpm install @spwntch/tailwind @spwntch/component @spwntch/shell
+```
+
+Here’s how to incorporate our libraries into your application:
+
+```bash
+import '@spwntch/component';
+import '@spwntch/shell';
+```
+
+> **NOTE:**
+> If you created an app using `pnpm dlx spawn-workspace`, we highly recommend importing **spwntch** packages into your `nextjs` libraries, not directly into your app. Follow the design pattern already established in a spawned-workspace.
+
+## Typical Tailwind Configuration
+
+Below is a typical `tailwind.config.js` that you would use in a Spawntech workspace:
+
+```js
+// tailwind.config.js
+
+const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+const { join } = require('path');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    join(
+      __dirname,
+      '{src,pages,components,app}/**/!(.stories|.spec).{ts,tsx,html}'
+    ),
+    ...createGlobPatternsForDependencies(__dirname),
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require('@tailwindcss/typography')],
+};
+```
+
+## Global CSS Configuration
+
+And here is what a typical `global.css` file might look like in your project:
+
+```ts
+@import '@spwntch/shell/styles';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 194 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+  }
+}
+```
+
+The css variabless in this file will enable you to restyle your components with ease.
+
+We encourage you to customize these configurations to better suit your project’s unique needs and styling guidelines.
+
+## Conclusion
+
+By adopting Spawntech's libraries, you not only ensure a robust, accessible UI but also gain the flexibility of Tailwind CSS's powerful theming capabilities. Dive into our documentation and start building today!
