@@ -1,3 +1,14 @@
+## 0.43.1 (2024-04-26)
+
+
+### 🚀 Features
+
+- adds flatten-toc util to @/mdx ([e324eb9](https://github.com/spwntch/core/commit/e324eb9))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.43.0 (2024-04-25)
 
 This was a version bump only, there were no code changes.
