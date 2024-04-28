@@ -1,22 +1,20 @@
-import Link from 'next/link';
 import { IPost } from '../../types';
 import { PostCard } from './post-card';
-import { usePathname } from 'next/navigation';
 
 interface Props {
   posts: IPost[];
+  onClickPost: (post: IPost) => void;
 }
 
-export const PostsGrid = ({ posts }: Props) => {
-  const pathname = usePathname();
+export const PostsGrid = ({ posts, onClickPost }: Props) => {
 
   if (!posts?.length) return <div>no posts</div>;
   return (
     <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 mt-8">
       {posts.map((post, index) => (
-        <Link key={index} href={`${pathname}/${post.meta.slug}`}>
+        <div key={index} onClick={() => onClickPost(post)}>
           <PostCard {...post} />
-        </Link>
+        </div>
       ))}
     </div>
   );
