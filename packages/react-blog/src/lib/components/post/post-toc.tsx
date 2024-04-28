@@ -9,7 +9,7 @@ export const PostToc = ({ toc }: Props) => {
   return (
     <>
       <H3 className="mb-4">On this page...</H3>
-      {!toc.length ? (
+      {!toc?.length ? (
         <p>Hmm... Nothing found.</p>
       ) : (
         <pre>{JSON.stringify(toc, null, 2)}</pre>
