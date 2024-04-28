@@ -26,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@spwntch/components": "~0.43.1",
-    "@spwntch/tailwind": "~0.43.1"
+    "@spwntch/tailwind": "~0.43.1",
+    "lucide-react": "^0.373.0"
   }
 }
