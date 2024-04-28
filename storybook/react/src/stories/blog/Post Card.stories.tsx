@@ -1,6 +1,6 @@
 import { PostCard } from '@/react-blog';
 import type { Meta, StoryObj } from '@storybook/react';
-import { withShellProvider } from '../../lib/decorators';
+import { articles } from '../../lib/config';
 import { NoControlsDocs } from '../../lib/docs-templates';
 
 /**
@@ -9,20 +9,12 @@ import { NoControlsDocs } from '../../lib/docs-templates';
 const meta: Meta<typeof PostCard> = {
   component: PostCard,
   parameters: { docs: { page: NoControlsDocs } },
-  decorators: [withShellProvider],
   args: {
-    coverImage: { src: 'images/guy-sitting-at-tech-control-station.webp' },
-    title: 'Post Title',
-    subtitle: 'Post Subtitle',
-    meta: {
-      slug: 'slug',
-      categories: ['Category'],
-      keywords: ['Keyword'],
-      author: {
-        name: 'Author Name',
-        avatarUrl: 'Author Avatar Url',
-      },
-    },
+    coverImage: articles[0].coverImage,
+    title: articles[0].title,
+    subtitle: articles[0].subtitle,
+    meta: articles[0].meta,
+   
   },
 };
 
