@@ -1,12 +1,11 @@
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-    Small,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Small,
 } from '@/react-components';
-import Image from 'next/image';
 import { IPost } from '../../types';
 
 type IPostCardProps = IPost;
@@ -21,13 +20,12 @@ export const PostCard = ({
   return (
     <Card>
       <CardContent className="m-0 p-0 h-60">
-        <Image
+        <img
           className="object-cover object-center rounded-t h-60 "
           alt="hero"
           src={coverImage.src}
           width={720}
           height={600}
-          priority
         />
       </CardContent>
       <CardHeader>
