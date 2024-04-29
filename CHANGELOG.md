@@ -1,3 +1,14 @@
+## 0.44.5 (2024-04-29)
+
+
+### 🚀 Features
+
+- adds an mdx article to work with ([9ee1e12](https://github.com/spwntch/core/commit/9ee1e12))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.44.4 (2024-04-29)
 
 
