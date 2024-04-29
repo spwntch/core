@@ -1,3 +1,7 @@
+## 0.44.3 (2024-04-29)
+
+This was a version bump only, there were no code changes.
+
 ## 0.44.2 (2024-04-29)
 
 This was a version bump only, there were no code changes.

@@ -135,6 +135,9 @@ importers:
       '@swc/helpers':
         specifier: ~0.5.2
         version: 0.5.11
+      '@tailwindcss/typography':
+        specifier: ^0.5.13
+        version: 0.5.13(tailwindcss@3.2.7)
       '@types/jest':
         specifier: ^29.4.0
         version: 29.5.12
@@ -241,14 +244,18 @@ importers:
   packages/react-blog:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.44.2
+        specifier: ~0.44.3
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: ~0.44.2
+        specifier: ~0.44.3
         version: link:../tailwind
       lucide-react:
         specifier: ^0.373.0
         version: 0.373.0(react@18.2.0)
+    devDependencies:
+      '@tailwindcss/typography':
+        specifier: ^0.5.13
+        version: 0.5.13(tailwindcss@3.2.7)
 
   packages/react-components:
     dependencies:
@@ -271,7 +278,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.33)(react@18.2.0)
       '@spwntch/tailwind':
-        specifier: ~0.44.2
+        specifier: ~0.44.3
         version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
@@ -297,10 +304,10 @@ importers:
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.44.2
+        specifier: ~0.44.3
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: ~0.44.2
+        specifier: ~0.44.3
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
@@ -6328,6 +6335,18 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       defer-to-connect: 2.0.1
+    dev: true
+
+  /@tailwindcss/typography@0.5.13(tailwindcss@3.2.7):
+    resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      postcss-selector-parser: 6.0.10
+      tailwindcss: 3.2.7(postcss@8.4.21)(ts-node@10.9.1)
     dev: true
 
   /@testing-library/dom@9.3.4:
@@ -13990,6 +14009,10 @@ packages:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: true
 
+  /lodash.castarray@4.4.0:
+    resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+    dev: true
+
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
     dev: true
@@ -16661,6 +16684,14 @@ packages:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-selector-parser@6.0.10:
+    resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
+    engines: {node: '>=4'}
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
     dev: true
 
   /postcss-selector-parser@6.0.16:
