@@ -10,6 +10,7 @@ interface IPostProps {
   image: IAttributableImage;
   header: IPageSectionContent;
   post: IMdxDoc | undefined;
+  onBackToList?: () => void;
 }
 
 export const Post = ({
@@ -17,13 +18,19 @@ export const Post = ({
   image,
   header,
   post,
+  onBackToList,
 }: IPostProps & PropsWithChildren) => {
   // const { toc, content, meta } = post;
 
   return (
     <div className="flex flex-col mx-2 md:mx-auto max-w-6xl">
       <div>
-        <PostHeader backTo={backTo} image={image} header={header} />
+        <PostHeader
+          backTo={backTo}
+          image={image}
+          header={header}
+          onBackToList={onBackToList}
+        />
       </div>
       <div className="flex">
         <div className="px-2 flex-1">
