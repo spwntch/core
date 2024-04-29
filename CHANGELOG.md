@@ -1,3 +1,45 @@
+## 0.44.3 (2024-04-29)
+
+This was a version bump only, there were no code changes.
+
+## 0.44.2 (2024-04-29)
+
+This was a version bump only, there were no code changes.
+
+## 0.44.1 (2024-04-29)
+
+This was a version bump only, there were no code changes.
+
+## 0.44.0 (2024-04-29)
+
+
+### 🚀 Features
+
+- adds interact-rdt assets ([f3214b6](https://github.com/spwntch/core/commit/f3214b6))
+- adds a WIP @/react-blog package ([a540ecb](https://github.com/spwntch/core/commit/a540ecb))
+- adds post-grid ([df537d0](https://github.com/spwntch/core/commit/df537d0))
+- exports a posts component, comploete with a page header, and stories to boot ([ee31677](https://github.com/spwntch/core/commit/ee31677))
+- adds a post header to @spwntch/blog ([5ce1cf7](https://github.com/spwntch/core/commit/5ce1cf7))
+- every post gets a TOC, even if nothing is found ([adc8b99](https://github.com/spwntch/core/commit/adc8b99))
+- export events ([bb4e1d2](https://github.com/spwntch/core/commit/bb4e1d2))
+- **react-blog:** exports a posts-grid component ([95da539](https://github.com/spwntch/core/commit/95da539))
+- **react-blog:** adds a basic post layout ([7729023](https://github.com/spwntch/core/commit/7729023))
+- **react-blog:** adds a post-content component complete with placeholder text ([678d475](https://github.com/spwntch/core/commit/678d475))
+- **react-components:** adds shadcn/ui resizable ([681c26a](https://github.com/spwntch/core/commit/681c26a))
+
+### 🩹 Fixes
+
+- switches out next link wih a onBackToList prop ([01d2fed](https://github.com/spwntch/core/commit/01d2fed))
+- caters for undefined post TOC ([b75671d](https://github.com/spwntch/core/commit/b75671d))
+- change vite output Path ([783f7d1](https://github.com/spwntch/core/commit/783f7d1))
+- set img height and width in past-card ([f579103](https://github.com/spwntch/core/commit/f579103))
+- add tailwind to get exported styles ([0a20287](https://github.com/spwntch/core/commit/0a20287))
+- makes backTo mandatory on Post components ([cb5d502](https://github.com/spwntch/core/commit/cb5d502))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.43.1 (2024-04-26)
 
 
