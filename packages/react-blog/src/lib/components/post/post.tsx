@@ -23,7 +23,7 @@ export const Post = ({
   // const { toc, content, meta } = post;
 
   return (
-    <div className="flex flex-col mx-2 md:mx-auto max-w-6xl">
+    <div className="flex flex-col mx-2 md:mx-auto max-w-6xl ">
       <div>
         <PostHeader
           backTo={backTo}
@@ -32,7 +32,7 @@ export const Post = ({
           onBackToList={() => onBackToList(backTo.href)}
         />
       </div>
-      <div className="flex">
+      <div className="flex gap-8">
         <div className="px-2 flex-1">
           <PostContent>{post?.content}</PostContent>
         </div>
