@@ -1,3 +1,14 @@
+## 0.44.4 (2024-04-29)
+
+
+### 🚀 Features
+
+- adds @tailwind/typography lugin to @spwntch/blog ([2e13ffb](https://github.com/spwntch/core/commit/2e13ffb))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.44.3 (2024-04-29)
 
 This was a version bump only, there were no code changes.
