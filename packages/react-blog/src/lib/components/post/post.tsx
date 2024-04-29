@@ -6,11 +6,11 @@ import { PostToc } from './post-toc';
 import { PostContent } from './post-content';
 
 interface IPostProps {
-  backTo?: { label?: string; href: string };
+  backTo: { label?: string; href: string };
   image: IAttributableImage;
   header: IPageSectionContent;
   post: IMdxDoc | undefined;
-  onBackToList?: () => void;
+  onBackToList: (href: string) => void;
 }
 
 export const Post = ({
@@ -29,7 +29,7 @@ export const Post = ({
           backTo={backTo}
           image={image}
           header={header}
-          onBackToList={onBackToList}
+          onBackToList={() => onBackToList(backTo.href)}
         />
       </div>
       <div className="flex">
