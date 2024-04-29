@@ -18,6 +18,15 @@ const meta: Meta<typeof Post> = {
       heading: articles[0].title,
       subHeading: articles[0].subtitle,
     },
+    post: {
+      meta: {
+        slug: 'ping',
+        date: '2021-01-01',
+        title: 'Ping',
+      },
+      toc: [],
+      content: <div>Hello World</div>,
+    },
   },
 };
 

@@ -14,14 +14,15 @@ export interface IMdxDoc {
 }
 
 export interface IMdxDocFrontMatter {
-  title: string;
-  subtitle: string;
   date: string;
-  author: string;
-  tags: string[];
+  title: string;
+  subtitle?: string;
+  authorName?: string;
+  authorAvatar?: string;
+  tags?: string[];
   published?: boolean;
 }
 
 export interface IMdxDocMeta extends IMdxDocFrontMatter {
-  path?: string;
+  slug: string;
 }
