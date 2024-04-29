@@ -1,0 +1,32 @@
+{
+  "name": "@spwntch/blog",
+  "version": "0.43.1",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": {
+      "default": "./dist/style.css"
+    }
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "sandbox"
+  ],
+  "author": "spwntch",
+  "license": "MIT",
+  "dependencies": {
+    "@spwntch/components": "~0.43.1",
+    "@spwntch/tailwind": "~0.43.1",
+    "lucide-react": "^0.373.0"
+  }
+}

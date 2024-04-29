@@ -1,7 +1,7 @@
 import { Code } from '@/react-components';
 import { UnderConstruction } from '@/react-shell';
 import type { Meta, StoryObj } from '@storybook/react';
-import { withShellProvider } from '../../../lib/decorators';
+import { withFullPage } from '../../../lib/decorators';
 import { NoControlsDocs } from '../../../lib/docs-templates';
 
 /**
@@ -10,7 +10,7 @@ import { NoControlsDocs } from '../../../lib/docs-templates';
 const meta: Meta<typeof UnderConstruction> = {
   component: UnderConstruction,
   parameters: { docs: { page: NoControlsDocs } },
-  decorators: [withShellProvider],
+  decorators: [withFullPage],
   args: {
     children: (
       <div className="text-center">

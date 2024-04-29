@@ -1,0 +1,9 @@
+{
+  "name": "react-blog",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-blog/src",
+  "projectType": "library",
+  "tags": ["tech:react"],
+  "// targets": "to see all targets run: nx show project react-blog --web",
+  "targets": {}
+}
