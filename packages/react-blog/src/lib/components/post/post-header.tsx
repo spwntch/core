@@ -7,7 +7,7 @@ import {
 import { ArrowBigLeft } from 'lucide-react';
 
 type Props = {
-  backTo?: { label?: string; path: string };
+  backTo?: { label?: string; href: string };
   image: IAttributableImage;
   header: IPageSectionContent;
   tags?: string[];

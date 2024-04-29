@@ -19,13 +19,11 @@ export const PostCard = ({
   const { categories } = meta;
   return (
     <Card>
-      <CardContent className="m-0 p-0 h-60">
+      <CardContent className="m-0 p-0">
         <img
-          className="object-cover object-center rounded-t h-60 "
+          className="object-cover rounded-t w-full h-60 "
           alt="hero"
           src={coverImage.src}
-          width={720}
-          height={600}
         />
       </CardContent>
       <CardHeader>
