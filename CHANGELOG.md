@@ -1,3 +1,16 @@
+## 0.50.0 (2024-04-29)
+
+
+### 🚀 Features
+
+- adds interact-rdt assets ([8c1851a](https://github.com/spwntch/core/commit/8c1851a))
+- adds a boilerplate @/blog packagr ([d31f609](https://github.com/spwntch/core/commit/d31f609))
+- adds mdx types ([7d0b9cf](https://github.com/spwntch/core/commit/7d0b9cf))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.43.0 (2024-04-25)
 
 This was a version bump only, there were no code changes.
