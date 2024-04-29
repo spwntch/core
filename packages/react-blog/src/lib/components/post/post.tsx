@@ -6,7 +6,7 @@ import { PostToc } from './post-toc';
 import { PostContent } from './post-content';
 
 interface IPostProps {
-  backTo?: { label?: string; path: string };
+  backTo?: { label?: string; href: string };
   image: IAttributableImage;
   header: IPageSectionContent;
   post: IMdxDoc | undefined;

@@ -10,7 +10,7 @@ const meta: Meta<typeof PostHeader> = {
   component: PostHeader,
   parameters: { docs: { page: NoControlsDocs } },
   args: {
-    backTo: { label: 'Back', path: '' },
+    backTo: { label: 'Back', href: '' },
     image: articles[0].coverImage,
     header: {
       heading: articles[0].title,
