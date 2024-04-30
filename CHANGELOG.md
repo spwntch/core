@@ -1,3 +1,14 @@
+## 0.50.6 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds a simple pre for our toc ([cc2b1e6](https://github.com/spwntch/core/commit/cc2b1e6))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.5 (2024-04-30)
 
 
