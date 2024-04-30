@@ -1,17 +1,24 @@
-import { H3 } from '@/react-components';
+import { H3, Small } from '@/react-components';
 import { ITocItem } from '../../types';
 
-type Props = {
+interface IPostTocProps {
   toc: ITocItem[];
-};
+  onClickToc: (href: string) => void;
+}
 
-export const PostToc = ({ toc }: Props) => {
+export const PostToc = ({ toc, onClickToc }: IPostTocProps) => {
   return (
     <div className="w-96">
       <H3 className="mb-4">On this page...</H3>
       <ul>
         {toc.map((heading, index) => (
-          <div key={index}>{heading.label}</div>
+          <Small
+            key={index}
+            className="mb-2 cursor-pointer"
+            onClick={() => onClickToc(heading.href)}
+          >
+            {heading.label}
+          </Small>
         ))}
       </ul>
     </div>
