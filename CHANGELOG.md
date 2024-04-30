@@ -1,3 +1,14 @@
+## 0.50.10 (2024-04-30)
+
+
+### 🩹 Fixes
+
+- adds a key to toc items ([ab44cac](https://github.com/spwntch/core/commit/ab44cac))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.9 (2024-04-30)
 
 
