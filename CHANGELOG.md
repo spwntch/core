@@ -1,3 +1,14 @@
+## 0.50.7 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds a width to the toc div ([7c97b13](https://github.com/spwntch/core/commit/7c97b13))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.6 (2024-04-30)
 
 
