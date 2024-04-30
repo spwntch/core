@@ -1,3 +1,15 @@
+## 0.50.2 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds a post-card ([a90a114](https://github.com/spwntch/core/commit/a90a114))
+- adds a posts grid ([d432c06](https://github.com/spwntch/core/commit/d432c06))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.1 (2024-04-30)
 
 
