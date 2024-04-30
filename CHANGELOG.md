@@ -1,3 +1,7 @@
+## 0.51.0 (2024-04-30)
+
+This was a version bump only, there were no code changes.
+
 ## 0.50.11 (2024-04-30)
 
 
