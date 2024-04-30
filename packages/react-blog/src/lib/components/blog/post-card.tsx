@@ -1,41 +1,50 @@
 import {
+  Badge,
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
+  Muted,
   Small,
 } from '@/react-components';
-import { IPost } from '../../types';
+import { IMdxDocMeta } from '@/react-mdx';
 
-type IPostCardProps = IPost;
+interface IPostCardProps extends IMdxDocMeta {
+  onClick: (slug: string) => void;
+}
 
 export const PostCard = ({
+  slug,
   coverImage,
+  date,
   title,
   subtitle,
-  meta,
+  tags,
+  onClick,
 }: IPostCardProps) => {
-  const { categories } = meta;
   return (
-    <Card>
+    <Card className="max-w-2xl mx-auto cursor-pointer" onClick={() => onClick(slug)}>
       <CardContent className="m-0 p-0">
         <img
-          className="object-cover rounded-t w-full h-60 "
-          alt="hero"
-          src={coverImage.src}
+          className="object-cover object-center rounded-t w-full h-60 "
+          alt="post cover image"
+          src={coverImage}
         />
       </CardContent>
       <CardHeader>
-        <ul className="flex gap-3">
-          {categories.map((category, index) => (
-            <li key={index}>
-              <Small>{category}</Small>
-            </li>
-          ))}
-        </ul>
+        {tags?.length && (
+          <ul className="hidden md:flex gap-3 mb-3 ">
+            {tags.map((category, index) => (
+              <li key={index}>
+                <Badge>{category}</Badge>
+              </li>
+            ))}
+          </ul>
+        )}
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{subtitle}</CardDescription>
+        <Small>{date}</Small>
+        <CardDescription className="!mt-3">{subtitle}</CardDescription>
       </CardHeader>
     </Card>
   );

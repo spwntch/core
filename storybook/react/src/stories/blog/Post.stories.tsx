@@ -1,32 +1,31 @@
 import { Post } from '@/react-blog';
 import type { Meta, StoryObj } from '@storybook/react';
+import { withShellProvider } from '../../lib/decorators';
 import { NoControlsDocs } from '../../lib/docs-templates';
-import { withFullPage } from '../../lib/decorators';
-import { articles } from '../../lib/config';
+import { H1 } from '@/react-components';
 
-/**
- * Renders a site footer component.
- */
 const meta: Meta<typeof Post> = {
   component: Post,
-  decorators: [withFullPage],
   parameters: { docs: { page: NoControlsDocs } },
+  decorators: [withShellProvider],
   args: {
-    backTo: { label: 'Back', href: '' },
-    image: articles[0].coverImage,
-    header: {
-      heading: articles[0].title,
-      subHeading: articles[0].subtitle,
+    meta: {
+      slug: 'the-real-reason-you-need-an-icp.webp',
+      date: '2024-03-11',
+      coverImage: 'blog/images/the-real-reason-you-need-an-icp.webp',
+      title: 'The Real Reason You Need an ICP',
+      subtitle: 'Unveiling the Keystone of Business Success',
+      tags: ['Customer Experience', 'Business Strategy', 'Smarketing'],
     },
-    post: {
-      meta: {
-        slug: 'ping',
-        date: '2021-01-01',
-        title: 'Ping',
-      },
-      toc: [],
-      content: <div>Hello World</div>,
-    },
+    content: (
+      <div>
+        <H1>Blog article goes here.</H1>
+        <div className="mt-20">
+          <p>ipsum lorem </p>
+        </div>
+      </div>
+    ),
+    toc: [{ label: 'ping', href: '#ping' }],
   },
 };
 

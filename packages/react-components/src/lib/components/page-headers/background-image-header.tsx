@@ -25,7 +25,7 @@ export const BackgroundImageHeader = forwardRef<
       {header.tags && (
         <div className="mx-auto flex flex-wrap gap-2 mb-6">
           {header.tags.map((tag) => (
-            <Badge>{tag}</Badge>
+            <Badge key={tag}>{tag}</Badge>
           ))}
         </div>
       )}

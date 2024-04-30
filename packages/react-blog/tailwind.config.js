@@ -12,5 +12,7 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
 
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

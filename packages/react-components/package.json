@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/components",
-  "version": "0.45.2",
+  "version": "0.50.6",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -33,6 +33,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@spwntch/tailwind": "~0.45.2",
     "class-variance-authority": "^0.7.0",
+    "@spwntch/tailwind": "~0.50.6",
     "clsx": "^2.1.0",
     "lucide-react": "^0.360.0",
     "react-resizable-panels": "^2.0.18",
