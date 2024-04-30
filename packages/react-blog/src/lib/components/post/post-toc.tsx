@@ -10,8 +10,8 @@ export const PostToc = ({ toc }: Props) => {
     <div className="w-96">
       <H3 className="mb-4">On this page...</H3>
       <ul>
-        {toc.map((heading) => (
-          <div>{heading.label}</div>
+        {toc.map((heading, index) => (
+          <div key={index}>{heading.label}</div>
         ))}
       </ul>
     </div>
