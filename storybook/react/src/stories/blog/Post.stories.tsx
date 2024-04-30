@@ -20,11 +20,12 @@ const meta: Meta<typeof Post> = {
     content: (
       <div>
         <H1>Blog article goes here.</H1>
-        <div className='mt-20'>
+        <div className="mt-20">
           <p>ipsum lorem </p>
         </div>
       </div>
     ),
+    toc: [{ label: 'ping', href: '#ping' }],
   },
 };
 
