@@ -1,3 +1,14 @@
+## 0.50.5 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds @tailwind/typography support to @spwntch/blog ([5e49e5a](https://github.com/spwntch/core/commit/5e49e5a))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.4 (2024-04-30)
 
 
