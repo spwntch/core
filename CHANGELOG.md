@@ -1,3 +1,14 @@
+## 0.50.9 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds a TOC list in right post column ([2d6e7ed](https://github.com/spwntch/core/commit/2d6e7ed))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.8 (2024-04-30)
 
 This was a version bump only, there were no code changes.
