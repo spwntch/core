@@ -2,6 +2,7 @@ import { Post } from '@/react-blog';
 import type { Meta, StoryObj } from '@storybook/react';
 import { withShellProvider } from '../../lib/decorators';
 import { NoControlsDocs } from '../../lib/docs-templates';
+import { H1 } from '@/react-components';
 
 const meta: Meta<typeof Post> = {
   component: Post,
@@ -16,7 +17,14 @@ const meta: Meta<typeof Post> = {
       subtitle: 'Unveiling the Keystone of Business Success',
       tags: ['Customer Experience', 'Business Strategy', 'Smarketing'],
     },
-    content: <div>Blog article goes here.</div>,
+    content: (
+      <div>
+        <H1>Blog article goes here.</H1>
+        <div className='mt-20'>
+          <p>ipsum lorem </p>
+        </div>
+      </div>
+    ),
   },
 };
 
