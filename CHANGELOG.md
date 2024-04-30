@@ -1,3 +1,14 @@
+## 0.50.4 (2024-04-30)
+
+
+### 🩹 Fixes
+
+- give post-card a cursor ([f1a3910](https://github.com/spwntch/core/commit/f1a3910))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.3 (2024-04-30)
 
 
