@@ -1,3 +1,14 @@
+## 0.50.1 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds a bunch of boilerplate components to reacxt-blog ([b63ee37](https://github.com/spwntch/core/commit/b63ee37))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.0 (2024-04-29)
 
 
