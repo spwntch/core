@@ -1,3 +1,51 @@
+## 0.50.11 (2024-04-30)
+
+
+### 🚀 Features
+
+- clicking a TOC item triggers an evnet ([25f4806](https://github.com/spwntch/core/commit/25f4806))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.50.10 (2024-04-30)
+
+
+### 🩹 Fixes
+
+- adds a key to toc items ([ab44cac](https://github.com/spwntch/core/commit/ab44cac))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.50.9 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds a TOC list in right post column ([2d6e7ed](https://github.com/spwntch/core/commit/2d6e7ed))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.50.8 (2024-04-30)
+
+This was a version bump only, there were no code changes.
+
+## 0.50.7 (2024-04-30)
+
+
+### 🚀 Features
+
+- adds a width to the toc div ([7c97b13](https://github.com/spwntch/core/commit/7c97b13))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.6 (2024-04-30)
 
 
