@@ -25,7 +25,10 @@ const meta: Meta<typeof Post> = {
         </div>
       </div>
     ),
-    toc: [{ label: 'ping', href: '#ping' }],
+    toc: [
+      { label: 'ping', href: '#ping' },
+      { label: 'pong', href: '#pong' },
+    ],
   },
 };
 
