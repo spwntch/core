@@ -1,3 +1,14 @@
+## 0.50.11 (2024-04-30)
+
+
+### 🚀 Features
+
+- clicking a TOC item triggers an evnet ([25f4806](https://github.com/spwntch/core/commit/25f4806))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.50.10 (2024-04-30)
 
 
