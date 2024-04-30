@@ -8,19 +8,23 @@ import {
   Muted,
   Small,
 } from '@/react-components';
-import { IMdxDocMeta } from '../../types';
+import { IMdxDocMeta } from '@/react-mdx';
 
-type IPostCardProps = IMdxDocMeta;
+interface IPostCardProps extends IMdxDocMeta {
+  onClick: (slug: string) => void;
+}
 
 export const PostCard = ({
+  slug,
   coverImage,
   date,
   title,
   subtitle,
   tags,
+  onClick,
 }: IPostCardProps) => {
   return (
-    <Card className="max-w-2xl mx-auto">
+    <Card className="max-w-2xl mx-auto" onClick={() => onClick(slug)}>
       <CardContent className="m-0 p-0">
         <img
           className="object-cover object-center rounded-t w-full h-60 "
@@ -29,22 +33,20 @@ export const PostCard = ({
         />
       </CardContent>
       <CardHeader>
-        <div className="flex items-center gap-4 mb-4">
-          <Small>
-            <Muted>{date}</Muted>
-          </Small>
-          {tags?.length && (
-            <ul className="flex gap-3">
-              {tags.map((category, index) => (
-                <li key={index}>
-                  <Badge>{category}</Badge>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        {tags?.length && (
+          <ul className="hidden md:flex gap-3 mb-3 ">
+            {tags.map((category, index) => (
+              <li key={index}>
+                <Badge>{category}</Badge>
+              </li>
+            ))}
+          </ul>
+        )}
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{subtitle}</CardDescription>
+        <Small>
+          <Muted>{date}</Muted>
+        </Small>
+        <CardDescription className='!mt-3'>{subtitle}</CardDescription>
       </CardHeader>
     </Card>
   );
