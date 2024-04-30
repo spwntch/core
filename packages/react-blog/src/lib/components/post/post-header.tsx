@@ -3,13 +3,13 @@ import { IMdxDocMeta } from '@/react-mdx';
 import {
   BackgroundImageHeader,
   Button,
-  IPageSectionContent
-} from '@spwntch/components';
+  IPageSectionContent,
+} from '@/react-components';
 import { ArrowBigLeft } from 'lucide-react';
 
 interface IPostHeaderProps extends IMdxDocMeta {
   backTo?: { label?: string; href: string };
-  onBackTo: (href: string) => void;
+  onBackTo?: (href: string) => void;
 }
 
 export const PostHeader = ({
@@ -27,7 +27,7 @@ export const PostHeader = ({
   };
   return (
     <div className="pt-4 sm:pt-16 pb-4">
-      {backTo && (
+      {backTo && onBackTo && (
         <Button
           variant="ghost"
           className="flex gap-2 pb-4"

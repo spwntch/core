@@ -43,10 +43,8 @@ export const PostCard = ({
           </ul>
         )}
         <CardTitle>{title}</CardTitle>
-        <Small>
-          <Muted>{date}</Muted>
-        </Small>
-        <CardDescription className='!mt-3'>{subtitle}</CardDescription>
+        <Small>{date}</Small>
+        <CardDescription className="!mt-3">{subtitle}</CardDescription>
       </CardHeader>
     </Card>
   );

@@ -14,6 +14,7 @@ const meta: Meta<typeof PostHeader> = {
     title: 'The Real Reason You Need an ICP',
     subtitle: 'Unveiling the Keystone of Business Success',
     tags: ['Customer Experience', 'Business Strategy', 'Smarketing'],
+    onBackTo: (href: string) => console.log('back to', href),
   },
 };
 

@@ -26,8 +26,8 @@
   "license": "MIT",
   "dependencies": {
     "@spwntch/components": "~0.50.2",
+    "@spwntch/mdx": "~0.50.2",
     "@spwntch/tailwind": "~0.50.2",
-    "lucide-react": "^0.360.0",
-    "next-themes": "^0.3.0"
+    "lucide-react": "^0.360.0"
   }
 }
