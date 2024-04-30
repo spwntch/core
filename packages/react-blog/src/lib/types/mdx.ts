@@ -8,21 +8,21 @@ export interface ITocItem {
 
 export interface IMdxDoc {
   meta: IMdxDocMeta;
-  toc: ITocItem[];
+  toc?: ITocItem[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  content: ReactElement<any, string | JSXElementConstructor<any>>;
+  content?: ReactElement<any, string | JSXElementConstructor<any>>;
 }
 
 export interface IMdxDocFrontMatter {
+  slug: string;
   date: string;
   title: string;
   subtitle?: string;
+  coverImage?: string;
   authorName?: string;
   authorAvatar?: string;
   tags?: string[];
   published?: boolean;
 }
 
-export interface IMdxDocMeta extends IMdxDocFrontMatter {
-  slug: string;
-}
+export type IMdxDocMeta = IMdxDocFrontMatter;
