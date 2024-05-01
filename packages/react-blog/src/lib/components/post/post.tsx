@@ -25,7 +25,11 @@ export const Post = ({
         <div className="border-2 border-green-500 prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground ">
           {content}
         </div>
-        {toc?.length && <PostToc toc={toc} onClickToc={onToc} />}
+        {toc?.length && (
+          <div className="flex-1">
+            <PostToc toc={toc} onClickToc={onToc} />
+          </div>
+        )}
       </article>
     </div>
   );
