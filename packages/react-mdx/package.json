@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/mdx",
-  "version": "0.51.24",
+  "version": "0.51.25",
   "main": "./dist/index.js",
   "files": [
     "dist"
