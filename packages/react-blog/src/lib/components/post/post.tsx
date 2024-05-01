@@ -1,6 +1,5 @@
 import { IMdxDoc } from '@/react-mdx';
 import { PostHeader } from './post-header';
-import { PostToc } from './post-toc';
 
 interface IPostProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
@@ -17,12 +16,14 @@ export const Post = ({
   onToc,
 }: IPostProps) => {
   return (
-    <div className="w-full flex flex-col mx-auto border-2 border-red-500">
+    <div className="w-full flex flex-col mx-auto ">
       <div>
         <PostHeader backTo={backTo} {...meta} onBackTo={onBackTo} />
       </div>
-      <article className="border-2 border-blue-500  py-1 md:py-4 px-2 ">
-        <div className="border-2 border-green-500 prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground ">{content}</div>
+      <article className="  py-1 md:py-4 px-2 ">
+        <div className="border-2 border-green-500 prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground ">
+          {content}
+        </div>
         {/* {toc?.length && <PostToc toc={toc} onClickToc={onToc} />} */}
       </article>
     </div>

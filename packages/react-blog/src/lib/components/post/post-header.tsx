@@ -26,7 +26,7 @@ export const PostHeader = ({
     tags,
   };
   return (
-    <div className="pt-4 sm:pt-16 pb-4">
+    <div className=" pb-4">
       {backTo && onBackTo && (
         <Button
           variant="ghost"
