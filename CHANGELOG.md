@@ -1,3 +1,14 @@
+## 0.51.6 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- moves left margin into MobileNavDrawer ([49a9726](https://github.com/spwntch/core/commit/49a9726))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.5 (2024-05-01)
 
 
