@@ -1,3 +1,14 @@
+## 0.51.2 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- removes max-w-none from post article ([535191c](https://github.com/spwntch/core/commit/535191c))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.1 (2024-05-01)
 
 
