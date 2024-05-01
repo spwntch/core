@@ -1,3 +1,14 @@
+## 0.51.1 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- hide post-toc under md ([afb7443](https://github.com/spwntch/core/commit/afb7443))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.0 (2024-04-30)
 
 This was a version bump only, there were no code changes.
