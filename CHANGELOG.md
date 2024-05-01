@@ -1,3 +1,14 @@
+## 0.51.9 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- an attempt to get a well-laid-out post ([b921ed0](https://github.com/spwntch/core/commit/b921ed0))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.8 (2024-05-01)
 
 
