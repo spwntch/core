@@ -1,3 +1,14 @@
+## 0.51.13 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- adds back relative isolate ([176d723](https://github.com/spwntch/core/commit/176d723))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.12 (2024-05-01)
 
 This was a version bump only, there were no code changes.
