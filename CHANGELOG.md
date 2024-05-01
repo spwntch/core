@@ -1,3 +1,14 @@
+## 0.51.8 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- adjusts Post padding in mobile ([54744dd](https://github.com/spwntch/core/commit/54744dd))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.7 (2024-05-01)
 
 
