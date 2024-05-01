@@ -17,7 +17,7 @@ export const Post = ({
   onToc,
 }: IPostProps) => {
   return (
-    <div className="flex flex-col mx-auto border-2 border-red-500">
+    <div className="w-full flex flex-col mx-auto border-2 border-red-500">
       <div>
         <PostHeader backTo={backTo} {...meta} onBackTo={onBackTo} />
       </div>
