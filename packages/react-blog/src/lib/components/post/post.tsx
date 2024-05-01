@@ -1,5 +1,6 @@
 import { IMdxDoc } from '@/react-mdx';
 import { PostHeader } from './post-header';
+import { PostToc } from './post-toc';
 
 interface IPostProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
@@ -24,7 +25,7 @@ export const Post = ({
         <div className="border-2 border-green-500 prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground ">
           {content}
         </div>
-        {/* {toc?.length && <PostToc toc={toc} onClickToc={onToc} />} */}
+        {toc?.length && <PostToc toc={toc} onClickToc={onToc} />}
       </article>
     </div>
   );
