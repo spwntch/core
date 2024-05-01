@@ -8,7 +8,7 @@ interface IPostTocProps {
 
 export const PostToc = ({ toc, onClickToc }: IPostTocProps) => {
   return (
-    <div className="w-96">
+    <div className="hidden md:block w-96">
       <H3 className="mb-4">On this page...</H3>
       <ul>
         {toc.map((heading, index) => (
