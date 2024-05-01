@@ -28,7 +28,7 @@ export const MobileNavDrawer = ({ onLinkTo }: IMobileNavDrawerProps) => {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
+      <SheetTrigger asChild className='ml-2'>
         <Button variant="outline" size="icon">
           <Menu className="h-[1.2rem] w-[1.2rem]" />
           <span className="sr-only">Open menu</span>

@@ -61,9 +61,9 @@ export const DesktopTopNavbar = ({
         <div className="ml-2">
           {githubUrl && <GithubButton url={githubUrl} />}
         </div>
-        <div className="ml-2 block md:hidden">
+        <div className="block md:hidden">
           <ButtonGroup>
-            <MobileNavDrawer onLinkTo={onLinkTo}/>
+            <MobileNavDrawer onLinkTo={onLinkTo} />
           </ButtonGroup>
         </div>
       </div>
