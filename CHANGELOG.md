@@ -1,3 +1,14 @@
+## 0.51.10 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- adds a w-full to Post ([dbd8fc2](https://github.com/spwntch/core/commit/dbd8fc2))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.9 (2024-05-01)
 
 
