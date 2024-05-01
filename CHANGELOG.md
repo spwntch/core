@@ -1,3 +1,14 @@
+## 0.51.4 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- attempt to finalise mobile styling ([12febed](https://github.com/spwntch/core/commit/12febed))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.3 (2024-05-01)
 
 
