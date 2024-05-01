@@ -1,3 +1,14 @@
+## 0.51.3 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- remove relative isolate from artcile ([4b83cef](https://github.com/spwntch/core/commit/4b83cef))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.2 (2024-05-01)
 
 
