@@ -22,7 +22,7 @@ export const Post = ({
         <PostHeader backTo={backTo} {...meta} onBackTo={onBackTo} />
       </div>
       <div className="px-2">
-        <article className="max-w-none py-8 relative isolate prose text-foreground prose-headings:text-foreground flex gap-6">
+        <article className="py-8 relative isolate prose text-foreground prose-headings:text-foreground flex gap-6">
           <div className="flex-1">{content}</div>
           {toc?.length && <PostToc toc={toc} onClickToc={onToc} />}
         </article>
