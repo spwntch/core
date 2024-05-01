@@ -22,7 +22,7 @@ export const Post = ({
         <PostHeader backTo={backTo} {...meta} onBackTo={onBackTo} />
       </div>
       <article className="border-2 border-blue-500  py-1 md:py-4 px-2 ">
-        <div className="border-2 border-green-500 ">{content}</div>
+        <div className="border-2 border-green-500 prose ">{content}</div>
         {/* {toc?.length && <PostToc toc={toc} onClickToc={onToc} />} */}
       </article>
     </div>
