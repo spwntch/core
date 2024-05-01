@@ -1,3 +1,14 @@
+## 0.51.11 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- adds a w-full to artcile tag ([118240a](https://github.com/spwntch/core/commit/118240a))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.10 (2024-05-01)
 
 
