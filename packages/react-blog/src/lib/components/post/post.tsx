@@ -17,11 +17,11 @@ export const Post = ({
   onToc,
 }: IPostProps) => {
   return (
-    <div className="flex flex-col mx-auto max-w-6xl">
+    <div className="flex flex-col mx-auto">
       <div>
         <PostHeader backTo={backTo} {...meta} onBackTo={onBackTo} />
       </div>
-      <div className="">
+      <div>
         <article className="prose text-foreground prose-headings:text-foreground py-1 md:py-4 px-2 flex gap-6">
           <div className="flex-1">{content}</div>
           {toc?.length && <PostToc toc={toc} onClickToc={onToc} />}
