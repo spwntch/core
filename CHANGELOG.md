@@ -1,3 +1,14 @@
+## 0.51.7 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- refines desktop-nav padding ([c9625b3](https://github.com/spwntch/core/commit/c9625b3))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.6 (2024-05-01)
 
 
