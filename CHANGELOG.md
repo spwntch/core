@@ -1,3 +1,14 @@
+## 0.51.5 (2024-05-01)
+
+
+### 🩹 Fixes
+
+- removes mobile menu button when there's no nav items ([80cc22d](https://github.com/spwntch/core/commit/80cc22d))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.4 (2024-05-01)
 
 
