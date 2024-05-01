@@ -21,7 +21,7 @@ export const Post = ({
       <div>
         <PostHeader backTo={backTo} {...meta} onBackTo={onBackTo} />
       </div>
-      <article className="  py-1 md:py-4 px-2 flex">
+      <article className="  py-1 md:py-4 px-2 flex mt-8">
         <div className="prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground ">
           {content}
         </div>
