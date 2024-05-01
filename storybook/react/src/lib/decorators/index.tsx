@@ -30,8 +30,15 @@ export const withBrandProvider: Decorator = (Story) => (
 );
 
 export const withShellProvider: Decorator = (Story) => (
-  <div className="w-screen container">
+  <div className="w-full ">
     <ShellProvider brand={brand} navItems={primaryNav}>
+      <Story />
+    </ShellProvider>
+  </div>
+);
+export const withShellProviderNoNav: Decorator = (Story) => (
+  <div className="w-screen ">
+    <ShellProvider brand={brand}>
       <Story />
     </ShellProvider>
   </div>

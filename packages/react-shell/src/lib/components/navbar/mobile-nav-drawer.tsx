@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { Logo } from '../brand/logo';
 import { Tagline } from '../brand/tagline';
 import { NavMenu } from '../nav/nav-menu';
+import { useNav } from '../../providers';
 
 interface IMobileNavDrawerProps {
   onLinkTo: (href: string) => void;
@@ -21,6 +22,9 @@ interface IMobileNavDrawerProps {
 
 export const MobileNavDrawer = ({ onLinkTo }: IMobileNavDrawerProps) => {
   const [open, setOpen] = useState(false);
+  const { navItems } = useNav();
+
+  if (!navItems?.length) return null;
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
