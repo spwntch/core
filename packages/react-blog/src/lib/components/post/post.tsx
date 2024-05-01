@@ -22,7 +22,7 @@ export const Post = ({
         <PostHeader backTo={backTo} {...meta} onBackTo={onBackTo} />
       </div>
       <article className="  py-1 md:py-4 px-2 flex">
-        <div className="border-2 border-green-500 prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground ">
+        <div className="prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground ">
           {content}
         </div>
         {toc?.length && (
