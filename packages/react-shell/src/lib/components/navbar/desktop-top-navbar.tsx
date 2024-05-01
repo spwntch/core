@@ -23,7 +23,7 @@ export const DesktopTopNavbar = ({
 }: IDesktopTopNavbarProps) => {
   return (
     <header className={cn('sticky top-0 z-50', classNames)}>
-      <div className=" flex py-1 px-4 items-center">
+      <div className=" flex p-2 items-center">
         {/* <Link className="py-1 " href="/">*/}
         <Logo
           height={logoHeight || 36}
