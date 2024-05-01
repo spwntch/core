@@ -18,7 +18,7 @@ export const withFullWidth: Decorator = (Story) => (
 );
 
 export const withFullPage: Decorator = (Story) => (
-  <div className="w-screen h-screen container">
+  <div className="w-full h-screen">
     <Story />
   </div>
 );

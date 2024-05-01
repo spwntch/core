@@ -1,13 +1,13 @@
 import { Post } from '@/react-blog';
 import type { Meta, StoryObj } from '@storybook/react';
-import { withShellProvider } from '../../lib/decorators';
+import { withFullPage, withShellProvider } from '../../lib/decorators';
 import { NoControlsDocs } from '../../lib/docs-templates';
 import { H1, H2, P, Small } from '@/react-components';
 
 const meta: Meta<typeof Post> = {
   component: Post,
   parameters: { docs: { page: NoControlsDocs } },
-  decorators: [withShellProvider],
+  decorators: [withFullPage],
   args: {
     meta: {
       slug: 'the-real-reason-you-need-an-icp.webp',
@@ -18,7 +18,7 @@ const meta: Meta<typeof Post> = {
       tags: ['Customer Experience', 'Business Strategy', 'Smarketing'],
     },
     content: (
-      <div className='flex flex-col gap-8'>
+      <div className='w-full flex flex-col gap-8'>
         <header className='flex flex-col gap-2'>
           <H1>My Fake Blog Post</H1>
           <Small>By John Doe</Small>
