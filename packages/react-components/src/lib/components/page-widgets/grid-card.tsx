@@ -28,7 +28,7 @@ export const GridCard = ({ image, content, onClick }: GridCardProps) => {
           src={image.src}
         />
       </CardContent>
-      <CardHeader>
+      <CardHeader className='py-0 px-3'>
         {tags?.length && (
           <ul className="hidden md:flex gap-3 mb-3 ">
             {tags.map((category, index) => (
