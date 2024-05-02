@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     { from: '../../../assets/spwn/brand/public', to: '/brand' },
     { from: '../../../assets/spwn/images/public', to: '/images' },
     { from: '../../../assets/spwn/blog', to: '/blog' },
+    { from: '../../../assets/interact/client-logos/public', to: '/client-logos' },
     // { from: '../../../assets/storybook/public', to: '/images' },
   ],
   docs: {
