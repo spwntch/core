@@ -1,3 +1,14 @@
+## 0.52.4 (2024-05-02)
+
+
+### 🩹 Fixes
+
+- more styling fixes ([0d9622b](https://github.com/spwntch/core/commit/0d9622b))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.3 (2024-05-02)
 
 
