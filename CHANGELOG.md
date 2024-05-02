@@ -1,3 +1,14 @@
+## 0.52.2 (2024-05-02)
+
+
+### 🩹 Fixes
+
+- trying to resolvecard grid styling ([cdd829e](https://github.com/spwntch/core/commit/cdd829e))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.1 (2024-05-02)
 
 This was a version bump only, there were no code changes.
