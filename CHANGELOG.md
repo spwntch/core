@@ -1,3 +1,15 @@
+## 0.52.3 (2024-05-02)
+
+
+### 🩹 Fixes
+
+- add m-0 to card image ([e68bb93](https://github.com/spwntch/core/commit/e68bb93))
+- allow card ts to be a bit wder ([881b0ba](https://github.com/spwntch/core/commit/881b0ba))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.2 (2024-05-02)
 
 
