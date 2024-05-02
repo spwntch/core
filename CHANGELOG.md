@@ -1,3 +1,14 @@
+## 0.52.0 (2024-05-02)
+
+
+### 🚀 Features
+
+- adds a card grid ([d830c75](https://github.com/spwntch/core/commit/d830c75))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.38 (2024-05-02)
 
 
