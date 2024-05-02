@@ -1,3 +1,14 @@
+## 0.51.38 (2024-05-02)
+
+
+### 🩹 Fixes
+
+- a touch less vertical padding ([05a0d60](https://github.com/spwntch/core/commit/05a0d60))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.37 (2024-05-02)
 
 
