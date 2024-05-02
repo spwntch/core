@@ -1,3 +1,14 @@
+## 0.51.36 (2024-05-02)
+
+
+### 🚀 Features
+
+- adds logo cloud ([19eb377](https://github.com/spwntch/core/commit/19eb377))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.35 (2024-05-01)
 
 This was a version bump only, there were no code changes.
