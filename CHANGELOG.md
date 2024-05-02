@@ -1,3 +1,15 @@
+## 0.51.37 (2024-05-02)
+
+
+### 🩹 Fixes
+
+- if empty array passed into logos, return null ([3e04725](https://github.com/spwntch/core/commit/3e04725))
+- adds key to logo img ([6f76132](https://github.com/spwntch/core/commit/6f76132))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.51.36 (2024-05-02)
 
 
