@@ -1,3 +1,14 @@
+## 0.52.6 (2024-05-02)
+
+
+### 🩹 Fixes
+
+- optimise card-header padding ([bc79fd2](https://github.com/spwntch/core/commit/bc79fd2))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.5 (2024-05-02)
 
 This was a version bump only, there were no code changes.
