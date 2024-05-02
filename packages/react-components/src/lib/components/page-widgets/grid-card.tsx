@@ -23,7 +23,7 @@ export const GridCard = ({ image, content, onClick }: GridCardProps) => {
     >
       <CardContent className="m-0 p-0">
         <img
-          className="object-cover object-center rounded-t w-full h-60 "
+          className="m-0 object-cover object-center rounded-t w-full h-60 "
           alt={image.alt || heading}
           src={image.src}
         />
