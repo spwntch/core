@@ -5,8 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  Muted,
-  Small,
+  Small
 } from '@/react-components';
 import { IMdxDocMeta } from '@/react-mdx';
 
