@@ -18,7 +18,7 @@ export const GridCard = ({ image, content, onClick }: GridCardProps) => {
   const { heading, subHeading, tags } = content;
   return (
     <Card
-      className="max-w-2xl mx-auto cursor-pointer"
+      className="max-w-2xl mx-auto cursor-pointer !p-0"
       onClick={() => onClick()}
     >
       <CardContent className="m-0 p-0">
