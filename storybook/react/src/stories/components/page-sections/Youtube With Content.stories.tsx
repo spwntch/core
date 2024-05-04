@@ -7,13 +7,13 @@ const meta: Meta<typeof YoutubeWithContent> = {
   decorators: [withFullPage],
 
   args: {
-    video: {
-      youtubeId: '1xgP-dR4dzI',
-      placeholderImage: '/brand/youtube-placeholder.webp',
+    youtube: {
+      id: '1xgP-dR4dzI',
+      placeholder: '/brand/youtube-placeholder.webp',
     },
     content: {
       heading: 'A Suitably Epic Heading',
-    }
+    },
   },
 };
 export default meta;

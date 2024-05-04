@@ -2,9 +2,9 @@ import { useMediaQuery } from '@react-hooks-library/core';
 import { useState } from 'react';
 import YouTube from 'react-youtube';
 
-type Props = { youtubeId: string; placeholderImage: string };
+type Props = { id: string; placeholder: string };
 
-export const YoutubePlayer = ({ youtubeId, placeholderImage }: Props) => {
+export const YoutubePlayer = ({ id, placeholder }: Props) => {
   const is2Xl = useMediaQuery('(min-width: 1536px)');
   const isXl = useMediaQuery('(min-width: 1280px)');
   const isLg = useMediaQuery('(min-width: 1024px)');
@@ -15,7 +15,7 @@ export const YoutubePlayer = ({ youtubeId, placeholderImage }: Props) => {
   if (!displayPlayer)
     return (
       <img
-        src={placeholderImage}
+        src={placeholder}
         alt="youtube-vid-placeholder"
         className="mx-auto lg:mx-0 sm:mb-6 md:mb-12 lg:mb-0 xl:mb-3 2xl:mb-0 w-[320px] h-[180px] sm:w-[592px] sm:h-[333px] md:w-[672px] md:h-[378px] lg:w-[464px] lg:h-[261px] xl:w-[592px] xl:h-[333px] 2xl:w-[720px] 2xl:h-[405px]"
         onClick={() => {
@@ -40,7 +40,7 @@ export const YoutubePlayer = ({ youtubeId, placeholderImage }: Props) => {
 
   return (
     <div className="h-[180px] sm:h-[357px] md:h-[426px] lg:h-auto xl:h-[345px] 2xl:h-[405px]  mx-auto lg:mx-0 xl:mx-1">
-      <YouTube videoId={youtubeId} className="" opts={playerOptions} />
+      <YouTube videoId={id} className="" opts={playerOptions} />
     </div>
   );
 };
