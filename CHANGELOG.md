@@ -1,3 +1,14 @@
+## 0.52.11 (2024-05-04)
+
+
+### 🚀 Features
+
+- adds a title opportunity to our logo cloud ([9a522ef](https://github.com/spwntch/core/commit/9a522ef))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.10 (2024-05-04)
 
 This was a version bump only, there were no code changes.
