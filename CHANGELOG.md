@@ -1,3 +1,14 @@
+## 0.52.13 (2024-05-04)
+
+
+### 🚀 Features
+
+- adds a youtube-player ([2cfe0ee](https://github.com/spwntch/core/commit/2cfe0ee))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.12 (2024-05-04)
 
 This was a version bump only, there were no code changes.
