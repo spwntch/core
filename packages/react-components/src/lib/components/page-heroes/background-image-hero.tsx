@@ -14,7 +14,7 @@ export const BackgroundImageHero = forwardRef<
   return (
     <BackgroundImageContainer
       src={image.src}
-      className={className}
+      className={`${className} h-full`}
       showBackgroundPattern
       darkenImage
     >
