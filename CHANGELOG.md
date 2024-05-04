@@ -1,3 +1,15 @@
+## 0.52.14 (2024-05-04)
+
+
+### 🩹 Fixes
+
+- some layout improvements ([db3b3c3](https://github.com/spwntch/core/commit/db3b3c3))
+- a more explicit youtube interface ([aedd77b](https://github.com/spwntch/core/commit/aedd77b))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.13 (2024-05-04)
 
 
