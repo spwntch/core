@@ -1,3 +1,14 @@
+## 0.52.15 (2024-05-05)
+
+
+### 🚀 Features
+
+- capability to place hder conten right. ([c876b09](https://github.com/spwntch/core/commit/c876b09))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.14 (2024-05-04)
 
 
