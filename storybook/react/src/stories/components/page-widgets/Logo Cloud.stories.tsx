@@ -19,6 +19,9 @@ export default meta;
 type Story = StoryObj<typeof LogoCloud>;
 
 export const logoCloud: Story = {};
+export const withTitle: Story = {
+  args: { title: 'Our Clients' },
+};
 export const noLogosProvider: Story = {
   args: { logos: [] },
 };

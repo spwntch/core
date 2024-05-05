@@ -19,3 +19,6 @@ export default meta;
 type Story = StoryObj<typeof BackgroundImageHeader>;
 
 export const backgroundImageHeader: Story = {};
+export const placeRight: Story = {
+  args: {placeRight: true}
+};

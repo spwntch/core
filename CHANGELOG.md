@@ -1,3 +1,57 @@
+## 0.52.14 (2024-05-04)
+
+
+### 🩹 Fixes
+
+- some layout improvements ([db3b3c3](https://github.com/spwntch/core/commit/db3b3c3))
+- a more explicit youtube interface ([aedd77b](https://github.com/spwntch/core/commit/aedd77b))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.13 (2024-05-04)
+
+
+### 🚀 Features
+
+- adds a youtube-player ([2cfe0ee](https://github.com/spwntch/core/commit/2cfe0ee))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.12 (2024-05-04)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.11 (2024-05-04)
+
+
+### 🚀 Features
+
+- adds a title opportunity to our logo cloud ([9a522ef](https://github.com/spwntch/core/commit/9a522ef))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.10 (2024-05-04)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.9 (2024-05-04)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.8 (2024-05-04)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.7 (2024-05-04)
+
+This was a version bump only, there were no code changes.
+
 ## 0.52.6 (2024-05-02)
 
 

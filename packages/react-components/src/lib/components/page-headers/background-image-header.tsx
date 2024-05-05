@@ -3,15 +3,17 @@ import { IAttributableImage } from '../../types';
 import { BackgroundImageContainer } from '../containers';
 import { Badge } from '../ui';
 import { BasicHeader, BasicHeaderProps } from './basic-header';
+import { cn } from '../../utils';
 
 interface BackgroundImageHeaderProps extends BasicHeaderProps {
   image: IAttributableImage;
+  placeRight?: boolean;
 }
 
 export const BackgroundImageHeader = forwardRef<
   HTMLDivElement,
   BackgroundImageHeaderProps
->(({ className, image, header, children }, ref) => {
+>(({ className, image, placeRight, header, children }, ref) => {
   return (
     <BackgroundImageContainer
       src={image.src}
@@ -19,7 +21,11 @@ export const BackgroundImageHeader = forwardRef<
       showBackgroundPattern
       darkenImage
     >
-      <BasicHeader header={header} className="text-left" ref={ref}>
+      <BasicHeader
+        header={header}
+        className={cn('text-left', placeRight ? 'pl-[50%]' : 'pr-[50%]')}
+        ref={ref}
+      >
         {children}
       </BasicHeader>
       {header.tags && (
