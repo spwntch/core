@@ -1,3 +1,19 @@
+## 0.52.17 (2024-05-09)
+
+
+### 🚀 Features
+
+- adds some imprved content to our youtbue section ([ba47fd7](https://github.com/spwntch/core/commit/ba47fd7))
+
+### 🩹 Fixes
+
+- swtich to 2-column grid at md for youtube-with-content ([4965d4b](https://github.com/spwntch/core/commit/4965d4b))
+- as a general rule now, body props go from string to string[] to allow for paragraphs ([a7934a6](https://github.com/spwntch/core/commit/a7934a6))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.16 (2024-05-09)
 
 
