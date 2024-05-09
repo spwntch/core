@@ -9,7 +9,7 @@ const meta: Meta<typeof YoutubeWithContent> = {
   args: {
     youtube: {
       id: '1xgP-dR4dzI',
-      placeholder: '/brand/youtube-placeholder.webp',
+      thumbnailUrl: '/brand/youtube-placeholder.webp',
     },
     content: {
       heading: 'A Suitably Epic Heading',

@@ -22,6 +22,7 @@ export interface IPageSectionContent {
   tags?: string[];
 }
 
+
 export interface IPageSection {
   image: IAttributableImage;
   content: IPageSectionContent;

@@ -7,7 +7,7 @@ const meta: Meta<typeof YoutubePlayer> = {
   parameters: { docs: { page: BasicDocs } },
   args: {
     id: '1xgP-dR4dzI',
-    placeholder: '/brand/youtube-placeholder.webp',
+    thumbnailUrl: '/brand/youtube-placeholder.webp',
   },
 };
 export default meta;
