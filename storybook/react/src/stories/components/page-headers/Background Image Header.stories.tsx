@@ -10,7 +10,9 @@ const meta: Meta<typeof BackgroundImageHeader> = {
     header: {
       heading: 'Blog',
       subHeading: 'The latest from our team',
-      body: `We're always learning and growing. Here's what we've been up to lately.`,
+      body: [
+        `We're always learning and growing. Here's what we've been up to lately.`,
+      ],
     },
   },
   // tags: ['autodocs'],
@@ -20,5 +22,5 @@ type Story = StoryObj<typeof BackgroundImageHeader>;
 
 export const backgroundImageHeader: Story = {};
 export const placeRight: Story = {
-  args: {placeRight: true}
+  args: { placeRight: true },
 };
