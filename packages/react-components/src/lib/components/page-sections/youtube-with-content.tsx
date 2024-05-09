@@ -15,7 +15,7 @@ export const YoutubeWithContent = ({
   content,
 }: YoutubeWithContentProps) => {
   return (
-    <div className="grid grid-cols-2 gap-8 ">
+    <div className="grid md:grid-cols-2 gap-8 ">
       <YoutubePlayer {...video} />
       <div>
         <H2>{content.heading}</H2>
