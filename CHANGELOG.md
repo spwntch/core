@@ -1,3 +1,15 @@
+## 0.52.16 (2024-05-09)
+
+
+### 🩹 Fixes
+
+- remove max-w-3xl from image children container ([03d1af6](https://github.com/spwntch/core/commit/03d1af6))
+- remove blue border ([7d9b217](https://github.com/spwntch/core/commit/7d9b217))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.15 (2024-05-05)
 
 
