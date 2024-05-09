@@ -28,7 +28,7 @@ export const BackgroundImageContainer = forwardRef<
     return (
       <div
         className={cn(
-          'border-2 border-blue-500 h-full w-full relative isolate overflow-hidden pt-48 sm:pt-64',
+          'h-full w-full relative isolate overflow-hidden pt-48 sm:pt-64',
           className
         )}
         ref={ref}
