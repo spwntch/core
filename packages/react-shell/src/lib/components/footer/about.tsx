@@ -7,7 +7,11 @@ export const About = () => {
   return (
     <div>
       <H3>{about?.title || 'About Us'}</H3>
-      <Small>{about?.body}</Small>
+      <div className="">
+        {about?.body?.map((paragraph, index) => (
+          <Small key={index}>{paragraph}</Small>
+        ))}
+      </div>
     </div>
   );
 };

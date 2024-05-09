@@ -13,7 +13,7 @@ export interface IBrand {
 
 export interface IBrandAbout {
   title?: string;
-  body: string;
+  body: string[];
 }
 
 export interface IBrandContact {

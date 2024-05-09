@@ -13,6 +13,9 @@ const meta: Meta<typeof YoutubeWithContent> = {
     },
     content: {
       heading: 'A Suitably Epic Heading',
+      body: [
+        'ipsum lorem dolor sit amet consectetur adipiscing elit. Nullam nec purus et libero.',
+      ],
     },
   },
 };
