@@ -28,7 +28,7 @@ export const BackgroundImageContainer = forwardRef<
     return (
       <div
         className={cn(
-          'h-full w-full relative isolate overflow-hidden pt-48 sm:pt-64',
+          'border-2 border-blue-500 h-full w-full relative isolate overflow-hidden pt-48 sm:pt-64',
           className
         )}
         ref={ref}
@@ -50,7 +50,7 @@ export const BackgroundImageContainer = forwardRef<
             darkenImage && 'text-white'
           )}
         >
-          <div className="mx-auto max-w-3xl lg:mx-0">{children}</div>
+          <div className="mx-auto lg:mx-0">{children}</div>
         </div>
       </div>
     );
