@@ -6,9 +6,9 @@ const meta: Meta<typeof Button> = {
   args: {
     children: 'Click Me',
   },
-  // tags: ['autodocs'],
+  tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const button: Story = {};
+export const basic: Story = {};
