@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import * as path from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   root: __dirname,
@@ -16,9 +17,11 @@ export default defineConfig({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
     }),
+    libInjectCss(),
   ],
 
   build: {
+    outDir: './dist',
     commonjsOptions: {
       transformMixedEsModules: true,
     },
@@ -29,6 +32,10 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output:{
+        assetFileNames: 'assets/[name][extname]',
+        entryFileNames: '[name].js',
+      }
     },
   },
 });
