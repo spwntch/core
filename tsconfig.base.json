@@ -20,6 +20,7 @@
       "@/react-mdx": ["packages/react-mdx/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],
+      "@/react-ui": ["packages/react-ui/src/index.ts"],
       "@/tailwind/*": ["packages/tailwind/src/*"]
     }
   },
