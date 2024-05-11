@@ -8,8 +8,6 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
-
-
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/react-ui',
@@ -37,18 +35,17 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       input: Object.fromEntries(
-        glob.sync('src/**/*.{ts,tsx}').map(file => [
-          relative(
-            'src',
-            file.slice(0, file.length - extname(file).length)
-          ),
-          fileURLToPath(new URL(file, import.meta.url))
-        ])
+        glob
+          .sync('src/**/*.{ts,tsx}')
+          .map((file) => [
+            relative('src', file.slice(0, file.length - extname(file).length)),
+            fileURLToPath(new URL(file, import.meta.url)),
+          ])
       ),
-      output:{
+      output: {
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
-      }
+      },
     },
   },
 });
