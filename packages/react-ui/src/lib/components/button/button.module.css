@@ -2,12 +2,11 @@
   width: fit-content;
   padding: 4px;
   text-align: center;
-  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   border: none;
   outline: none;
-  @apply border-2 border-red-500;
+  @apply border-2 border-red-500 bg-primary;
 }
