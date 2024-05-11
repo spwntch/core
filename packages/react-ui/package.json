@@ -1,7 +1,6 @@
 {
   "name": "@spwntch/ui",
-  "private": true,
-  "version": "0.52.17",
+  "version": "0.52.18",
   "files": [
     "dist"
   ],
@@ -17,7 +16,7 @@
     "@radix-ui/react-menubar": "^1.0.4",
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-slot": "^1.0.2",
-    "@spwntch/tailwind": "~0.52.17",
+    "@spwntch/tailwind": "~0.52.18",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.360.0",

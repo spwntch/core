@@ -1,3 +1,22 @@
+## 0.52.18 (2024-05-11)
+
+
+### 🚀 Features
+
+- adds a boilerplate @spwntch/ui lib ([0626fca](https://github.com/spwntch/core/commit/0626fca))
+- adds a temporary button component to play with ([c27086b](https://github.com/spwntch/core/commit/c27086b))
+- adds a simple tailwind direcove to give our button a red border. ([4197d02](https://github.com/spwntch/core/commit/4197d02))
+
+### 🩹 Fixes
+
+- remove all @spwntch/ui deps ([bd78094](https://github.com/spwntch/core/commit/bd78094))
+- remove our sayHello function ([8820802](https://github.com/spwntch/core/commit/8820802))
+- ci (lint) ([fb96687](https://github.com/spwntch/core/commit/fb96687))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.17 (2024-05-09)
 
 
