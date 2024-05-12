@@ -6,11 +6,6 @@
   ],
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
-  "exports": {
-    "./styles": {
-      "default": "./dist/assets/index.css"
-    }
-  },
   "keywords": [],
   "author": "spwntch",
   "license": "MIT",
