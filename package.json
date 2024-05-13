@@ -15,7 +15,7 @@
     "webp": "tools/scripts/webp.sh ",
     "registry": "pnpm dlx nx local-registry",
     "spawn-workspace": "pnpm dlx nx run spawn-workspace",
-    "add-shad": "pnpm dlx nx run react-components:add-shad",
+    "add-shad": "pnpm dlx nx run react-ui:add-shad",
     "ci": "pnpm dlx nx run-many -t lint test build build-storybook"
   },
   "private": true,
