@@ -2,12 +2,30 @@ import { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '../../../utils';
 import { BackroundPattern } from './background-pattern';
 
+/**
+ * Props for the BackgroundImageContainer component.
+ */
 interface BackgroundImageContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
     PropsWithChildren {
+  /**
+   * Additional class name(s) for the container.
+   */
   className?: string;
+  
+  /**
+   * The URL of the background image.
+   */
   src?: string;
+  
+  /**
+   * Whether to darken the background image.
+   */
   darkenImage?: boolean;
+  
+  /**
+   * Whether to show a background pattern.
+   */
   showBackgroundPattern?: boolean;
 }
 
@@ -50,7 +68,7 @@ export const BackgroundImageContainer = forwardRef<
             darkenImage && 'text-white'
           )}
         >
-          <div className="mx-auto max-w-3xl lg:mx-0">{children}</div>
+          <div className="mx-auto lg:mx-0">{children}</div>
         </div>
       </div>
     );

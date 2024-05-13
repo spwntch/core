@@ -1,16 +1,15 @@
 import { Button, ButtonGroup } from '@/react-components';
 import type { Meta, StoryObj } from '@storybook/react';
-import { withFlexRowWrap } from '../../../lib/decorators';
 import { BasicDocs } from '../../../lib/docs-templates';
 
 /**
  * Custom ButtonGroup component built on top of the standard ButtonGroup from `shadcn/ui`.
- * Inherits all capabilities from the base ButtonGroup component, with some UX enhancements.
+ * Inherits all capabilities from the base ButtonGroup component, with the introduction of a `stacked` prop..
  */
 const meta: Meta<typeof ButtonGroup> = {
   component: ButtonGroup,
-  parameters: { docs: { page: BasicDocs } },
-  decorators: [withFlexRowWrap],
+  parameters: { docs: { page: BasicDocs }, layout: 'centered' },
+  tags: ['autodocs'],
   args: {
     children: (
       <>
@@ -23,4 +22,6 @@ const meta: Meta<typeof ButtonGroup> = {
 export default meta;
 type Story = StoryObj<typeof ButtonGroup>;
 
-export const buttonGroup: Story = {};
+export const standard: Story = {};
+
+export const stacked: Story = { args: { stacked: true } };

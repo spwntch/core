@@ -1,3 +1,50 @@
+## 0.52.18 (2024-05-11)
+
+
+### 🚀 Features
+
+- adds a boilerplate @spwntch/ui lib ([0626fca](https://github.com/spwntch/core/commit/0626fca))
+- adds a temporary button component to play with ([c27086b](https://github.com/spwntch/core/commit/c27086b))
+- adds a simple tailwind direcove to give our button a red border. ([4197d02](https://github.com/spwntch/core/commit/4197d02))
+
+### 🩹 Fixes
+
+- remove all @spwntch/ui deps ([bd78094](https://github.com/spwntch/core/commit/bd78094))
+- remove our sayHello function ([8820802](https://github.com/spwntch/core/commit/8820802))
+- ci (lint) ([fb96687](https://github.com/spwntch/core/commit/fb96687))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.17 (2024-05-09)
+
+
+### 🚀 Features
+
+- adds some imprved content to our youtbue section ([ba47fd7](https://github.com/spwntch/core/commit/ba47fd7))
+
+### 🩹 Fixes
+
+- swtich to 2-column grid at md for youtube-with-content ([4965d4b](https://github.com/spwntch/core/commit/4965d4b))
+- as a general rule now, body props go from string to string[] to allow for paragraphs ([a7934a6](https://github.com/spwntch/core/commit/a7934a6))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.16 (2024-05-09)
+
+
+### 🩹 Fixes
+
+- remove max-w-3xl from image children container ([03d1af6](https://github.com/spwntch/core/commit/03d1af6))
+- remove blue border ([7d9b217](https://github.com/spwntch/core/commit/7d9b217))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.15 (2024-05-05)
 
 

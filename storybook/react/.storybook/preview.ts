@@ -12,7 +12,6 @@ export const parameters: Parameters = {
     ],
     disable: true,
   },
-  layout: 'centered',
   controls: { exclude: ['children'] },
   options: {
     storySort: {

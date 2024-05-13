@@ -2,9 +2,9 @@ import { useMediaQuery } from '@react-hooks-library/core';
 import { useState } from 'react';
 import YouTube from 'react-youtube';
 
-type Props = { id: string; placeholder: string };
+type Props = { id: string; thumbnailUrl: string };
 
-export const YoutubePlayer = ({ id, placeholder }: Props) => {
+export const YoutubePlayer = ({ id, thumbnailUrl }: Props) => {
   const is2Xl = useMediaQuery('(min-width: 1536px)');
   const isXl = useMediaQuery('(min-width: 1280px)');
   const isLg = useMediaQuery('(min-width: 1024px)');
@@ -15,7 +15,7 @@ export const YoutubePlayer = ({ id, placeholder }: Props) => {
   if (!displayPlayer)
     return (
       <img
-        src={placeholder}
+        src={thumbnailUrl}
         alt="youtube-vid-placeholder"
         className="mx-auto lg:mx-0 sm:mb-6 md:mb-12 lg:mb-0 xl:mb-3 2xl:mb-0 w-[320px] h-[180px] sm:w-[592px] sm:h-[333px] md:w-[672px] md:h-[378px] lg:w-[464px] lg:h-[261px] xl:w-[592px] xl:h-[333px] 2xl:w-[720px] 2xl:h-[405px]"
         onClick={() => {

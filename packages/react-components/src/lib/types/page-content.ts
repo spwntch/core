@@ -17,10 +17,11 @@ export interface IPageSectionBullet {
 export interface IPageSectionContent {
   heading: string;
   subHeading?: string;
-  body?: string;
+  body?: string[];
   bullets?: IPageSectionBullet[];
   tags?: string[];
 }
+
 
 export interface IPageSection {
   image: IAttributableImage;
