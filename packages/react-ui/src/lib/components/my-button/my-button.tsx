@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import styles from './button.module.css';
+import styles from './my-button.module.css';
 
 export interface ButtonProps extends PropsWithChildren {
   allCaps?: boolean;
