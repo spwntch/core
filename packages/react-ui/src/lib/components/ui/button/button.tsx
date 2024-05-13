@@ -8,33 +8,33 @@ import { cn } from '../../../utils';
 const buttonVariants = cva(styles.button, {
   variants: {
     variant: {
-      default: styles.variant_default,
-      destructive: styles.variant_destructive,
-      outline: styles.variant_outline,
-      secondary: styles.variant_secondary,
-      ghost: styles.variant_ghost,
-      link: styles.variant_link,
+      primary: styles.primary,
+      secondary: styles.secondary,
+      destructive: styles.destructive,
+      ghost: styles.ghost,
+      outline: styles.outline,
+      link: styles.link,
     },
     size: {
-      default: styles.size_default,
-      sm: styles.size_sm,
-      lg: styles.size_lg,
-      icon: styles.size_icon,
+      sm: styles.sm,
+      md: styles.md,
+      lg: styles.lg,
+      icon: styles.icon,
     },
   },
   defaultVariants: {
-    variant: 'default',
-    size: 'default',
+    variant: 'primary',
+    size: 'md',
   },
 });
 
-export interface NewButtonProps
+export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
-const NewButton = React.forwardRef<HTMLButtonElement, NewButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
     return (
@@ -46,6 +46,6 @@ const NewButton = React.forwardRef<HTMLButtonElement, NewButtonProps>(
     );
   }
 );
-NewButton.displayName = 'NewButton';
+Button.displayName = 'Button';
 
-export { NewButton, buttonVariants };
+export { Button, buttonVariants };
