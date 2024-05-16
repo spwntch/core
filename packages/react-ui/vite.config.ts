@@ -21,16 +21,15 @@ export default defineConfig({
 
   build: {
     outDir: './dist',
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
+    // commonjsOptions: {
+    //   transformMixedEsModules: true,
+    // },
     lib: {
       entry: 'src/index.ts',
       name: 'react-ui',
       formats: ['es'],
     },
     rollupOptions: {
-      // external: ['react', 'react-dom', 'react/jsx-runtime'],
       // input: Object.fromEntries(
       //   glob
       //     .sync('src/**/*.{ts,tsx}')
@@ -43,6 +42,7 @@ export default defineConfig({
         //   assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
       },
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
     },
   },
 });
