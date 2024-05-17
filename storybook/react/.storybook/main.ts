@@ -18,8 +18,8 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
   stories: [
-    '../src/stories/**/!(_)*.@(mdx|stories.@(js|jsx|ts|tsx))',
-    '../../../packages/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/docs/**/!(_)*.mdx',
+    '../../../packages/**/!(_)*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-essentials',

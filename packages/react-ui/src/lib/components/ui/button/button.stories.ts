@@ -1,7 +1,8 @@
-import { Button } from '@/react-ui';
+import { Button } from './button';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Button> = {
+  title: 'UI/Components/Button',
   component: Button,
   args: {
     children: 'Click Me',
