@@ -2,14 +2,14 @@ import { Badge } from './badge';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Badge> = {
-  title: 'UI/Badge',
+  title: 'UI/Components/Badge',
   component: Badge,
   args: {
     children: 'user experience',
   },
-  // tags: ['autodocs'],
+  tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof Badge>;
 
-export const badge: Story = {};
+export const basic: Story = {};

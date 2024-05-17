@@ -7,17 +7,17 @@ import {
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Accordion> = {
-  title: 'UI/Accordion',
+  title: 'UI/Components/Accordion',
   component: Accordion,
   args: {
     children: 'Click Me',
   },
-  // tags: ['autodocs'],
+  tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof Accordion>;
 
-export const accordion: Story = {
+export const basic: Story = {
   render: () => (
     <Accordion type="single" collapsible className="w-96">
       <AccordionItem value="item-1">
