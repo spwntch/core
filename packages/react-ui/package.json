@@ -4,7 +4,8 @@
   "files": [
     "dist",
     "!dist/**/*.stories.js",
-    "!dist/**/*.stories.d.ts"
+    "!dist/**/*.stories.d.ts",
+    "!dist/**/*.mjs"
   ],
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",

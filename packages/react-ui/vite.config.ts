@@ -24,9 +24,9 @@ export default defineConfig({
 
   build: {
     outDir: './dist',
-    // commonjsOptions: {
-    //   transformMixedEsModules: true,
-    // },
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
     lib: {
       entry: 'src/index.ts',
       name: 'react-ui',
@@ -45,7 +45,7 @@ export default defineConfig({
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
       },
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', 'lucide-react'],
     },
   },
 });
