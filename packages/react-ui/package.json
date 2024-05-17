@@ -10,5 +10,7 @@
   "keywords": [],
   "author": "spwntch",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "@spwntch/tailwind": "~0.52.20"
+  }
 }
