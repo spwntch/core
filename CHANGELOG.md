@@ -1,3 +1,19 @@
+## 0.52.20 (2024-05-17)
+
+
+### 🚀 Features
+
+- adds accordion to @/react-ui ([7a6bb6b](https://github.com/spwntch/core/commit/7a6bb6b))
+- adds badge ([51766f1](https://github.com/spwntch/core/commit/51766f1))
+- adds card ([8d6121d](https://github.com/spwntch/core/commit/8d6121d))
+- adds menubar ([0c6eff8](https://github.com/spwntch/core/commit/0c6eff8))
+- adds navigation-menu ([811dce5](https://github.com/spwntch/core/commit/811dce5))
+- adds sheet ([8ffd2fb](https://github.com/spwntch/core/commit/8ffd2fb))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.18 (2024-05-11)
 
 
