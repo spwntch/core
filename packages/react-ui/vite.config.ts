@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import { join } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   root: __dirname,
@@ -16,7 +17,7 @@ export default defineConfig({
       entryRoot: 'src',
       tsconfigPath: join(__dirname, 'tsconfig.lib.json'),
     }),
-    // libInjectCss(),
+    libInjectCss(),
   ],
 
   build: {
