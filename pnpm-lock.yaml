@@ -128,7 +128,7 @@ importers:
         version: 8.1.1(prettier@3.2.5)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)(vite@5.0.13)
       '@storybook/test-runner':
         specifier: ^0.18.0
-        version: 0.18.0(@swc/helpers@0.5.11)(@types/node@18.16.9)(prettier@3.2.5)(ts-node@10.9.1)
+        version: 0.18.1(@swc/helpers@0.5.11)(@types/node@18.16.9)(prettier@3.2.5)(ts-node@10.9.1)
       '@storybook/theming':
         specifier: ^8.1.1
         version: 8.1.1(react-dom@18.3.1)(react@18.3.1)
@@ -354,6 +354,9 @@ importers:
 
   packages/react-ui:
     dependencies:
+      '@radix-ui/react-slot':
+        specifier: ^1.0.2
+        version: 1.0.2(@types/react@18.3.1)(react@18.3.1)
       '@spwntch/tailwind':
         specifier: ~0.52.22
         version: link:../tailwind
@@ -5415,8 +5418,8 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/test-runner@0.18.0(@swc/helpers@0.5.11)(@types/node@18.16.9)(prettier@3.2.5)(ts-node@10.9.1):
-    resolution: {integrity: sha512-6IUQbRp78yNwAEpS8w9aIZaaNoaMV8g0r8PXCB+dooWywty9FOL1q6oDOTCUeUQKuziIPUfFX5er58UokSmlRQ==}
+  /@storybook/test-runner@0.18.1(@swc/helpers@0.5.11)(@types/node@18.16.9)(prettier@3.2.5)(ts-node@10.9.1):
+    resolution: {integrity: sha512-lNbrdruC8v2RP6r0CYdUzfjLIFP/VllajqyX73adhlj8LrJ8vNMRNNTy3e29Ah8fCSCS+1rhjYO97V5tYl25vg==}
     engines: {node: ^16.10.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
