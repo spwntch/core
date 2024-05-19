@@ -5,3 +5,4 @@ export * from './card/card';
 export * from './dropdown-menu/dropdown-menu';
 export * from './menubar/menubar';
 export * from './navigation-menu/navigation-menu';
+export * from './sheet/sheet';
