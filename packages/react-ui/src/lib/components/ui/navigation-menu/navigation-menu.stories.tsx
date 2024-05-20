@@ -1,35 +1,55 @@
+import React from "react"
+import { Meta, StoryObj } from "@storybook/react"
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuItem,
   NavigationMenuTrigger,
-} from './navigation-menu';
-import type { Meta, StoryObj } from '@storybook/react';
+  NavigationMenuContent,
+  NavigationMenuLink,
+  NavigationMenuIndicator,
+  NavigationMenuViewport,
+} from "./navigation-menu"
 
 const meta: Meta<typeof NavigationMenu> = {
-  title: 'UI/Components/NavigationMenu',
+  title: "UI/Components/NavigationMenu",
   component: NavigationMenu,
-  args: {
-    children: 'Click Me',
-  },
   tags: ['autodocs'],
-};
-export default meta;
-type Story = StoryObj<typeof NavigationMenu>;
+  parameters: {
+    docs: {
+      description: {
+        component: "A versatile navigation menu component with multiple subcomponents.",
+      },
+    },
+  },
+}
 
-export const basic: Story = {
-  render: () => (
-    <NavigationMenu>
+export default meta
+
+export const Default: StoryObj<typeof NavigationMenu> = {
+  render: (args) => (
+    <NavigationMenu {...args}>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink>Link</NavigationMenuLink>
+            <NavigationMenuLink href="/">Home</NavigationMenuLink>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>About</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <NavigationMenuLink href="/about">About</NavigationMenuLink>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <NavigationMenuLink href="/services">Services</NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
+      <NavigationMenuIndicator />
     </NavigationMenu>
   ),
-};
+}
