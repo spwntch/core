@@ -1,25 +1,18 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "../../../utils";
 
-/**
- * Badge component - A small, pill-shaped component used to display a count or label.
- * 
- * @param {object} props - Props for Badge
- * @param {string} [props.variant] - Variant style of the badge (default, secondary, destructive, outline)
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @returns {JSX.Element} The Badge component
- */
+import { cn } from "../../../utils";
+import styles from "./badge.module.css";
+
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  styles.badge,
   {
     variants: {
       variant: {
-        default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
+        default: styles["badge--default"],
+        secondary: styles["badge--secondary"],
+        destructive: styles["badge--destructive"],
+        outline: styles["badge--outline"],
       },
     },
     defaultVariants: {
@@ -28,29 +21,25 @@ const badgeVariants = cva(
   }
 );
 
+/**
+ * Badge component for displaying inline labels.
+ *
+ * This component can be used to create labels with various styles. It supports different variants
+ * like default, secondary, destructive, and outline. You can use the `className` prop to add
+ * additional styles.
+ *
+ * @param {string} className - Additional class names to style the component.
+ * @param {string} variant - The variant of the badge. It can be 'default', 'secondary', 'destructive', or 'outline'.
+ * @param {object} props - Additional props for the Badge component.
+ */
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
-/**
- * Badge component - A small, pill-shaped component used to display a count or label.
- * 
- * @param {object} props - Props for Badge
- * @param {string} [props.variant] - Variant style of the badge (default, secondary, destructive, outline)
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @returns {JSX.Element} The Badge component
- */
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
-  ({ className, variant, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn(badgeVariants({ variant }), className)}
-        {...props}
-      />
-    );
-  }
+  ({ className, variant, ...props }, ref) => (
+    <div ref={ref} className={cn(badgeVariants({ variant }), className)} {...props} />
+  )
 );
 
 Badge.displayName = "Badge";

@@ -1,37 +1,35 @@
-/* Accordion.module.css */
-
 .accordion-item {
   @apply border-b;
+}
+
+.accordion-trigger__header {
+  @apply flex;
 }
 
 .accordion-trigger {
   @apply flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline;
 }
 
-.accordion-trigger-open svg {
-  @apply rotate-180;
-}
-
-.accordion-chevron {
+.accordion-trigger__icon {
   @apply h-4 w-4 shrink-0 transition-transform duration-200;
 }
 
-.accordion-header {
-  @apply flex;
+.accordion-trigger__icon--open {
+  @apply rotate-180;
 }
 
 .accordion-content {
   @apply overflow-hidden text-sm transition-all;
 }
 
-.accordion-content-closed {
+.accordion-content--closed {
   @apply data-[state=closed]:animate-accordion-up;
 }
 
-.accordion-content-open {
+.accordion-content--open {
   @apply data-[state=open]:animate-accordion-down;
 }
 
-.accordion-content-inner {
+.accordion-content__inner {
   @apply pb-4 pt-0;
 }

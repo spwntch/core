@@ -1,90 +1,81 @@
-import * as React from "react"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from "lucide-react"
-import { cn } from "../../../utils"
+import * as React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
+
+import { cn } from "../../../utils";
+import styles from "./accordion.module.css";
 
 /**
- * Accordion component - A container for accordion items.
+ * Accordion component that provides an expandable/collapsible content section.
  * 
- * @param {object} props - Props for Accordion
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @returns {JSX.Element} The Accordion component
+ * Use this component to wrap AccordionItem components for a cohesive accordion
+ * behavior.
  */
-const Accordion = AccordionPrimitive.Root
+const Accordion = AccordionPrimitive.Root;
 
 /**
- * AccordionItem component - An item in the Accordion.
- * 
- * @param {object} props - Props for AccordionItem
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The AccordionItem component
+ * AccordionItem component represents a single item within an Accordion.
+ *
+ * @param {string} className - Additional class names for styling the component.
+ * @param {object} props - Additional props for the AccordionItem.
  */
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> & { className?: string }
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b", className)}
+    className={cn(styles['accordion-item'], className)}
     {...props}
   />
-))
-AccordionItem.displayName = "AccordionItem"
+));
+AccordionItem.displayName = "AccordionItem";
 
 /**
- * AccordionTrigger component - A trigger for the Accordion item.
- * 
- * @param {object} props - Props for AccordionTrigger
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The AccordionTrigger component
+ * AccordionTrigger component is a button that toggles the visibility of the
+ * corresponding AccordionContent.
+ *
+ * @param {string} className - Additional class names for styling the component.
+ * @param {object} props - Additional props for the AccordionTrigger.
+ * @param {React.ReactNode} children - The content to be displayed inside the trigger.
  */
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & { className?: string }
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex">
+  <AccordionPrimitive.Header className={styles['accordion-trigger__header']}>
     <AccordionPrimitive.Trigger
       ref={ref}
-      className={cn(
-        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
-        className
-      )}
+      className={cn(styles['accordion-trigger'], className)}
       {...props}
     >
       {children}
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown className={cn(styles['accordion-trigger__icon'], "[data-state=open]:" + styles['accordion-trigger__icon--open'])} />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
-))
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
 /**
- * AccordionContent component - The content of the Accordion item.
- * 
- * @param {object} props - Props for AccordionContent
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The AccordionContent component
+ * AccordionContent component that contains the content for a specific AccordionItem.
+ *
+ * @param {string} className - Additional class names for styling the component.
+ * @param {object} props - Additional props for the AccordionContent.
+ * @param {React.ReactNode} children - The content to be displayed inside the AccordionContent.
  */
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> & { className?: string }
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className={cn(styles['accordion-content'], { [styles['accordion-content--closed']]: true, [styles['accordion-content--open']]: true })}
     {...props}
   >
-    <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    <div className={cn(styles['accordion-content__inner'], className)}>{children}</div>
   </AccordionPrimitive.Content>
-))
+));
 
-AccordionContent.displayName = AccordionPrimitive.Content.displayName
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

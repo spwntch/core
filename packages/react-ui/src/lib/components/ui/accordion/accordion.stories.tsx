@@ -1,58 +1,41 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from './accordion';
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./accordion";
 
 const meta: Meta<typeof Accordion> = {
-  title: 'UI/Components/Accordion',
+  title: "UI/Components/Accordion",
   component: Accordion,
   tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: 'A versatile accordion component that adheres to WAI-ARIA design patterns.',
-      },
+  argTypes: {
+    className: {
+      control: 'text',
+      description: 'Additional class names to style the component',
     },
   },
 };
-
 export default meta;
 
 type Story = StoryObj<typeof Accordion>;
 
 /**
- * Default story for the Accordion component.
+ * Default Accordion with multiple items.
+ * 
+ * This story showcases the default usage of the Accordion component,
+ * with multiple AccordionItem components, each containing an AccordionTrigger
+ * and AccordionContent. Use this as a starting point for more complex
+ * accordion structures.
  */
 export const Default: Story = {
   render: (args) => (
     <Accordion {...args}>
       <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
+        <AccordionTrigger>Item 1</AccordionTrigger>
+        <AccordionContent>Content for item 1</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>Is it customizable?</AccordionTrigger>
-        <AccordionContent>
-          Absolutely. You can customize the accordion items as you like.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Can it be used in different projects?</AccordionTrigger>
-        <AccordionContent>
-          Yes. The accordion component is versatile and can be integrated into various projects.
-        </AccordionContent>
+        <AccordionTrigger>Item 2</AccordionTrigger>
+        <AccordionContent>Content for item 2</AccordionContent>
       </AccordionItem>
     </Accordion>
   ),
-  args: {
-    type: 'single',
-    collapsible: true,
-    className: 'w-96',
-  },
 };

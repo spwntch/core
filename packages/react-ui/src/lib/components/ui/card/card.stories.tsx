@@ -1,60 +1,69 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "./card";
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "./card";
 
 const meta: Meta<typeof Card> = {
   title: "UI/Components/Card",
   component: Card,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
-    docs: {
-      description: {
-        component: "A container for displaying content and actions on a single topic.",
-      },
-    },
+    controls: { expanded: true },
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Card>;
-
 /**
- * Default story for the Card component.
+ * Default card example displaying a header, content, and footer.
  */
-export const Default: Story = {
+export const Default: StoryObj<typeof Card> = {
   render: (args) => (
-    <Card {...args}>
+    <Card {...args} className="w-fit">
       <CardHeader>
         <CardTitle>Card Title</CardTitle>
-        <CardDescription>This is the card description</CardDescription>
+        <CardDescription>Card Description</CardDescription>
       </CardHeader>
-      <CardContent>
-        This is the main content of the card.
-      </CardContent>
-      <CardFooter>
-        Card Footer
-      </CardFooter>
+      <CardContent>Card Content</CardContent>
+      <CardFooter>Card Footer</CardFooter>
     </Card>
   ),
 };
 
 /**
- * WithLongContent story for the Card component.
+ * Example of a card with only a header and content.
+ * 
+ * Use this setup when you need to display a card with a title, description, and content,
+ * but no footer section.
  */
-export const WithLongContent: Story = {
+export const HeaderContent: StoryObj<typeof Card> = {
   render: (args) => (
-    <Card {...args}>
+    <Card {...args} className="w-fit">
       <CardHeader>
         <CardTitle>Card Title</CardTitle>
-        <CardDescription>This is the card description</CardDescription>
+        <CardDescription>Card Description</CardDescription>
       </CardHeader>
-      <CardContent>
-        This is the main content of the card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </CardContent>
-      <CardFooter>
-        Card Footer
-      </CardFooter>
+      <CardContent>Card Content</CardContent>
+    </Card>
+  ),
+};
+
+/**
+ * Example of a card with only content and footer.
+ * 
+ * This setup is useful for cards that require content and action buttons or links at the bottom.
+ */
+export const ContentFooter: StoryObj<typeof Card> = {
+  render: (args) => (
+    <Card {...args} className="w-fit">
+      <CardContent>Card Content</CardContent>
+      <CardFooter>Card Footer</CardFooter>
     </Card>
   ),
 };

@@ -1,116 +1,96 @@
-import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./button";
-import { Plus } from "lucide-react"; // Importing a Lucide React icon
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import { Button, ButtonProps } from './button';
+import { Heart } from 'lucide-react';
 
-const meta: Meta<typeof Button> = {
-  title: "UI/Components/Button",
+const meta: Meta<ButtonProps> = {
+  title: 'UI/Components/Button',
   component: Button,
   tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: "A versatile button component with multiple variants and sizes.",
-      },
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: [
+        'default',
+        'destructive',
+        'outline',
+        'secondary',
+        'ghost',
+        'link',
+      ],
     },
+    size: {
+      control: { type: 'select' },
+      options: ['default', 'sm', 'lg', 'icon'],
+    },
+    asChild: {
+      control: { type: 'boolean' },
+    },
+    className: {
+      control: { type: 'text' },
+    },
+  },
+  args: {
+    variant: 'default',
+    size: 'default',
+    asChild: false,
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
-
-/**
- * Default story for the Button component.
- */
-export const Default: Story = {
-  render: (args) => <Button {...args}>Default</Button>,
+export const Default: StoryObj<ButtonProps> = {
   args: {
-    variant: "default",
-    size: "default",
+    children: 'Button',
   },
 };
 
 /**
- * Destructive variant of the Button component.
+ * Different variants of the button component.
  */
-export const Destructive: Story = {
-  render: (args) => <Button {...args}>Destructive</Button>,
-  args: {
-    variant: "destructive",
-  },
-};
-
-/**
- * Outline variant of the Button component.
- */
-export const Outline: Story = {
-  render: (args) => <Button {...args}>Outline</Button>,
-  args: {
-    variant: "outline",
-  },
-};
-
-/**
- * Secondary variant of the Button component.
- */
-export const Secondary: Story = {
-  render: (args) => <Button {...args}>Secondary</Button>,
-  args: {
-    variant: "secondary",
-  },
-};
-
-/**
- * Ghost variant of the Button component.
- */
-export const Ghost: Story = {
-  render: (args) => <Button {...args}>Ghost</Button>,
-  args: {
-    variant: "ghost",
-  },
-};
-
-/**
- * Link variant of the Button component.
- */
-export const Link: Story = {
-  render: (args) => <Button {...args}>Link</Button>,
-  args: {
-    variant: "link",
-  },
-};
-
-/**
- * Small size of the Button component.
- */
-export const Small: Story = {
-  render: (args) => <Button {...args}>Small</Button>,
-  args: {
-    size: "sm",
-  },
-};
-
-/**
- * Large size of the Button component.
- */
-export const Large: Story = {
-  render: (args) => <Button {...args}>Large</Button>,
-  args: {
-    size: "lg",
-  },
-};
-
-/**
- * Icon size of the Button component.
- */
-export const Icon: Story = {
+export const Variants: StoryObj<ButtonProps> = {
   render: (args) => (
-    <Button {...args}>
-      <Plus />
-    </Button>
+    <div className="w-fit flex flex-col gap-2">
+      <Button {...args} variant="default">
+        Default
+      </Button>
+      <Button {...args} variant="destructive">
+        Destructive
+      </Button>
+      <Button {...args} variant="outline">
+        Outline
+      </Button>
+      <Button {...args} variant="secondary">
+        Secondary
+      </Button>
+      <Button {...args} variant="ghost">
+        Ghost
+      </Button>
+      <Button {...args} variant="link">
+        Link
+      </Button>
+    </div>
   ),
-  args: {
-    size: "icon",
-  },
+};
+
+/**
+ * Different sizes of the button component.
+ */
+export const Sizes: StoryObj<ButtonProps> = {
+  render: (args) => (
+    <div className="w-fit flex flex-col gap-2">
+      <Button {...args} size="default">
+        Default
+      </Button>
+      <Button {...args} size="sm">
+        Small
+      </Button>
+      <Button {...args} size="lg">
+        Large
+      </Button>
+      <Button {...args} size="icon">
+        <Heart className="w-4 h-4" />
+      </Button>
+    </div>
+  ),
 };

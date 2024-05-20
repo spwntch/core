@@ -1,133 +1,130 @@
-import * as React from "react";
-import { cn } from "../../../utils";
+import * as React from 'react';
+import { cn } from '../../../utils';
+import styles from './card.module.css';
+
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * Additional class names to style the card component.
+   */
+  className?: string;
+}
 
 /**
- * Card component - A container for displaying content and actions on a single topic.
+ * Card component to display content within a styled container.
  * 
- * @param {object} props - Props for Card
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The Card component
+ * The Card component can be used to group related content together and
+ * provides a flexible and extensible container for content sections.
  */
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
-      className
-    )}
-    {...props}
-  />
-));
-Card.displayName = "Card";
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(styles.card, className)}
+      {...props}
+    />
+  )
+);
+Card.displayName = 'Card';
+
+interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
 
 /**
- * CardHeader component - The header for the card.
+ * CardHeader component to display the header section of the card.
  * 
- * @param {object} props - Props for CardHeader
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The CardHeader component
+ * Use this component to display the title and description at the top of the card.
  */
-const CardHeader = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props}
-  />
-));
-CardHeader.displayName = "CardHeader";
+const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(styles.card__header, className)}
+      {...props}
+    />
+  )
+);
+CardHeader.displayName = 'CardHeader';
+
+interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
+  className?: string;
+}
 
 /**
- * CardTitle component - The title for the card.
+ * CardTitle component to display the title of the card.
  * 
- * @param {object} props - Props for CardTitle
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The CardTitle component
+ * Use this component to display the main heading of the card content.
  */
-const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-  <h3
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    )}
-    {...props}
-  />
-));
-CardTitle.displayName = "CardTitle";
+const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
+  ({ className, ...props }, ref) => (
+    <h3
+      ref={ref}
+      className={cn(styles.card__title, className)}
+      {...props}
+    />
+  )
+);
+CardTitle.displayName = 'CardTitle';
+
+interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {
+  className?: string;
+}
 
 /**
- * CardDescription component - The description for the card.
+ * CardDescription component to display the description of the card.
  * 
- * @param {object} props - Props for CardDescription
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The CardDescription component
+ * Use this component to provide additional information or context for the card content.
  */
-const CardDescription = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-));
-CardDescription.displayName = "CardDescription";
+const CardDescription = React.forwardRef<HTMLParagraphElement, CardDescriptionProps>(
+  ({ className, ...props }, ref) => (
+    <p
+      ref={ref}
+      className={cn(styles.card__description, className)}
+      {...props}
+    />
+  )
+);
+CardDescription.displayName = 'CardDescription';
+
+interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
 
 /**
- * CardContent component - The content for the card.
+ * CardContent component to display the main content of the card.
  * 
- * @param {object} props - Props for CardContent
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The CardContent component
+ * Use this component to place the primary content or elements within the card.
  */
-const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-));
-CardContent.displayName = "CardContent";
+const CardContent = React.forwardRef<HTMLDivElement, CardContentProps>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(styles.card__content, className)}
+      {...props}
+    />
+  )
+);
+CardContent.displayName = 'CardContent';
+
+interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
 
 /**
- * CardFooter component - The footer for the card.
+ * CardFooter component to display the footer section of the card.
  * 
- * @param {object} props - Props for CardFooter
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The CardFooter component
+ * Use this component to place actions, buttons, or any additional information at the bottom of the card.
  */
-const CardFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
-    {...props}
-  />
-));
-CardFooter.displayName = "CardFooter";
+const CardFooter = React.forwardRef<HTMLDivElement, CardFooterProps>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(styles.card__footer, className)}
+      {...props}
+    />
+  )
+);
+CardFooter.displayName = 'CardFooter';
 
 export {
   Card,
