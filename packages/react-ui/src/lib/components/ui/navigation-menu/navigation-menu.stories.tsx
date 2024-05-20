@@ -1,55 +1,45 @@
-import React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-  NavigationMenuLink,
-  NavigationMenuIndicator,
-  NavigationMenuViewport,
-} from "./navigation-menu"
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuTrigger, NavigationMenuLink, NavigationMenuIndicator, NavigationMenuViewport } from "./navigation-menu";
+import { ChevronDown } from "lucide-react";
 
 const meta: Meta<typeof NavigationMenu> = {
   title: "UI/Components/NavigationMenu",
   component: NavigationMenu,
   tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: "A versatile navigation menu component with multiple subcomponents.",
-      },
+  argTypes: {
+    className: {
+      control: 'text',
+      description: 'Additional class names to style the component.',
+    },
+    children: {
+      control: 'text',
+      description: 'Child elements to be rendered inside the NavigationMenu.',
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Default: StoryObj<typeof NavigationMenu> = {
+type Story = StoryObj<typeof NavigationMenu>;
+
+/**
+ * Default NavigationMenu component showcasing basic usage.
+ */
+export const Default: Story = {
   render: (args) => (
     <NavigationMenu {...args}>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+          <NavigationMenuTrigger>
+            Menu
+            <ChevronDown />
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink href="/">Home</NavigationMenuLink>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>About</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <NavigationMenuLink href="/about">About</NavigationMenuLink>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <NavigationMenuLink href="/services">Services</NavigationMenuLink>
+            <NavigationMenuLink href="#">Link 1</NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
-      <NavigationMenuIndicator />
     </NavigationMenu>
   ),
-}
+};

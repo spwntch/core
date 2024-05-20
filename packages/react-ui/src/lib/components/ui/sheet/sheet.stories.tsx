@@ -1,47 +1,60 @@
-import React from "react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from '@storybook/react';
+import { Button } from '../button/button';
 import {
   Sheet,
+  SheetClose,
   SheetContent,
-  SheetTrigger,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
   SheetDescription,
-} from "./sheet"
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from './sheet';
 
 const meta: Meta<typeof Sheet> = {
-  title: "UI/Components/Sheet",
+  title: 'UI/Components/Sheet',
   component: Sheet,
   tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: "A versatile sheet component with multiple subcomponents.",
-      },
+  argTypes: {
+    // className: {
+    //   control: 'text',
+    //   description: 'Additional class names to style the component.',
+    // },
+    children: {
+      control: 'text',
+      description: 'Child elements to be rendered inside the Sheet.',
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Default: StoryObj<typeof Sheet> = {
+type Story = StoryObj<typeof Sheet>;
+
+/**
+ * Default Sheet component showcasing basic usage.
+ */
+export const Default: Story = {
   render: (args) => (
     <Sheet {...args}>
-      <SheetTrigger>Open Sheet</SheetTrigger>
+      <SheetTrigger asChild>
+        <Button>Open Sheet</Button>
+      </SheetTrigger>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Sheet Title</SheetTitle>
-          <SheetDescription>This is the description for the sheet.</SheetDescription>
+          <SheetDescription>
+            Sheet description goes here. Add relevant details and information.
+          </SheetDescription>
         </SheetHeader>
-        <div>
-          <p>Sheet content goes here.</p>
-        </div>
+        <div>Sheet content goes here. Add your components and elements.</div>
         <SheetFooter>
-          <button>Cancel</button>
-          <button>Confirm</button>
+          <SheetClose asChild>
+            <Button variant="secondary">Close</Button>
+          </SheetClose>
+          <Button variant="default">Save changes</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>
   ),
-}
+};

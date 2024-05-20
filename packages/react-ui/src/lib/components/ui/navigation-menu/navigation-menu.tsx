@@ -1,9 +1,9 @@
-import * as React from "react"
-import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
-import { cva } from "class-variance-authority"
-import { ChevronDown } from "lucide-react"
-import { cn } from '../../../utils'
-import styles from './navigation-menu.module.css'
+import * as React from 'react';
+import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
+import { cva } from 'class-variance-authority';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '../../../utils';
+import styles from './navigation-menu.module.css';
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
@@ -17,68 +17,43 @@ const NavigationMenu = React.forwardRef<
     {children}
     <NavigationMenuViewport />
   </NavigationMenuPrimitive.Root>
-))
-NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName
+));
+NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
 
-/**
- * NavigationMenuList component - A list for NavigationMenu items.
- * 
- * @param {object} props - Props for NavigationMenuList
- * @param {string} [props.className] - Additional className for the component
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The NavigationMenuList component
- */
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.List
     ref={ref}
-    className={cn(styles['navigation-menu-list'], "group", className)}
+    className={cn('group', styles['navigation-menu-list'], className)}
     {...props}
   />
-))
-NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
+));
+NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 
-const NavigationMenuItem = NavigationMenuPrimitive.Item
+const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
-const navigationMenuTriggerStyle = cva(styles['navigation-menu-trigger'])
+const navigationMenuTriggerStyle = cva(styles['navigation-menu-trigger']);
 
-/**
- * NavigationMenuTrigger component - A trigger for NavigationMenu items.
- * 
- * @param {object} props - Props for NavigationMenuTrigger
- * @param {string} [props.className] - Additional className for the component
- * @param {React.ReactNode} props.children - Children elements
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The NavigationMenuTrigger component
- */
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
     ref={ref}
-    className={cn(navigationMenuTriggerStyle(), "group", className)}
+    className={cn(navigationMenuTriggerStyle(), className)}
     {...props}
   >
-    {children}{" "}
+    {children}{' '}
     <ChevronDown
-      className={styles['navigation-menu-trigger-chevron']}
+      className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
       aria-hidden="true"
     />
   </NavigationMenuPrimitive.Trigger>
-))
-NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
+));
+NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
 
-/**
- * NavigationMenuContent component - The content of the NavigationMenu.
- * 
- * @param {object} props - Props for NavigationMenuContent
- * @param {string} [props.className] - Additional className for the component
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The NavigationMenuContent component
- */
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
@@ -88,41 +63,26 @@ const NavigationMenuContent = React.forwardRef<
     className={cn(styles['navigation-menu-content'], className)}
     {...props}
   />
-))
-NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
+));
+NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 
-const NavigationMenuLink = NavigationMenuPrimitive.Link
+const NavigationMenuLink = NavigationMenuPrimitive.Link;
 
-/**
- * NavigationMenuViewport component - The viewport of the NavigationMenu.
- * 
- * @param {object} props - Props for NavigationMenuViewport
- * @param {string} [props.className] - Additional className for the component
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The NavigationMenuViewport component
- */
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
 >(({ className, ...props }, ref) => (
-  <div className={styles['navigation-menu-viewport-container']}>
+  <div className={cn('absolute left-0 top-full flex justify-center')}>
     <NavigationMenuPrimitive.Viewport
-      ref={ref}
       className={cn(styles['navigation-menu-viewport'], className)}
+      ref={ref}
       {...props}
     />
   </div>
-))
-NavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName
+));
+NavigationMenuViewport.displayName =
+  NavigationMenuPrimitive.Viewport.displayName;
 
-/**
- * NavigationMenuIndicator component - The indicator of the NavigationMenu.
- * 
- * @param {object} props - Props for NavigationMenuIndicator
- * @param {string} [props.className] - Additional className for the component
- * @param {React.Ref} ref - Forwarded ref
- * @returns {JSX.Element} The NavigationMenuIndicator component
- */
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>
@@ -132,10 +92,11 @@ const NavigationMenuIndicator = React.forwardRef<
     className={cn(styles['navigation-menu-indicator'], className)}
     {...props}
   >
-    <div className={styles['navigation-menu-indicator-icon']} />
+    <div className={styles['navigation-menu-indicator__inner']} />
   </NavigationMenuPrimitive.Indicator>
-))
-NavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayName
+));
+NavigationMenuIndicator.displayName =
+  NavigationMenuPrimitive.Indicator.displayName;
 
 export {
   navigationMenuTriggerStyle,
@@ -147,4 +108,4 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport,
-}
+};
