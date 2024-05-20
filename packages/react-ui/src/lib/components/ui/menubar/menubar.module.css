@@ -1,46 +1,77 @@
-@tailwind utilities;
+/* menubar.module.css */
 
 .menubar {
   @apply flex h-10 items-center space-x-1 rounded-md border bg-background p-1;
 }
 
-.trigger {
-  @apply flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground;
-  @apply data-[state=open]:bg-accent data-[state=open]:text-accent-foreground;
+.menubar-trigger {
+  @apply flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground;
 }
 
-.subTrigger {
-  @apply flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground;
-  @apply data-[state=open]:bg-accent data-[state=open]:text-accent-foreground;
+.menubar-sub-trigger {
+  @apply flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground;
 }
 
-.subContent {
-  @apply z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground;
-  @apply data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0;
-  @apply data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95;
-  @apply data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2;
-}
-
-.content {
-  @apply z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md;
-  @apply data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0;
-  @apply data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95;
-  @apply data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2;
-}
-
-.item {
-  @apply relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground;
-  @apply data-[disabled]:pointer-events-none data-[disabled]:opacity-50;
-}
-
-.inset {
+.menubar-sub-trigger-inset {
   @apply pl-8;
 }
 
-.separator {
+.menubar-sub-trigger-chevron {
+  @apply ml-auto h-4 w-4;
+}
+
+.menubar-sub-content {
+  @apply z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2;
+}
+
+.menubar-content {
+  @apply z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2;
+}
+
+.menubar-item {
+  @apply relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50;
+}
+
+.menubar-item-inset {
+  @apply pl-8;
+}
+
+.menubar-checkbox-item {
+  @apply relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50;
+}
+
+.menubar-checkbox-item-indicator {
+  @apply absolute left-2 flex h-3.5 w-3.5 items-center justify-center;
+}
+
+.menubar-checkbox-item-icon {
+  @apply h-4 w-4;
+}
+
+.menubar-radio-item {
+  @apply relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50;
+}
+
+.menubar-radio-item-indicator {
+  @apply absolute left-2 flex h-3.5 w-3.5 items-center justify-center;
+}
+
+.menubar-radio-item-icon {
+  @apply h-2 w-2 fill-current;
+}
+
+.menubar-label {
+  @apply px-2 py-1.5 text-sm font-semibold;
+}
+
+.menubar-label-inset {
+  @apply pl-8;
+}
+
+.menubar-separator {
   @apply -mx-1 my-1 h-px bg-muted;
 }
 
-.shortcut {
+.menubar-shortcut {
   @apply ml-auto text-xs tracking-widest text-muted-foreground;
 }
