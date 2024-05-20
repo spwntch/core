@@ -1,22 +1,25 @@
+/* card.module.css */
+
 .card {
   @apply rounded-lg border bg-card text-card-foreground shadow-sm;
 }
-.header {
+
+.card-header {
   @apply flex flex-col space-y-1.5 p-6;
 }
 
-.title {
+.card-title {
   @apply text-2xl font-semibold leading-none tracking-tight;
 }
 
-.description {
+.card-description {
   @apply text-sm text-muted-foreground;
 }
 
-.content {
+.card-content {
   @apply p-6 pt-0;
 }
 
-.footer {
+.card-footer {
   @apply flex items-center p-6 pt-0;
 }
