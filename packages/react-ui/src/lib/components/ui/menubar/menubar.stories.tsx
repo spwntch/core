@@ -1,62 +1,122 @@
-import { Meta, StoryObj } from "@storybook/react"
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
 import {
   Menubar,
-  MenubarCheckboxItem,
+  MenubarMenu,
+  MenubarTrigger,
   MenubarContent,
   MenubarItem,
-  MenubarMenu,
-  MenubarPortal,
-  MenubarRadioGroup,
+  MenubarCheckboxItem,
   MenubarRadioItem,
+  MenubarLabel,
   MenubarSeparator,
+  MenubarShortcut,
+  MenubarGroup,
+  MenubarPortal,
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
-  MenubarTrigger
-} from "./menubar"
+  MenubarRadioGroup,
+} from "./menubar";
+import { Button } from "../button/button";
 
 const meta: Meta<typeof Menubar> = {
   title: "UI/Components/Menubar",
   component: Menubar,
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: "A versatile menubar component with multiple subcomponents.",
-      },
-    },
-  },
-}
+  tags: ["autodocs"],
+};
 
-export default meta
+export default meta;
 
-export const Default: StoryObj<typeof Menubar> = {
+/**
+ * Basic Menubar example with a few items.
+ */
+export const Basic: StoryObj<typeof Menubar> = {
   render: (args) => (
     <Menubar {...args}>
       <MenubarMenu>
         <MenubarTrigger>File</MenubarTrigger>
-        <MenubarPortal>
-          <MenubarContent>
-            <MenubarItem>New Tab</MenubarItem>
-            <MenubarItem>New Window</MenubarItem>
-            <MenubarSeparator />
-            <MenubarCheckboxItem checked>Show Bookmarks</MenubarCheckboxItem>
-            <MenubarRadioGroup value="show-tabs">
-              <MenubarRadioItem value="show-tabs">Show Tabs</MenubarRadioItem>
-              <MenubarRadioItem value="hide-tabs">Hide Tabs</MenubarRadioItem>
-            </MenubarRadioGroup>
-            <MenubarSub>
-              <MenubarSubTrigger>More Options</MenubarSubTrigger>
-              <MenubarPortal>
-                <MenubarSubContent>
-                  <MenubarItem>Settings</MenubarItem>
-                  <MenubarItem>Help</MenubarItem>
-                </MenubarSubContent>
-              </MenubarPortal>
-            </MenubarSub>
-          </MenubarContent>
-        </MenubarPortal>
+        <MenubarContent>
+          <MenubarItem>New File</MenubarItem>
+          <MenubarItem>Open File</MenubarItem>
+          <MenubarItem>Save</MenubarItem>
+          <MenubarSeparator />
+          <MenubarItem>Exit</MenubarItem>
+        </MenubarContent>
+      </MenubarMenu>
+      <MenubarMenu>
+        <MenubarTrigger>Edit</MenubarTrigger>
+        <MenubarContent>
+          <MenubarItem>Undo</MenubarItem>
+          <MenubarItem>Redo</MenubarItem>
+          <MenubarSeparator />
+          <MenubarItem>Cut</MenubarItem>
+          <MenubarItem>Copy</MenubarItem>
+          <MenubarItem>Paste</MenubarItem>
+        </MenubarContent>
       </MenubarMenu>
     </Menubar>
   ),
-}
+};
+
+/**
+ * Menubar example with checkbox items.
+ */
+export const WithCheckboxes: StoryObj<typeof Menubar> = {
+  render: (args) => (
+    <Menubar {...args}>
+      <MenubarMenu>
+        <MenubarTrigger>Options</MenubarTrigger>
+        <MenubarContent>
+          <MenubarCheckboxItem checked>Option 1</MenubarCheckboxItem>
+          <MenubarCheckboxItem>Option 2</MenubarCheckboxItem>
+          <MenubarCheckboxItem>Option 3</MenubarCheckboxItem>
+        </MenubarContent>
+      </MenubarMenu>
+    </Menubar>
+  ),
+};
+
+/**
+ * Menubar example with radio items.
+ */
+export const WithRadios: StoryObj<typeof Menubar> = {
+  render: (args) => (
+    <Menubar {...args}>
+      <MenubarMenu>
+        <MenubarTrigger>View</MenubarTrigger>
+        <MenubarContent>
+          <MenubarRadioGroup value="view1">
+            <MenubarRadioItem value="view1">View 1</MenubarRadioItem>
+            <MenubarRadioItem value="view2">View 2</MenubarRadioItem>
+            <MenubarRadioItem value="view3">View 3</MenubarRadioItem>
+          </MenubarRadioGroup>
+        </MenubarContent>
+      </MenubarMenu>
+    </Menubar>
+  ),
+};
+
+/**
+ * Menubar example with submenus.
+ */
+export const WithSubmenus: StoryObj<typeof Menubar> = {
+  render: (args) => (
+    <Menubar {...args}>
+      <MenubarMenu>
+        <MenubarTrigger>Tools</MenubarTrigger>
+        <MenubarContent>
+          <MenubarItem>Tool 1</MenubarItem>
+          <MenubarSub>
+            <MenubarSubTrigger>More Tools</MenubarSubTrigger>
+            <MenubarSubContent>
+              <MenubarItem>Tool 2</MenubarItem>
+              <MenubarItem>Tool 3</MenubarItem>
+            </MenubarSubContent>
+          </MenubarSub>
+          <MenubarItem>Tool 4</MenubarItem>
+        </MenubarContent>
+      </MenubarMenu>
+    </Menubar>
+  ),
+};
