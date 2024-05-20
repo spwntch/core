@@ -1,87 +1,58 @@
-import React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./accordion"
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './accordion';
 
 const meta: Meta<typeof Accordion> = {
-  title: "UI/Components/Accordion",
+  title: 'UI/Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
-        component: "An accordion is a vertically stacked list of items that can be expanded to reveal more content.",
+        component: 'A versatile accordion component that adheres to WAI-ARIA design patterns.',
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Default: StoryObj<typeof Accordion> = {
+type Story = StoryObj<typeof Accordion>;
+
+/**
+ * Default story for the Accordion component.
+ */
+export const Default: Story = {
   render: (args) => (
     <Accordion {...args}>
       <AccordionItem value="item-1">
-        <AccordionTrigger>Item 1</AccordionTrigger>
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>
-          Content for item 1.
+          Yes. It adheres to the WAI-ARIA design pattern.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>Item 2</AccordionTrigger>
+        <AccordionTrigger>Is it customizable?</AccordionTrigger>
         <AccordionContent>
-          Content for item 2.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-  ),
-  args: {
-    type: "single",
-    collapsible: true,
-  },
-}
-
-export const SingleItem: StoryObj<typeof Accordion> = {
-  render: (args) => (
-    <Accordion {...args}>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Item 1</AccordionTrigger>
-        <AccordionContent>
-          Content for item 1.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-  ),
-  args: {
-    type: "single",
-    collapsible: true,
-  },
-}
-
-export const MultipleItems: StoryObj<typeof Accordion> = {
-  render: (args) => (
-    <Accordion {...args}>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Item 1</AccordionTrigger>
-        <AccordionContent>
-          Content for item 1.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Item 2</AccordionTrigger>
-        <AccordionContent>
-          Content for item 2.
+          Absolutely. You can customize the accordion items as you like.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>Item 3</AccordionTrigger>
+        <AccordionTrigger>Can it be used in different projects?</AccordionTrigger>
         <AccordionContent>
-          Content for item 3.
+          Yes. The accordion component is versatile and can be integrated into various projects.
         </AccordionContent>
       </AccordionItem>
     </Accordion>
   ),
   args: {
-    type: "multiple",
-    // collapsible: true,
+    type: 'single',
+    collapsible: true,
+    className: 'w-96',
   },
-}
+};
