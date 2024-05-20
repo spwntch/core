@@ -1,6 +1,6 @@
-import React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "./card"
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "./card";
 
 const meta: Meta<typeof Card> = {
   title: "UI/Components/Card",
@@ -13,11 +13,16 @@ const meta: Meta<typeof Card> = {
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Default: StoryObj<typeof Card> = {
+type Story = StoryObj<typeof Card>;
+
+/**
+ * Default story for the Card component.
+ */
+export const Default: Story = {
   render: (args) => (
     <Card {...args}>
       <CardHeader>
@@ -32,9 +37,12 @@ export const Default: StoryObj<typeof Card> = {
       </CardFooter>
     </Card>
   ),
-}
+};
 
-export const WithLongContent: StoryObj<typeof Card> = {
+/**
+ * WithLongContent story for the Card component.
+ */
+export const WithLongContent: Story = {
   render: (args) => (
     <Card {...args}>
       <CardHeader>
@@ -49,4 +57,4 @@ export const WithLongContent: StoryObj<typeof Card> = {
       </CardFooter>
     </Card>
   ),
-}
+};

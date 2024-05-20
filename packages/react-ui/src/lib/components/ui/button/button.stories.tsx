@@ -1,6 +1,7 @@
-import React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { Button } from "./button"
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+import { Button } from "./button";
+import { Plus } from "lucide-react"; // Importing a Lucide React icon
 
 const meta: Meta<typeof Button> = {
   title: "UI/Components/Button",
@@ -13,70 +14,103 @@ const meta: Meta<typeof Button> = {
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Default: StoryObj<typeof Button> = {
+type Story = StoryObj<typeof Button>;
+
+/**
+ * Default story for the Button component.
+ */
+export const Default: Story = {
   render: (args) => <Button {...args}>Default</Button>,
   args: {
     variant: "default",
     size: "default",
   },
-}
+};
 
-export const Destructive: StoryObj<typeof Button> = {
+/**
+ * Destructive variant of the Button component.
+ */
+export const Destructive: Story = {
   render: (args) => <Button {...args}>Destructive</Button>,
   args: {
     variant: "destructive",
   },
-}
+};
 
-export const Outline: StoryObj<typeof Button> = {
+/**
+ * Outline variant of the Button component.
+ */
+export const Outline: Story = {
   render: (args) => <Button {...args}>Outline</Button>,
   args: {
     variant: "outline",
   },
-}
+};
 
-export const Secondary: StoryObj<typeof Button> = {
+/**
+ * Secondary variant of the Button component.
+ */
+export const Secondary: Story = {
   render: (args) => <Button {...args}>Secondary</Button>,
   args: {
     variant: "secondary",
   },
-}
+};
 
-export const Ghost: StoryObj<typeof Button> = {
+/**
+ * Ghost variant of the Button component.
+ */
+export const Ghost: Story = {
   render: (args) => <Button {...args}>Ghost</Button>,
   args: {
     variant: "ghost",
   },
-}
+};
 
-export const Link: StoryObj<typeof Button> = {
+/**
+ * Link variant of the Button component.
+ */
+export const Link: Story = {
   render: (args) => <Button {...args}>Link</Button>,
   args: {
     variant: "link",
   },
-}
+};
 
-export const Small: StoryObj<typeof Button> = {
+/**
+ * Small size of the Button component.
+ */
+export const Small: Story = {
   render: (args) => <Button {...args}>Small</Button>,
   args: {
     size: "sm",
   },
-}
+};
 
-export const Large: StoryObj<typeof Button> = {
+/**
+ * Large size of the Button component.
+ */
+export const Large: Story = {
   render: (args) => <Button {...args}>Large</Button>,
   args: {
     size: "lg",
   },
-}
+};
 
-export const Icon: StoryObj<typeof Button> = {
-  render: (args) => <Button {...args}>Icon</Button>,
+/**
+ * Icon size of the Button component.
+ */
+export const Icon: Story = {
+  render: (args) => (
+    <Button {...args}>
+      <Plus />
+    </Button>
+  ),
   args: {
     size: "icon",
   },
-}
+};

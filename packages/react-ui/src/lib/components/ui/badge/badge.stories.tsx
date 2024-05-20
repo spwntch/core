@@ -1,6 +1,6 @@
-import React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { Badge } from "./badge"
+import React from "react";
+import { Meta, StoryObj } from "@storybook/react";
+import { Badge } from "./badge";
 
 const meta: Meta<typeof Badge> = {
   title: "UI/Components/Badge",
@@ -13,34 +13,48 @@ const meta: Meta<typeof Badge> = {
       },
     },
   },
-}
+};
 
-export default meta
+export default meta;
 
-export const Default: StoryObj<typeof Badge> = {
+type Story = StoryObj<typeof Badge>;
+
+/**
+ * Default story for the Badge component.
+ */
+export const Default: Story = {
   render: (args) => <Badge {...args}>Default</Badge>,
   args: {
     variant: "default",
   },
-}
+};
 
-export const Secondary: StoryObj<typeof Badge> = {
+/**
+ * Secondary variant of the Badge component.
+ */
+export const Secondary: Story = {
   render: (args) => <Badge {...args}>Secondary</Badge>,
   args: {
     variant: "secondary",
   },
-}
+};
 
-export const Destructive: StoryObj<typeof Badge> = {
+/**
+ * Destructive variant of the Badge component.
+ */
+export const Destructive: Story = {
   render: (args) => <Badge {...args}>Destructive</Badge>,
   args: {
     variant: "destructive",
   },
-}
+};
 
-export const Outline: StoryObj<typeof Badge> = {
+/**
+ * Outline variant of the Badge component.
+ */
+export const Outline: Story = {
   render: (args) => <Badge {...args}>Outline</Badge>,
   args: {
     variant: "outline",
   },
-}
+};
