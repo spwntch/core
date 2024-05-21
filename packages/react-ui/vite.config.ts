@@ -1,12 +1,9 @@
 /// <reference types='vitest' />
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import react from '@vitejs/plugin-react';
-import { extname, join, relative } from 'path';
+import { join } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
-import { glob } from 'glob';
-import { fileURLToPath } from 'url';
 
 export default defineConfig({
   root: __dirname,
@@ -19,7 +16,7 @@ export default defineConfig({
       entryRoot: 'src',
       tsconfigPath: join(__dirname, 'tsconfig.lib.json'),
     }),
-    libInjectCss(),
+    // libInjectCss(),
   ],
 
   build: {
@@ -30,17 +27,18 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'react-ui',
+      fileName: 'index',
       formats: ['es'],
     },
     rollupOptions: {
-      input: Object.fromEntries(
-        glob
-          .sync('src/**/*.{ts,tsx}')
-          .map((file) => [
-            relative('src', file.slice(0, file.length - extname(file).length)),
-            fileURLToPath(new URL(file, import.meta.url)),
-          ])
-      ),
+      // input: Object.fromEntries(
+      //   glob
+      //     .sync('src/**/*.{ts,tsx}')
+      //     .map((file) => [
+      //       relative('src', file.slice(0, file.length - extname(file).length)),
+      //       fileURLToPath(new URL(file, import.meta.url)),
+      //     ])
+      // ),
       output: {
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
