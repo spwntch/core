@@ -9,7 +9,7 @@ import {
 } from './sheet';
 
 const meta: Meta<typeof Sheet> = {
-  title: 'UI/Components/Sheet',
+  title: 'ui/components/sheet',
   component: Sheet,
   tags: ['autodocs'],
   argTypes: {

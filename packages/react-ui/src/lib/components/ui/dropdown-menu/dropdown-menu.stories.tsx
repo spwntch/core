@@ -17,7 +17,7 @@ import {
 } from './dropdown-menu';
 
 const meta: Meta = {
-  title: 'UI/Components/DropdownMenu',
+  title: 'ui/components/dropdown-menu',
   component: DropdownMenu,
   tags: ['autodocs'],
 };

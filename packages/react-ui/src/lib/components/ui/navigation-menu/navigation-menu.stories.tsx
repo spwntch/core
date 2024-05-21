@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "./navigation-menu";
 
 const meta: Meta<typeof NavigationMenu> = {
-  title: "UI/Components/NavigationMenu",
+  title: "ui/components/navigation-menu",
   component: NavigationMenu,
   tags: ['autodocs'],
   argTypes: {

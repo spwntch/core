@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react';
 import { Button, ButtonProps } from './button';
 
 const meta: Meta<ButtonProps> = {
-  title: 'UI/Components/Button',
+  title: 'ui/components/button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
