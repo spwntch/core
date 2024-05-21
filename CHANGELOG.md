@@ -1,3 +1,18 @@
+## 0.52.28 (2024-05-21)
+
+
+### 🚀 Features
+
+- adds a youtube-player ([4fdd614](https://github.com/spwntch/core/commit/4fdd614))
+
+### 🩹 Fixes
+
+- ci error ([e007201](https://github.com/spwntch/core/commit/e007201))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.27 (2024-05-19)
 
 This was a version bump only, there were no code changes.
