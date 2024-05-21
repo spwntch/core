@@ -277,13 +277,13 @@ importers:
   packages/react-blog:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.52.28
+        specifier: ~0.52.29
         version: link:../react-components
       '@spwntch/mdx':
-        specifier: ~0.52.28
+        specifier: ~0.52.29
         version: link:../react-mdx
       '@spwntch/tailwind':
-        specifier: ~0.52.28
+        specifier: ~0.52.29
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
@@ -314,7 +314,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.3.1)(react@18.3.1)
       '@spwntch/tailwind':
-        specifier: ~0.52.28
+        specifier: ~0.52.29
         version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
@@ -340,10 +340,10 @@ importers:
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.52.28
+        specifier: ~0.52.29
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: ~0.52.28
+        specifier: ~0.52.29
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
@@ -373,7 +373,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.3.1)(react@18.3.1)
       '@spwntch/tailwind':
-        specifier: ~0.52.28
+        specifier: ~0.52.29
         version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
@@ -2552,7 +2552,7 @@ packages:
       jest-util: 29.7.0
       jest-validate: 29.7.0
       jest-watcher: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-ansi: 6.0.1
@@ -2708,7 +2708,7 @@ packages:
       jest-haste-map: 29.7.0
       jest-regex-util: 29.6.3
       jest-util: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       pirates: 4.0.6
       slash: 3.0.0
       write-file-atomic: 4.0.2
@@ -10331,7 +10331,7 @@ packages:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.5
+      micromatch: 4.0.6
     dev: true
 
   /fast-glob@3.3.2:
@@ -10342,7 +10342,7 @@ packages:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.5
+      micromatch: 4.0.6
 
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
@@ -11302,7 +11302,7 @@ packages:
       http-proxy: 1.18.1
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
-      micromatch: 4.0.5
+      micromatch: 4.0.6
     transitivePeerDependencies:
       - debug
     dev: true
@@ -12097,7 +12097,7 @@ packages:
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       parse-json: 5.2.0
       pretty-format: 29.7.0
       slash: 3.0.0
@@ -12189,7 +12189,7 @@ packages:
       jest-regex-util: 29.6.3
       jest-util: 29.7.0
       jest-worker: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       walker: 1.0.8
     optionalDependencies:
       fsevents: 2.3.3
@@ -12232,7 +12232,7 @@ packages:
       '@types/stack-utils': 2.0.3
       chalk: 4.1.2
       graceful-fs: 4.2.11
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       pretty-format: 29.7.0
       slash: 3.0.0
       stack-utils: 2.0.6
@@ -12579,7 +12579,7 @@ packages:
       chalk: 4.1.2
       flow-parser: 0.236.0
       graceful-fs: 4.2.11
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       neo-async: 2.6.2
       node-dir: 0.1.17
       recast: 0.23.7
@@ -14018,12 +14018,12 @@ packages:
       - supports-color
     dev: false
 
-  /micromatch@4.0.5:
-    resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
+  /micromatch@4.0.6:
+    resolution: {integrity: sha512-Y4Ypn3oujJYxJcMacVgcs92wofTHxp9FzfDpQON4msDefoC0lb3ETvQLOdLcbhSwU1bz8HrL/1sygfBIHudrkQ==}
     engines: {node: '>=8.6'}
     dependencies:
       braces: 3.0.3
-      picomatch: 2.3.1
+      picomatch: 4.0.2
 
   /mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
@@ -15059,6 +15059,10 @@ packages:
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  /picomatch@4.0.2:
+    resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
+    engines: {node: '>=12'}
 
   /pify@2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
@@ -17391,7 +17395,7 @@ packages:
       glob-parent: 6.0.2
       is-glob: 4.0.3
       lilconfig: 2.1.0
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.1
@@ -17722,7 +17726,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       enhanced-resolve: 5.16.1
-      micromatch: 4.0.5
+      micromatch: 4.0.6
       semver: 7.6.2
       source-map: 0.7.4
       typescript: 5.4.5

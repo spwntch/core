@@ -1,3 +1,14 @@
+## 0.52.29 (2024-05-21)
+
+
+### 🩹 Fixes
+
+- pull data- classws back into  sheet.tsx ([7aacd88](https://github.com/spwntch/core/commit/7aacd88))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.28 (2024-05-21)
 
 
