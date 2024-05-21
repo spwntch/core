@@ -1,24 +1,18 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import {
   Menubar,
-  MenubarMenu,
-  MenubarTrigger,
+  MenubarCheckboxItem,
   MenubarContent,
   MenubarItem,
-  MenubarCheckboxItem,
+  MenubarMenu,
+  MenubarRadioGroup,
   MenubarRadioItem,
-  MenubarLabel,
   MenubarSeparator,
-  MenubarShortcut,
-  MenubarGroup,
-  MenubarPortal,
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
-  MenubarRadioGroup,
+  MenubarTrigger
 } from "./menubar";
-import { Button } from "../button/button";
 
 const meta: Meta<typeof Menubar> = {
   title: "UI/Components/Menubar",

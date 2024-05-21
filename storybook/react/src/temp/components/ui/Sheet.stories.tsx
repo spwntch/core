@@ -21,7 +21,7 @@ type Story = StoryObj<typeof Sheet>;
 export const sheet: Story = {
   render: () => (
     <Sheet>
-      <SheetTrigger>Open</SheetTrigger>
+      <SheetTrigger >Open</SheetTrigger>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Are you absolutely sure?</SheetTitle>

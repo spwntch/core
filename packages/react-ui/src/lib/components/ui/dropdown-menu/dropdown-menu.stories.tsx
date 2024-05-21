@@ -1,28 +1,25 @@
-import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from '@storybook/react';
+import { Button } from '../button/button';
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuCheckboxItem,
-  DropdownMenuRadioItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
+  DropdownMenuContent,
   DropdownMenuGroup,
-  DropdownMenuPortal,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuRadioGroup,
-} from "./dropdown-menu";
-import { Button } from "../button/button";
+  DropdownMenuTrigger,
+} from './dropdown-menu';
 
 const meta: Meta = {
-  title: "UI/Components/DropdownMenu",
+  title: 'UI/Components/DropdownMenu',
   component: DropdownMenu,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -31,15 +28,16 @@ export default meta;
  * Basic DropdownMenu with a few items.
  */
 export const Basic: StoryObj = {
-  render: (args) => (
+  render: () => (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button>Open Menu</Button>
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem>Item 1</DropdownMenuItem>
-        <DropdownMenuItem>Item 2</DropdownMenuItem>
-        <DropdownMenuItem>Item 3</DropdownMenuItem>
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuItem>Team</DropdownMenuItem>
+        <DropdownMenuItem>Subscription</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   ),

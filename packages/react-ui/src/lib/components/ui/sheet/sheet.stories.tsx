@@ -1,14 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../button/button';
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
+  SheetTrigger
 } from './sheet';
 
 const meta: Meta<typeof Sheet> = {
@@ -36,24 +33,16 @@ type Story = StoryObj<typeof Sheet>;
  */
 export const Default: Story = {
   render: (args) => (
-    <Sheet {...args}>
-      <SheetTrigger asChild>
-        <Button>Open Sheet</Button>
-      </SheetTrigger>
+    <Sheet>
+      <SheetTrigger>Open</SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Sheet Title</SheetTitle>
+          <SheetTitle>Are you absolutely sure?</SheetTitle>
           <SheetDescription>
-            Sheet description goes here. Add relevant details and information.
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
           </SheetDescription>
         </SheetHeader>
-        <div>Sheet content goes here. Add your components and elements.</div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button variant="secondary">Close</Button>
-          </SheetClose>
-          <Button variant="default">Save changes</Button>
-        </SheetFooter>
       </SheetContent>
     </Sheet>
   ),

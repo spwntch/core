@@ -1,7 +1,6 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Button, ButtonProps } from './button';
 import { Heart } from 'lucide-react';
+import { Button, ButtonProps } from './button';
 
 const meta: Meta<ButtonProps> = {
   title: 'UI/Components/Button',

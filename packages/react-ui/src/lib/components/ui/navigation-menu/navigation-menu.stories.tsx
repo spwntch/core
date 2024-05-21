@@ -1,7 +1,6 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuTrigger, NavigationMenuLink, NavigationMenuIndicator, NavigationMenuViewport } from "./navigation-menu";
 import { ChevronDown } from "lucide-react";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "./navigation-menu";
 
 const meta: Meta<typeof NavigationMenu> = {
   title: "UI/Components/NavigationMenu",
