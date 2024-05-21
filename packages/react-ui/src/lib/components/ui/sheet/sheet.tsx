@@ -1,9 +1,9 @@
-import * as React from 'react';
-import * as SheetPrimitive from '@radix-ui/react-dialog';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { X } from 'lucide-react';
+import * as React from "react";
+import * as SheetPrimitive from "@radix-ui/react-dialog";
+import { cva, type VariantProps } from "class-variance-authority";
+import { X } from "lucide-react";
 
-import { cn } from '../../../utils';
+import { cn } from "../../../utils";
 import styles from './sheet.module.css';
 
 const Sheet = SheetPrimitive.Root;
@@ -21,7 +21,9 @@ const SheetOverlay = React.forwardRef<
   <SheetPrimitive.Overlay
     className={cn(
       styles['sheet-overlay'],
-      'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      {
+        'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0': true,
+      },
       className
     )}
     {...props}
@@ -31,18 +33,18 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
 
 const sheetVariants = cva(
-  `${styles['sheet-content']} data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500`,
+  styles['sheet-content'],
   {
     variants: {
       side: {
-        top: `${styles['sheet-content--top']} data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top`,
-        bottom: `${styles['sheet-content--bottom']} data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom`,
-        left: `${styles['sheet-content--left']} data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left`,
-        right: `${styles['sheet-content--right']} data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right`,
+        top: styles['sheet-content--top'],
+        bottom: styles['sheet-content--bottom'],
+        left: styles['sheet-content--left'],
+        right: styles['sheet-content--right'],
       },
     },
     defaultVariants: {
-      side: 'right',
+      side: "right",
     },
   }
 );
@@ -54,12 +56,22 @@ interface SheetContentProps
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = 'right', className, children, ...props }, ref) => (
+>(({ side = "right", className, children, ...props }, ref) => (
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
-      className={cn(sheetVariants({ side }), className)}
+      className={cn(
+        sheetVariants({ side }),
+        {
+          'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500': true,
+          'data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top': side === 'top',
+          'data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom': side === 'bottom',
+          'data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left': side === 'left',
+          'data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right': side === 'right',
+        },
+        className
+      )}
       {...props}
     >
       {children}
