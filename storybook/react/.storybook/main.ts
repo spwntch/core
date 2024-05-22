@@ -8,13 +8,20 @@ const config: StorybookConfig = {
     { from: '../../../assets/spwn/brand/public', to: '/brand' },
     { from: '../../../assets/spwn/images/public', to: '/images' },
     { from: '../../../assets/spwn/blog', to: '/blog' },
-    { from: '../../../assets/interact/client-logos/public', to: '/client-logos' },
+    {
+      from: '../../../assets/interact/client-logos/public',
+      to: '/client-logos',
+    },
     // { from: '../../../assets/storybook/public', to: '/images' },
   ],
   docs: {
     autodocs: 'tag',
   },
-  stories: ['../src/stories/**/!(_)*.@(mdx|stories.@(js|jsx|ts|tsx))'],
+  stories: [
+    '../src/docs/**/!(_)*.mdx',
+    '../src/temp/**/!(_)*.stories.@(js|jsx|ts|tsx)',
+    '../../../packages/**/src/**/!(_)*.stories.@(js|jsx|ts|tsx)',
+  ],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',

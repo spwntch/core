@@ -1,25 +1,38 @@
+import { Meta, StoryObj } from '@storybook/react';
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
-} from '@/react-components';
-import type { Meta, StoryObj } from '@storybook/react';
+  SheetTrigger
+} from './sheet';
 
 const meta: Meta<typeof Sheet> = {
+  title: 'ui/components/sheet',
   component: Sheet,
-  args: {
-    children: 'Click Me',
+  tags: ['autodocs'],
+  argTypes: {
+    // className: {
+    //   control: 'text',
+    //   description: 'Additional class names to style the component.',
+    // },
+    children: {
+      control: 'text',
+      description: 'Child elements to be rendered inside the Sheet.',
+    },
   },
-  // tags: ['autodocs'],
 };
+
 export default meta;
+
 type Story = StoryObj<typeof Sheet>;
 
-export const sheet: Story = {
-  render: () => (
+/**
+ * Default Sheet component showcasing basic usage.
+ */
+export const Default: Story = {
+  render: (args) => (
     <Sheet>
       <SheetTrigger>Open</SheetTrigger>
       <SheetContent>

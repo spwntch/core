@@ -1,3 +1,104 @@
+## 0.52.35 (2024-05-22)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.34 (2024-05-22)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.33 (2024-05-22)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.32 (2024-05-22)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.31 (2024-05-22)
+
+
+### 🩹 Fixes
+
+- uses standard shadcn/ui components without styles extracted ([25821c0](https://github.com/spwntch/core/commit/25821c0))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.30 (2024-05-21)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.29 (2024-05-21)
+
+
+### 🩹 Fixes
+
+- pull data- classws back into  sheet.tsx ([7aacd88](https://github.com/spwntch/core/commit/7aacd88))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.28 (2024-05-21)
+
+
+### 🚀 Features
+
+- adds a youtube-player ([4fdd614](https://github.com/spwntch/core/commit/4fdd614))
+
+### 🩹 Fixes
+
+- ci error ([e007201](https://github.com/spwntch/core/commit/e007201))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
+## 0.52.27 (2024-05-19)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.26 (2024-05-19)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.25 (2024-05-19)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.24 (2024-05-17)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.23 (2024-05-17)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.22 (2024-05-17)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.21 (2024-05-17)
+
+This was a version bump only, there were no code changes.
+
+## 0.52.20 (2024-05-17)
+
+
+### 🚀 Features
+
+- adds accordion to @/react-ui ([7a6bb6b](https://github.com/spwntch/core/commit/7a6bb6b))
+- adds badge ([51766f1](https://github.com/spwntch/core/commit/51766f1))
+- adds card ([8d6121d](https://github.com/spwntch/core/commit/8d6121d))
+- adds menubar ([0c6eff8](https://github.com/spwntch/core/commit/0c6eff8))
+- adds navigation-menu ([811dce5](https://github.com/spwntch/core/commit/811dce5))
+- adds sheet ([8ffd2fb](https://github.com/spwntch/core/commit/8ffd2fb))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.18 (2024-05-11)
 
 
