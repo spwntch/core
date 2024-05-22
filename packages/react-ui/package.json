@@ -9,6 +9,10 @@
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
     "./styles": {
       "default": "./dist/assets/style.css"
     }
