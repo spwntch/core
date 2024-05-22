@@ -2,10 +2,9 @@
   "name": "@spwntch/ui",
   "version": "0.52.34",
   "files": [
-    "dist",
-    "!dist/**/*.stories.js",
-    "!dist/**/*.stories.d.ts"
+    "dist"
   ],
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -15,10 +14,14 @@
       "types": "./dist/index.d.ts"
     },
     "./styles": {
-      "default": "./dist/assets/style.css"
+      "default": "./dist/style.css"
     }
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "vite",
+    "sandbox"
+  ],
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
@@ -34,7 +37,6 @@
     "lucide-react": "^0.378.0",
     "react-resizable-panels": "^2.0.18",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
-    "glob": "^10.3.14"
+    "tailwindcss-animate": "^1.0.7"
   }
 }

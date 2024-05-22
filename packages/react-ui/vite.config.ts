@@ -1,12 +1,9 @@
 /// <reference types='vitest' />
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import react from '@vitejs/plugin-react';
-import { extname, join, relative } from 'path';
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 import dts from 'vite-plugin-dts';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
-import { glob } from 'glob';
-import { fileURLToPath } from 'url';
+import * as path from 'path';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
@@ -17,40 +14,38 @@ export default defineConfig({
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',
-      tsconfigPath: join(__dirname, 'tsconfig.lib.json'),
+      tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
     }),
-    libInjectCss(),
   ],
 
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+
+  // Configuration for building your library.
+  // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
     outDir: './dist',
+    reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
     lib: {
+      // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
       name: 'react-ui',
       fileName: 'index',
+      // Change this to the formats you want to support.
+      // Don't forget to update your package.json as well.
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      input: Object.fromEntries(
-        glob
-          .sync('src/**/*.{ts,tsx}')
-          .map((file) => [
-            relative('src', file.slice(0, file.length - extname(file).length)),
-            fileURLToPath(new URL(file, import.meta.url)),
-          ])
-      ),
-      output: {
-        assetFileNames: 'assets/[name][extname]',
-        entryFileNames: '[name].js',
-      },
+      // External packages that should not be bundled into your library.
       external: [
         'react',
         'react-dom',
         'react/jsx-runtime',
-        'lucide-react',
         '@/tailwind/tailwind.css',
       ],
     },
