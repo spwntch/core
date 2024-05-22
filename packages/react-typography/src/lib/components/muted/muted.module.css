@@ -1,0 +1,6 @@
+.muted {
+  font-size: 0.875rem; /* corresponds to text-sm */
+  color: var(
+    --muted-foreground
+  ); /* corresponds to text-muted-foreground, assuming it's defined in your CSS variables */
+}

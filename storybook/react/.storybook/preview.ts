@@ -19,7 +19,7 @@ export const parameters: Parameters = {
         'Introduction',
         'Tailwind',
         'Tech Stack',
-        'shad-cn-components',
+        'ui',
         'typography',
         'shell',
         'components',

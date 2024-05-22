@@ -1,5 +1,6 @@
-import React, { PropsWithChildren } from 'react';
 import { cn } from '@/react-ui';
+import React, { PropsWithChildren, forwardRef } from 'react';
+import styles from './muted.module.css';
 
 export interface IMutedProps
   extends React.HTMLAttributes<HTMLParagraphElement>,
@@ -7,16 +8,18 @@ export interface IMutedProps
   className?: string;
 }
 
-export const Muted = React.forwardRef<HTMLParagraphElement, IMutedProps>(
+/**
+ * Muted component for displaying less prominent text.
+ * Use this component to render muted text in your content.
+ */
+export const Muted = forwardRef<HTMLParagraphElement, IMutedProps>(
   ({ className, ...props }, ref) => {
     return (
-      <p
-        ref={ref}
-        className={cn('text-sm text-muted-foreground', className)}
-        {...props}
-      >
+      <p ref={ref} className={cn(styles.muted, className)} {...props}>
         {props.children}
       </p>
     );
   }
 );
+
+Muted.displayName = 'Muted';

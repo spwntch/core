@@ -10,7 +10,7 @@ import {
 } from './card';
 
 const meta: Meta<typeof Card> = {
-  title: 'shad-cn-components/card',
+  title: 'ui/card',
   component: Card,
   tags: ['autodocs'],
   parameters: {

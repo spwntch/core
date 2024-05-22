@@ -17,7 +17,7 @@ import {
 } from './dropdown-menu';
 
 const meta: Meta = {
-  title: 'shad-cn-components/dropdown-menu',
+  title: 'ui/dropdown-menu',
   component: DropdownMenu,
   tags: ['autodocs'],
 };
