@@ -16,5 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "@spwntch/tailwind": "~0.53.1"
+  },
+  "devDependencies": {
+    "storybook": "8.1.1"
   }
 }
