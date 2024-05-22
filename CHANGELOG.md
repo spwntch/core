@@ -1,3 +1,15 @@
+## 0.53.1 (2024-05-22)
+
+
+### 🚀 Features
+
+- adds a boilerplate @/react-typography package ([9318ce3](https://github.com/spwntch/core/commit/9318ce3))
+- adds h1-4 ([a0e4748](https://github.com/spwntch/core/commit/a0e4748))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.53.0 (2024-05-22)
 
 This was a version bump only, there were no code changes.
