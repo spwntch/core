@@ -1,0 +1,11 @@
+.ul {
+    margin-top: 1.5rem; /* corresponds to my-6 */
+    margin-bottom: 1.5rem; /* corresponds to my-6 */
+    margin-left: 1.5rem; /* corresponds to ml-6 */
+    list-style-type: disc; /* corresponds to list-disc */
+  }
+  
+  .ul > li {
+    margin-top: 0.5rem; /* corresponds to [&>li]:mt-2 */
+  }
+  

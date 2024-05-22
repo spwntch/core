@@ -5,7 +5,7 @@ export * from './h3/h3';
 export * from './h4/h4';
 export * from './large/large';
 export * from './lead/lead';
-export * from './list/ul';
+export * from './list/ul/ul';
 export * from './muted/muted';
 export * from './p/p';
 export * from './small/small';
