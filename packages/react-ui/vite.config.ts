@@ -46,7 +46,7 @@ export default defineConfig({
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
       },
-      external: ['react', 'react-dom', 'react/jsx-runtime', 'lucide-react'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', 'lucide-react', '@/tailwind/tailwind.css'],
     },
   },
 });
