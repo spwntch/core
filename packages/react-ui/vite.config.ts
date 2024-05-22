@@ -31,7 +31,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'react-ui',
       fileName: 'index',
-      formats: ['es'],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       input: Object.fromEntries(
@@ -46,7 +46,13 @@ export default defineConfig({
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
       },
-      external: ['react', 'react-dom', 'react/jsx-runtime', 'lucide-react', '@/tailwind/tailwind.css'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'lucide-react',
+        '@/tailwind/tailwind.css',
+      ],
     },
   },
 });
