@@ -1,5 +1,5 @@
-import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 import {
   Card,
   CardHeader,
@@ -7,12 +7,12 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-} from "./card";
+} from './card';
 
 const meta: Meta<typeof Card> = {
-  title: "ui/components/card",
+  title: 'shad-cn-components/card',
   component: Card,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
     controls: { expanded: true },
   },
@@ -38,7 +38,7 @@ export const Default: StoryObj<typeof Card> = {
 
 /**
  * Example of a card with only a header and content.
- * 
+ *
  * Use this setup when you need to display a card with a title, description, and content,
  * but no footer section.
  */
@@ -56,7 +56,7 @@ export const HeaderContent: StoryObj<typeof Card> = {
 
 /**
  * Example of a card with only content and footer.
- * 
+ *
  * This setup is useful for cards that require content and action buttons or links at the bottom.
  */
 export const ContentFooter: StoryObj<typeof Card> = {

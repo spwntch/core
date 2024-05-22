@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Badge, BadgeProps } from "./badge";
+import { Meta, StoryObj } from '@storybook/react';
+import { Badge, BadgeProps } from './badge';
 
 const meta: Meta<typeof Badge> = {
-  title: "ui/components/badge",
+  title: 'shad-cn-components/badge',
   component: Badge,
   tags: ['autodocs'],
   argTypes: {
@@ -13,7 +13,8 @@ const meta: Meta<typeof Badge> = {
     variant: {
       control: 'select',
       options: ['default', 'secondary', 'destructive', 'outline'],
-      description: 'The variant of the badge. It can be "default", "secondary", "destructive", or "outline".',
+      description:
+        'The variant of the badge. It can be "default", "secondary", "destructive", or "outline".',
     },
   },
 };
@@ -30,10 +31,18 @@ type Story = StoryObj<typeof Badge>;
 export const Default: Story = {
   render: (args: BadgeProps) => (
     <>
-      <Badge {...args} variant="default">Default</Badge>
-      <Badge {...args} variant="secondary">Secondary</Badge>
-      <Badge {...args} variant="destructive">Destructive</Badge>
-      <Badge {...args} variant="outline">Outline</Badge>
+      <Badge {...args} variant="default">
+        Default
+      </Badge>
+      <Badge {...args} variant="secondary">
+        Secondary
+      </Badge>
+      <Badge {...args} variant="destructive">
+        Destructive
+      </Badge>
+      <Badge {...args} variant="outline">
+        Outline
+      </Badge>
     </>
   ),
 };

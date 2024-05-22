@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from '@storybook/react';
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -11,13 +11,13 @@ import {
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
-  MenubarTrigger
-} from "./menubar";
+  MenubarTrigger,
+} from './menubar';
 
 const meta: Meta<typeof Menubar> = {
-  title: "ui/components/menubar",
+  title: 'shad-cn-components/menubar',
   component: Menubar,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;

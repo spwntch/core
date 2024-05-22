@@ -5,11 +5,11 @@ import {
   SheetDescription,
   SheetHeader,
   SheetTitle,
-  SheetTrigger
+  SheetTrigger,
 } from './sheet';
 
 const meta: Meta<typeof Sheet> = {
-  title: 'ui/components/sheet',
+  title: 'shad-cn-components/sheet',
   component: Sheet,
   tags: ['autodocs'],
   argTypes: {

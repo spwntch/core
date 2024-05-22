@@ -1,9 +1,16 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { ChevronDown } from "lucide-react";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "./navigation-menu";
+import { Meta, StoryObj } from '@storybook/react';
+import { ChevronDown } from 'lucide-react';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from './navigation-menu';
 
 const meta: Meta<typeof NavigationMenu> = {
-  title: "ui/components/navigation-menu",
+  title: 'shad-cn-components/navigation-menu',
   component: NavigationMenu,
   tags: ['autodocs'],
   argTypes: {

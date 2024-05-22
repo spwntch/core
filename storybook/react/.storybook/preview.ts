@@ -15,7 +15,15 @@ export const parameters: Parameters = {
   controls: { exclude: ['children'] },
   options: {
     storySort: {
-      order: ['Introduction', 'Tech Stack', 'Tailwind', 'components', 'shell'],
+      order: [
+        'Introduction',
+        'Tailwind',
+        'Tech Stack',
+        'shad-cn-components',
+        'shell',
+        'components',
+        'blog',
+      ],
     },
   },
   // controls: { exclude: ['children'] },
