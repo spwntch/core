@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/ui",
-  "version": "0.52.32",
+  "version": "0.52.33",
   "files": [
     "dist",
     "!dist/**/*.stories.js",
@@ -27,7 +27,7 @@
     "@radix-ui/react-menubar": "^1.0.4",
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-slot": "^1.0.2",
-    "@spwntch/tailwind": "~0.52.32",
+    "@spwntch/tailwind": "~0.52.33",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.378.0",
