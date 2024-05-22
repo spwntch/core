@@ -1,3 +1,14 @@
+## 0.52.31 (2024-05-22)
+
+
+### 🩹 Fixes
+
+- uses standard shadcn/ui components without styles extracted ([25821c0](https://github.com/spwntch/core/commit/25821c0))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.52.30 (2024-05-21)
 
 This was a version bump only, there were no code changes.
