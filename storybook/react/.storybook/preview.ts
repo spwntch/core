@@ -20,6 +20,7 @@ export const parameters: Parameters = {
         'Tailwind',
         'Tech Stack',
         'shad-cn-components',
+        'typography',
         'shell',
         'components',
         'blog',
