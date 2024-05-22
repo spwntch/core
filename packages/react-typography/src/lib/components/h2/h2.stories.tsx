@@ -1,8 +1,7 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { H2, IH2Props } from './h2';
 
-export default {
+const meta: Meta<typeof H2> = {
   title: 'typography/h2',
   component: H2,
   tags: ['autodocs'],
@@ -12,14 +11,16 @@ export default {
   args: {
     className: '',
   },
-} as Meta<typeof H2>;
+};
+
+export default meta;
 
 type Story = StoryObj<IH2Props>;
 
 /**
- * Default H2 story
+ * Basic H2 story
  */
-export const Default: Story = {
+export const Basic: Story = {
   render: (args) => <H2 {...args}>Section Heading</H2>,
 };
-Default.storyName = 'Default';
+Basic.storyName = 'Basic';

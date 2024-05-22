@@ -1,1 +1,1 @@
-export * from './lib/react-typography';
+export * from './lib/components';

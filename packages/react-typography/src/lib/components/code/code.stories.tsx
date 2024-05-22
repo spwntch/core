@@ -1,8 +1,7 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { Code, ICodeProps } from './code';
 
-export default {
+const meta: Meta<typeof Code> = {
   title: 'typography/code',
   component: Code,
   tags: ['autodocs'],
@@ -12,14 +11,16 @@ export default {
   args: {
     className: '',
   },
-} as Meta;
+};
+
+export default meta;
 
 type Story = StoryObj<typeof Code>;
 
 /**
- * Default code story
+ * Basic code story
  */
-export const Default: Story = (args: ICodeProps) => (
+export const Basic: Story = (args: ICodeProps) => (
   <Code {...args}>Inline Code</Code>
 );
-Default.storyName = 'Default';
+Basic.storyName = 'Basic';

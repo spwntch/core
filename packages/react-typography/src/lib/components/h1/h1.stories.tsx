@@ -1,8 +1,7 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { H1, IH1Props } from './h1';
 
-export default {
+const meta: Meta<typeof H1> = {
   title: 'typography/h1',
   component: H1,
   tags: ['autodocs'],
@@ -12,14 +11,16 @@ export default {
   args: {
     className: '',
   },
-} as Meta<typeof H1>;
+};
+
+export default meta;
 
 type Story = StoryObj<IH1Props>;
 
 /**
- * Default H1 story
+ * Basic H1 story
  */
-export const Default: Story = {
+export const Basic: Story = {
   render: (args) => <H1 {...args}>Main Heading</H1>,
 };
-Default.storyName = 'Default';
+Basic.storyName = 'Basic';

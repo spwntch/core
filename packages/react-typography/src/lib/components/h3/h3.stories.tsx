@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { H3, IH3Props } from './h3';
 
-export default {
+const meta: Meta<typeof H3> = {
   title: 'typography/h3',
   component: H3,
   tags: ['autodocs'],
@@ -11,14 +11,16 @@ export default {
   args: {
     className: '',
   },
-} as Meta<typeof H3>;
+};
+
+export default meta;
 
 type Story = StoryObj<IH3Props>;
 
 /**
- * Default H3 story
+ * Basic H3 story
  */
-export const Default: Story = {
+export const Basic: Story = {
   render: (args) => <H3 {...args}>Sub-section Heading</H3>,
 };
-Default.storyName = 'Default';
+Basic.storyName = 'Basic';
