@@ -1,5 +1,6 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '@/react-ui';
+import styles from './lead.module.css';
 
 export interface ILeadProps
   extends React.HTMLAttributes<HTMLParagraphElement>,
@@ -7,12 +8,16 @@ export interface ILeadProps
   className?: string;
 }
 
-export const Lead = React.forwardRef<HTMLParagraphElement, ILeadProps>(
+/**
+ * Lead component for displaying lead paragraph text.
+ * Use this component to emphasize introductory text in your content.
+ */
+export const Lead = forwardRef<HTMLParagraphElement, ILeadProps>(
   ({ className, ...props }, ref) => {
     return (
       <p
         ref={ref}
-        className={cn('text-xl text-muted-foreground', className)}
+        className={cn(styles.lead, className)}
         {...props}
       >
         {props.children}
@@ -20,3 +25,5 @@ export const Lead = React.forwardRef<HTMLParagraphElement, ILeadProps>(
     );
   }
 );
+
+Lead.displayName = 'Lead';
