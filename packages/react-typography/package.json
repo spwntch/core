@@ -1,0 +1,23 @@
+{
+  "name": "@spwntch/typography",
+  "version": "0.53.3",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "react",
+    "vite",
+    "sandbox"
+  ],
+  "author": "spwntch",
+  "license": "MIT",
+  "dependencies": {
+    "@spwntch/tailwind": "~0.53.3"
+  },
+  "devDependencies": {
+    "storybook": "8.1.1"
+  }
+}

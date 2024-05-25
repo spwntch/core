@@ -9,7 +9,7 @@ import {
 } from './sheet';
 
 const meta: Meta<typeof Sheet> = {
-  title: 'shad-cn-components/sheet',
+  title: 'ui/sheet',
   component: Sheet,
   tags: ['autodocs'],
   argTypes: {

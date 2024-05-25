@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react';
 import { Button, ButtonProps } from './button';
 
 const meta: Meta<ButtonProps> = {
-  title: 'shad-cn-components/button',
+  title: 'ui/button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

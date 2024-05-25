@@ -15,7 +15,7 @@ import {
 } from './menubar';
 
 const meta: Meta<typeof Menubar> = {
-  title: 'shad-cn-components/menubar',
+  title: 'ui/menubar',
   component: Menubar,
   tags: ['autodocs'],
 };

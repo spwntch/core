@@ -10,7 +10,7 @@ import {
 } from './navigation-menu';
 
 const meta: Meta<typeof NavigationMenu> = {
-  title: 'shad-cn-components/navigation-menu',
+  title: 'ui/navigation-menu',
   component: NavigationMenu,
   tags: ['autodocs'],
   argTypes: {
