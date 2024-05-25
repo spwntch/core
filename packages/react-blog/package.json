@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/blog",
-  "version": "0.53.2",
+  "version": "0.53.3",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -25,9 +25,9 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/components": "~0.53.2",
-    "@spwntch/mdx": "~0.53.2",
-    "@spwntch/tailwind": "~0.53.2",
+    "@spwntch/components": "~0.53.3",
+    "@spwntch/mdx": "~0.53.3",
+    "@spwntch/tailwind": "~0.53.3",
     "lucide-react": "^0.360.0"
   },
   "devDependencies": {
