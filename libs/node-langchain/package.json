@@ -1,0 +1,8 @@
+{
+  "name": "@/node-langchain",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts",
+  "private": true
+}

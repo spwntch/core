@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@/node-langchain": ["libs/node-langchain/src/index.ts"],
       "@/react-blog": ["packages/react-blog/src/index.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-mdx": ["packages/react-mdx/src/index.ts"],
