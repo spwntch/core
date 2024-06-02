@@ -1,2 +1,2 @@
 export * from './lib/openai';
-export * from './lib/sandbox';
+export * from './lib/playground';
