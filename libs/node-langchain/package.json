@@ -4,5 +4,11 @@
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@langchain/openai": "^0.1.0",
+    "vite": "~5.0.0",
+    "vite-plugin-dts": "~3.8.1",
+    "@nx/vite": "19.0.1"
+  }
 }
