@@ -20,6 +20,7 @@
   },
   "private": true,
   "dependencies": {
+    "@langchain/core": "^0.2.5",
     "@langchain/openai": "^0.1.0",
     "@react-hooks-library/core": "^0.6.2",
     "gray-matter": "^4.0.3",
