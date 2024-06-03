@@ -7,8 +7,7 @@ import { CheerioWebBaseLoader } from 'langchain/document_loaders/web/cheerio';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { MemoryVectorStore } from 'langchain/vectorstores/memory';
 
-
-const template = ChatPromptTemplate.fromMessages([
+const prompt = ChatPromptTemplate.fromMessages([
   [
     'system',
     `
@@ -18,45 +17,39 @@ const template = ChatPromptTemplate.fromMessages([
   ],
 ]);
 
+const loader = new CheerioWebBaseLoader(
+  'https://icanhazdadjoke.com/search?term=space%20ship'
+);
+
+const spliter = new RecursiveCharacterTextSplitter({
+  chunkSize: 200,
+  chunkOverlap: 50,
+});
+
+const getRetriever = async (docs: any[]) => {
+  const store = await MemoryVectorStore.fromDocuments(docs, embeddings);
+  return store.asRetriever();
+};
+
+/**
+ * API
+ */
+
 export const retrieveDadJoke = async (): Promise<unknown> => {
-  //   const schema = z.object({
-  //     topic: z.string().describe('the topic of the joke'),
-  //     joke: z.string().describe('the joke itself'),
-  //     dad_joke_rating: z
-  //       .number()
-  //       .describe('how dad-like the joke is. the stupider the better!'),
-  //   });
-  //   const parser = StructuredOutputParser.fromZodSchema(schema);
-  // const chain = template.pipe(openai).pipe(parser);
-
-  const chain = await createStuffDocumentsChain({
+  const promptChain = await createStuffDocumentsChain({
     llm: openai,
-    prompt: template,
+    prompt,
   });
 
-  const loader = new CheerioWebBaseLoader(
-    'https://icanhazdadjoke.com/search?term=space%20ship'
-  );
   const docs = await loader.load();
-
-  const spliter = new RecursiveCharacterTextSplitter({
-    chunkSize: 200,
-    chunkOverlap: 50,
-  });
   const splitDocs = await spliter.splitDocuments(docs);
 
-  const store = await MemoryVectorStore.fromDocuments(splitDocs, embeddings);
-  const retriever = store.asRetriever();
   const retrievalChain = await createRetrievalChain({
-    combineDocsChain: chain,
-    retriever,
+    combineDocsChain: promptChain,
+    retriever: await getRetriever(splitDocs),
   });
 
-  //   chain.pipe(parser);
-
-  const response = await retrievalChain.invoke({
+  return await retrievalChain.invoke({
     input: 'null',
   });
-
-  return response;
 };
