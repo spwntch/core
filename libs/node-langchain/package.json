@@ -6,6 +6,7 @@
   "typings": "./index.d.ts",
   "private": true,
   "dependencies": {
+    "@langchain/core": "^0.2.5",
     "@langchain/openai": "^0.1.0",
     "vite": "~5.0.0",
     "vite-plugin-dts": "~3.8.1",

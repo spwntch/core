@@ -7,3 +7,5 @@ const openai = new ChatOpenAI({
 });
 
 export default openai;
+
+
