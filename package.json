@@ -38,6 +38,7 @@
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@clack/prompts": "^0.7.0",
+    "@langchain/community": "^0.2.5",
     "@langchain/core": "^0.2.5",
     "@langchain/openai": "^0.1.0",
     "@nx/devkit": "19.0.1",

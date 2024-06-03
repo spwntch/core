@@ -3,11 +3,13 @@ import { embeddings, openai } from '../openai';
 
 import { createStuffDocumentsChain } from 'langchain/chains/combine_documents';
 import { createRetrievalChain } from 'langchain/chains/retrieval';
-import { CheerioWebBaseLoader } from 'langchain/document_loaders/web/cheerio';
+import { CheerioWebBaseLoader } from '@langchain/community/document_loaders/web/cheerio';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { MemoryVectorStore } from 'langchain/vectorstores/memory';
 
-export const retrieveDadJoke = async (): Promise<unknown> => {
+export const retrieveAnswerFromPage = async (
+  input: string
+): Promise<unknown> => {
   /**
    * SETUP
    */
@@ -16,8 +18,9 @@ export const retrieveDadJoke = async (): Promise<unknown> => {
     [
       'system',
       `
-     Return a radnomly selected joke about space-ships from your knowledge base: {context}
-     Always adda divider line (*-------LOL--------*)  below the joke, so that it is easier to read.
+     Aanswer the users question: {input}.
+     Draw answers from from your knowledge base: {context}
+     Always add a divider line (*---------------*)  below your answer, so that it is easier to read.
      `,
     ],
   ]);
@@ -27,7 +30,7 @@ export const retrieveDadJoke = async (): Promise<unknown> => {
   );
 
   const spliter = new RecursiveCharacterTextSplitter({
-    chunkSize: 200,
+    chunkSize: 300,
     chunkOverlap: 50,
   });
 
@@ -52,7 +55,5 @@ export const retrieveDadJoke = async (): Promise<unknown> => {
     retriever: await getRetriever(splitDocs),
   });
 
-  return await retrievalChain.invoke({
-    input: 'null',
-  });
+  return await retrievalChain.invoke({ input });
 };

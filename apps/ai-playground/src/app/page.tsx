@@ -1,9 +1,9 @@
 'use client';
-import { retrieveDadJoke } from '@/node-langchain';
+import { retrieveAnswerFromPage } from '@/node-langchain';
 
 export default function Index() {
   const onTellMeAJokeClick = async () => {
-    const joke = await retrieveDadJoke();
+    const joke = await retrieveAnswerFromPage('How do i improve CX?');
     console.log(joke);
   };
   return (
@@ -12,7 +12,7 @@ export default function Index() {
         className="border-2 px-4 py-2 rounded-xl bg-black text-white"
         onClick={onTellMeAJokeClick}
       >
-        Tell me a joke
+        EXECUTE AI
       </button>
     </div>
   );
