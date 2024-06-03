@@ -6,6 +6,7 @@
   "typings": "./index.d.ts",
   "private": true,
   "dependencies": {
+    "@langchain/community": "^0.2.5",
     "@langchain/core": "^0.2.5",
     "@langchain/openai": "^0.1.0",
     "langchain": "^0.2.4",
