@@ -1,6 +1,9 @@
 import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { openai } from '../openai';
-export const tellJoke = async (): Promise<string> => {
+import { StringOutputParser } from '@langchain/core/output_parsers';
+
+
+export const tellParsedJoke = async (): Promise<string> => {
   const template = ChatPromptTemplate.fromMessages([
     [
       'system',
@@ -13,11 +16,14 @@ export const tellJoke = async (): Promise<string> => {
     ],
   ]);
 
-  const chain = template.pipe(openai);
+  const parser = new StringOutputParser();
+
+  const chain = template.pipe(openai).pipe(parser);
 
   const response = await chain.invoke({
     input: 'alien cat in pyjamas',
   });
 
-  return response.content as string;
+
+  return response;
 };

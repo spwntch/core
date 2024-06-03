@@ -2,7 +2,8 @@
 import { tellJoke } from '@/node-langchain';
 export default function Index() {
   const onTellMeAJokeClick = async () => {
-    await tellJoke();
+    const joke = await tellJoke();
+    console.log(joke);
   };
   return (
     <div className="h-full border-2 flex justify-center items-center">
