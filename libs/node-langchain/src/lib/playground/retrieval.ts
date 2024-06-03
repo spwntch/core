@@ -34,7 +34,7 @@ export const retrieveAnswerFromPage = async (
     chunkOverlap: 50,
   });
 
-  const getRetriever = async (docs: unknown[]) => {
+  const getRetriever = async (docs: any[]) => {
     const store = await MemoryVectorStore.fromDocuments(docs, embeddings);
     return store.asRetriever();
   };
