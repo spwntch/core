@@ -1,8 +1,8 @@
 'use client';
-import { tellJoke } from '@/node-langchain';
+import { tellStructuredJoke } from '@/node-langchain';
 export default function Index() {
   const onTellMeAJokeClick = async () => {
-    const joke = await tellJoke();
+    const joke = await tellStructuredJoke('space ships');
     console.log(joke);
   };
   return (
