@@ -1,6 +1,5 @@
-import { StructuredOutputParser } from '@langchain/core/output_parsers';
 import { ChatPromptTemplate } from '@langchain/core/prompts';
-import { openai, embeddings } from '../openai';
+import { embeddings, openai } from '../openai';
 
 import { createStuffDocumentsChain } from 'langchain/chains/combine_documents';
 import { createRetrievalChain } from 'langchain/chains/retrieval';
@@ -8,7 +7,6 @@ import { CheerioWebBaseLoader } from 'langchain/document_loaders/web/cheerio';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { MemoryVectorStore } from 'langchain/vectorstores/memory';
 
-import { z } from 'zod';
 
 const template = ChatPromptTemplate.fromMessages([
   [
