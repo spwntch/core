@@ -22,7 +22,7 @@
   "dependencies": {
     "@react-hooks-library/core": "^0.6.2",
     "gray-matter": "^4.0.3",
-    "next": "14.0.4",
+    "next": "14.2.3",
     "next-mdx-remote": "^4.4.1",
     "react-youtube": "^10.1.0",
     "rehype-slug": "^6.0.0",
