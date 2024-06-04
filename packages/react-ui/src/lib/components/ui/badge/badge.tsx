@@ -22,29 +22,20 @@ const badgeVariants = cva(
   }
 );
 
-/**
- * Props for the Badge component.
- *
- * - `className` allows for additional styling to be applied.
- * - `variant` determines the styling variant of the badge.
- */
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
-/**
- * Badge component for displaying labels or statuses.
- *
- * - Use the `Badge` component to highlight specific information or status in your UI.
- * - Supports different variants such as `default`, `secondary`, `destructive`, and `outline` to customize the appearance.
- *
- * @param {BadgeProps} props - The properties to configure the Badge component.
- * @returns {JSX.Element} The rendered Badge component.
- */
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
-  );
-}
+const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
+  ({ className, variant, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(badgeVariants({ variant }), className)}
+      {...props}
+    />
+  )
+);
+
+Badge.displayName = 'Badge';
 
 export { Badge, badgeVariants };
