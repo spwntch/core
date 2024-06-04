@@ -19,7 +19,7 @@ const config: StorybookConfig = {
   },
   stories: [
     '../src/docs/**/!(_)*.mdx',
-    '../src/temp/**/!(_)*.stories.@(js|jsx|ts|tsx)',
+    // '../src/temp/**/!(_)*.stories.@(js|jsx|ts|tsx)',
     '../../../packages/**/src/**/!(_)*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
