@@ -8,6 +8,9 @@
   "author": "Spawntech",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/ui": "latest"
+    "@spwntch/tailwind": "latest",
+    "@spwntch/ui": "latest",
+    "@spwntch/typography": "latest",
+    "@spwntch/components": "latest"
   }
 }

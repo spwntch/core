@@ -334,6 +334,9 @@ importers:
       '@spwntch/tailwind':
         specifier: ~0.54.0
         version: link:../tailwind
+      '@spwntch/ui':
+        specifier: ~0.54.0
+        version: link:../react-ui
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
