@@ -5,22 +5,6 @@ import { X } from 'lucide-react';
 
 import { cn } from '../../../utils/cn';
 
-/**
- * Sheet component and its subcomponents for creating slide-in panels.
- *
- * The `Sheet` component provides a flexible and customizable sheet system.
- * Use the various subcomponents to construct sheets with triggers, content areas, headers, footers, and overlays.
- *
- * - `SheetTrigger`: The element that toggles the visibility of the sheet.
- * - `SheetContent`: The container for the sheet content.
- * - `SheetHeader`: A header section for the sheet.
- * - `SheetFooter`: A footer section for the sheet.
- * - `SheetTitle`: A title for the sheet.
- * - `SheetDescription`: A description for the sheet.
- * - `SheetOverlay`: An overlay that appears behind the sheet.
- * - `SheetClose`: A button to close the sheet.
- * - `SheetPortal`: A portal for rendering the sheet in a different part of the DOM.
- */
 const Sheet = SheetPrimitive.Root;
 
 const SheetTrigger = SheetPrimitive.Trigger;
@@ -28,15 +12,6 @@ const SheetTrigger = SheetPrimitive.Trigger;
 const SheetClose = SheetPrimitive.Close;
 
 const SheetPortal = SheetPrimitive.Portal;
-
-/**
- * SheetOverlay component for displaying an overlay behind the sheet.
- *
- * - Use the `SheetOverlay` component to add a background overlay when the sheet is open.
- *
- * @param {React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>} props - The properties to configure the SheetOverlay component.
- * @returns {JSX.Element} The rendered SheetOverlay component.
- */
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
@@ -71,24 +46,10 @@ const sheetVariants = cva(
   }
 );
 
-/**
- * Props for the SheetContent component.
- *
- * - `side`: Determines the side from which the sheet will appear (top, bottom, left, right).
- */
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     VariantProps<typeof sheetVariants> {}
 
-/**
- * SheetContent component for displaying the main content of the sheet.
- *
- * - Use the `SheetContent` component to define the content area of the sheet.
- * - Supports different sides for the sheet to appear from.
- *
- * @param {SheetContentProps} props - The properties to configure the SheetContent component.
- * @returns {JSX.Element} The rendered SheetContent component.
- */
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
@@ -110,14 +71,6 @@ const SheetContent = React.forwardRef<
 ));
 SheetContent.displayName = SheetPrimitive.Content.displayName;
 
-/**
- * SheetHeader component for displaying the header of the sheet.
- *
- * - Use the `SheetHeader` component to define the header section of the sheet.
- *
- * @param {React.HTMLAttributes<HTMLDivElement>} props - The properties to configure the SheetHeader component.
- * @returns {JSX.Element} The rendered SheetHeader component.
- */
 const SheetHeader = ({
   className,
   ...props
@@ -132,14 +85,6 @@ const SheetHeader = ({
 );
 SheetHeader.displayName = 'SheetHeader';
 
-/**
- * SheetFooter component for displaying the footer of the sheet.
- *
- * - Use the `SheetFooter` component to define the footer section of the sheet.
- *
- * @param {React.HTMLAttributes<HTMLDivElement>} props - The properties to configure the SheetFooter component.
- * @returns {JSX.Element} The rendered SheetFooter component.
- */
 const SheetFooter = ({
   className,
   ...props
@@ -154,14 +99,6 @@ const SheetFooter = ({
 );
 SheetFooter.displayName = 'SheetFooter';
 
-/**
- * SheetTitle component for displaying the title of the sheet.
- *
- * - Use the `SheetTitle` component to define the title of the sheet.
- *
- * @param {React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>} props - The properties to configure the SheetTitle component.
- * @returns {JSX.Element} The rendered SheetTitle component.
- */
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
@@ -174,14 +111,6 @@ const SheetTitle = React.forwardRef<
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 
-/**
- * SheetDescription component for displaying the description of the sheet.
- *
- * - Use the `SheetDescription` component to define the description of the sheet.
- *
- * @param {React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>} props - The properties to configure the SheetDescription component.
- * @returns {JSX.Element} The rendered SheetDescription component.
- */
 const SheetDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
