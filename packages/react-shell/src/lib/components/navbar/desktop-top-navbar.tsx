@@ -1,8 +1,8 @@
-import { ButtonGroup, cn } from '@/react-components';
+import { cn } from '@/react-ui';
 import { Logo } from '../brand';
-import { GithubButton, ThemeToggleButton } from '../buttons';
-import { MobileNavDrawer } from './mobile-nav-drawer';
+import { GithubButton } from '../buttons';
 import { NavToolbar } from '../nav';
+import { MobileNavDrawer } from './mobile-nav-drawer';
 
 interface IDesktopTopNavbarProps {
   classNames?: string;
@@ -46,25 +46,25 @@ export const DesktopTopNavbar = ({
           </nav>
         </div>
         <div>
-          <ButtonGroup>
+          {/* <ButtonGroup>
             {!disableThemeToggle && <ThemeToggleButton />}
-          </ButtonGroup>
+          </ButtonGroup> */}
         </div>
         <div className="hidden md:block">
-          <ButtonGroup>
+          {/* <ButtonGroup> */}
             {/* <Button variant="secondary" className="flex gap-2">
               <div>Sign In</div>
               <LogIn />
             </Button> */}
-          </ButtonGroup>
+          {/* </ButtonGroup> */}
         </div>
         <div className="ml-2">
           {githubUrl && <GithubButton url={githubUrl} />}
         </div>
         <div className="block md:hidden">
-          <ButtonGroup>
+          {/* <ButtonGroup> */}
             <MobileNavDrawer onLinkTo={onLinkTo} />
-          </ButtonGroup>
+          {/* </ButtonGroup> */}
         </div>
       </div>
     </header>

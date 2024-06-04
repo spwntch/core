@@ -1,7 +1,7 @@
 
 import { Linkedin } from 'lucide-react';
 import { useBrand } from '../../providers';
-import { H3 } from '@/react-components';
+import { H3 } from '@/react-typography';
 
 export const Social = () => {
   const { social } = useBrand();

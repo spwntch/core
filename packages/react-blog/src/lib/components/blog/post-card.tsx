@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  Small
-} from '@/react-components';
+} from '@/react-ui';
+import { Small } from '@/react-typography';
 import { IMdxDocMeta } from '@/react-mdx';
 
 interface IPostCardProps extends IMdxDocMeta {
@@ -23,7 +23,10 @@ export const PostCard = ({
   onClick,
 }: IPostCardProps) => {
   return (
-    <Card className="max-w-2xl mx-auto cursor-pointer" onClick={() => onClick(slug)}>
+    <Card
+      className="max-w-2xl mx-auto cursor-pointer"
+      onClick={() => onClick(slug)}
+    >
       <CardContent className="m-0 p-0">
         <img
           className="object-cover object-center rounded-t w-full h-60 "

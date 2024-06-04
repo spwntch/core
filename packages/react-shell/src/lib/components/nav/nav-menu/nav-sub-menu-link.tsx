@@ -1,8 +1,5 @@
-import {
-  Muted,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from '@/react-components';
+import { Muted } from '@/react-typography';
+import { NavigationMenuItem, NavigationMenuLink } from '@/react-ui';
 import { INavLink } from '../../../providers/nav-provider';
 
 type INavToolbarMenuLinkProps = INavLink;
@@ -12,7 +9,6 @@ export const NavSubMenuLink = ({
   description,
   href,
   onLinkTo,
-
 }: INavToolbarMenuLinkProps) => {
   return (
     <li className="ml-2">

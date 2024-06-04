@@ -1,5 +1,5 @@
 'use client';
-import { H2 } from '@/react-components';
+import { H2 } from '@/react-typography';
 import { PropsWithChildren } from 'react';
 
 export const UnderConstruction = ({ children }: PropsWithChildren) => {

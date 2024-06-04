@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@/react-components';
+import { Button, ButtonProps } from '@/react-ui';
 import { Github } from 'lucide-react';
 import React from 'react';
 

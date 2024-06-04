@@ -1,4 +1,4 @@
-import { P } from '@/react-components';
+import { P } from '@/react-typography';
 import { IBrandLegal, useBrand } from '../../providers';
 
 type ILegalProps = {

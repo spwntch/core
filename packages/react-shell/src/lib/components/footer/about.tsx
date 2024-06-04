@@ -1,4 +1,4 @@
-import { H3, Small } from '@/react-components';
+import { H3, Small } from '@/react-typography';
 import { useBrand } from '../../providers';
 
 export const About = () => {

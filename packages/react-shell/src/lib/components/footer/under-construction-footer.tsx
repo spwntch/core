@@ -2,7 +2,7 @@
 import { Linkedin } from 'lucide-react';
 import { About } from './about';
 import { Contact } from './contact';
-import { H3 } from '@/react-components';
+import { H3 } from '@/react-typography';
 import { Legal } from './legal';
 
 export const UnderConstructionFooter = () => {

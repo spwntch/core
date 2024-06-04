@@ -1,4 +1,4 @@
-import { Small } from '@/react-components';
+import { Small } from '@/react-typography';
 import { useBrand } from '../../providers';
 
 export const Tagline = () => {

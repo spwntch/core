@@ -1,4 +1,4 @@
-import { H3, Small } from '@/react-components';
+import { H3, Small } from '@/react-typography';
 import { ITocItem } from '../../types';
 
 interface IPostTocProps {

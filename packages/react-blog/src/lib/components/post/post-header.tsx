@@ -1,10 +1,11 @@
-import { BasicHeader } from '@/react-components';
+// import { BasicHeader } from '@/react-components';
 import { IMdxDocMeta } from '@/react-mdx';
-import {
-  BackgroundImageHeader,
-  Button,
-  IPageSectionContent,
-} from '@/react-components';
+import { Button } from '@/react-ui';
+// import {
+//   BackgroundImageHeader,
+//   Button,
+//   IPageSectionContent,
+// } from '@/react-components';
 import { ArrowBigLeft } from 'lucide-react';
 
 interface IPostHeaderProps extends IMdxDocMeta {
@@ -20,11 +21,11 @@ export const PostHeader = ({
   coverImage,
   onBackTo,
 }: IPostHeaderProps) => {
-  const header: IPageSectionContent = {
-    heading: title,
-    subHeading: subtitle,
-    tags,
-  };
+  // const header: IPageSectionContent = {
+  //   heading: title,
+  //   subHeading: subtitle,
+  //   tags,
+  // };
   return (
     <div className=" pb-4">
       {backTo && onBackTo && (
@@ -37,11 +38,11 @@ export const PostHeader = ({
           <span>{backTo.label || 'Back'}</span>
         </Button>
       )}
-      {coverImage ? (
+      {/* {coverImage ? (
         <BackgroundImageHeader header={header} image={{ src: coverImage }} />
       ) : (
         <BasicHeader header={header} />
-      )}
+      )} */}
     </div>
   );
 };

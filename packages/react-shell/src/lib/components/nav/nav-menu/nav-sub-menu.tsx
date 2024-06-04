@@ -3,9 +3,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/react-components';
-import { NavSubMenuLink } from './nav-sub-menu-link';
+} from '@/react-ui';
 import { INavLink, INavMenu } from '../../../providers/nav-provider';
+import { NavSubMenuLink } from './nav-sub-menu-link';
 
 interface INavSubMenuProps extends INavMenu {
   onLinkTo: (href: string) => void;

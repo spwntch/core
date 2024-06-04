@@ -1,8 +1,5 @@
-import {
-  Muted,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from '@/react-components';
+import { Muted } from '@/react-typography';
+import { NavigationMenuItem, NavigationMenuLink } from '@/react-ui';
 import { INavLink } from '../../../providers/nav-provider';
 
 interface INavToolbarMenuLinkProps extends INavLink {
