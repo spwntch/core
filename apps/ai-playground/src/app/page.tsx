@@ -1,8 +1,7 @@
 'use client';
-import { retrieveAnswerFromPage } from '@/node-langchain';
 
 export default function Index() {
-  const onTellMeAJokeClick = async () => {
+  const onExecuteAi = async () => {
     const response = await fetch('/api/ai', {
       method: 'POST',
       headers: {
@@ -19,7 +18,7 @@ export default function Index() {
     <div className="h-full border-2 flex justify-center items-center">
       <button
         className="border-2 px-4 py-2 rounded-xl bg-black text-white"
-        onClick={onTellMeAJokeClick}
+        onClick={onExecuteAi}
       >
         EXECUTE AI
       </button>
