@@ -21,6 +21,7 @@ export const parameters: Parameters = {
         'Tech Stack',
         'ui',
         'typography',
+        ['complete-example', '*'],
         'components',
         'shell',
         'blog',

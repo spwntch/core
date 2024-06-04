@@ -57,38 +57,40 @@ type Story = StoryObj;
  * Displays a carousel with a set of images.
  */
 export const basic: Story = {
-  args: {
-    className: 'max-w-3xl mx-auto',
-    children: (
-      <CarouselContent>
-        <CarouselItem>
-          <img src="/images/landscape-1.webp" alt="Landscape Image 1" />
-        </CarouselItem>
-        <CarouselItem>
-          <img src="/images/landscape-2.webp" alt="Landscape Image 2" />
-        </CarouselItem>
-        <CarouselItem>
-          <img src="/images/landscape-3.webp" alt="Landscape Image 3" />
-        </CarouselItem>
-        <CarouselItem>
-          <img src="/images/landscape-4.webp" alt="Landscape Image 4" />
-        </CarouselItem>
-        <CarouselItem>
-          <img src="/images/landscape-5.webp" alt="Landscape Image 5" />
-        </CarouselItem>
-        <CarouselItem>
-          <img src="/images/landscape-6.webp" alt="Landscape Image 6" />
-        </CarouselItem>
-        <CarouselItem>
-          <img src="/images/landscape-7.webp" alt="Landscape Image 7" />
-        </CarouselItem>
-        <CarouselItem>
-          <img src="/images/landscape-8.webp" alt="Landscape Image 8" />
-        </CarouselItem>
+  args: {},
+  render: (args) => (
+    <div className="max-w-3xl mx-auto">
+      <Carousel {...args}>
+        <CarouselContent>
+          <CarouselItem>
+            <img src="/images/landscape-1.webp" alt="Landscape Image 1" />
+          </CarouselItem>
+          <CarouselItem>
+            <img src="/images/landscape-2.webp" alt="Landscape Image 2" />
+          </CarouselItem>
+          <CarouselItem>
+            <img src="/images/landscape-3.webp" alt="Landscape Image 3" />
+          </CarouselItem>
+          <CarouselItem>
+            <img src="/images/landscape-4.webp" alt="Landscape Image 4" />
+          </CarouselItem>
+          <CarouselItem>
+            <img src="/images/landscape-5.webp" alt="Landscape Image 5" />
+          </CarouselItem>
+          <CarouselItem>
+            <img src="/images/landscape-6.webp" alt="Landscape Image 6" />
+          </CarouselItem>
+          <CarouselItem>
+            <img src="/images/landscape-7.webp" alt="Landscape Image 7" />
+          </CarouselItem>
+          <CarouselItem>
+            <img src="/images/landscape-8.webp" alt="Landscape Image 8" />
+          </CarouselItem>
+        </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
-      </CarouselContent>
-    ),
-  },
+      </Carousel>
+    </div>
+  ),
   play: playBasic,
 };

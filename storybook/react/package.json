@@ -10,7 +10,6 @@
   "dependencies": {
     "@spwntch/tailwind": "latest",
     "@spwntch/ui": "latest",
-    "@spwntch/typography": "latest",
-    "@spwntch/components": "latest"
+    "@spwntch/typography": "latest"
   }
 }
