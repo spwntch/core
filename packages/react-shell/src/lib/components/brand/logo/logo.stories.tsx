@@ -42,16 +42,13 @@ const meta: Meta<typeof Logo> = {
       description: 'Additional class name(s) for the container',
       control: 'text',
     },
-    altText: {
-      description: 'Alt text for the logo image. Defaults to "Logo".',
-      control: 'text',
-    },
     width: {
       description: 'The width of the logo image in pixels. Defaults to 240.',
       control: 'number',
     },
     height: {
-      description: 'The height of the logo image in pixels. Defaults to 40. If not provided, it will be calculated based on the width.',
+      description:
+        'The height of the logo image in pixels. Defaults to 40. If not provided, it will be calculated based on the width.',
       control: 'number',
     },
     onClick: {
@@ -70,7 +67,6 @@ type Story = StoryObj<typeof Logo>;
  */
 export const Basic: Story = {
   args: {
-    altText: 'Brand Logo',
     width: 240,
     height: 40,
   },
@@ -83,7 +79,6 @@ export const Basic: Story = {
  */
 export const DarkMode: Story = {
   args: {
-    altText: 'Brand Logo',
     width: 240,
     height: 40,
   },
@@ -93,4 +88,26 @@ export const DarkMode: Story = {
     },
   },
   play: playDarkMode,
+};
+
+export const MarkLight: Story = {
+  args: {
+    variant: 'mark',
+    width: 240,
+    height: 40,
+  },
+  play: playBasic,
+};
+export const MarkDark: Story = {
+  args: {
+    variant: 'mark',
+    width: 240,
+    height: 40,
+  },
+  parameters: {
+    themes: {
+      themeOverride: 'dark',
+    },
+  },
+  play: playBasic,
 };

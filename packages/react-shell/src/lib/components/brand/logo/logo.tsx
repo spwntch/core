@@ -8,7 +8,7 @@ export interface ILogoProps {
    * Alt text for the logo image. Defaults to 'Logo'.
    */
 
-  altText?: string;
+  variant?: 'logo' | 'mark';
   /**
    * The width of the logo image in pixels. Defaults to 240.
    */
@@ -21,28 +21,31 @@ export interface ILogoProps {
 }
 
 export const Logo = forwardRef<HTMLImageElement, ILogoProps>(
-  ({ className, altText = 'Logo', width, height = 40, onClick }, ref) => {
+  ({ className, variant = 'logo', width, height = 40, onClick }, ref) => {
     const brand = useBrand();
+    const altText = variant === 'logo' ? 'Logo' : 'Mark';
+    const logo = variant === 'logo' ? brand.logoUrl : brand.markUrl;
+    width = variant === 'logo' ? width || height * 4 : height;
 
     return (
       <div className={cn(' w-fit h-fit', className)} onClick={onClick}>
-        {brand.logoUrl?.light && (
+        {logo?.light && (
           <img
             ref={ref}
-            width={width || height * 4}
+            width={width}
             height={height}
             alt={altText}
-            src={brand.logoUrl.light}
+            src={logo.light}
             className="dark:hidden"
           />
         )}
-        {brand.logoUrl?.dark && (
+        {logo?.dark && (
           <img
             ref={ref}
-            width={width || height * 4}
+            width={width}
             height={height}
             alt={altText}
-            src={brand.logoUrl.dark}
+            src={logo.dark}
             className="hidden dark:block"
           />
         )}
