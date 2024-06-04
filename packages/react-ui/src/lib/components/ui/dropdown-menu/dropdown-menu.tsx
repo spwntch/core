@@ -1,29 +1,8 @@
-import * as React from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { Check, ChevronRight, Circle } from 'lucide-react';
+import * as React from 'react';
 import { cn } from '../../../utils/cn';
 
-/**
- * DropdownMenu component and its subcomponents for creating complex dropdown menus.
- *
- * The `DropdownMenu` component provides a flexible and customizable dropdown menu system.
- * Use the various subcomponents to construct dropdown menus with items, sub-menus, radio groups, checkboxes, and more.
- *
- * - `DropdownMenuTrigger`: The element that toggles the visibility of the dropdown menu.
- * - `DropdownMenuContent`: The container for the dropdown menu items.
- * - `DropdownMenuItem`: A standard item within the dropdown menu.
- * - `DropdownMenuCheckboxItem`: An item that includes a checkbox.
- * - `DropdownMenuRadioItem`: An item that behaves like a radio button.
- * - `DropdownMenuLabel`: A label for grouping items within the dropdown.
- * - `DropdownMenuSeparator`: A visual separator between groups of items.
- * - `DropdownMenuShortcut`: A span element for displaying keyboard shortcuts.
- * - `DropdownMenuGroup`: A grouping of multiple dropdown items.
- * - `DropdownMenuPortal`: A portal for rendering the dropdown menu in a different part of the DOM.
- * - `DropdownMenuSub`: A container for creating sub-menus.
- * - `DropdownMenuSubTrigger`: The trigger for displaying sub-menus.
- * - `DropdownMenuSubContent`: The container for sub-menu items.
- * - `DropdownMenuRadioGroup`: A group of radio items.
- */
 const DropdownMenu = DropdownMenuPrimitive.Root;
 
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
@@ -36,15 +15,6 @@ const DropdownMenuSub = DropdownMenuPrimitive.Sub;
 
 const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 
-/**
- * DropdownMenuSubTrigger component for displaying a sub-menu trigger.
- *
- * - Use the `DropdownMenuSubTrigger` component to trigger nested dropdown menus.
- * - Supports an optional `inset` prop for additional padding.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & { inset?: boolean }} props - The properties to configure the DropdownMenuSubTrigger component.
- * @returns {JSX.Element} The rendered DropdownMenuSubTrigger component.
- */
 const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
@@ -67,14 +37,6 @@ const DropdownMenuSubTrigger = React.forwardRef<
 DropdownMenuSubTrigger.displayName =
   DropdownMenuPrimitive.SubTrigger.displayName;
 
-/**
- * DropdownMenuSubContent component for displaying sub-menu content.
- *
- * - Use the `DropdownMenuSubContent` component to display nested dropdown menu content.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>} props - The properties to configure the DropdownMenuSubContent component.
- * @returns {JSX.Element} The rendered DropdownMenuSubContent component.
- */
 const DropdownMenuSubContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>
@@ -91,15 +53,6 @@ const DropdownMenuSubContent = React.forwardRef<
 DropdownMenuSubContent.displayName =
   DropdownMenuPrimitive.SubContent.displayName;
 
-/**
- * DropdownMenuContent component for displaying dropdown menu content.
- *
- * - Use the `DropdownMenuContent` component to display the content of the dropdown menu.
- * - Supports an optional `sideOffset` prop to adjust the offset of the menu.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>} props - The properties to configure the DropdownMenuContent component.
- * @returns {JSX.Element} The rendered DropdownMenuContent component.
- */
 const DropdownMenuContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
@@ -118,15 +71,6 @@ const DropdownMenuContent = React.forwardRef<
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 
-/**
- * DropdownMenuItem component for displaying an item in the dropdown menu.
- *
- * - Use the `DropdownMenuItem` component to display an item within the dropdown menu.
- * - Supports an optional `inset` prop for additional padding.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & { inset?: boolean }} props - The properties to configure the DropdownMenuItem component.
- * @returns {JSX.Element} The rendered DropdownMenuItem component.
- */
 const DropdownMenuItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
@@ -145,14 +89,6 @@ const DropdownMenuItem = React.forwardRef<
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 
-/**
- * DropdownMenuCheckboxItem component for displaying a checkbox item in the dropdown menu.
- *
- * - Use the `DropdownMenuCheckboxItem` component to display a checkbox within the dropdown menu.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>} props - The properties to configure the DropdownMenuCheckboxItem component.
- * @returns {JSX.Element} The rendered DropdownMenuCheckboxItem component.
- */
 const DropdownMenuCheckboxItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>
@@ -177,14 +113,6 @@ const DropdownMenuCheckboxItem = React.forwardRef<
 DropdownMenuCheckboxItem.displayName =
   DropdownMenuPrimitive.CheckboxItem.displayName;
 
-/**
- * DropdownMenuRadioItem component for displaying a radio item in the dropdown menu.
- *
- * - Use the `DropdownMenuRadioItem` component to display a radio item within the dropdown menu.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>} props - The properties to configure the DropdownMenuRadioItem component.
- * @returns {JSX.Element} The rendered DropdownMenuRadioItem component.
- */
 const DropdownMenuRadioItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>
@@ -207,15 +135,6 @@ const DropdownMenuRadioItem = React.forwardRef<
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
 
-/**
- * DropdownMenuLabel component for displaying a label in the dropdown menu.
- *
- * - Use the `DropdownMenuLabel` component to display a label within the dropdown menu.
- * - Supports an optional `inset` prop for additional padding.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & { inset?: boolean }} props - The properties to configure the DropdownMenuLabel component.
- * @returns {JSX.Element} The rendered DropdownMenuLabel component.
- */
 const DropdownMenuLabel = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {
@@ -234,14 +153,6 @@ const DropdownMenuLabel = React.forwardRef<
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 
-/**
- * DropdownMenuSeparator component for displaying a separator in the dropdown menu.
- *
- * - Use the `DropdownMenuSeparator` component to visually separate items within the dropdown menu.
- *
- * @param {React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>} props - The properties to configure the DropdownMenuSeparator component.
- * @returns {JSX.Element} The rendered DropdownMenuSeparator component.
- */
 const DropdownMenuSeparator = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
@@ -254,14 +165,6 @@ const DropdownMenuSeparator = React.forwardRef<
 ));
 DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName;
 
-/**
- * DropdownMenuShortcut component for displaying a keyboard shortcut in the dropdown menu.
- *
- * - Use the `DropdownMenuShortcut` component to display keyboard shortcuts next to menu items.
- *
- * @param {React.HTMLAttributes<HTMLSpanElement>} props - The properties to configure the DropdownMenuShortcut component.
- * @returns {JSX.Element} The rendered DropdownMenuShortcut component.
- */
 const DropdownMenuShortcut = ({
   className,
   ...props
@@ -277,18 +180,18 @@ DropdownMenuShortcut.displayName = 'DropdownMenuShortcut';
 
 export {
   DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuCheckboxItem,
-  DropdownMenuRadioItem,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
-  DropdownMenuGroup,
-  DropdownMenuPortal,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuRadioGroup,
+  DropdownMenuTrigger,
 };

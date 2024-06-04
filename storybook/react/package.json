@@ -6,5 +6,8 @@
   "scripts": {},
   "keywords": [],
   "author": "Spawntech",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@spwntch/ui": "latest"
+  }
 }

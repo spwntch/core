@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from './carousel';
 import { playBasic } from './carousel.specs';
+import { withFullPage } from '../../../utils';
 
 const componentDescription = `
 ### Overview
@@ -34,6 +35,7 @@ This component is used to create a sliding image carousel.
 const meta: Meta = {
   title: 'ui/carousel',
   component: Carousel,
+  decorators: [withFullPage],
   // subcomponents: { CarouselContent, CarouselItem, CarouselNext, CarouselPrevious },
   tags: ['autodocs'],
   parameters: {
@@ -55,40 +57,38 @@ type Story = StoryObj;
  * Displays a carousel with a set of images.
  */
 export const basic: Story = {
-  args: {},
-  render: (args) => (
-    <div className="max-w-3xl mx-auto">
-      <Carousel {...args}>
-        <CarouselContent>
-          <CarouselItem>
-            <img src="/images/landscape-1.webp" alt="Landscape Image 1" />
-          </CarouselItem>
-          <CarouselItem>
-            <img src="/images/landscape-2.webp" alt="Landscape Image 2" />
-          </CarouselItem>
-          <CarouselItem>
-            <img src="/images/landscape-3.webp" alt="Landscape Image 3" />
-          </CarouselItem>
-          <CarouselItem>
-            <img src="/images/landscape-4.webp" alt="Landscape Image 4" />
-          </CarouselItem>
-          <CarouselItem>
-            <img src="/images/landscape-5.webp" alt="Landscape Image 5" />
-          </CarouselItem>
-          <CarouselItem>
-            <img src="/images/landscape-6.webp" alt="Landscape Image 6" />
-          </CarouselItem>
-          <CarouselItem>
-            <img src="/images/landscape-7.webp" alt="Landscape Image 7" />
-          </CarouselItem>
-          <CarouselItem>
-            <img src="/images/landscape-8.webp" alt="Landscape Image 8" />
-          </CarouselItem>
-        </CarouselContent>
+  args: {
+    className: 'max-w-3xl mx-auto',
+    children: (
+      <CarouselContent>
+        <CarouselItem>
+          <img src="/images/landscape-1.webp" alt="Landscape Image 1" />
+        </CarouselItem>
+        <CarouselItem>
+          <img src="/images/landscape-2.webp" alt="Landscape Image 2" />
+        </CarouselItem>
+        <CarouselItem>
+          <img src="/images/landscape-3.webp" alt="Landscape Image 3" />
+        </CarouselItem>
+        <CarouselItem>
+          <img src="/images/landscape-4.webp" alt="Landscape Image 4" />
+        </CarouselItem>
+        <CarouselItem>
+          <img src="/images/landscape-5.webp" alt="Landscape Image 5" />
+        </CarouselItem>
+        <CarouselItem>
+          <img src="/images/landscape-6.webp" alt="Landscape Image 6" />
+        </CarouselItem>
+        <CarouselItem>
+          <img src="/images/landscape-7.webp" alt="Landscape Image 7" />
+        </CarouselItem>
+        <CarouselItem>
+          <img src="/images/landscape-8.webp" alt="Landscape Image 8" />
+        </CarouselItem>
         <CarouselPrevious />
         <CarouselNext />
-      </Carousel>
-    </div>
-  ),
+      </CarouselContent>
+    ),
+  },
   play: playBasic,
 };

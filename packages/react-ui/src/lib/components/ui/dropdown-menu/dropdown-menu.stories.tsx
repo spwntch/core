@@ -1,79 +1,136 @@
+import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../button/button';
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
+  DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
+  DropdownMenuCheckboxItem,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuSeparator,
   DropdownMenuSub,
-  DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
+  DropdownMenuSubContent,
+  DropdownMenuGroup,
+  DropdownMenuSeparator
 } from './dropdown-menu';
+import { Button } from '../button/button';
+import { playBasic, playWithGroups, playWithCheckboxes, playWithRadios, playWithSubmenus } from './dropdown-menu.specs';
 
-const meta: Meta = {
+const componentDescription = `
+### Overview
+The \`DropdownMenu\` component provides a flexible and customizable dropdown menu system.
+
+### Props
+- \`DropdownMenuTrigger\`: The element that toggles the visibility of the dropdown menu.
+- \`DropdownMenuContent\`: The container for the dropdown menu items.
+- \`DropdownMenuItem\`: A standard item within the dropdown menu.
+- \`DropdownMenuCheckboxItem\`: An item that includes a checkbox.
+- \`DropdownMenuRadioItem\`: An item that behaves like a radio button.
+- \`DropdownMenuLabel\`: A label for grouping items within the dropdown.
+- \`DropdownMenuSeparator\`: A visual separator between groups of items.
+- \`DropdownMenuShortcut\`: A span element for displaying keyboard shortcuts.
+- \`DropdownMenuGroup\`: A grouping of multiple dropdown items.
+- \`DropdownMenuPortal\`: A portal for rendering the dropdown menu in a different part of the DOM.
+- \`DropdownMenuSub\`: A container for creating sub-menus.
+- \`DropdownMenuSubTrigger\`: The trigger for displaying sub-menus.
+- \`DropdownMenuSubContent\`: The container for sub-menu items.
+- \`DropdownMenuRadioGroup\`: A group of radio items.
+
+### Example
+\`\`\`
+<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button>Open Menu</Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuItem>Item 1</DropdownMenuItem>
+    <DropdownMenuItem>Item 2</DropdownMenuItem>
+    <DropdownMenuItem>Item 3</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+\`\`\`
+`;
+
+const meta: Meta<typeof DropdownMenu> = {
   title: 'ui/dropdown-menu',
   component: DropdownMenu,
+  // subcomponents: {
+  //   DropdownMenuTrigger,
+  //   DropdownMenuContent,
+  //   DropdownMenuItem,
+  //   DropdownMenuCheckboxItem,
+  //   DropdownMenuRadioGroup,
+  //   DropdownMenuRadioItem,
+  //   DropdownMenuSub,
+  //   DropdownMenuSubTrigger,
+  //   DropdownMenuSubContent,
+  //   DropdownMenuGroup,
+  //   DropdownMenuSeparator
+  // },
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: componentDescription,
+      },
+    },
+  },
 };
 
 export default meta;
 
-/**
- * Basic DropdownMenu with a few items.
- */
-export const Basic: StoryObj = {
-  render: () => (
-    <DropdownMenu>
-      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
-};
+type Story = StoryObj<typeof DropdownMenu>;
 
 /**
- * DropdownMenu with groups, labels, and separators.
+ * Basic DropdownMenu example.
  */
-export const WithGroups: StoryObj = {
-  render: (args) => (
+export const Basic: Story = {
+  render: () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button>Open Menu</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel>Group 1</DropdownMenuLabel>
+        <DropdownMenuItem>Item 1</DropdownMenuItem>
+        <DropdownMenuItem>Item 2</DropdownMenuItem>
+        <DropdownMenuItem>Item 3</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  ),
+  play: playBasic,
+};
+
+/**
+ * DropdownMenu with grouped items.
+ */
+export const WithGroups: Story = {
+  render: () => (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button>Open Menu</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
         <DropdownMenuGroup>
-          <DropdownMenuItem>Item 1</DropdownMenuItem>
-          <DropdownMenuItem>Item 2</DropdownMenuItem>
+          <DropdownMenuItem>Group Item 1</DropdownMenuItem>
+          <DropdownMenuItem>Group Item 2</DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuLabel>Group 2</DropdownMenuLabel>
         <DropdownMenuGroup>
-          <DropdownMenuItem>Item 3</DropdownMenuItem>
-          <DropdownMenuItem>Item 4</DropdownMenuItem>
+          <DropdownMenuItem>Group Item 3</DropdownMenuItem>
+          <DropdownMenuItem>Group Item 4</DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   ),
+  play: playWithGroups,
 };
 
 /**
  * DropdownMenu with checkbox items.
  */
-export const WithCheckboxes: StoryObj = {
-  render: (args) => (
+export const WithCheckboxes: Story = {
+  render: () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button>Open Menu</Button>
@@ -85,13 +142,14 @@ export const WithCheckboxes: StoryObj = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
+  play: playWithCheckboxes,
 };
 
 /**
  * DropdownMenu with radio items.
  */
-export const WithRadios: StoryObj = {
-  render: (args) => (
+export const WithRadios: Story = {
+  render: () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button>Open Menu</Button>
@@ -105,13 +163,14 @@ export const WithRadios: StoryObj = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
+  play: playWithRadios,
 };
 
 /**
  * DropdownMenu with submenus.
  */
-export const WithSubmenus: StoryObj = {
-  render: (args) => (
+export const WithSubmenus: Story = {
+  render: () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button>Open Menu</Button>
@@ -129,4 +188,5 @@ export const WithSubmenus: StoryObj = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
+  play: playWithSubmenus,
 };
