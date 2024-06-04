@@ -1,7 +1,7 @@
-import { BrandProvider, Logo, Mark,  } from '@/react-shell';
-import { BasicDocs } from '@/react-storybook';
 import type { Meta, StoryObj } from '@storybook/react';
-import { brand } from '../../../lib/config';
+import { BrandProvider } from './brand-provider';
+import { Logo } from '../logo/logo';
+import { brand } from '../../../utils/storybook-config';
 
 /**
  *
@@ -60,7 +60,8 @@ import { brand } from '../../../lib/config';
  
  */
 const meta: Meta<typeof BrandProvider> = {
-  parameters: { docs: { page: BasicDocs } },
+  title: 'shell/brand/brand-provider',
+  // parameters: { docs: { page: BasicDocs } },
   tags: ['autodocs'],
   component: BrandProvider,
   args: {
@@ -73,14 +74,10 @@ export default meta;
 type Story = StoryObj<typeof BrandProvider>;
 
 export const Primary: Story = {
-  name: 'BrandProvider with Logo in light mode',
 };
 
 export const InDarkMode: Story = {
-  name: 'BrandProvider with Mark in dark mode.',
-  args: {
-    children: <Mark />,
-  },
+  
   parameters: {
     themes: {
       themeOverride: 'dark',

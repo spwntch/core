@@ -1,6 +1,6 @@
-import { ShellProvider } from '@/react-shell';
+import { ShellProvider } from './shell-provider';
 import type { Meta, StoryObj } from '@storybook/react';
-import { BasicDocs } from '../../../lib/docs-templates';
+// import { BasicDocs } from '../../../lib/docs-templates';
 
 /**
  *
@@ -39,7 +39,9 @@ import { BasicDocs } from '../../../lib/docs-templates';
  *  ```
  */
 const meta: Meta<typeof ShellProvider> = {
-  parameters: { docs: { page: BasicDocs } },
+  title: 'shell/shell-provider',
+
+  // parameters: { docs: { page: BasicDocs } },
   tags: ['autodocs'],
   component: ShellProvider,
   args: {

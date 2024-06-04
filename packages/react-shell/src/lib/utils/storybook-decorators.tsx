@@ -1,7 +1,7 @@
 
 import { Decorator } from '@storybook/react/*';
-import { ShellProvider } from '../providers/shell-provider';
 import { brand, primaryNav } from './storybook-config';
+import { ShellProvider } from '../components';
 
 export const withShellProvider: Decorator = (Story) => (
   <div className="w-full ">
