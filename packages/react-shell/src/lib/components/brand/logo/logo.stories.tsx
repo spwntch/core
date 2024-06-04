@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withShellProvider } from '../../../storybook/decorators/with-shell-provider';
+import { withShellProvider } from '../../../utils/storybook-decorators';
 import { Logo } from './logo';
-// import { playBasic, playDarkMode } from './logo.specs';
+import { playBasic, playDarkMode } from './logo.specs';
 
 const componentDescription = `
 ### Overview
@@ -51,8 +51,7 @@ const meta: Meta<typeof Logo> = {
       control: 'number',
     },
     height: {
-      description:
-        'The height of the logo image in pixels. Defaults to 40. If not provided, it will be calculated based on the width.',
+      description: 'The height of the logo image in pixels. Defaults to 40. If not provided, it will be calculated based on the width.',
       control: 'number',
     },
     onClick: {
@@ -75,7 +74,7 @@ export const Basic: Story = {
     width: 240,
     height: 40,
   },
-//   play: playBasic,
+  play: playBasic,
 };
 
 /**
@@ -93,5 +92,5 @@ export const DarkMode: Story = {
       themeOverride: 'dark',
     },
   },
-//   play: playDarkMode,
+  play: playDarkMode,
 };
