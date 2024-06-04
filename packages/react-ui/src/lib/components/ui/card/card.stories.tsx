@@ -8,6 +8,27 @@ import {
   CardDescription,
   CardContent,
 } from './card';
+import { playBasic, playHeaderContent, playContentFooter, playWithImage } from './card.specs';
+
+const componentDescription = `
+### Overview
+The \`Card\` component is a versatile container for displaying content in a styled container.
+
+### Props
+- \`className\`: Additional class names to style the component.
+
+### Example
+\`\`\`
+<Card>
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+    <CardDescription>Description</CardDescription>
+  </CardHeader>
+  <CardContent>Content</CardContent>
+  <CardFooter>Footer</CardFooter>
+</Card>
+\`\`\`
+`;
 
 const meta: Meta<typeof Card> = {
   title: 'ui/card',
@@ -15,55 +36,103 @@ const meta: Meta<typeof Card> = {
   tags: ['autodocs'],
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: {
+        component: componentDescription,
+      },
+    },
+  },
+  argTypes: {
+    className: {
+      control: 'text',
+      description: 'Additional class names to style the component',
+    },
+  },
+  args: {
+    className: '',
   },
 };
 
 export default meta;
 
+type Story = StoryObj<typeof Card>;
+
 /**
- * Default card example displaying a header, content, and footer.
+ * ### Basic Example
+ * Displays a card with header, content, and footer.
  */
-export const Default: StoryObj<typeof Card> = {
+export const basic: Story = {
   render: (args) => (
-    <Card {...args} className="w-fit">
+    <Card {...args} className="max-w-3xl w-fit">
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <CardTitle>Blog Post Title</CardTitle>
+        <CardDescription>Author Name - Date</CardDescription>
       </CardHeader>
-      <CardContent>Card Content</CardContent>
-      <CardFooter>Card Footer</CardFooter>
+      <CardContent>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+      </CardContent>
+      <CardFooter>Read More</CardFooter>
     </Card>
   ),
+  play: playBasic,
 };
 
 /**
- * Example of a card with only a header and content.
- *
- * Use this setup when you need to display a card with a title, description, and content,
- * but no footer section.
+ * ### Card with Header and Content
+ * Displays a card with only header and content sections.
  */
-export const HeaderContent: StoryObj<typeof Card> = {
+export const headerContent: Story = {
   render: (args) => (
-    <Card {...args} className="w-fit">
+    <Card {...args} className="max-w-3xl w-fit">
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <CardTitle>Blog Post Title</CardTitle>
+        <CardDescription>Author Name - Date</CardDescription>
       </CardHeader>
-      <CardContent>Card Content</CardContent>
+      <CardContent>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+      </CardContent>
     </Card>
   ),
+  play: playHeaderContent,
 };
 
 /**
- * Example of a card with only content and footer.
- *
- * This setup is useful for cards that require content and action buttons or links at the bottom.
+ * ### Card with Content and Footer
+ * Displays a card with only content and footer sections.
  */
-export const ContentFooter: StoryObj<typeof Card> = {
+export const contentFooter: Story = {
   render: (args) => (
-    <Card {...args} className="w-fit">
-      <CardContent>Card Content</CardContent>
-      <CardFooter>Card Footer</CardFooter>
+    <Card {...args} className="max-w-3xl w-fit">
+      <CardContent>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+      </CardContent>
+      <CardFooter>Read More</CardFooter>
     </Card>
   ),
+  play: playContentFooter,
+};
+
+/**
+ * ### Card with Image
+ * Displays a card with an image in the content area.
+ */
+export const withImage: Story = {
+  render: (args) => (
+    <Card {...args} className="max-w-3xl w-fit">
+      <CardHeader>
+        <CardTitle>Blog Post Title</CardTitle>
+        <CardDescription>Author Name - Date</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <img src="/images/landscape-1.webp" alt="Landscape Image 1" className="w-full mb-4 rounded-lg" />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+      </CardContent>
+      <CardFooter>Read More</CardFooter>
+    </Card>
+  ),
+  play: playWithImage,
 };
