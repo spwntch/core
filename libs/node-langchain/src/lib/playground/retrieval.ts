@@ -1,3 +1,5 @@
+"use server";
+
 import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { embeddings, openai } from '../openai';
 
@@ -26,7 +28,7 @@ export const retrieveAnswerFromPage = async (
   ]);
 
   const loader = new CheerioWebBaseLoader(
-    'https://icanhazdadjoke.com/search?term=space%20ship'
+    'https://www.interactrdt.com'
   );
 
   const spliter = new RecursiveCharacterTextSplitter({
@@ -36,7 +38,7 @@ export const retrieveAnswerFromPage = async (
 
   const getRetriever = async (docs: any[]) => {
     const store = await MemoryVectorStore.fromDocuments(docs, embeddings);
-    return store.asRetriever();
+    return store.asRetriever({k:10});
   };
 
   /**

@@ -3,7 +3,16 @@ import { retrieveAnswerFromPage } from '@/node-langchain';
 
 export default function Index() {
   const onTellMeAJokeClick = async () => {
-    const joke = await retrieveAnswerFromPage('How do i improve CX?');
+    const response = await fetch('/api/ai', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        input: 'what do you offer?',
+      }),
+    });
+    const joke = await response.json();
     console.log(joke);
   };
   return (
