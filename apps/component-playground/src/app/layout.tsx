@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ShellProvider brand={brand} navItems={primaryNav} defaultTheme="dark">
+        <ShellProvider brand={brand} /*navItems={primaryNav}*/ defaultTheme="dark">
           <WebsiteShell githubUrl="https://github.com/spwntch">
             {children}
           </WebsiteShell>

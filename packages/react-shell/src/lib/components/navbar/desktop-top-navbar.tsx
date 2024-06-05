@@ -1,4 +1,4 @@
-import { cn } from '@/react-ui';
+import { Button, cn } from '@/react-ui';
 import { Logo } from '../brand';
 import { GithubButton, ThemeToggleButton } from '../buttons';
 import { NavToolbar } from '../nav';
@@ -52,20 +52,20 @@ export const DesktopTopNavbar = ({
           </ButtonGroup>
         </div>
         <div className="hidden md:block">
-          {/* <ButtonGroup> */}
-            {/* <Button variant="secondary" className="flex gap-2">
+          {/* <ButtonGroup>
+            <Button variant="secondary" className="flex gap-2">
               <div>Sign In</div>
               <LogIn />
-            </Button> */}
-          {/* </ButtonGroup> */}
+            </Button>
+          </ButtonGroup> */}
         </div>
         <div className="ml-2">
           {githubUrl && <GithubButton url={githubUrl} />}
         </div>
         <div className="block md:hidden">
-          {/* <ButtonGroup> */}
+          <ButtonGroup>
             <MobileNavDrawer onLinkTo={onLinkTo} />
-          {/* </ButtonGroup> */}
+          </ButtonGroup>
         </div>
       </div>
     </header>

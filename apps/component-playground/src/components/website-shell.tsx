@@ -55,7 +55,7 @@ export const WebsiteShell = ({
         githubUrl={githubUrl}
         onLinkTo={handleLinkTo}
       />
-      <main className="h-full flex flex-col overflow-y">
+      <main className="h-full  flex flex-col overflow-y">
         {children}
         {/* {displayShellInfo && <ShellInfo />} */}
         {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
