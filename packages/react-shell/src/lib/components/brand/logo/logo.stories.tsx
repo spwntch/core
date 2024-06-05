@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withShellProvider } from '../../../utils/storybook-decorators';
+import { withShellProvider } from '../../../storybook/storybook-decorators';
 import { Logo } from './logo';
 import { playBasic, playDarkMode } from './logo.specs';
 

@@ -9,9 +9,6 @@ import { NavToolbarLink } from './components/nav-toolbar-link';
 import { NavToolbarMenu } from './components/nav-toolbar-menu';
 
 export interface ITopNavProps {
-  /**
-   * An array of navigation items. Use this if you want to override the navigation items from the `NavProvider`
-   */
   items?: INavItem[];
 
   onLinkTo: (href: string) => void;

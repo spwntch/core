@@ -4,7 +4,7 @@ import { About } from './about';
 import {
   withBrandProvider,
   withFullWidth,
-} from '../../../../utils/storybook-decorators';
+} from '../../../../storybook/storybook-decorators';
 import { playBasic, playAccessibilityTest } from './about.specs';
 
 const componentDescription = `

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import SocialIcon from './social-icon';
-import { withFullWidth } from '../../../utils/storybook-decorators';
+import { withFullWidth } from '../../../storybook/storybook-decorators';
 import { playBasic, playDarkMode } from './social-icon.specs';
 
 const componentDescription = `
@@ -85,11 +85,31 @@ export const DarkModeIcons: Story = {
   },
   render: () => (
     <div className="flex gap-4 justify-center items-center p-4">
-      <SocialIcon platform="linkedin" url="https://www.linkedin.com" className="text-white" />
-      <SocialIcon platform="facebook" url="https://www.facebook.com" className="text-white" />
-      <SocialIcon platform="youtube" url="https://www.youtube.com" className="text-white" />
-      <SocialIcon platform="instagram" url="https://www.instagram.com" className="text-white" />
-      <SocialIcon platform="twitter" url="https://www.twitter.com" className="text-white" />
+      <SocialIcon
+        platform="linkedin"
+        url="https://www.linkedin.com"
+        className="text-white"
+      />
+      <SocialIcon
+        platform="facebook"
+        url="https://www.facebook.com"
+        className="text-white"
+      />
+      <SocialIcon
+        platform="youtube"
+        url="https://www.youtube.com"
+        className="text-white"
+      />
+      <SocialIcon
+        platform="instagram"
+        url="https://www.instagram.com"
+        className="text-white"
+      />
+      <SocialIcon
+        platform="twitter"
+        url="https://www.twitter.com"
+        className="text-white"
+      />
     </div>
   ),
   play: playDarkMode,

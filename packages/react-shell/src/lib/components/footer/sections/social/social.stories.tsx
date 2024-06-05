@@ -4,7 +4,7 @@ import { Social } from './social';
 import {
   withBrandProvider,
   withFullWidth,
-} from '../../../../utils/storybook-decorators';
+} from '../../../../storybook/storybook-decorators';
 import { playBasic, playAccessibilityTest } from './social.specs';
 
 const componentDescription = `

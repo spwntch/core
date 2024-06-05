@@ -1,7 +1,10 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { UnderConstructionFooter } from './under-construction-footer';
-import { withFullWidth, withBrandProvider } from '../../../utils/storybook-decorators';
+import {
+  withFullWidth,
+  withBrandProvider,
+} from '../../../storybook/storybook-decorators';
 import { playBasic, playDarkMode } from './under-construction-footer.specs';
 
 const componentDescription = `

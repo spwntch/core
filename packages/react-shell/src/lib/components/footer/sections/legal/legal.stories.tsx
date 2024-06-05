@@ -5,7 +5,7 @@ import {
   withBrandProvider,
   withFullPage,
   withFullWidth,
-} from '../../../../utils/storybook-decorators';
+} from '../../../../storybook/storybook-decorators';
 import { playBasic, playAccessibilityTest } from './legal.specs';
 
 const componentDescription = `

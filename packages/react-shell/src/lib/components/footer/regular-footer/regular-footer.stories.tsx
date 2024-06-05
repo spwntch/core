@@ -1,7 +1,10 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { RegularFooter } from './regular-footer';
-import { withFullWidth, withBrandProvider } from '../../../utils/storybook-decorators';
+import {
+  withFullWidth,
+  withBrandProvider,
+} from '../../../storybook/storybook-decorators';
 import { playBasic, playDarkMode } from './regular-footer.specs';
 
 const componentDescription = `

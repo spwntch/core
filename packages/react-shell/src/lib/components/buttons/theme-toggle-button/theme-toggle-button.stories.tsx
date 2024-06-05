@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withThemeProvider } from '../../../utils/storybook-decorators';
+import { withThemeProvider } from '../../../storybook/storybook-decorators';
 import { ThemeToggleButton } from './theme-toggle-button';
 import { playAccessibilityTest, playBasic } from './theme-toggle-button.specs';
 

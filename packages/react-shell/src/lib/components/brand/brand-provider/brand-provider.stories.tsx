@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BrandProvider } from './brand-provider';
 import { Logo } from '../logo/logo';
-import { brand } from '../../../utils/storybook-config';
+import { brand } from '../../../storybook/storybook-config';
 
 /**
  *
@@ -73,11 +73,9 @@ export default meta;
 
 type Story = StoryObj<typeof BrandProvider>;
 
-export const Primary: Story = {
-};
+export const Primary: Story = {};
 
 export const InDarkMode: Story = {
-  
   parameters: {
     themes: {
       themeOverride: 'dark',

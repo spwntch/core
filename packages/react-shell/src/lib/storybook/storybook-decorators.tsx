@@ -1,7 +1,7 @@
 import { Decorator } from '@storybook/react/*';
 import { ShellProvider } from '../components';
 import { BrandProvider } from '../components/brand/brand-provider/brand-provider';
-import { ThemeProvider } from '../providers';
+import { NavProvider, ThemeProvider } from '../providers';
 import { brand, primaryNav } from './storybook-config';
 
 export const withFullWidth: Decorator = (Story) => (
@@ -15,7 +15,6 @@ export const withFullPage: Decorator = (Story) => (
     <Story />
   </div>
 );
-
 
 export const withThemeProvider: Decorator = (Story) => (
   <ThemeProvider
@@ -40,5 +39,12 @@ export const withBrandProvider: Decorator = (Story) => (
     <BrandProvider brand={brand}>
       <Story />
     </BrandProvider>
+  </div>
+);
+export const withNavProvider: Decorator = (Story) => (
+  <div className="w-full ">
+    <NavProvider navItems={primaryNav}>
+      <Story />
+    </NavProvider>
   </div>
 );
