@@ -1,4 +1,4 @@
-import { IBrand } from '../../providers';
+import { IBrand } from '../../components/brand/brand-provider/brand-provider';
 
 export const brand: IBrand = {
   logoUrl: {
@@ -16,14 +16,15 @@ export const brand: IBrand = {
     ],
   },
   contact: {
-    website: 'www.spawntech.io', // Placeholder, adjust as necessary
-    mail: 'hello@spawntech.io', // Placeholder, adjust as necessary
-    phone: '+27 11 994 9960', // Placeholder, adjust as necessary
+    website: 'www.spawntech.io',
+    mail: 'hello@spawntech.io',
+    phone: '+27 11 994 9960',
   },
   social: {
     linkedin: 'https://www.linkedin.com/company/spawntech-io',
-    // youtube: 'https://www.youtube.com',
-    // facebook: 'https://www.facebook.com',
+    youtube: '', // Example URL
+    facebook: '',
+    instagram: '',
   },
   legal: {
     companyName: 'Spawntech',

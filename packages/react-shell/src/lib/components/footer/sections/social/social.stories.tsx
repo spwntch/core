@@ -51,7 +51,7 @@ type Story = StoryObj<typeof Social>;
  */
 export const Basic: Story = {
   args: {
-    className: 'max-w-md mx-auto',
+    className: 'max-w-2xl mx-auto',
   },
   play: playBasic,
 };
@@ -62,7 +62,7 @@ export const Basic: Story = {
  */
 export const AccessibilityTest: Story = {
   args: {
-    className: 'max-w-md mx-auto',
+    className: 'max-w-2xl mx-auto',
   },
   play: playAccessibilityTest,
 };

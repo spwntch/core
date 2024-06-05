@@ -23,9 +23,7 @@ export interface IBrandContact {
 }
 
 export interface IBrandSocial {
-  linkedin?: string;
-  youtube?: string;
-  facebook?: string;
+  [key: string]: string;
 }
 
 export interface IBrandLegal {
