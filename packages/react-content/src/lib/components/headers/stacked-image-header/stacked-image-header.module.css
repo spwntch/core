@@ -1,0 +1,13 @@
+/* stacked-image-header.module.css */
+
+.container {
+  @apply h-full flex flex-col;
+}
+
+.reverse {
+  @apply flex-col-reverse;
+}
+
+.tags {
+  @apply mx-auto flex flex-wrap gap-2;
+}
