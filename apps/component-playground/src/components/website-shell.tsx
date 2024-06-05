@@ -1,11 +1,11 @@
 'use client';
 import {
-  RegularFooter,
   DesktopTopNavbar,
+  RegularFooter,
   UnderConstructionFooter,
 } from '@/react-shell';
-import { PropsWithChildren } from 'react';
 import { useRouter } from 'next/navigation';
+import { PropsWithChildren } from 'react';
 
 /**
  * Props for the SiteShell component.

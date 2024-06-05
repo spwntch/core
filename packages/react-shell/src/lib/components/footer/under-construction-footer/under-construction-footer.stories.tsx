@@ -10,19 +10,14 @@ The \`UnderConstructionFooter\` component displays the footer section with about
 
 ### Props
 - \`className\`: Additional class name(s) for the component.
-- \`poweredBySrcLight\`: The source URL for the light mode "Powered by Spawntech" image.
-- \`poweredBySrcDark\`: The source URL for the dark mode "Powered by Spawntech" image.
 
 ### Example
 \`\`\`
-<UnderConstructionFooter
-  poweredBySrcLight="/under-construction/powered-by-spawntech-primary.webp"
-  poweredBySrcDark="/under-construction/powered-by-spawntech-dark.webp"
-/>
+<UnderConstructionFooter />
 \`\`\`
 
 ### Notes
-This component uses the \`About\`, \`Contact\`, \`Social\`, and \`Legal\` components.
+This component uses the \`About\`, \`Contact\`, \`Social\`, and \`Legal\` components, and retrieves the under construction URLs from the brand context.
 `;
 
 const meta: Meta<typeof UnderConstructionFooter> = {
@@ -43,14 +38,6 @@ const meta: Meta<typeof UnderConstructionFooter> = {
       description: 'Additional class name(s) for the component',
       control: 'text',
     },
-    poweredBySrcLight: {
-      description: 'The source URL for the light mode "Powered by Spawntech" image',
-      control: 'text',
-    },
-    poweredBySrcDark: {
-      description: 'The source URL for the dark mode "Powered by Spawntech" image',
-      control: 'text',
-    },
   },
 };
 
@@ -65,8 +52,6 @@ type Story = StoryObj<typeof UnderConstructionFooter>;
 export const Basic: Story = {
   args: {
     className: '',
-    poweredBySrcLight: '/under-construction/powered-by-spawntech-primary.webp',
-    poweredBySrcDark: '/under-construction/powered-by-spawntech-dark.webp',
   },
   play: playBasic,
 };
@@ -83,8 +68,6 @@ export const DarkMode: Story = {
   },
   args: {
     className: 'bg-gray-900 text-white',
-    poweredBySrcLight: '/under-construction/powered-by-spawntech-primary.webp',
-    poweredBySrcDark: '/under-construction/powered-by-spawntech-dark.webp',
   },
   play: playDarkMode,
 };

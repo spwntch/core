@@ -3,6 +3,7 @@ import { PropsWithChildren, createContext, useContext } from 'react';
 export interface IBrand {
   logoUrl?: { light?: string; dark?: string };
   markUrl?: { light?: string; dark?: string };
+  underConstructionUrl?: { light?: string; dark?: string };
   markText?: string;
   tagline?: string;
   about?: IBrandAbout;

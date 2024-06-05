@@ -9,6 +9,10 @@ export const brand: IBrand = {
     light: '/brand/mark-primary.webp',
     dark: '/brand/mark-dark.webp',
   },
+  underConstructionUrl: {
+    light: '/under-construction/powered-by-spawntech-primary.webp',
+    dark: '/under-construction/powered-by-spawntech-dark.webp',
+  },
   tagline: '{ experience in code }',
   about: {
     body: [
