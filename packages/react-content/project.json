@@ -1,0 +1,9 @@
+{
+  "name": "react-content",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-content/src",
+  "projectType": "library",
+  "tags": ["tech:react"],
+  "// targets": "to see all targets run: nx show project react-content --web",
+  "targets": {}
+}
