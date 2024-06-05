@@ -24,7 +24,7 @@ This component uses the \`H3\` and \`Small\` components from \`@/react-typograph
 `;
 
 const meta: Meta<typeof About> = {
-  title: 'shell/footer/about',
+  title: 'shell/footer/sections/about',
   component: About,
   tags: ['autodocs'],
   decorators: [withBrandProvider, withFullWidth],

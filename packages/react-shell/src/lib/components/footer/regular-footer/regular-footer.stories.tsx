@@ -21,7 +21,7 @@ This component uses the \`About\`, \`Contact\`, \`Social\`, and \`Legal\` compon
 `;
 
 const meta: Meta<typeof RegularFooter> = {
-  title: 'shell/regular-footer',
+  title: 'shell/footer/regular-footer',
   component: RegularFooter,
   tags: ['autodocs'],
   decorators: [withFullWidth, withBrandProvider],

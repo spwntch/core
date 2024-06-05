@@ -21,7 +21,7 @@ This component uses the \`H3\` component from \`@/react-typography\` and icons f
 `;
 
 const meta: Meta<typeof Contact> = {
-  title: 'shell/footer/contact',
+  title: 'shell/footer/sections/contact',
   component: Contact,
   tags: ['autodocs'],
   decorators: [withBrandProvider, withFullWidth],

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { Social } from './social';
-import { withBrandProvider, withFullWidth } from '../../../../utils/storybook-decorators';
+import {
+  withBrandProvider,
+  withFullWidth,
+} from '../../../../utils/storybook-decorators';
 import { playBasic, playAccessibilityTest } from './social.specs';
 
 const componentDescription = `
@@ -21,7 +24,7 @@ This component uses the \`H3\` component from \`@/react-typography\` and icons f
 `;
 
 const meta: Meta<typeof Social> = {
-  title: 'shell/footer/social',
+  title: 'shell/footer/sections/social',
   component: Social,
   tags: ['autodocs'],
   decorators: [withBrandProvider, withFullWidth],

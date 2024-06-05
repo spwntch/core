@@ -21,7 +21,7 @@ This component uses the \`About\`, \`Contact\`, \`Social\`, and \`Legal\` compon
 `;
 
 const meta: Meta<typeof UnderConstructionFooter> = {
-  title: 'shell/under-construction-footer',
+  title: 'shell/footer/under-construction-footer',
   component: UnderConstructionFooter,
   tags: ['autodocs'],
   decorators: [withFullWidth, withBrandProvider],

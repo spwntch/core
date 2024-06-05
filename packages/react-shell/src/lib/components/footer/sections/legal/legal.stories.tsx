@@ -26,7 +26,7 @@ This component uses the \`P\` component from \`@/react-typography\`.
 `;
 
 const meta: Meta<typeof Legal> = {
-  title: 'shell/footer/legal',
+  title: 'shell/footer/sections/legal',
   component: Legal,
   tags: ['autodocs'],
   decorators: [withBrandProvider, withFullWidth],
