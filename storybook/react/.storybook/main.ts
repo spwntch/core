@@ -6,8 +6,12 @@ const config: StorybookConfig = {
   staticDirs: [
     { from: '../../../assets/spwn/brand/public', to: '/brand' },
     { from: '../../../assets/spwn/images/public', to: '/images' },
-    { from: '../../../assets/spwn/blog', to: '/blog' },
     { from: '../../../assets/storybook/images/public', to: '/images' },
+    {
+      from: '../../../assets/spwn/under-construction/public',
+      to: '/under-construction',
+    },
+    { from: '../../../assets/spwn/blog', to: '/blog' },
     { from: '../../../assets/storybook/client-logos', to: '/client-logos' },
     {
       from: '../../../assets/interact/client-logos/public',
