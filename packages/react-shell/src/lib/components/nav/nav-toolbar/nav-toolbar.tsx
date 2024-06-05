@@ -5,8 +5,8 @@ import {
   INavMenu,
   useNav,
 } from '../../../providers/nav-provider';
-import { NavToolbarLink } from './nav-toolbar-link';
-import { NavToolbarMenu } from './nav-toolbar-menu';
+import { NavToolbarLink } from './components/nav-toolbar-link';
+import { NavToolbarMenu } from './components/nav-toolbar-menu';
 
 export interface ITopNavProps {
   /**
