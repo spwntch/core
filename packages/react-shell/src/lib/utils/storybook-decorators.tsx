@@ -1,7 +1,18 @@
 import { Decorator } from '@storybook/react/*';
-import { brand, primaryNav } from './storybook-config';
 import { ShellProvider } from '../components';
-import { BrandProvider } from '../providers';
+import { BrandProvider, ThemeProvider } from '../providers';
+import { brand, primaryNav } from './storybook-config';
+
+export const withThemeProvider: Decorator = (Story) => (
+  <ThemeProvider
+    attribute="class"
+    defaultTheme={'system'}
+    enableSystem
+    disableTransitionOnChange
+  >
+    <Story />
+  </ThemeProvider>
+);
 
 export const withShellProvider: Decorator = (Story) => (
   <div className="w-full ">
