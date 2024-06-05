@@ -1,8 +1,9 @@
 import { cn } from '@/react-ui';
 import { Logo } from '../brand';
-import { GithubButton } from '../buttons';
+import { GithubButton, ThemeToggleButton } from '../buttons';
 import { NavToolbar } from '../nav';
 import { MobileNavDrawer } from './mobile-nav-drawer';
+import { ButtonGroup } from '@/react-components';
 
 interface IDesktopTopNavbarProps {
   classNames?: string;
@@ -46,9 +47,9 @@ export const DesktopTopNavbar = ({
           </nav>
         </div>
         <div>
-          {/* <ButtonGroup>
+          <ButtonGroup>
             {!disableThemeToggle && <ThemeToggleButton />}
-          </ButtonGroup> */}
+          </ButtonGroup>
         </div>
         <div className="hidden md:block">
           {/* <ButtonGroup> */}
