@@ -1,4 +1,4 @@
-import { cn } from '@/react-components';
+import { cn } from '@/react-ui';
 import { forwardRef } from 'react';
 import { useBrand } from '../brand-provider/brand-provider';
 
