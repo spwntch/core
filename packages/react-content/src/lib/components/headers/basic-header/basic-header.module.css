@@ -1,0 +1,22 @@
+/* basic-header.module.css */
+
+.container {
+    @apply text-center w-full;
+  }
+  
+  .heading {
+    @apply mt-6;
+  }
+  
+  .sub-heading {
+    @apply mt-4;
+  }
+  
+  .body {
+    @apply mt-4 mb-8;
+  }
+  
+  .children {
+    @apply flex justify-center gap-8;
+  }
+  
