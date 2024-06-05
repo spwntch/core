@@ -1,1 +1,1 @@
-export * from './under-construction';
+export * from './under-construction/under-construction';
