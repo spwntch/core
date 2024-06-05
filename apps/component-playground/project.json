@@ -1,0 +1,9 @@
+{
+  "name": "component-playground",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/component-playground",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project component-playground --web",
+  "targets": {}
+}
