@@ -1,0 +1,22 @@
+/* contact.module.css */
+
+.container {
+    @apply p-4;
+  }
+  
+  .title {
+    @apply text-2xl font-semibold;
+  }
+  
+  .list {
+    @apply text-sm leading-relaxed;
+  }
+  
+  .icon {
+    @apply inline h-4 w-4 mr-2;
+  }
+  
+  .link {
+    @apply underline hover:text-blue-300;
+  }
+  

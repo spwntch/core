@@ -1,9 +1,9 @@
 'use client';
 import { Linkedin } from 'lucide-react';
-import { About } from './about';
-import { Contact } from './contact';
+import { About } from './sections/about/about';
+import { Contact } from './sections/contact/contact';
 import { H3 } from '@/react-typography';
-import { Legal } from './legal';
+import { Legal } from './sections/legal/legal';
 
 export const UnderConstructionFooter = () => {
   return (

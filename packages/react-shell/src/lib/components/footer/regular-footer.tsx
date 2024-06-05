@@ -1,8 +1,8 @@
-"use client";
-import { About } from "./about";
-import { Contact } from "./contact";
-import { Legal } from "./legal";
-import { Social } from "./social";
+'use client';
+import { About } from './sections/about/about';
+import { Contact } from './sections/contact/contact';
+import { Legal } from './sections/legal/legal';
+import { Social } from './sections/social/social';
 
 export const RegularFooter = () => {
   return (

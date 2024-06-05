@@ -1,0 +1,10 @@
+/* social-icon.module.css */
+
+.icon {
+    @apply w-6 h-6;
+  }
+  
+  .link {
+    @apply underline hover:text-blue-300;
+  }
+  

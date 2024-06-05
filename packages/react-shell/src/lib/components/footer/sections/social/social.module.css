@@ -1,0 +1,18 @@
+/* social.module.css */
+
+.container {
+    @apply p-4;
+  }
+  
+  .title {
+    @apply text-2xl font-semibold;
+  }
+  
+  .list {
+    @apply flex space-x-4 text-sm leading-relaxed;
+  }
+  
+  .icon {
+    @apply w-6 h-6;
+  }
+  
