@@ -1,7 +1,9 @@
 import { H3 } from '@/react-typography';
 import React, { forwardRef, PropsWithChildren } from 'react';
 import { useBrand } from '../../../brand/brand-provider/brand-provider';
-import SocialIcon, { SocialPlatform } from './social-icon/social-icon';
+import SocialIcon, {
+  SocialPlatform,
+} from '../../../social/social-icon/social-icon';
 import styles from './social.module.css';
 
 export interface ISocialProps

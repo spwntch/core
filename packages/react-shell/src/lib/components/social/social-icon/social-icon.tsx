@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './social-icon.module.css';
 import { LinkedIn } from './linkedin';
 import { Facebook } from './facebook';
@@ -11,6 +11,7 @@ export type SocialPlatform = 'linkedin' | 'facebook' | 'youtube' | 'instagram' |
 interface ISocialIconProps {
   platform: SocialPlatform;
   url: string;
+  className?: string;
 }
 
 const platformIcons = {
@@ -21,14 +22,25 @@ const platformIcons = {
   twitter: Twitter,
 };
 
-export const SocialIcon: React.FC<ISocialIconProps> = ({ platform, url }) => {
-  const IconComponent = platformIcons[platform];
+export const SocialIcon = forwardRef<HTMLAnchorElement, ISocialIconProps>(
+  ({ platform, url, className, ...props }, ref) => {
+    const IconComponent = platformIcons[platform];
 
-  return (
-    <a href={url} target="_blank" rel="noopener noreferrer" className={styles.link}>
-      <IconComponent className={styles.icon} />
-    </a>
-  );
-};
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.link} ${className}`}
+        ref={ref}
+        {...props}
+      >
+        <IconComponent className={styles.icon} />
+      </a>
+    );
+  }
+);
+
+SocialIcon.displayName = 'SocialIcon';
 
 export default SocialIcon;
