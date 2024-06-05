@@ -13,7 +13,7 @@ import { Menu } from 'lucide-react';
 import { useState } from 'react';
 import { useNav } from '../../providers';
 import { Logo } from '../brand';
-import { Tagline } from '../brand/tagline';
+import { Tagline } from '../brand/tagline/tagline';
 import { NavMenu } from '../nav/nav-menu';
 
 interface IMobileNavDrawerProps {

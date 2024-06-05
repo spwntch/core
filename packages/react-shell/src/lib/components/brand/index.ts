@@ -1,2 +1,2 @@
 export * from './logo/logo'
-export * from './tagline'
+export * from './tagline/tagline'
