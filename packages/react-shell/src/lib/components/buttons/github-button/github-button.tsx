@@ -1,22 +1,23 @@
-import React from 'react';
 import { Button, ButtonProps } from '@/react-ui';
-import { Github } from 'lucide-react';
+import { forwardRef } from 'react';
+import { GithubIcon } from './github-icon';
 
 export interface GithubButtonProps extends ButtonProps {
   url: string;
 }
 
-export const GithubButton = React.forwardRef<HTMLButtonElement, GithubButtonProps>(
-  ({ url, ...props }, ref) => {
-    return (
-      <Button asChild ref={ref} variant="outline" size="icon" {...props}>
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <Github />
-        </a>
-      </Button>
-    );
-  }
-);
+export const GithubButton = forwardRef<
+  HTMLButtonElement,
+  GithubButtonProps
+>(({ url, ...props }, ref) => {
+  return (
+    <Button asChild ref={ref} variant="outline" size="icon" {...props}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <GithubIcon />
+      </a>
+    </Button>
+  );
+});
 
 GithubButton.displayName = 'GithubButton';
 
