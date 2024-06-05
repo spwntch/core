@@ -24,7 +24,7 @@ export const parameters: Parameters = {
         ['complete-example', '*'],
         'components',
         'shell',
-        ['shell-provider', 'brand', ['brand-provider', '*'], '*'],
+        ['theme-provider','shell-provider', 'brand', ['brand-provider', '*'], '*'],
         'blog',
       ],
     },

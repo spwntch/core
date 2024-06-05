@@ -4,7 +4,7 @@ import {
   INavLink,
   INavMenu,
   useNav,
-} from '../../../providers/nav-provider';
+} from '../nav-provider/nav-provider';
 import { NavToolbarLink } from './components/nav-toolbar-link';
 import { NavToolbarMenu } from './components/nav-toolbar-menu';
 

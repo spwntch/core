@@ -18,7 +18,7 @@ The \`NavToolbar\` component renders a navigation toolbar with support for subme
 `;
 
 const meta: Meta<typeof NavToolbar> = {
-  title: 'nav/nav-toolbar',
+  title: 'shell/nav/nav-toolbar',
   component: NavToolbar,
   tags: ['autodocs'],
   decorators: [withFullWidth, withNavProvider],

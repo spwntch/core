@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/react-ui';
-import { INavLink, INavMenu } from '../../../providers/nav-provider';
+import { INavLink, INavMenu } from '../../nav-provider/nav-provider';
 import { NavSubMenuLink } from './nav-sub-menu-link';
 
 interface INavSubMenuProps extends INavMenu {

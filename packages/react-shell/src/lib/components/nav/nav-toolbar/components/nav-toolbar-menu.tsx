@@ -4,7 +4,7 @@ import {
   NavigationMenuTrigger,
 } from '@/react-ui';
 import { NavToolbarMenuLink } from './nav-toolbar-menu-link';
-import { INavLink, INavMenu } from '../../../../providers/nav-provider';
+import { INavLink, INavMenu } from '../../nav-provider/nav-provider';
 
 interface ITopNavMenuProps extends INavMenu {
   onLinkTo: (href: string) => void;

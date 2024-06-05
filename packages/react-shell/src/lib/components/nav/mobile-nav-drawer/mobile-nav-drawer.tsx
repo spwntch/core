@@ -11,10 +11,10 @@ import {
 } from '@/react-ui';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
-import { useNav } from '../../providers';
-import { Logo } from '../brand';
-import { Tagline } from '../brand/tagline/tagline';
-import { NavMenu } from '../nav/nav-menu';
+import { useNav } from '../nav-provider/nav-provider';
+import { Logo } from '../../brand';
+import { Tagline } from '../../brand/tagline/tagline';
+import { NavMenu } from '../nav-menu/nav-menu';
 
 interface IMobileNavDrawerProps {
   onLinkTo: (href: string) => void;

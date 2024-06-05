@@ -1,8 +1,8 @@
 import { Button, cn } from '@/react-ui';
-import { Logo } from '../brand';
-import { GithubButton, ThemeToggleButton } from '../buttons';
-import { NavToolbar } from '../nav';
-import { MobileNavDrawer } from './mobile-nav-drawer';
+import { Logo } from '../../brand';
+import { GithubButton, ThemeToggleButton } from '../../buttons';
+import { NavToolbar } from '..';
+import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 import { ButtonGroup } from '@/react-components';
 
 interface IDesktopTopNavbarProps {

@@ -4,9 +4,9 @@ import {
   INavLink,
   INavMenu,
   useNav,
-} from '../../../providers/nav-provider';
-import { NavMenuLink } from './nav-menu-link';
-import { NavSubMenu } from './nav-sub-menu';
+} from '../nav-provider/nav-provider';
+import { NavMenuLink } from './components/nav-menu-link';
+import { NavSubMenu } from './components/nav-sub-menu';
 // import { NavMenuItem } from './nav-item';
 
 export interface INavMenuProps {
