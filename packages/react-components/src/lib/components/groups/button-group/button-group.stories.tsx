@@ -26,7 +26,7 @@ This component is used to group buttons in a flexible manner, allowing for horiz
 `;
 
 const meta: Meta<IButtonGroupProps> = {
-  title: 'components/containers/button-group',
+  title: 'components/groups/button-group',
   component: ButtonGroup,
   tags: ['autodocs'],
   parameters: {
