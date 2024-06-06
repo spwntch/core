@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface IImageAttribution {
   url: string;
   photographer?: {
@@ -16,7 +18,7 @@ export type ImageCoverage =
 export interface IImage {
   src: string;
   alt?: string;
-  backgroundPattern?: boolean;
+  backgroundPattern?: ReactNode;
   darken?: boolean;
   attribution?: IImageAttribution;
   coverage?: ImageCoverage;

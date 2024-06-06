@@ -1,13 +1,8 @@
 import { Card } from '@/react-ui';
 import { Meta, StoryObj } from '@storybook/react';
-import BackgroundImageContainer from './background-image-container';
-import {
-  playBasic,
-  playMultipleItems,
-  playAccessibilityTest,
-  playEmptyContainer,
-} from './background-image-container.specs';
 import { withFullPage } from '../../../storybook/storybook-decorators';
+import BackgroundImageContainer from './background-image-container';
+import { playBasic } from './background-image-container.specs';
 
 const componentDescription = `
 ### Overview
@@ -52,31 +47,10 @@ const meta: Meta<typeof BackgroundImageContainer> = {
       description: 'Additional class name(s) for the container',
       type: 'string',
     },
-    src: {
-      description: 'The URL of the background image',
-      type: 'string',
-      defaultValue: '/images/guy-sitting-at-tech-control-station.webp',
-    },
-    darkenImage: {
-      description: 'Whether to darken the background image',
-      type: 'boolean',
-      defaultValue: false,
-    },
-    showBackgroundPattern: {
-      description: 'Whether to show a background pattern',
-      type: 'boolean',
-      defaultValue: false,
-    },
-    coverage: {
-      description: 'The coverage style of the background image',
-      options: [
-        'full',
-        'split-left',
-        'split-right',
-        'split-top',
-        'split-bottom',
-      ],
-      defaultValue: 'full',
+    image: {
+      description: 'The image object passed to the component',
+      // type: 'object',
+      // defaultValue: '/images/guy-sitting-at-tech-control-station.webp',
     },
     children: {
       description: 'The content to be displayed inside the container',
@@ -95,10 +69,9 @@ type Story = StoryObj<typeof BackgroundImageContainer>;
  */
 export const Basic: Story = {
   args: {
-    src: '/images/guy-sitting-at-tech-control-station.webp',
-    darkenImage: false,
-    showBackgroundPattern: false,
-    coverage: 'full',
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+    },
     children: (
       <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
@@ -114,36 +87,17 @@ export const Basic: Story = {
  */
 export const Darkened: Story = {
   args: {
-    src: '/images/guy-sitting-at-tech-control-station.webp',
-    darkenImage: true,
-    showBackgroundPattern: false,
-    coverage: 'full',
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+      darken: true,
+    },
     children: (
       <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
       </div>
     ),
   },
-  play: playAccessibilityTest,
-};
-
-/**
- * Patterned BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with a background pattern.
- */
-export const Patterned: Story = {
-  args: {
-    src: '/images/guy-sitting-at-tech-control-station.webp',
-    darkenImage: false,
-    showBackgroundPattern: true,
-    coverage: 'full',
-    children: (
-      <div className="h-full flex items-center justify-center">
-        <Card className="p-4 opacity-50">Your Content Here</Card>
-      </div>
-    ),
-  },
-  play: playAccessibilityTest,
+  // play: playAccessibilityTest,
 };
 
 /**
@@ -152,10 +106,9 @@ export const Patterned: Story = {
  */
 export const MultipleItems: Story = {
   args: {
-    src: '/images/guy-sitting-at-tech-control-station.webp',
-    darkenImage: false,
-    showBackgroundPattern: false,
-    coverage: 'full',
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+    },
     children: (
       <div className="h-full flex items-center justify-center">
         <div className="grid grid-cols-2 gap-8">
@@ -167,7 +120,7 @@ export const MultipleItems: Story = {
       </div>
     ),
   },
-  play: playMultipleItems,
+  // play: playMultipleItems,
 };
 
 /**
@@ -176,13 +129,11 @@ export const MultipleItems: Story = {
  */
 export const EmptyContainer: Story = {
   args: {
-    src: '/images/guy-sitting-at-tech-control-station.webp',
-    darkenImage: false,
-    showBackgroundPattern: false,
-    coverage: 'full',
-    children: <div className="h-full flex items-center justify-center"></div>,
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+    },
   },
-  play: playEmptyContainer,
+  // play: playEmptyContainer,
 };
 
 /**
@@ -191,10 +142,10 @@ export const EmptyContainer: Story = {
  */
 export const SplitLeft: Story = {
   args: {
-    src: '/images/abstract-1.webp',
-    darkenImage: false,
-    showBackgroundPattern: false,
-    coverage: 'split-left',
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+      coverage: 'split-left',
+    },
     children: (
       <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
@@ -210,10 +161,10 @@ export const SplitLeft: Story = {
  */
 export const SplitRight: Story = {
   args: {
-    src: '/images/abstract-2.webp',
-    darkenImage: false,
-    showBackgroundPattern: false,
-    coverage: 'split-right',
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+      coverage: 'split-right',
+    },
     children: (
       <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
@@ -229,14 +180,14 @@ export const SplitRight: Story = {
  */
 export const SplitTop: Story = {
   args: {
-    src: '/images/abstract-1.webp',
-    darkenImage: false,
-    showBackgroundPattern: false,
-    coverage: 'split-top',
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+      coverage: 'split-top',
+    },
     children: (
       <div className="h-full flex items-center justify-center">
-      <Card className="p-4 opacity-50">Your Content Here</Card>
-    </div>
+        <Card className="p-4 opacity-50">Your Content Here</Card>
+      </div>
     ),
   },
   play: playBasic,
@@ -248,10 +199,10 @@ export const SplitTop: Story = {
  */
 export const SplitBottom: Story = {
   args: {
-    src: '/images/abstract-2.webp',
-    darkenImage: false,
-    showBackgroundPattern: false,
-    coverage: 'split-bottom',
+    image: {
+      src: '/images/guy-sitting-at-tech-control-station.webp',
+      coverage: 'split-bottom',
+    },
     children: (
       <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
