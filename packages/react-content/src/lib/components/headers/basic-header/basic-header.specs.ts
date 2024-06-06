@@ -15,3 +15,27 @@ export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement 
   const results = await axe(canvasElement);
   expect(results).toHaveNoViolations();
 };
+
+export const playLeftAligned = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+  const canvas = within(canvasElement);
+  const heading = await canvas.findByRole('heading', { name: /welcome to our site/i });
+
+  // Initial state check
+  expect(heading).toBeInTheDocument();
+
+  // Accessibility check
+  const results = await axe(canvasElement);
+  expect(results).toHaveNoViolations();
+};
+
+export const playRightAligned = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+  const canvas = within(canvasElement);
+  const heading = await canvas.findByRole('heading', { name: /welcome to our site/i });
+
+  // Initial state check
+  expect(heading).toBeInTheDocument();
+
+  // Accessibility check
+  const results = await axe(canvasElement);
+  expect(results).toHaveNoViolations();
+};
