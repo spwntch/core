@@ -1,7 +1,13 @@
 import { Card } from '@/react-ui';
 import { Meta, StoryObj } from '@storybook/react';
 import BackgroundImageContainer from './background-image-container';
-import { playBasic, playMultipleItems, playAccessibilityTest, playEmptyContainer } from './background-image-container.specs';
+import {
+  playBasic,
+  playMultipleItems,
+  playAccessibilityTest,
+  playEmptyContainer,
+} from './background-image-container.specs';
+import { withFullPage } from '../../../storybook/storybook-decorators';
 
 const componentDescription = `
 ### Overview
@@ -14,7 +20,7 @@ It serves as a versatile container for displaying content with a styled backgrou
 - \`src\`: The URL of the background image.
 - \`darkenImage\`: Whether to darken the background image.
 - \`showBackgroundPattern\`: Whether to show a background pattern.
-- \`coverage\`: The coverage style of the background image (\`full\`, \`split-left\`, \`split-right\`).
+- \`coverage\`: The coverage style of the background image (\`full\`, \`split-left\`, \`split-right\`, \`split-top\`, \`split-bottom\`).
 - \`children\`: The content to be displayed inside the container.
 
 ### Example
@@ -31,6 +37,7 @@ This component is flexible and can be used in various sections of a webpage to e
 const meta: Meta<typeof BackgroundImageContainer> = {
   title: 'components/containers/background-image-container',
   component: BackgroundImageContainer,
+  decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -62,8 +69,13 @@ const meta: Meta<typeof BackgroundImageContainer> = {
     },
     coverage: {
       description: 'The coverage style of the background image',
-      // type: 'select',
-      options: ['full', 'split-left', 'split-right'],
+      options: [
+        'full',
+        'split-left',
+        'split-right',
+        'split-top',
+        'split-bottom',
+      ],
       defaultValue: 'full',
     },
     children: {
@@ -88,7 +100,7 @@ export const Basic: Story = {
     showBackgroundPattern: false,
     coverage: 'full',
     children: (
-      <div className="h-screen flex items-center justify-center">
+      <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
       </div>
     ),
@@ -107,7 +119,7 @@ export const Darkened: Story = {
     showBackgroundPattern: false,
     coverage: 'full',
     children: (
-      <div className="h-screen flex items-center justify-center">
+      <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
       </div>
     ),
@@ -126,7 +138,7 @@ export const Patterned: Story = {
     showBackgroundPattern: true,
     coverage: 'full',
     children: (
-      <div className="h-screen flex items-center justify-center">
+      <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
       </div>
     ),
@@ -145,10 +157,13 @@ export const MultipleItems: Story = {
     showBackgroundPattern: false,
     coverage: 'full',
     children: (
-      <div className="h-screen flex items-center justify-center">
-        <Card className="p-4 opacity-50">Content item 1</Card>
-        <Card className="p-4 opacity-50">Content item 2</Card>
-        <Card className="p-4 opacity-50">Content item 3</Card>
+      <div className="h-full flex items-center justify-center">
+        <div className="grid grid-cols-2 gap-8">
+          <Card className="p-4 opacity-50">Content item 1</Card>
+          <Card className="p-4 opacity-50">Content item 2</Card>
+          <Card className="p-4 opacity-50">Content item 3</Card>
+          <Card className="p-4 opacity-50">Content item 4</Card>
+        </div>
       </div>
     ),
   },
@@ -165,7 +180,7 @@ export const EmptyContainer: Story = {
     darkenImage: false,
     showBackgroundPattern: false,
     coverage: 'full',
-    children: <div className="h-screen flex items-center justify-center"></div>,
+    children: <div className="h-full flex items-center justify-center"></div>,
   },
   play: playEmptyContainer,
 };
@@ -181,7 +196,7 @@ export const SplitLeft: Story = {
     showBackgroundPattern: false,
     coverage: 'split-left',
     children: (
-      <div className="h-screen flex items-center justify-center">
+      <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
       </div>
     ),
@@ -200,7 +215,45 @@ export const SplitRight: Story = {
     showBackgroundPattern: false,
     coverage: 'split-right',
     children: (
-      <div className="h-screen flex items-center justify-center">
+      <div className="h-full flex items-center justify-center">
+        <Card className="p-4 opacity-50">Your Content Here</Card>
+      </div>
+    ),
+  },
+  play: playBasic,
+};
+
+/**
+ * Split Top BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with split-top coverage.
+ */
+export const SplitTop: Story = {
+  args: {
+    src: '/images/abstract-1.webp',
+    darkenImage: false,
+    showBackgroundPattern: false,
+    coverage: 'split-top',
+    children: (
+      <div className="h-full flex items-center justify-center">
+      <Card className="p-4 opacity-50">Your Content Here</Card>
+    </div>
+    ),
+  },
+  play: playBasic,
+};
+
+/**
+ * Split Bottom BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with split-bottom coverage.
+ */
+export const SplitBottom: Story = {
+  args: {
+    src: '/images/abstract-2.webp',
+    darkenImage: false,
+    showBackgroundPattern: false,
+    coverage: 'split-bottom',
+    children: (
+      <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
       </div>
     ),

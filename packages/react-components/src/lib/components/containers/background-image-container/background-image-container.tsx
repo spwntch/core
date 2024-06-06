@@ -10,7 +10,12 @@ export interface IBackgroundImageContainerProps
   src?: string;
   darkenImage?: boolean;
   showBackgroundPattern?: boolean;
-  coverage?: 'full' | 'split-left' | 'split-right';
+  coverage?:
+    | 'full'
+    | 'split-left'
+    | 'split-right'
+    | 'split-top'
+    | 'split-bottom';
 }
 
 export const BackgroundImageContainer = forwardRef<
@@ -31,32 +36,38 @@ export const BackgroundImageContainer = forwardRef<
   ) => {
     return (
       <div
-        className={cn(
-          styles['background-container'],
-          className
-        )}
+        className={cn(styles['background-container'], className)}
         ref={ref}
         {...props}
-        >
+      >
         <img
           src={src}
           alt=""
           className={cn(
             styles['background-image'],
-            coverage === 'split-left' && styles['split-left'],
-            coverage === 'split-right' && styles['split-right'],
+            coverage === 'split-left' && styles['background-image--split-left'],
+            coverage === 'split-right' &&
+              styles['background-image--split-right'],
+            coverage === 'split-top' && styles['background-image--split-top'],
+            coverage === 'split-bottom' &&
+              styles['background-image--split-bottom'],
             darkenImage && styles['background-image--darken']
           )}
-          width={1280}
-          height={720}
         />
         {showBackgroundPattern && <BackroundPatternOne />}
-        
-          <div className={cn(styles['inner-content'],
+        <div
+          className={cn(
+            styles['inner-content'],
+            coverage === 'full' && styles['inner-content--full'],
             coverage === 'split-left' && styles['inner-content--split-left'],
-            coverage === 'split-right' && styles['inner-content--split-right']
-          )}>{children}</div>
+            coverage === 'split-right' && styles['inner-content--split-right'],
+            coverage === 'split-top' && styles['inner-content--split-top'],
+            coverage === 'split-bottom' && styles['inner-content--split-bottom']
+          )}
+        >
+          {children}
         </div>
+      </div>
     );
   }
 );

@@ -1,31 +1,52 @@
+/* background-image-container.module.css */
+
 .background-container {
-  @apply h-full w-full relative isolate overflow-hidden p-2 md:p-4 lg:p-8;
-}
-
-.split-left {
-  @apply md:pr-[50%];
-}
-
-.split-right {
-  @apply md:pl-[50%];
+  @apply h-full w-full p-0 relative;
 }
 
 .background-image {
-  @apply absolute inset-0 -z-10 h-full w-full object-cover;
+  @apply absolute inset-0 -z-10 h-full w-full object-cover ;
+}
+
+.background-image--split-left {
+  @apply md:w-[50%];
+}
+
+.background-image--split-right {
+  @apply md:w-[50%] md:ml-[50%];
+}
+
+.background-image--split-top {
+  @apply md:h-[50%];
+}
+
+.background-image--split-bottom {
+  @apply md:h-[50%] mt-[50%];
 }
 
 .background-image--darken {
   @apply brightness-50;
 }
 
-
 .inner-content {
-  @apply h-full mx-auto lg:mx-0;
+}
+
+.inner-content--full {
+  @apply h-full;
 }
 
 .inner-content--split-left {
-  @apply md:pl-[50%];
+  @apply md:pl-[50%] h-full;
 }
+
 .inner-content--split-right {
-  @apply md:pr-[50%];
+  @apply md:pr-[50%] h-full;
+}
+
+.inner-content--split-top {
+  @apply relative top-[50%] h-[50%];
+}
+
+.inner-content--split-bottom {
+  @apply relative top-0 h-[50%];
 }
