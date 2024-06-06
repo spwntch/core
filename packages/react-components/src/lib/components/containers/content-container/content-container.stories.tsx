@@ -261,3 +261,30 @@ export const BottomRight: Story = {
     ),
   },
 };
+
+/**
+ * Long Content example.
+ * Demonstrates the ContentContainer component with long headings, subheadings, and numerous, long body strings.
+ */
+export const LongContent: Story = {
+  args: {
+    innerContent: {
+      heading:
+        'This is a Very Long Heading to Test How the ContentContainer Handles Long Texts in Different Scenarios and Ensure Proper Layout and Display Across Various Screen Sizes and Resolutions',
+      subHeading:
+        'This is an Even Longer Subheading that Should Stretch the Limits of the ContentContainer Component and Help Us Understand Its Behavior with Such Inputs. It Needs to be Really Long to Simulate Real-World Scenarios Where Subheadings Can Get Quite Lengthy',
+      body: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel semper eros, ac lacinia nisi. Nulla facilisi. Suspendisse potenti. Morbi vitae purus justo. Nam id lacinia velit. Donec non elit a risus tempus vestibulum. Nullam non ligula a orci facilisis gravida sit amet a magna. Donec sit amet lectus mi. Integer viverra sapien non est sollicitudin, nec pulvinar sapien facilisis. Proin mollis libero sit amet libero ultrices, non dapibus lorem ultricies.',
+        'Aenean ut sem vitae turpis auctor consequat et at quam. Sed quis ullamcorper risus. Quisque id ex non justo venenatis elementum. Integer euismod, sapien non convallis ultricies, purus nulla interdum purus, sit amet scelerisque urna quam eget sapien. Ut euismod, nulla in commodo vehicula, risus mi faucibus ligula, ut interdum est ipsum a ante. Pellentesque tincidunt lacus ut odio posuere, ut euismod turpis pretium. Nam fermentum, dolor eu consequat cursus, sapien leo suscipit odio, non pulvinar nulla erat et justo.',
+      ],
+    },
+    hAlign: 'center',
+    vAlign: 'middle',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
