@@ -8,21 +8,39 @@ export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
     PropsWithChildren {
   innerContent: IContent;
-  alignment?: 'left' | 'center' | 'right';
+  hAlign?: 'left' | 'center' | 'right';
+  vAlign?: 'top' | 'middle' | 'bottom';
   className?: string;
 }
 
 export const ContentContainer = forwardRef<HTMLDivElement, ContentContainerProps>(
-  ({ innerContent, alignment = 'center', className, children, ...props }, ref) => {
+  ({ innerContent, hAlign = 'center', vAlign = 'middle', className, children, ...props }, ref) => {
+    const alignmentClass = 
+      vAlign === 'top' && hAlign === 'left'
+        ? 'top-left'
+        : vAlign === 'top' && hAlign === 'center'
+        ? 'top-center'
+        : vAlign === 'top' && hAlign === 'right'
+        ? 'top-right'
+        : vAlign === 'middle' && hAlign === 'left'
+        ? 'middle-left'
+        : vAlign === 'middle' && hAlign === 'center'
+        ? 'middle-center'
+        : vAlign === 'middle' && hAlign === 'right'
+        ? 'middle-right'
+        : vAlign === 'bottom' && hAlign === 'left'
+        ? 'bottom-left'
+        : vAlign === 'bottom' && hAlign === 'center'
+        ? 'bottom-center'
+        : vAlign === 'bottom' && hAlign === 'right'
+        ? 'bottom-right'
+        : 'middle-center';
+
     return (
       <div
         className={cn(
           styles.container,
-          alignment === 'left'
-            ? styles['container--left']
-            : alignment === 'right'
-            ? styles['container--right']
-            : styles['container--center'],
+          styles[`container--${alignmentClass}`],
           className
         )}
         ref={ref}
@@ -54,11 +72,7 @@ export const ContentContainer = forwardRef<HTMLDivElement, ContentContainerProps
         <div
           className={cn(
             styles.childrenContainer,
-            alignment === 'left'
-              ? styles['childrenContainer--left']
-              : alignment === 'right'
-              ? styles['childrenContainer--right']
-              : styles['childrenContainer--center']
+            styles[`childrenContainer--${alignmentClass}`]
           )}
         >
           {children}

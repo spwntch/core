@@ -1,63 +1,93 @@
-
 /* content-container.module.css */
 
 .container {
-    @apply md:max-w-xl lg:max-w-3xl flex flex-col justify-center p-4;
-  }
-  
-  .container--left {
-    @apply text-left;
-  }
-  
-  .container--center {
-    @apply text-center mx-auto;
-  }
-  
-  .container--right {
-    @apply text-right md:mx-[50%];
-  }
-  
-  .announcement {
-    @apply mb-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-800;
-  }
-  
-  .heading {
-    @apply mt-6;
-  }
-  
-  .subHeading {
-    @apply mt-4;
-  }
-  
-  .body {
-    @apply mt-4 mb-8;
-  }
-  
-  .bullets {
-    @apply mt-4 list-disc list-inside;
-  }
-  
-  .bulletItem {
-    @apply mb-2 flex items-start;
-  }
-  
-  .bulletIcon {
-    @apply mr-2;
-  }
-  
-  .childrenContainer {
-    @apply mt-8 flex gap-8;
-  }
-  
-  .childrenContainer--left {
-    @apply justify-start;
-  }
-  
-  .childrenContainer--center {
-    @apply justify-center;
-  }
-  
-  .childrenContainer--right {
-    @apply justify-end;
-  }
-  
+  @apply w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-3;
+}
+
+.container--top-left {
+  @apply justify-start items-start text-left;
+}
+.container--top-center {
+  @apply justify-start items-center text-center;
+}
+.container--top-right {
+  @apply justify-start items-end text-right;
+}
+.container--middle-left {
+  @apply justify-center items-start text-left;
+}
+.container--middle-center {
+  @apply justify-center items-center text-center;
+}
+.container--middle-right {
+  @apply justify-center items-end text-right;
+}
+.container--bottom-left {
+  @apply justify-end items-start text-left;
+}
+.container--bottom-center {
+  @apply justify-end items-center text-center;
+}
+.container--bottom-right {
+  @apply justify-end items-end text-right;
+}
+
+.announcement {
+  @apply mb-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-800;
+}
+
+.heading {
+  @apply mt-6;
+}
+
+.subHeading {
+  @apply mt-4;
+}
+
+.body {
+  @apply mt-4 mb-8;
+}
+
+.bullets {
+  @apply mt-4 list-disc list-inside;
+}
+
+.bulletItem {
+  @apply mb-2 flex items-start;
+}
+
+.bulletIcon {
+  @apply mr-2;
+}
+
+.childrenContainer {
+  @apply mt-8 flex gap-8;
+}
+
+.childrenContainer--top-left {
+  @apply justify-start items-start;
+}
+.childrenContainer--top-center {
+  @apply justify-start items-center;
+}
+.childrenContainer--top-right {
+  @apply justify-start items-end;
+}
+.childrenContainer--middle-left {
+  @apply justify-center items-start;
+}
+.childrenContainer--middle-center {
+  @apply justify-center items-center;
+}
+.childrenContainer--middle-right {
+  @apply justify-center items-end;
+}
+.childrenContainer--bottom-left {
+  @apply justify-end items-start;
+}
+.childrenContainer--bottom-center {
+  @apply justify-end items-center;
+}
+.childrenContainer--bottom-right {
+  @apply justify-end items-end;
+}
