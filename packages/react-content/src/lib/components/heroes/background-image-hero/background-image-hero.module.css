@@ -1,0 +1,9 @@
+/* background-image-hero.module.css */
+
+.container {
+  @apply h-full;
+}
+
+.hero {
+  @apply text-left;
+}
