@@ -1,0 +1,63 @@
+
+/* content-container.module.css */
+
+.container {
+    @apply md:max-w-xl lg:max-w-3xl flex flex-col justify-center p-4;
+  }
+  
+  .container--left {
+    @apply text-left;
+  }
+  
+  .container--center {
+    @apply text-center mx-auto;
+  }
+  
+  .container--right {
+    @apply text-right md:mx-[50%];
+  }
+  
+  .announcement {
+    @apply mb-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-800;
+  }
+  
+  .heading {
+    @apply mt-6;
+  }
+  
+  .subHeading {
+    @apply mt-4;
+  }
+  
+  .body {
+    @apply mt-4 mb-8;
+  }
+  
+  .bullets {
+    @apply mt-4 list-disc list-inside;
+  }
+  
+  .bulletItem {
+    @apply mb-2 flex items-start;
+  }
+  
+  .bulletIcon {
+    @apply mr-2;
+  }
+  
+  .childrenContainer {
+    @apply mt-8 flex gap-8;
+  }
+  
+  .childrenContainer--left {
+    @apply justify-start;
+  }
+  
+  .childrenContainer--center {
+    @apply justify-center;
+  }
+  
+  .childrenContainer--right {
+    @apply justify-end;
+  }
+  
