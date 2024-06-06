@@ -10,6 +10,7 @@ export interface IBackgroundImageContainerProps
   src?: string;
   darkenImage?: boolean;
   showBackgroundPattern?: boolean;
+  coverage?: 'full' | 'split-left' | 'split-right';
 }
 
 /**
@@ -27,6 +28,7 @@ export const BackgroundImageContainer = forwardRef<
       src = '/images/guy-sitting-at-tech-control-station.webp',
       darkenImage,
       showBackgroundPattern,
+      coverage = 'full',
       children,
       ...props
     },
@@ -34,7 +36,12 @@ export const BackgroundImageContainer = forwardRef<
   ) => {
     return (
       <div
-        className={cn(styles['background-container'], className)}
+        className={cn(
+          styles['background-container'],
+          coverage === 'split-left' && styles['split-left'],
+          coverage === 'split-right' && styles['split-right'],
+          className
+        )}
         ref={ref}
         {...props}
       >

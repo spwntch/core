@@ -1,7 +1,7 @@
 import { Card } from '@/react-ui';
 import { Meta, StoryObj } from '@storybook/react';
 import BackgroundImageContainer from './background-image-container';
-import { playBasic, playMultipleItems, playAccessibilityTest, playEmptyContainer, playLargeNumberOfItems } from './background-image-container.specs';
+import { playBasic, playMultipleItems, playAccessibilityTest, playEmptyContainer } from './background-image-container.specs';
 
 const componentDescription = `
 ### Overview
@@ -14,6 +14,7 @@ It serves as a versatile container for displaying content with a styled backgrou
 - \`src\`: The URL of the background image.
 - \`darkenImage\`: Whether to darken the background image.
 - \`showBackgroundPattern\`: Whether to show a background pattern.
+- \`coverage\`: The coverage style of the background image (\`full\`, \`split-left\`, \`split-right\`).
 - \`children\`: The content to be displayed inside the container.
 
 ### Example
@@ -59,6 +60,12 @@ const meta: Meta<typeof BackgroundImageContainer> = {
       type: 'boolean',
       defaultValue: false,
     },
+    coverage: {
+      description: 'The coverage style of the background image',
+      // type: 'select',
+      options: ['full', 'split-left', 'split-right'],
+      defaultValue: 'full',
+    },
     children: {
       description: 'The content to be displayed inside the container',
       type: 'string',
@@ -79,6 +86,7 @@ export const Basic: Story = {
     src: '/images/guy-sitting-at-tech-control-station.webp',
     darkenImage: false,
     showBackgroundPattern: false,
+    coverage: 'full',
     children: (
       <div className="h-screen flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
@@ -97,6 +105,7 @@ export const Darkened: Story = {
     src: '/images/guy-sitting-at-tech-control-station.webp',
     darkenImage: true,
     showBackgroundPattern: false,
+    coverage: 'full',
     children: (
       <div className="h-screen flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
@@ -115,6 +124,7 @@ export const Patterned: Story = {
     src: '/images/guy-sitting-at-tech-control-station.webp',
     darkenImage: false,
     showBackgroundPattern: true,
+    coverage: 'full',
     children: (
       <div className="h-screen flex items-center justify-center">
         <Card className="p-4 opacity-50">Your Content Here</Card>
@@ -133,6 +143,7 @@ export const MultipleItems: Story = {
     src: '/images/guy-sitting-at-tech-control-station.webp',
     darkenImage: false,
     showBackgroundPattern: false,
+    coverage: 'full',
     children: (
       <div className="h-screen flex items-center justify-center">
         <Card className="p-4 opacity-50">Content item 1</Card>
@@ -153,29 +164,46 @@ export const EmptyContainer: Story = {
     src: '/images/guy-sitting-at-tech-control-station.webp',
     darkenImage: false,
     showBackgroundPattern: false,
+    coverage: 'full',
     children: <div className="h-screen flex items-center justify-center"></div>,
   },
   play: playEmptyContainer,
 };
 
 /**
- * Large Number of Items BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with a large number of items inside.
+ * Split Left BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with split-left coverage.
  */
-export const LargeNumberOfItems: Story = {
+export const SplitLeft: Story = {
   args: {
-    src: '/images/guy-sitting-at-tech-control-station.webp',
+    src: '/images/abstract-1.webp',
     darkenImage: false,
     showBackgroundPattern: false,
+    coverage: 'split-left',
     children: (
-      <div className="h-screen flex flex-wrap items-center justify-center">
-        {[...Array(50).keys()].map((i) => (
-          <Card key={i} className="p-4 opacity-50">
-            Content item {i}
-          </Card>
-        ))}
+      <div className="h-screen flex items-center justify-center">
+        <Card className="p-4 opacity-50">Your Content Here</Card>
       </div>
     ),
   },
-  play: playLargeNumberOfItems,
+  play: playBasic,
+};
+
+/**
+ * Split Right BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with split-right coverage.
+ */
+export const SplitRight: Story = {
+  args: {
+    src: '/images/abstract-2.webp',
+    darkenImage: false,
+    showBackgroundPattern: false,
+    coverage: 'split-right',
+    children: (
+      <div className="h-screen flex items-center justify-center">
+        <Card className="p-4 opacity-50">Your Content Here</Card>
+      </div>
+    ),
+  },
+  play: playBasic,
 };
