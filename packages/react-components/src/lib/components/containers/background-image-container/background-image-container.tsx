@@ -13,11 +13,6 @@ export interface IBackgroundImageContainerProps
   coverage?: 'full' | 'split-left' | 'split-right';
 }
 
-/**
- * BackgroundImageContainer component.
- *
- * A container component that displays a background image with optional darkening and a background pattern.
- */
 export const BackgroundImageContainer = forwardRef<
   HTMLDivElement,
   IBackgroundImageContainerProps
@@ -38,33 +33,30 @@ export const BackgroundImageContainer = forwardRef<
       <div
         className={cn(
           styles['background-container'],
-          coverage === 'split-left' && styles['split-left'],
-          coverage === 'split-right' && styles['split-right'],
           className
         )}
         ref={ref}
         {...props}
-      >
+        >
         <img
           src={src}
           alt=""
           className={cn(
             styles['background-image'],
+            coverage === 'split-left' && styles['split-left'],
+            coverage === 'split-right' && styles['split-right'],
             darkenImage && styles['background-image--darken']
           )}
           width={1280}
           height={720}
         />
         {showBackgroundPattern && <BackroundPatternOne />}
-        <div
-          className={cn(
-            styles['content-container'],
-            darkenImage && styles['content-container--darken']
-          )}
-        >
-          <div className={styles['inner-content']}>{children}</div>
+        
+          <div className={cn(styles['inner-content'],
+            coverage === 'split-left' && styles['inner-content--split-left'],
+            coverage === 'split-right' && styles['inner-content--split-right']
+          )}>{children}</div>
         </div>
-      </div>
     );
   }
 );

@@ -3,11 +3,11 @@
 }
 
 .split-left {
-  @apply md:w-[50%];
+  @apply md:pr-[50%];
 }
 
 .split-right {
-  @apply md:w-[50%] md:ml-auto;
+  @apply md:pl-[50%];
 }
 
 .background-image {
@@ -18,14 +18,14 @@
   @apply brightness-50;
 }
 
-.content-container {
-  @apply h-full mx-auto max-w-none;
-}
-
-.content-container--darken {
-  @apply text-white;
-}
 
 .inner-content {
   @apply h-full mx-auto lg:mx-0;
+}
+
+.inner-content--split-left {
+  @apply md:pl-[50%];
+}
+.inner-content--split-right {
+  @apply md:pr-[50%];
 }
