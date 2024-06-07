@@ -2,14 +2,18 @@ import { cn } from '@/react-ui';
 import { PropsWithChildren, forwardRef } from 'react';
 import {
   IContent,
-  ParapgraphsWithClassName,
-  TextWithClassName,
 } from '../../../types';
 import { Announcement } from '../../content/announcement/announcement';
 import { ContentChildren } from '../../content/content-children/content-children';
 import { Header } from '../../content/header/header';
 import { List } from '../../content/list/list';
 import { Paragraphs } from '../../content/paragraphs/paragraphs';
+import {
+  getTitleContentAndClassName,
+  getSubTitleContentAndClassName,
+  getBodyContentAndClassName,
+  getTagsContentAndClassName,
+} from './content-container.utils';
 import styles from './content-container.module.css';
 
 export interface ContentContainerProps
@@ -38,29 +42,10 @@ export const ContentContainer = forwardRef<
   ) => {
     const alignmentClass = `${vAlign}-${hAlign}`;
 
-    const titleContent =
-      (innerContent.title as TextWithClassName)?.content ||
-      (innerContent.title as string);
-    const titleClassName =
-      (innerContent.title as TextWithClassName)?.className || '';
-
-    const subTitleContent =
-      (innerContent.subTitle as TextWithClassName)?.content ||
-      (innerContent.subTitle as string);
-    const subTitleClassName =
-      (innerContent.subTitle as TextWithClassName)?.className || '';
-
-    const bodyContent =
-      (innerContent.body as ParapgraphsWithClassName)?.content ||
-      (innerContent.body as string[]);
-    const bodyClassName =
-      (innerContent.body as ParapgraphsWithClassName)?.className || '';
-
-    const tagsContent =
-      (innerContent.tags as ParapgraphsWithClassName)?.content ||
-      (innerContent.tags as string[]);
-    const tagsClassName =
-      (innerContent.tags as ParapgraphsWithClassName)?.className || '';
+    const { titleContent, titleClassName } = getTitleContentAndClassName(innerContent.title);
+    const { subTitleContent, subTitleClassName } = getSubTitleContentAndClassName(innerContent.subTitle);
+    const { bodyContent, bodyClassName } = getBodyContentAndClassName(innerContent.body);
+    const { tagsContent, tagsClassName } = getTagsContentAndClassName(innerContent.tags);
 
     return (
       <div
