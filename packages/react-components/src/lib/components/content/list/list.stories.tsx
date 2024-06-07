@@ -95,19 +95,27 @@ export const AvatarBullets: Story = {
     bullets: [
       {
         image: {
-          src: 'https://via.placeholder.com/150/0000FF/FFFFFF/?text=User1',
-          alt: 'User 1',
-          fallback: 'U1',
+          src: 'https://avatar.iran.liara.run/public/boy',
+          alt: 'Person 1 (he/him)',
+          fallback: 'he/him',
         },
-        body: 'User 1',
+        body: 'Person 1 (he/him)',
       },
       {
         image: {
-          src: 'https://via.placeholder.com/150/FF0000/FFFFFF/?text=User2',
-          alt: 'User 2',
-          fallback: 'U2',
+          src: 'https://avatar.iran.liara.run/public/girl',
+          alt: 'Person 2 (she/her)',
+          fallback: 'she/her',
         },
-        body: 'User 2',
+        body: 'Person 2 (she/her)',
+      },
+      {
+        image: {
+          src: 'https://avatar.iran.liara.run/public',
+          alt: 'Person 3 (they/them)',
+          fallback: 'they/them',
+        },
+        body: 'Person 3 (they/them)',
       },
     ],
   },
