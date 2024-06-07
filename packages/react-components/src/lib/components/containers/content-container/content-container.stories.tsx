@@ -71,11 +71,12 @@ const innerContent: IContent = {
   title: 'Spawntech Company Overview',
   subTitle: 'Pioneering a transformative approach to software development',
   body: [
-    'Spawntech is pioneering a transformative approach to software development, blending advanced DevOps, precise UX implementation, and customized development with an extensive library of reusable packages.',
-    'Born from a vision to expedite project delivery while slashing costs, Spawntech embodies innovation by leveraging these libraries, enabling projects to be delivered five times quicker and at a fraction of traditional costs.',
-    'Unlike its inception as a vehicle for SaaS products, Spawntech has evolved into a beacon of lean innovation, where every project is infused with a product-led mindset and cutting-edge technology, ensuring our solutions are not just solutions but strategic advantages for our clients.',
-    'Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. We strive to integrate the latest technologies with a robust library of reusable components, ensuring every project is a step towards digital excellence. By championing lean innovation and a product-led approach, we aim to transform our clients\' most complex challenges into their greatest successes.',
+    'Spawntech pioneers transformative software development, blending advanced DevOps, precise UX implementation, and customized development with reusable packages.',
+    'Spawntech embodies innovation by leveraging these libraries, enabling projects to be delivered five times quicker and at a fraction of traditional costs.',
+    'Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. By championing lean innovation and a product-led approach, we transform our clients\' complex challenges into their greatest successes.',
   ],
+  
+  
   bullets: [
     { icon: <Rocket className="h-5 w-5" />, title: 'Custom Software Development', body: 'Combining lean UX philosophies with agile and innovative methodologies.' },
     { icon: <Star className="h-5 w-5" />, title: 'DevOps and Lean CI/CD', body: 'Implementing advanced DevOps practices to streamline development and reduce time-to-market.' },

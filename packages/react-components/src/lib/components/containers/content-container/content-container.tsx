@@ -7,8 +7,8 @@ import {
   ParapgraphsWithClassName,
 } from '../../../types';
 import { Announcement } from '../../content/announcement/announcement';
-import { Tags } from '../../content/tags/tags';
 import { List } from '../../content/list/list';
+import { Header } from '../../content/header/header';
 import styles from './content-container.module.css';
 
 export interface ContentContainerProps
@@ -78,17 +78,14 @@ export const ContentContainer = forwardRef<
             className={innerContent.announcement.className}
           />
         )}
-        {titleContent && (
-          <H2 className={cn(styles.heading, titleClassName)}>{titleContent}</H2>
-        )}
-        {subTitleContent && (
-          <H3 className={cn(styles.subHeading, subTitleClassName)}>
-            {subTitleContent}
-          </H3>
-        )}
-          {tagsContent && (
-          <Tags tags={tagsContent} className={tagsClassName} />
-        )}
+        <Header
+          titleContent={titleContent}
+          titleClassName={titleClassName}
+          subTitleContent={subTitleContent}
+          subTitleClassName={subTitleClassName}
+          tagsContent={tagsContent}
+          tagsClassName={tagsClassName}
+        />
         <div className={cn(styles.body, bodyClassName)}>
           {bodyContent?.map((paragraph, index) => (
             <P key={index}>{paragraph}</P>
@@ -97,7 +94,6 @@ export const ContentContainer = forwardRef<
         {innerContent.bullets && (
           <List bullets={innerContent.bullets} />
         )}
-      
         <div
           className={cn(
             styles.childrenContainer,

@@ -1,3 +1,4 @@
+/* content-container.module.css */
 .container {
   @apply w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-3 max-w-3xl mx-auto;
 }
@@ -30,18 +31,6 @@
   @apply justify-end items-end text-right;
 }
 
-.announcement-container {
-  @apply relative rounded-full px-3 py-1 text-sm leading-6 text-foreground ring-1 ring-ring/20 hover:ring-ring/30 mb-4;
-}
-
-.announcement-link {
-  @apply ml-3 font-semibold text-primary;
-}
-
-.absolute-inset {
-  @apply absolute inset-0;
-}
-
 .title {
   @apply mt-6;
 }
@@ -52,18 +41,6 @@
 
 .body {
   @apply mt-4 mb-8;
-}
-
-.bullets {
-  @apply mt-4 list-disc list-inside;
-}
-
-.bulletItem {
-  @apply mb-2 flex items-start;
-}
-
-.bulletIcon {
-  @apply mr-2;
 }
 
 .childrenContainer {

@@ -1,0 +1,12 @@
+/* header.module.css */
+.heading {
+  @apply text-2xl font-bold mb-2 mt-6;
+}
+
+.subHeading {
+  @apply text-xl font-semibold mb-2 mt-4;
+}
+
+.tags {
+  @apply mt-2;
+}
