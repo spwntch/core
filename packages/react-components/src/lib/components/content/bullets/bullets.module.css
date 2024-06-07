@@ -1,0 +1,16 @@
+/* bullets.module.css */
+.bullets-container {
+  @apply flex flex-col gap-2;
+}
+
+.bullet-item {
+  @apply flex items-center gap-2;
+}
+
+.bullet-icon {
+  @apply flex-shrink-0;
+}
+
+.bullet-text {
+  @apply flex-grow;
+}
