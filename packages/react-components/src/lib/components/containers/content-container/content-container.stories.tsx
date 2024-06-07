@@ -4,6 +4,7 @@ import { ContentContainer } from './content-container';
 import { Button } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { IContent } from '../../../types';
+import { Rocket, Star } from 'lucide-react';
 
 /**
  * The `ContentContainer` component displays a section with a heading, sub-heading, body text, and optional bullets and tags.
@@ -66,19 +67,21 @@ export default meta;
 type Story = StoryObj<typeof ContentContainer>;
 
 const innerContent: IContent = {
-  announcement: { message: 'This is an announcement', href: '/news' },
-  title: 'Welcome to Our Site',
-  subTitle: 'We are glad to have you here',
+  announcement: { message: 'Spawntech is transforming software development', href: '/news' },
+  title: 'Spawntech Company Overview',
+  subTitle: 'Pioneering a transformative approach to software development',
   body: [
-    'Our site offers a variety of features to help you succeed.',
-    'Explore the site to learn more about what we offer.',
+    'Spawntech is pioneering a transformative approach to software development, blending advanced DevOps, precise UX implementation, and customized development with an extensive library of reusable packages.',
+    'Born from a vision to expedite project delivery while slashing costs, Spawntech embodies innovation by leveraging these libraries, enabling projects to be delivered five times quicker and at a fraction of traditional costs.',
+    'Unlike its inception as a vehicle for SaaS products, Spawntech has evolved into a beacon of lean innovation, where every project is infused with a product-led mindset and cutting-edge technology, ensuring our solutions are not just solutions but strategic advantages for our clients.',
+    'Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. We strive to integrate the latest technologies with a robust library of reusable components, ensuring every project is a step towards digital excellence. By championing lean innovation and a product-led approach, we aim to transform our clients\' most complex challenges into their greatest successes.',
   ],
   bullets: [
-    { text: 'Bullet point 1' },
-    { text: 'Bullet point 2' },
-    { text: 'Bullet point 3' },
+    { icon: <Rocket className="h-5 w-5" />, title: 'Custom Software Development', body: 'Combining lean UX philosophies with agile and innovative methodologies.' },
+    { icon: <Star className="h-5 w-5" />, title: 'DevOps and Lean CI/CD', body: 'Implementing advanced DevOps practices to streamline development and reduce time-to-market.' },
+    { body: 'Bullet point 3' },
   ],
-  tags: ['Tag1', 'Tag2', 'Tag3'],
+  tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
 };
 
 /**
@@ -99,205 +102,179 @@ export const Basic: Story = {
   },
 };
 
-// /**
-//  * Top Left Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with top-left aligned text content.
-//  */
-// export const TopLeft: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'left',
-//     vAlign: 'top',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Top Left Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with top-left aligned text content.
+ */
+export const TopLeft: Story = {
+  args: {
+    innerContent,
+    hAlign: 'left',
+    vAlign: 'top',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Top Center Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with top-center aligned text content.
-//  */
-// export const TopCenter: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'center',
-//     vAlign: 'top',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Top Center Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with top-center aligned text content.
+ */
+export const TopCenter: Story = {
+  args: {
+    innerContent,
+    hAlign: 'center',
+    vAlign: 'top',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Top Right Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with top-right aligned text content.
-//  */
-// export const TopRight: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'right',
-//     vAlign: 'top',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Top Right Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with top-right aligned text content.
+ */
+export const TopRight: Story = {
+  args: {
+    innerContent,
+    hAlign: 'right',
+    vAlign: 'top',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Middle Left Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with middle-left aligned text content.
-//  */
-// export const MiddleLeft: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'left',
-//     vAlign: 'middle',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Middle Left Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with middle-left aligned text content.
+ */
+export const MiddleLeft: Story = {
+  args: {
+    innerContent,
+    hAlign: 'left',
+    vAlign: 'middle',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Middle Right Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with middle-right aligned text content.
-//  */
-// export const MiddleRight: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'right',
-//     vAlign: 'middle',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Middle Right Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with middle-right aligned text content.
+ */
+export const MiddleRight: Story = {
+  args: {
+    innerContent,
+    hAlign: 'right',
+    vAlign: 'middle',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Bottom Left Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with bottom-left aligned text content.
-//  */
-// export const BottomLeft: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'left',
-//     vAlign: 'bottom',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Bottom Left Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with bottom-left aligned text content.
+ */
+export const BottomLeft: Story = {
+  args: {
+    innerContent,
+    hAlign: 'left',
+    vAlign: 'bottom',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Bottom Center Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with bottom-center aligned text content.
-//  */
-// export const BottomCenter: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'center',
-//     vAlign: 'bottom',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Bottom Center Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with bottom-center aligned text content.
+ */
+export const BottomCenter: Story = {
+  args: {
+    innerContent,
+    hAlign: 'center',
+    vAlign: 'bottom',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Bottom Right Aligned ContentContainer example.
-//  * Demonstrates the ContentContainer component with bottom-right aligned text content.
-//  */
-// export const BottomRight: Story = {
-//   args: {
-//     innerContent: {
-//       title: 'Welcome to Our Site',
-//       subTitle: 'We are glad to have you here',
-//       body: ['Our site offers a variety of features to help you succeed.'],
-//     },
-//     hAlign: 'right',
-//     vAlign: 'bottom',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Bottom Right Aligned ContentContainer example.
+ * Demonstrates the ContentContainer component with bottom-right aligned text content.
+ */
+export const BottomRight: Story = {
+  args: {
+    innerContent,
+    hAlign: 'right',
+    vAlign: 'bottom',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};
 
-// /**
-//  * Long Content example.
-//  * Demonstrates the ContentContainer component with long headings, subheadings, and numerous, long body strings.
-//  */
-// export const LongContent: Story = {
-//   args: {
-//     innerContent: {
-//       title:
-//         'This is a Very Long Heading to Test How the ContentContainer Handles Long Texts in Different Scenarios and Ensure Proper Layout and Display Across Various Screen Sizes and Resolutions',
-//       subTitle:
-//         'This is an Even Longer Subheading that Should Stretch the Limits of the ContentContainer Component and Help Us Understand Its Behavior with Such Inputs. It Needs to be Really Long to Simulate Real-World Scenarios Where Subheadings Can Get Quite Lengthy',
-//       body: [
-//         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel semper eros, ac lacinia nisi. Nulla facilisi. Suspendisse potenti. Morbi vitae purus justo. Nam id lacinia velit. Donec non elit a risus tempus vestibulum. Nullam non ligula a orci facilisis gravida sit amet a magna. Donec sit amet lectus mi. Integer viverra sapien non est sollicitudin, nec pulvinar sapien facilisis. Proin mollis libero sit amet libero ultrices, non dapibus lorem ultricies.',
-//         'Aenean ut sem vitae turpis auctor consequat et at quam. Sed quis ullamcorper risus. Quisque id ex non justo venenatis elementum. Integer euismod, sapien non convallis ultricies, purus nulla interdum purus, sit amet scelerisque urna quam eget sapien. Ut euismod, nulla in commodo vehicula, risus mi faucibus ligula, ut interdum est ipsum a ante. Pellentesque tincidunt lacus ut odio posuere, ut euismod turpis pretium. Nam fermentum, dolor eu consequat cursus, sapien leo suscipit odio, non pulvinar nulla erat et justo.',
-//       ],
-//     },
-//     hAlign: 'center',
-//     vAlign: 'middle',
-//     children: (
-//       <>
-//         <Button>Get Started</Button>
-//         <Button variant="secondary">Learn More</Button>
-//       </>
-//     ),
-//   },
-// };
+/**
+ * Long Content example.
+ * Demonstrates the ContentContainer component with long headings, subheadings, and numerous, long body strings.
+ */
+export const LongContent: Story = {
+  args: {
+    innerContent: {
+      announcement: { message: 'This is a long announcement', href: '/news' },
+      title:
+        'This is a Very Long Heading to Test How the ContentContainer Handles Long Texts in Different Scenarios and Ensure Proper Layout and Display Across Various Screen Sizes and Resolutions',
+      subTitle:
+        'This is an Even Longer Subheading that Should Stretch the Limits of the ContentContainer Component and Help Us Understand Its Behavior with Such Inputs. It Needs to be Really Long to Simulate Real-World Scenarios Where Subheadings Can Get Quite Lengthy',
+      body: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel semper eros, ac lacinia nisi. Nulla facilisi. Suspendisse potenti. Morbi vitae purus justo. Nam id lacinia velit. Donec non elit a risus tempus vestibulum. Nullam non ligula a orci facilisis gravida sit amet a magna. Donec sit amet lectus mi. Integer viverra sapien non est sollicitudin, nec pulvinar sapien facilisis. Proin mollis libero sit amet libero ultrices, non dapibus lorem ultricies.',
+        'Aenean ut sem vitae turpis auctor consequat et at quam. Sed quis ullamcorper risus. Quisque id ex non justo venenatis elementum. Integer euismod, sapien non convallis ultricies, purus nulla interdum purus, sit amet scelerisque urna quam eget sapien. Ut euismod, nulla in commodo vehicula, risus mi faucibus ligula, ut interdum est ipsum a ante. Pellentesque tincidunt lacus ut odio posuere, ut euismod turpis pretium. Nam fermentum, dolor eu consequat cursus, sapien leo suscipit odio, non pulvinar nulla erat et justo.',
+      ],
+      bullets: [
+        { emoji: '🔥', title: 'Fire Title', body: 'This is the body of the fire bullet' },
+        { emoji: '🌟', title: 'Star Title', body: 'This is the body of the star bullet' },
+      ],
+      tags: ['Tag1', 'Tag2', 'Tag3'],
+    },
+    hAlign: 'center',
+    vAlign: 'middle',
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
+  },
+};

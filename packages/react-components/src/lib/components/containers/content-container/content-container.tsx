@@ -1,11 +1,14 @@
 import { H2, H3, P } from '@/react-typography';
-import { Badge, cn } from '@/react-ui';
+import { cn } from '@/react-ui';
 import { PropsWithChildren, forwardRef } from 'react';
 import {
   IContent,
   TextWithClassName,
   ParapgraphsWithClassName,
 } from '../../../types';
+import { Announcement } from '../../content/announcement/announcement';
+import { Tags } from '../../content/tags/tags';
+import { List } from '../../content/list/list';
 import styles from './content-container.module.css';
 
 export interface ContentContainerProps
@@ -69,16 +72,11 @@ export const ContentContainer = forwardRef<
         {...props}
       >
         {innerContent.announcement && (
-          <div className={cn(styles['announcement-container'])}>
-            {innerContent.announcement.message}.
-            <a
-              href={innerContent.announcement.href}
-              className={styles['announcement-link']}
-            >
-              <span className={styles['absolute-inset']} aria-hidden="true" />
-              Read more <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+          <Announcement
+            message={innerContent.announcement.message}
+            href={innerContent.announcement.href}
+            className={innerContent.announcement.className}
+          />
         )}
         {titleContent && (
           <H2 className={cn(styles.heading, titleClassName)}>{titleContent}</H2>
@@ -88,33 +86,18 @@ export const ContentContainer = forwardRef<
             {subTitleContent}
           </H3>
         )}
+          {tagsContent && (
+          <Tags tags={tagsContent} className={tagsClassName} />
+        )}
         <div className={cn(styles.body, bodyClassName)}>
           {bodyContent?.map((paragraph, index) => (
             <P key={index}>{paragraph}</P>
           ))}
         </div>
         {innerContent.bullets && (
-          <ul className={styles.bullets}>
-            {innerContent.bullets.map((bullet, index) => (
-              <li
-                key={index}
-                className={cn(styles.bulletItem, bullet.className)}
-              >
-                {bullet.icon && (
-                  <span className={styles.bulletIcon}>{bullet.icon}</span>
-                )}
-                <P>{bullet.text}</P>
-              </li>
-            ))}
-          </ul>
+          <List bullets={innerContent.bullets} />
         )}
-        {tagsContent && (
-          <div className={cn(styles.tags, tagsClassName)}>
-            {tagsContent?.map((tag, index) => (
-              <Badge key={index}>{tag}</Badge>
-            ))}
-          </div>
-        )}
+      
         <div
           className={cn(
             styles.childrenContainer,
