@@ -3,13 +3,17 @@ import { ReactNode } from 'react';
 export interface IBullet {
   icon?: ReactNode;
   text: string;
+  className?: string;
 }
 
+export type TextWithClassName = { content: string; className: string };
+export type ParapgraphsWithClassName = { content: string[]; className: string };
+
 export interface IContent {
-  announcement?: { message: string; cta: ReactNode }; // Time-related information
-  heading?: string; // H2 tag
-  subHeading?: string; // H3 tag
-  body?: string[]; // Array of P tags
+  announcement?: { message: string; className?: string; cta: ReactNode }; // Time-related information
+  title?: string | TextWithClassName; // H2 tag
+  subTitle?: string | TextWithClassName; // H3 tag
+  body?: string[] | ParapgraphsWithClassName; // Array of P tags
   bullets?: IBullet[];
-  tags?: string[];
+  tags?: string[] | ParapgraphsWithClassName;
 }

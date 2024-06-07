@@ -13,8 +13,9 @@ export const ImageContentLayer = ({
 }: ImageContentLayerProps) => {
   return (
     <div className="h-full w-full">
-      <BackgroundImageContainer image={image} />
-      {innerContent && <ContentContainer innerContent={innerContent} />}
+      <BackgroundImageContainer image={image}>
+        {innerContent && <ContentContainer innerContent={innerContent} className='text-white˝' />}
+      </BackgroundImageContainer>
     </div>
   );
 };

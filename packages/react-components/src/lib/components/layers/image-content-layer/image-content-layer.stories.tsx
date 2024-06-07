@@ -61,8 +61,8 @@ export const Basic: Story = {
       coverage: 'full',
     },
     innerContent: {
-      heading: 'Heading',
-      subHeading: 'Subheading',
+      title: 'Heading',
+      subTitle: 'Subheading',
     },
   },
 };

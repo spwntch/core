@@ -71,8 +71,8 @@ type Story = StoryObj<typeof ContentContainer>;
 export const Basic: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'center',
@@ -93,8 +93,8 @@ export const Basic: Story = {
 export const TopLeft: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'left',
@@ -115,8 +115,8 @@ export const TopLeft: Story = {
 export const TopCenter: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'center',
@@ -137,8 +137,8 @@ export const TopCenter: Story = {
 export const TopRight: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'right',
@@ -159,8 +159,8 @@ export const TopRight: Story = {
 export const MiddleLeft: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'left',
@@ -181,8 +181,8 @@ export const MiddleLeft: Story = {
 export const MiddleRight: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'right',
@@ -203,8 +203,8 @@ export const MiddleRight: Story = {
 export const BottomLeft: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'left',
@@ -225,8 +225,8 @@ export const BottomLeft: Story = {
 export const BottomCenter: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'center',
@@ -247,8 +247,8 @@ export const BottomCenter: Story = {
 export const BottomRight: Story = {
   args: {
     innerContent: {
-      heading: 'Welcome to Our Site',
-      subHeading: 'We are glad to have you here',
+      title: 'Welcome to Our Site',
+      subTitle: 'We are glad to have you here',
       body: ['Our site offers a variety of features to help you succeed.'],
     },
     hAlign: 'right',
@@ -269,9 +269,9 @@ export const BottomRight: Story = {
 export const LongContent: Story = {
   args: {
     innerContent: {
-      heading:
+      title:
         'This is a Very Long Heading to Test How the ContentContainer Handles Long Texts in Different Scenarios and Ensure Proper Layout and Display Across Various Screen Sizes and Resolutions',
-      subHeading:
+      subTitle:
         'This is an Even Longer Subheading that Should Stretch the Limits of the ContentContainer Component and Help Us Understand Its Behavior with Such Inputs. It Needs to be Really Long to Simulate Real-World Scenarios Where Subheadings Can Get Quite Lengthy',
       body: [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel semper eros, ac lacinia nisi. Nulla facilisi. Suspendisse potenti. Morbi vitae purus justo. Nam id lacinia velit. Donec non elit a risus tempus vestibulum. Nullam non ligula a orci facilisis gravida sit amet a magna. Donec sit amet lectus mi. Integer viverra sapien non est sollicitudin, nec pulvinar sapien facilisis. Proin mollis libero sit amet libero ultrices, non dapibus lorem ultricies.',
