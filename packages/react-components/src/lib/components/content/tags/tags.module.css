@@ -1,0 +1,4 @@
+/* tags.module.css */
+.tags-container {
+  @apply flex flex-wrap gap-2;
+}
