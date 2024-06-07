@@ -1,5 +1,3 @@
-/* content-container.module.css */
-
 .container {
   @apply w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-3;
 }
@@ -32,15 +30,23 @@
   @apply justify-end items-end text-right;
 }
 
-.announcement {
-  @apply mb-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-800;
+.announcement-container {
+  @apply relative rounded-full px-3 py-1 text-sm leading-6 text-foreground ring-1 ring-ring/20 hover:ring-ring/30 mb-4;
 }
 
-.heading {
+.announcement-link {
+  @apply ml-3 font-semibold text-primary;
+}
+
+.absolute-inset {
+  @apply absolute inset-0;
+}
+
+.title {
   @apply mt-6;
 }
 
-.subHeading {
+.subTitle {
   @apply mt-4;
 }
 
