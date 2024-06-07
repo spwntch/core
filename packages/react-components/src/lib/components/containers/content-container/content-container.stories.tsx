@@ -4,6 +4,7 @@ import { ContentContainer } from './content-container';
 import { Button } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { IContent } from '../../../types';
+import { playBasic } from './content-container.specs';
 import { Rocket, Star } from 'lucide-react';
 
 /**
@@ -76,21 +77,24 @@ const innerContent: IContent = {
   body: [
     'Spawntech pioneers transformative software development, blending advanced DevOps, precise UX implementation, and customized development with reusable packages. Our approach integrates the latest technologies to ensure robust and scalable solutions that meet the evolving needs of our clients. By utilizing a comprehensive library of reusable packages, we can accelerate the development process and maintain high standards of quality and performance.',
     'Innovation at unparalleled speed.',
-    'Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. By championing lean innovation and a product-led approach, we transform our clients\' complex challenges into their greatest successes. Our team of experts works closely with clients to understand their unique requirements and deliver tailored solutions that drive business growth and enhance user experience. We pride ourselves on our ability to turn visionary ideas into reality, helping our clients achieve their strategic objectives with precision and agility.',
+    "Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. By championing lean innovation and a product-led approach, we transform our clients' complex challenges into their greatest successes. Our team of experts works closely with clients to understand their unique requirements and deliver tailored solutions that drive business growth and enhance user experience. We pride ourselves on our ability to turn visionary ideas into reality, helping our clients achieve their strategic objectives with precision and agility.",
   ],
-
   bullets: [
     {
-      icon: <Rocket className="h-5 w-5" />,
+      emoji: '🚀',
       title: 'Custom Software Development',
       body: 'Combining lean UX philosophies with agile and innovative methodologies.',
     },
     {
-      icon: <Star className="h-5 w-5" />,
+      emoji: '⭐',
       title: 'DevOps and Lean CI/CD',
       body: 'Implementing advanced DevOps practices to streamline development and reduce time-to-market.',
     },
-    { body: 'Bullet point 3' },
+    {
+      emoji: '🔧',
+      title: 'Technical Excellence',
+      body: 'Ensuring high standards of quality and performance through continuous improvement.',
+    },
   ],
   tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
 };
@@ -111,6 +115,7 @@ export const Basic: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -129,6 +134,7 @@ export const TopLeft: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -147,6 +153,7 @@ export const TopCenter: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -165,6 +172,7 @@ export const TopRight: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -183,6 +191,7 @@ export const MiddleLeft: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -201,6 +210,7 @@ export const MiddleRight: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -219,6 +229,7 @@ export const BottomLeft: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -237,6 +248,7 @@ export const BottomCenter: Story = {
       </>
     ),
   },
+  play: playBasic,
 };
 
 /**
@@ -255,45 +267,5 @@ export const BottomRight: Story = {
       </>
     ),
   },
-};
-
-/**
- * Long Content example.
- * Demonstrates the ContentContainer component with long headings, subheadings, and numerous, long body strings.
- */
-export const LongContent: Story = {
-  args: {
-    innerContent: {
-      announcement: { message: 'This is a long announcement', href: '/news' },
-      title:
-        'This is a Very Long Heading to Test How the ContentContainer Handles Long Texts in Different Scenarios and Ensure Proper Layout and Display Across Various Screen Sizes and Resolutions',
-      subTitle:
-        'This is an Even Longer Subheading that Should Stretch the Limits of the ContentContainer Component and Help Us Understand Its Behavior with Such Inputs. It Needs to be Really Long to Simulate Real-World Scenarios Where Subheadings Can Get Quite Lengthy',
-      body: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel semper eros, ac lacinia nisi. Nulla facilisi. Suspendisse potenti. Morbi vitae purus justo. Nam id lacinia velit. Donec non elit a risus tempus vestibulum. Nullam non ligula a orci facilisis gravida sit amet a magna. Donec sit amet lectus mi. Integer viverra sapien non est sollicitudin, nec pulvinar sapien facilisis. Proin mollis libero sit amet libero ultrices, non dapibus lorem ultricies.',
-        'Aenean ut sem vitae turpis auctor consequat et at quam. Sed quis ullamcorper risus. Quisque id ex non justo venenatis elementum. Integer euismod, sapien non convallis ultricies, purus nulla interdum purus, sit amet scelerisque urna quam eget sapien. Ut euismod, nulla in commodo vehicula, risus mi faucibus ligula, ut interdum est ipsum a ante. Pellentesque tincidunt lacus ut odio posuere, ut euismod turpis pretium. Nam fermentum, dolor eu consequat cursus, sapien leo suscipit odio, non pulvinar nulla erat et justo.',
-      ],
-      bullets: [
-        {
-          emoji: '🔥',
-          title: 'Fire Title',
-          body: 'This is the body of the fire bullet',
-        },
-        {
-          emoji: '🌟',
-          title: 'Star Title',
-          body: 'This is the body of the star bullet',
-        },
-      ],
-      tags: ['Tag1', 'Tag2', 'Tag3'],
-    },
-    hAlign: 'center',
-    vAlign: 'middle',
-    children: (
-      <>
-        <Button>Get Started</Button>
-        <Button variant="secondary">Learn More</Button>
-      </>
-    ),
-  },
+  play: playBasic,
 };

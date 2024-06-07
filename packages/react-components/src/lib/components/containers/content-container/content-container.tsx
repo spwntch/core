@@ -6,6 +6,7 @@ import {
   TextWithClassName,
 } from '../../../types';
 import { Announcement } from '../../content/announcement/announcement';
+import { ContentChildren } from '../../content/content-children/content-children';
 import { Header } from '../../content/header/header';
 import { List } from '../../content/list/list';
 import { Paragraphs } from '../../content/paragraphs/paragraphs';
@@ -89,14 +90,9 @@ export const ContentContainer = forwardRef<
         />
         <Paragraphs content={bodyContent} className={bodyClassName} />
         {innerContent.bullets && <List bullets={innerContent.bullets} />}
-        <div
-          className={cn(
-            styles.childrenContainer,
-            styles[`childrenContainer--${alignmentClass}`]
-          )}
-        >
+        <ContentChildren alignmentClass={alignmentClass}>
           {children}
-        </div>
+        </ContentChildren>
       </div>
     );
   }
