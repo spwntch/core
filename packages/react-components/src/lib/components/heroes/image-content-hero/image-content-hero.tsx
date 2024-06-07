@@ -7,14 +7,14 @@ interface ImageContentLayerProps {
   innerContent?: IContent;
 }
 
-export const ImageContentLayer = ({
+export const ImageContentHero = ({
   image,
   innerContent,
 }: ImageContentLayerProps) => {
   return (
-    <div className="h-full w-full">
+    <div className="h-screen w-full">
       <BackgroundImageContainer image={image}>
-        {innerContent && <ContentContainer innerContent={innerContent} className='text-white˝' />}
+        {innerContent && <ContentContainer innerContent={innerContent} />}
       </BackgroundImageContainer>
     </div>
   );

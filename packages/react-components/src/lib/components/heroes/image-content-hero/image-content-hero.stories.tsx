@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { withFullPage } from '../../../storybook/storybook-decorators';
-import { ImageContentLayer } from './image-content-layer';
+import { ImageContentHero } from './image-content-hero';
 
 /**
  * ## Overview
@@ -27,9 +27,9 @@ import { ImageContentLayer } from './image-content-layer';
  * }
  * ```
  */
-const meta: Meta<typeof ImageContentLayer> = {
-  title: 'components/layers/image-content-layer',
-  component: ImageContentLayer,
+const meta: Meta<typeof ImageContentHero> = {
+  title: 'components/heroes/image-content-hero',
+  component: ImageContentHero,
   decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
@@ -46,7 +46,7 @@ const meta: Meta<typeof ImageContentLayer> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ImageContentLayer>;
+type Story = StoryObj<typeof ImageContentHero>;
 
 /**
  * ## Basic example.
@@ -61,8 +61,8 @@ export const Basic: Story = {
       coverage: 'full',
     },
     innerContent: {
-      title: 'Heading',
-      subTitle: 'Subheading',
+      title: {content:'Heading', className: 'text-white'},
+      subTitle:  {content:'Subheading', className: 'text-white'},
     },
   },
 };

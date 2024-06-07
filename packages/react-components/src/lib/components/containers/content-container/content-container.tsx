@@ -1,8 +1,6 @@
 import { cn } from '@/react-ui';
 import { PropsWithChildren, forwardRef } from 'react';
-import {
-  IContent,
-} from '../../../types';
+import { IContent } from '../../../types';
 import { Announcement } from '../../content/announcement/announcement';
 import { ContentChildren } from '../../content/content-children/content-children';
 import { Header } from '../../content/header/header';
@@ -42,10 +40,17 @@ export const ContentContainer = forwardRef<
   ) => {
     const alignmentClass = `${vAlign}-${hAlign}`;
 
-    const { titleContent, titleClassName } = getTitleContentAndClassName(innerContent.title);
-    const { subTitleContent, subTitleClassName } = getSubTitleContentAndClassName(innerContent.subTitle);
-    const { bodyContent, bodyClassName } = getBodyContentAndClassName(innerContent.body);
-    const { tagsContent, tagsClassName } = getTagsContentAndClassName(innerContent.tags);
+    const { titleContent, titleClassName } = getTitleContentAndClassName(
+      innerContent.title
+    );
+    const { subTitleContent, subTitleClassName } =
+      getSubTitleContentAndClassName(innerContent.subTitle);
+    const { bodyContent, bodyClassName } = getBodyContentAndClassName(
+      innerContent.body
+    );
+    const { tagsContent, tagsClassName } = getTagsContentAndClassName(
+      innerContent.tags
+    );
 
     return (
       <div
@@ -73,7 +78,9 @@ export const ContentContainer = forwardRef<
           tagsClassName={tagsClassName}
           alignment={hAlign}
         />
-        <Paragraphs content={bodyContent} className={bodyClassName} />
+        {bodyContent && (
+          <Paragraphs content={bodyContent} className={bodyClassName} />
+        )}
         {innerContent.bullets && <List bullets={innerContent.bullets} />}
         <ContentChildren alignmentClass={alignmentClass}>
           {children}
