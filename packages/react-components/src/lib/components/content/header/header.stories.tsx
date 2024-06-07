@@ -14,6 +14,7 @@ The \`Header\` component displays a section header with a title, subtitle, and o
 - \`subTitleClassName\`: Additional class name(s) for the subtitle.
 - \`tagsContent\`: An array of tags to display.
 - \`tagsClassName\`: Additional class name(s) for the tags container.
+- \`alignment\`: The horizontal alignment of the text. Options are 'left', 'center', and 'right'.
 
 ### Example
 \`\`\`
@@ -21,6 +22,7 @@ The \`Header\` component displays a section header with a title, subtitle, and o
   titleContent="Spawntech Company Overview"
   subTitleContent="Pioneering a transformative approach to software development"
   tagsContent={['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js']}
+  alignment="center"
 />
 \`\`\`
 
@@ -65,6 +67,12 @@ const meta: Meta<typeof Header> = {
       description: 'Additional class name(s) for the tags container',
       control: 'text',
     },
+    alignment: {
+      description: 'The horizontal alignment of the text',
+      control: 'select',
+      options: ['left', 'center', 'right'],
+      defaultValue: 'center',
+    },
   },
 };
 
@@ -76,6 +84,7 @@ export const Basic: Story = {
   args: {
     titleContent: 'Spawntech Company Overview',
     subTitleContent: 'Pioneering a transformative approach to software development',
+    alignment: 'center',
   },
   play: playBasic,
 };
@@ -85,6 +94,27 @@ export const WithTags: Story = {
     titleContent: 'Spawntech Company Overview',
     subTitleContent: 'Pioneering a transformative approach to software development',
     tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
+    alignment: 'center',
+  },
+  play: playWithTags,
+};
+
+export const LeftAligned: Story = {
+  args: {
+    titleContent: 'Spawntech Company Overview',
+    subTitleContent: 'Pioneering a transformative approach to software development',
+    tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
+    alignment: 'left',
+  },
+  play: playWithTags,
+};
+
+export const RightAligned: Story = {
+  args: {
+    titleContent: 'Spawntech Company Overview',
+    subTitleContent: 'Pioneering a transformative approach to software development',
+    tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
+    alignment: 'right',
   },
   play: playWithTags,
 };

@@ -1,12 +1,36 @@
 /* header.module.css */
-.heading {
+.title {
   @apply text-2xl font-bold mb-2 mt-6;
 }
 
-.subHeading {
+.sub-title {
   @apply text-xl font-semibold mb-2 mt-4;
 }
 
 .tags {
-  @apply mt-2;
+  @apply mt-4;
+}
+
+.tags-left {
+  @apply justify-start;
+}
+
+.tags-center {
+  @apply justify-center;
+}
+
+.tags-right {
+  @apply justify-end;
+}
+
+.left {
+  @apply text-left;
+}
+
+.center {
+  @apply text-center;
+}
+
+.right {
+  @apply text-right;
 }

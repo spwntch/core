@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/react-ui';
 import { H2, H3 } from '@/react-typography';
-import { Tags } from '../../content/tags/tags';
+import { Tags } from '../tags/tags';
 import styles from './header.module.css';
 
 interface IHeaderProps {
@@ -33,7 +33,10 @@ export const Header: React.FC<IHeaderProps> = ({
       </H3>
     )}
     {tagsContent && (
-      <Tags tags={tagsContent} className={cn(styles.tags, styles[`tags-${alignment}`], tagsClassName)} />
+      <Tags
+        tags={tagsContent}
+        className={cn(styles.tags, styles[`tags-${alignment}`], tagsClassName)}
+      />
     )}
   </div>
 );

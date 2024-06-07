@@ -10,6 +10,7 @@ import { Announcement } from '../../content/announcement/announcement';
 import { List } from '../../content/list/list';
 import { Header } from '../../content/header/header';
 import styles from './content-container.module.css';
+import Paragraphs from '../../content/paragraphs/paragraphs';
 
 export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -86,14 +87,8 @@ export const ContentContainer = forwardRef<
           tagsContent={tagsContent}
           tagsClassName={tagsClassName}
         />
-        <div className={cn(styles.body, bodyClassName)}>
-          {bodyContent?.map((paragraph, index) => (
-            <P key={index}>{paragraph}</P>
-          ))}
-        </div>
-        {innerContent.bullets && (
-          <List bullets={innerContent.bullets} />
-        )}
+        <Paragraphs content={bodyContent} className={bodyClassName} />
+        {innerContent.bullets && <List bullets={innerContent.bullets} />}
         <div
           className={cn(
             styles.childrenContainer,
