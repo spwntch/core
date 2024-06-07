@@ -1,8 +1,9 @@
+import { PropsWithChildren } from 'react';
 import { IContent, IImage } from '../../../types';
 import BackgroundImageContainer from '../../containers/background-image-container/background-image-container';
 import { ContentContainer } from '../../containers/content-container/content-container';
 
-interface ImageContentLayerProps {
+interface ImageContentHeroProps extends PropsWithChildren {
   image: IImage;
   innerContent?: IContent;
 }
@@ -10,11 +11,16 @@ interface ImageContentLayerProps {
 export const ImageContentHero = ({
   image,
   innerContent,
-}: ImageContentLayerProps) => {
+  children
+}: ImageContentHeroProps) => {
   return (
     <div className="h-screen w-full">
       <BackgroundImageContainer image={image}>
-        {innerContent && <ContentContainer innerContent={innerContent} />}
+        {innerContent && (
+          <ContentContainer innerContent={innerContent}>
+            {children}
+          </ContentContainer>
+        )}
       </BackgroundImageContainer>
     </div>
   );

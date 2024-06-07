@@ -11,8 +11,14 @@ interface IParagraphsProps {
   alignment?: ParagraphAlignment;
 }
 
-export const Paragraphs: React.FC<IParagraphsProps> = ({ content, className, alignment = 'left' }) => (
-  <div className={cn(styles['paragraph-container'], styles[alignment], className)}>
+export const Paragraphs: React.FC<IParagraphsProps> = ({
+  content = [],
+  className,
+  alignment = 'left',
+}) => (
+  <div
+    className={cn(styles['paragraph-container'], styles[alignment], className)}
+  >
     {content.map((paragraph, index) => (
       <P key={index}>{paragraph}</P>
     ))}

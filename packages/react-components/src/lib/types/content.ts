@@ -12,8 +12,8 @@ export interface IBullet {
   className?: string;
 }
 
-export type TextWithClassName = { content: string; className: string };
-export type ParapgraphsWithClassName = { content: string[]; className: string };
+export type TextWithClassName = { content: string; className?: string };
+export type ParapgraphsWithClassName = { content: string[]; className?: string };
 
 export interface IContent {
   announcement?: { message: string; className?: string; href: string }; // Time-related information

@@ -1,21 +1,25 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Card } from '@/react-ui';
+import { Button } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { ImageContentHero } from './image-content-hero';
 import { playBasic } from './image-content-hero.specs';
 
 const componentDescription = `
 ### Overview
-The \`ImageContentHero\` component displays a prominent hero section with an optional background image, darkening, and background pattern. It includes a content container for inner content.
+The \`ImageContentHero\` component displays a prominent hero section with an optional background image, darkening, and background pattern. It includes a content container for inner content and supports additional children elements.
 
 ### Props
 - \`className\`: Additional class name(s) for the container.
 - \`image\`: The image object passed to the component.
 - \`innerContent\`: The content to be displayed inside the container.
+- \`children\`: Additional elements to be displayed inside the content container.
 
 ### Example
 \`\`\`
-<ImageContentHero image={{ src: "/path/to/image.jpg" }} innerContent={innerContent} />
+<ImageContentHero image={{ src: "/path/to/image.jpg" }} innerContent={innerContent}>
+  <Button>Get Started</Button>
+  <Button variant="secondary">Learn More</Button>
+</ImageContentHero>
 \`\`\`
 
 ### Notes
@@ -44,6 +48,10 @@ const meta: Meta<typeof ImageContentHero> = {
       description: 'The content to be displayed inside the container',
       control: 'object',
     },
+    children: {
+      description: 'Additional elements to be displayed inside the content container',
+      control: 'text',
+    },
   },
 };
 
@@ -53,30 +61,9 @@ type Story = StoryObj<typeof ImageContentHero>;
 
 const innerContent = {
   title: { content: 'Welcome to Spawntech' },
-  subTitle: {
-    content: 'Pioneering the Future of Software Development',
-  },
+  subTitle: { content: 'Pioneering the Future of Software Development' },
   body: [
-    'Spawntech is at the forefront of transforming software development, blending advanced DevOps, precise UX implementation, and customized development with an extensive library of reusable packages.',
-    'Born from a vision to expedite project delivery while slashing costs, Spawntech embodies innovation by leveraging these libraries, enabling projects to be delivered five times quicker and at a fraction of traditional costs.',
-    'Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction.',
-  ],
-  bullets: [
-    {
-      emoji: '🚀',
-      title: 'Custom Software Development',
-      body: 'Combining lean UX philosophies with agile and innovative methodologies.',
-    },
-    {
-      emoji: '⭐',
-      title: 'DevOps and Lean CI/CD',
-      body: 'Implementing advanced DevOps practices to streamline development and reduce time-to-market.',
-    },
-    {
-      emoji: '🔧',
-      title: 'Technical Excellence',
-      body: 'Ensuring high standards of quality and performance through continuous improvement.',
-    },
+    'Spawntech is at the forefront of transforming software development, blending advanced DevOps, precise UX implementation, and customized development.',
   ],
   tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
 };
@@ -92,6 +79,12 @@ export const Basic: Story = {
       alt: 'Abstract Image 1',
     },
     innerContent,
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
   },
   play: playBasic,
 };
@@ -108,6 +101,12 @@ export const Darkened: Story = {
       darken: true,
     },
     innerContent,
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
   },
   play: playBasic,
 };
@@ -124,6 +123,12 @@ export const SplitLeft: Story = {
       coverage: 'split-left',
     },
     innerContent,
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
   },
   play: playBasic,
 };
@@ -140,6 +145,12 @@ export const SplitRight: Story = {
       coverage: 'split-right',
     },
     innerContent,
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
   },
   play: playBasic,
 };
@@ -156,6 +167,12 @@ export const SplitTop: Story = {
       coverage: 'split-top',
     },
     innerContent,
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
   },
   play: playBasic,
 };
@@ -172,6 +189,12 @@ export const SplitBottom: Story = {
       coverage: 'split-bottom',
     },
     innerContent,
+    children: (
+      <>
+        <Button>Get Started</Button>
+        <Button variant="secondary">Learn More</Button>
+      </>
+    ),
   },
   play: playBasic,
 };
