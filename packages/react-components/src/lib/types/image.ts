@@ -17,6 +17,7 @@ export type ImageCoverage =
 
 export interface IImage {
   src: string;
+  fallback?: string;
   alt?: string;
   backgroundPattern?: ReactNode;
   darken?: boolean;

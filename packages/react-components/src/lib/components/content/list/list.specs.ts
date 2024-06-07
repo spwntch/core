@@ -8,12 +8,14 @@ export const playBasic = async ({
   canvasElement,
 }: {canvasElement: HTMLElement}) => {
   const canvas = within(canvasElement);
-  const bullet1 = await canvas.findByText('Rocket to the moon');
-  const bullet2 = await canvas.findByText('Reach for the stars');
+  const bullet1 = await canvas.findByText('A first thought');
+  const bullet2 = await canvas.findByText('A second');
+  const bullet3 = await canvas.findByText('Yet another');
 
   // Initial state check
   expect(bullet1).toBeInTheDocument();
   expect(bullet2).toBeInTheDocument();
+  expect(bullet3).toBeInTheDocument();
 
   // Accessibility check
   const results = await axe(canvasElement);
