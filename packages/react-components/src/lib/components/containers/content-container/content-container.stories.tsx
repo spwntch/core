@@ -67,19 +67,29 @@ export default meta;
 type Story = StoryObj<typeof ContentContainer>;
 
 const innerContent: IContent = {
-  announcement: { message: 'Spawntech is transforming software development', href: '/news' },
+  announcement: {
+    message: 'Spawntech is transforming software development',
+    href: '/news',
+  },
   title: 'Spawntech Company Overview',
   subTitle: 'Pioneering a transformative approach to software development',
   body: [
-    'Spawntech pioneers transformative software development, blending advanced DevOps, precise UX implementation, and customized development with reusable packages.',
-    'Spawntech embodies innovation by leveraging these libraries, enabling projects to be delivered five times quicker and at a fraction of traditional costs.',
-    'Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. By championing lean innovation and a product-led approach, we transform our clients\' complex challenges into their greatest successes.',
+    'Spawntech pioneers transformative software development, blending advanced DevOps, precise UX implementation, and customized development with reusable packages. Our approach integrates the latest technologies to ensure robust and scalable solutions that meet the evolving needs of our clients. By utilizing a comprehensive library of reusable packages, we can accelerate the development process and maintain high standards of quality and performance.',
+    'Innovation at unparalleled speed.',
+    'Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. By championing lean innovation and a product-led approach, we transform our clients\' complex challenges into their greatest successes. Our team of experts works closely with clients to understand their unique requirements and deliver tailored solutions that drive business growth and enhance user experience. We pride ourselves on our ability to turn visionary ideas into reality, helping our clients achieve their strategic objectives with precision and agility.',
   ],
-  
-  
+
   bullets: [
-    { icon: <Rocket className="h-5 w-5" />, title: 'Custom Software Development', body: 'Combining lean UX philosophies with agile and innovative methodologies.' },
-    { icon: <Star className="h-5 w-5" />, title: 'DevOps and Lean CI/CD', body: 'Implementing advanced DevOps practices to streamline development and reduce time-to-market.' },
+    {
+      icon: <Rocket className="h-5 w-5" />,
+      title: 'Custom Software Development',
+      body: 'Combining lean UX philosophies with agile and innovative methodologies.',
+    },
+    {
+      icon: <Star className="h-5 w-5" />,
+      title: 'DevOps and Lean CI/CD',
+      body: 'Implementing advanced DevOps practices to streamline development and reduce time-to-market.',
+    },
     { body: 'Bullet point 3' },
   ],
   tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
@@ -264,8 +274,16 @@ export const LongContent: Story = {
         'Aenean ut sem vitae turpis auctor consequat et at quam. Sed quis ullamcorper risus. Quisque id ex non justo venenatis elementum. Integer euismod, sapien non convallis ultricies, purus nulla interdum purus, sit amet scelerisque urna quam eget sapien. Ut euismod, nulla in commodo vehicula, risus mi faucibus ligula, ut interdum est ipsum a ante. Pellentesque tincidunt lacus ut odio posuere, ut euismod turpis pretium. Nam fermentum, dolor eu consequat cursus, sapien leo suscipit odio, non pulvinar nulla erat et justo.',
       ],
       bullets: [
-        { emoji: '🔥', title: 'Fire Title', body: 'This is the body of the fire bullet' },
-        { emoji: '🌟', title: 'Star Title', body: 'This is the body of the star bullet' },
+        {
+          emoji: '🔥',
+          title: 'Fire Title',
+          body: 'This is the body of the fire bullet',
+        },
+        {
+          emoji: '🌟',
+          title: 'Star Title',
+          body: 'This is the body of the star bullet',
+        },
       ],
       tags: ['Tag1', 'Tag2', 'Tag3'],
     },

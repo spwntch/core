@@ -1,4 +1,8 @@
 /* header.module.css */
+.container {
+  @apply mb-10;
+}
+
 .title {
   @apply text-2xl font-bold mb-2 mt-6;
 }

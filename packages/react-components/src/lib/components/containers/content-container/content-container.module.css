@@ -1,6 +1,6 @@
 /* content-container.module.css */
 .container {
-  @apply w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-3 max-w-3xl mx-auto;
+  @apply w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-3 max-w-7xl mx-auto;
 }
 
 .container--top-left {
@@ -31,20 +31,8 @@
   @apply justify-end items-end text-right;
 }
 
-.title {
-  @apply mt-6;
-}
-
-.subTitle {
-  @apply mt-4;
-}
-
-.body {
-  @apply mt-4 mb-8;
-}
-
 .childrenContainer {
-  @apply mt-8 flex gap-8;
+  @apply mt-10 flex gap-8;
 }
 
 .childrenContainer--top-left {

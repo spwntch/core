@@ -23,7 +23,7 @@ export const Header: React.FC<IHeaderProps> = ({
   tagsClassName,
   alignment = 'center',
 }) => (
-  <div className={cn(styles[alignment])}>
+  <div className={cn(styles.container, styles[alignment])}>
     {titleContent && (
       <H2 className={cn(styles.title, titleClassName)}>{titleContent}</H2>
     )}

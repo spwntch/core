@@ -1,16 +1,15 @@
-import { H2, H3, P } from '@/react-typography';
 import { cn } from '@/react-ui';
 import { PropsWithChildren, forwardRef } from 'react';
 import {
   IContent,
-  TextWithClassName,
   ParapgraphsWithClassName,
+  TextWithClassName,
 } from '../../../types';
 import { Announcement } from '../../content/announcement/announcement';
-import { List } from '../../content/list/list';
 import { Header } from '../../content/header/header';
+import { List } from '../../content/list/list';
+import { Paragraphs } from '../../content/paragraphs/paragraphs';
 import styles from './content-container.module.css';
-import Paragraphs from '../../content/paragraphs/paragraphs';
 
 export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -86,6 +85,7 @@ export const ContentContainer = forwardRef<
           subTitleClassName={subTitleClassName}
           tagsContent={tagsContent}
           tagsClassName={tagsClassName}
+          alignment={hAlign}
         />
         <Paragraphs content={bodyContent} className={bodyClassName} />
         {innerContent.bullets && <List bullets={innerContent.bullets} />}
