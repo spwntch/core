@@ -1,0 +1,53 @@
+.split-layout {
+  @apply h-full w-full p-0 relative flex flex-col md:flex-row;
+}
+
+.split-pane {
+  @apply absolute inset-0 -z-10 h-full w-full;
+}
+
+.split-pane--left,
+.split-pane--right {
+  @apply md:w-[50%];
+}
+
+.split-pane--left {
+  @apply md:left-0;
+}
+
+.split-pane--right {
+  @apply md:right-0;
+}
+
+.split-pane--top,
+.split-pane--bottom {
+  @apply md:h-[50%];
+}
+
+.split-pane--top {
+  @apply md:top-0;
+}
+
+.split-pane--bottom {
+  @apply md:bottom-0;
+}
+
+.inner-content {
+  @apply relative z-10 flex;
+}
+
+.inner-content--left {
+  @apply md:pl-[50%];
+}
+
+.inner-content--right {
+  @apply md:pr-[50%];
+}
+
+.inner-content--top {
+  @apply md:pt-[50%];
+}
+
+.inner-content--bottom {
+  @apply md:pb-[50%];
+}

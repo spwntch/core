@@ -1,8 +1,7 @@
-import React, { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '@/react-ui';
-import { BackroundPatternOne } from './background-patterns/background-pattern-one';
-import styles from './background-image-container.module.css';
+import React, { PropsWithChildren, forwardRef } from 'react';
 import { IImage } from '../../../types';
+import styles from './background-image-container.module.css';
 
 export interface IBackgroundImageContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -18,9 +17,7 @@ export const BackgroundImageContainer = forwardRef<
   const {
     src,
     alt,
-    backgroundPattern,
     darken,
-    attribution,
     coverage = 'full',
   } = image;
   return (
@@ -42,7 +39,6 @@ export const BackgroundImageContainer = forwardRef<
           darken && styles['background-image--darken']
         )}
       />
-      {backgroundPattern && <BackroundPatternOne />}
       <div
         className={cn(
           styles['inner-content'],
@@ -53,7 +49,7 @@ export const BackgroundImageContainer = forwardRef<
           coverage === 'split-bottom' && styles['inner-content--split-bottom']
         )}
       >
-        {children}
+        {/* {children} */}
       </div>
     </div>
   );
