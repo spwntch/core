@@ -5,29 +5,3 @@
 .split-pane {
   @apply h-full w-full;
 }
-
-.split-pane--left,
-.split-pane--right {
-  @apply md:w-[50%];
-}
-
-.split-pane--left {
-  @apply md:left-0;
-}
-
-.split-pane--right {
-  @apply md:right-0;
-}
-
-.split-pane--top,
-.split-pane--bottom {
-  @apply md:h-[50%];
-}
-
-.split-pane--top {
-  @apply md:top-0;
-}
-
-.split-pane--bottom {
-  @apply md:bottom-0;
-}

@@ -4,40 +4,26 @@ import styles from './split-layout.module.css';
 
 export interface ISplitLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
-  split: 'left' | 'right' | 'top' | 'bottom';
+  split: 'horizontal' | 'vertical';
+  flip?: boolean;
   containers: [ReactNode, ReactNode];
 }
 
 export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
-  ({ className, split, containers, ...props }, ref) => {
+  ({ className, split, flip, containers, ...props }, ref) => {
     return (
       <div
-        className={cn(styles['split-layout'], className)}
+        className={cn(
+          styles['split-layout'],
+          split === 'vertical' && 'flex-col',
+          flip && (split === 'horizontal' ? 'flex-row-reverse' : 'flex-col-reverse'),
+          className
+        )}
         ref={ref}
         {...props}
       >
-        <div
-          className={cn(
-            styles['split-pane'],
-            split === 'left' && styles['split-pane--left'],
-            split === 'right' && styles['split-pane--right'],
-            split === 'top' && styles['split-pane--top'],
-            split === 'bottom' && styles['split-pane--bottom']
-          )}
-        >
-          {containers[0]}
-        </div>
-        <div
-          className={cn(
-            styles['split-pane'],
-            split === 'left' && styles['split-pane--right'],
-            split === 'right' && styles['split-pane--left'],
-            split === 'top' && styles['split-pane--bottom'],
-            split === 'bottom' && styles['split-pane--top']
-          )}
-        >
-          {containers[1]}
-        </div>
+        <div className={styles['split-pane']}>{containers[0]}</div>
+        <div className={styles['split-pane']}>{containers[1]}</div>
       </div>
     );
   }
