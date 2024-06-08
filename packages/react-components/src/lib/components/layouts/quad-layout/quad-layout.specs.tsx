@@ -22,7 +22,7 @@ export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement 
   expect(results).toHaveNoViolations();
 };
 
-export const playFlipped = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+export const playFlipOne = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
 
   // Check if Pane One, Pane Two, Pane Three, and Pane Four are present

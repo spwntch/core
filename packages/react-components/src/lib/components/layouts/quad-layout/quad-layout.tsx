@@ -4,34 +4,22 @@ import styles from './quad-layout.module.css';
 
 export interface IQuadLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
-  flip?: boolean;
+  flipQuadrants?: [boolean, boolean, boolean, boolean];
   containers?: [ReactNode, ReactNode, ReactNode, ReactNode];
 }
 
 export const QuadLayout = forwardRef<HTMLDivElement, IQuadLayoutProps>(
-  ({ className, flip, containers, ...props }, ref) => {
-    const panes = flip && containers ? [containers[2], containers[3], containers[0], containers[1]] : containers;
+  ({ className, flipQuadrants = [false, false, false, false], containers, ...props }, ref) => {
     return (
       <div
         className={cn(styles['quad-layout'], className)}
         ref={ref}
         {...props}
       >
-        {containers ? (
-          <>
-            <div className={styles['pane']}>{panes ? panes[0] : 'Pane One'}</div>
-            <div className={styles['pane']}>{panes ? panes[1] : 'Pane Two'}</div>
-            <div className={styles['pane']}>{panes ? panes[2] : 'Pane Three'}</div>
-            <div className={styles['pane']}>{panes ? panes[3] : 'Pane Four'}</div>
-          </>
-        ) : (
-          <>
-            <div className={styles['pane']}>Pane One</div>
-            <div className={styles['pane']}>Pane Two</div>
-            <div className={styles['pane']}>Pane Three</div>
-            <div className={styles['pane']}>Pane Four</div>
-          </>
-        )}
+        <div className={cn(styles['pane'], flipQuadrants[0] && styles['flip'])}>{containers ? containers[0] : 'Pane One'}</div>
+        <div className={cn(styles['pane'], flipQuadrants[1] && styles['flip'])}>{containers ? containers[1] : 'Pane Two'}</div>
+        <div className={cn(styles['pane'], flipQuadrants[2] && styles['flip'])}>{containers ? containers[2] : 'Pane Three'}</div>
+        <div className={cn(styles['pane'], flipQuadrants[3] && styles['flip'])}>{containers ? containers[3] : 'Pane Four'}</div>
       </div>
     );
   }

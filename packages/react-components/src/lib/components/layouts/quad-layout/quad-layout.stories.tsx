@@ -3,14 +3,14 @@ import { Meta, StoryObj } from '@storybook/react';
 import { QuadLayout } from './quad-layout';
 import { Card } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
-import { playBasic, playFlipped } from './quad-layout.specs';
+import { playBasic, playFlipOne } from './quad-layout.specs';
 
 const componentDescription = `
 ### Overview
 The \`QuadLayout\` component divides the container into four sections (quadrants), allowing users to place other components in each section.
 
 ### Props
-- \`flip\`: Reverses the order of the quadrants.
+- \`flipQuadrants\`: An array of four boolean values to flip each quadrant independently.
 - \`containers\`: An array of four elements to be placed in the quadrants.
 
 ### Example
@@ -36,9 +36,9 @@ const meta: Meta<typeof QuadLayout> = {
     },
   },
   argTypes: {
-    flip: {
-      description: 'Reverses the order of the quadrants',
-      control: 'boolean',
+    flipQuadrants: {
+      description: 'An array of four boolean values to flip each quadrant independently',
+      control: 'object',
     },
     className: {
       description: 'Additional class name(s) for the container',
@@ -90,13 +90,13 @@ export const Basic: Story = {
 };
 
 /**
- * Flipped QuadLayout example.
- * Demonstrates the QuadLayout component with a flipped layout.
+ * Flip One QuadLayout example.
+ * Demonstrates the QuadLayout component with the first quadrant flipped.
  */
-export const Flipped: Story = {
+export const FlipOne: Story = {
   args: {
     // ...args,
-    flip: true,
+    flipQuadrants: [true, false, false, false],
   },
-  play: playFlipped,
+  play: playFlipOne,
 };

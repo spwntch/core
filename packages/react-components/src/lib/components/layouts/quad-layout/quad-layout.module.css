@@ -9,3 +9,7 @@
 .pane:nth-child(odd) {
   @apply bg-gray-300;
 }
+
+.flip {
+  @apply transform rotate-180;
+}
