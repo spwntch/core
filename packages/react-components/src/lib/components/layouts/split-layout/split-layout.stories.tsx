@@ -3,11 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { SplitLayout } from './split-layout';
 import { Card } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
-import { within } from '@storybook/testing-library';
-import { axe, toHaveNoViolations } from 'jest-axe';
-import { expect } from '@storybook/jest';
-
-expect.extend(toHaveNoViolations);
+import { playBasic, playFlipped, playVertical } from './split-layout.specs';
 
 const componentDescription = `
 ### Overview
@@ -54,6 +50,10 @@ const meta: Meta<typeof SplitLayout> = {
       description: 'Additional class name(s) for the container',
       control: 'text',
     },
+    containers: {
+      description: 'An array of two elements to be placed in the split sections',
+      control: 'object',
+    },
   },
 };
 
@@ -72,9 +72,8 @@ const paneTwo = (
   </div>
 );
 
-const args = {
+const defaultArgs = {
   split: 'horizontal' as 'horizontal' | 'vertical',
-  containers: [paneOne, paneTwo],
 };
 
 /**
@@ -82,20 +81,11 @@ const args = {
  * Demonstrates a basic usage of the SplitLayout component with a horizontal split.
  */
 export const Basic: Story = {
-  args,
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    // Check if Pane One and Pane Two are present
-    const paneOneContent = await canvas.findByText('Pane One Content');
-    const paneTwoContent = await canvas.findByText('Pane Two Content');
-    expect(paneOneContent).toBeInTheDocument();
-    expect(paneTwoContent).toBeInTheDocument();
-
-    // Accessibility check
-    const results = await axe(canvasElement);
-    expect(results).toHaveNoViolations();
+  args: {
+    ...defaultArgs,
+    containers: [paneOne, paneTwo],
   },
+  play: playBasic,
 };
 
 /**
@@ -104,23 +94,11 @@ export const Basic: Story = {
  */
 export const FlippedHorizontalSplit: Story = {
   args: {
-    split: 'horizontal',
+    ...defaultArgs,
     containers: [paneOne, paneTwo],
     flip: true,
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    // Check if Pane One and Pane Two are present
-    const paneOneContent = await canvas.findByText('Pane One Content');
-    const paneTwoContent = await canvas.findByText('Pane Two Content');
-    expect(paneOneContent).toBeInTheDocument();
-    expect(paneTwoContent).toBeInTheDocument();
-
-    // Accessibility check
-    const results = await axe(canvasElement);
-    expect(results).toHaveNoViolations();
-  },
+  play: playFlipped,
 };
 
 /**
@@ -129,22 +107,11 @@ export const FlippedHorizontalSplit: Story = {
  */
 export const VerticalSplit: Story = {
   args: {
+    ...defaultArgs,
     split: 'vertical',
     containers: [paneOne, paneTwo],
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    // Check if Pane One and Pane Two are present
-    const paneOneContent = await canvas.findByText('Pane One Content');
-    const paneTwoContent = await canvas.findByText('Pane Two Content');
-    expect(paneOneContent).toBeInTheDocument();
-    expect(paneTwoContent).toBeInTheDocument();
-
-    // Accessibility check
-    const results = await axe(canvasElement);
-    expect(results).toHaveNoViolations();
-  },
+  play: playVertical,
 };
 
 /**
@@ -153,21 +120,10 @@ export const VerticalSplit: Story = {
  */
 export const FlippedVerticalSplit: Story = {
   args: {
+    ...defaultArgs,
     split: 'vertical',
     containers: [paneOne, paneTwo],
     flip: true,
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    // Check if Pane One and Pane Two are present
-    const paneOneContent = await canvas.findByText('Pane One Content');
-    const paneTwoContent = await canvas.findByText('Pane Two Content');
-    expect(paneOneContent).toBeInTheDocument();
-    expect(paneTwoContent).toBeInTheDocument();
-
-    // Accessibility check
-    const results = await axe(canvasElement);
-    expect(results).toHaveNoViolations();
-  },
+  play: playFlipped,
 };

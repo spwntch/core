@@ -6,7 +6,7 @@ export interface ISplitLayoutProps extends React.HTMLAttributes<HTMLDivElement> 
   className?: string;
   split?: 'horizontal' | 'vertical';
   flip?: boolean;
-  containers: [ReactNode, ReactNode];
+  containers?: [ReactNode, ReactNode];
 }
 
 export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
@@ -16,14 +16,21 @@ export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
         className={cn(
           styles['split-layout'],
           split === 'vertical' && 'flex-col',
-          flip && (split === 'horizontal' ? 'flex-row-reverse' : 'flex-col-reverse'),
+          flip &&
+            (split === 'horizontal' ? 'flex-row-reverse' : 'flex-col-reverse'),
           className
         )}
         ref={ref}
         {...props}
       >
-        <div className={styles['split-pane']}>{containers[0]}</div>
-        <div className={styles['split-pane']}>{containers[1]}</div>
+        {containers ? (
+          <>
+            <div className={styles['split-pane']}>{containers[0]}</div>
+            <div className={styles['split-pane']}>{containers[1]}</div>
+          </>
+        ) : (
+          <div className={styles['split-pane']}>Pane One</div>
+        )}
       </div>
     );
   }

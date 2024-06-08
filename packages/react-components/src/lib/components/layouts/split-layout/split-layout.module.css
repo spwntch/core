@@ -1,7 +1,7 @@
 .split-layout {
-  @apply h-full w-full p-0 relative flex;
+  @apply flex h-full w-full;
 }
 
 .split-pane {
-  @apply h-full w-full;
+  @apply flex-1;
 }
