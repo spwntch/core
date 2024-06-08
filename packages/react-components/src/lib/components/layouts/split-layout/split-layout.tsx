@@ -25,18 +25,18 @@ export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
             split === 'bottom' && styles['split-pane--bottom']
           )}
         >
-          {split === 'left' || split === 'top' ? containers[0] : containers[1]}
+          {containers[0]}
         </div>
         <div
           className={cn(
-            styles['inner-content'],
-            split === 'left' && styles['inner-content--right'],
-            split === 'right' && styles['inner-content--left'],
-            split === 'top' && styles['inner-content--bottom'],
-            split === 'bottom' && styles['inner-content--top']
+            styles['split-pane'],
+            split === 'left' && styles['split-pane--right'],
+            split === 'right' && styles['split-pane--left'],
+            split === 'top' && styles['split-pane--bottom'],
+            split === 'bottom' && styles['split-pane--top']
           )}
         >
-          {split === 'left' || split === 'top' ? containers[1] : containers[0]}
+          {containers[1]}
         </div>
       </div>
     );

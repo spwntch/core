@@ -1,9 +1,9 @@
 .split-layout {
-  @apply h-full w-full p-0 relative flex flex-col md:flex-row;
+  @apply h-full w-full p-0 relative flex;
 }
 
 .split-pane {
-  @apply absolute inset-0 -z-10 h-full w-full;
+  @apply h-full w-full;
 }
 
 .split-pane--left,
@@ -30,24 +30,4 @@
 
 .split-pane--bottom {
   @apply md:bottom-0;
-}
-
-.inner-content {
-  @apply relative z-10 flex;
-}
-
-.inner-content--left {
-  @apply md:pl-[50%];
-}
-
-.inner-content--right {
-  @apply md:pr-[50%];
-}
-
-.inner-content--top {
-  @apply md:pt-[50%];
-}
-
-.inner-content--bottom {
-  @apply md:pb-[50%];
 }

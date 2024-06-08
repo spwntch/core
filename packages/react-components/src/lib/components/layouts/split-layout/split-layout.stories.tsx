@@ -2,6 +2,7 @@ import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { SplitLayout } from './split-layout';
 import { Card } from '@/react-ui';
+import { withFullPage } from '../../../storybook/storybook-decorators';
 
 const componentDescription = `
 ### Overview
@@ -23,6 +24,7 @@ This component is flexible and can be used to create various layouts such as spl
 const meta: Meta<typeof SplitLayout> = {
   title: 'components/layouts/split-layout',
   component: SplitLayout,
+  decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -38,9 +40,9 @@ const meta: Meta<typeof SplitLayout> = {
       control: 'select',
       options: ['left', 'right', 'top', 'bottom'],
     },
-    containers: {
-      description: 'An array of two elements to be placed in the split sections',
-      // control: 'array',
+    className: {
+      description: 'Additional class name(s) for the container',
+      control: 'text',
     },
   },
 };
