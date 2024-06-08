@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { QuadLayout } from './quad-layout';
+import { QuadLayout, IQuadLayoutProps } from './quad-layout';
 import { Card } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { playBasic, playFlipOne } from './quad-layout.specs';
@@ -56,27 +56,27 @@ export default meta;
 type Story = StoryObj<typeof QuadLayout>;
 
 const paneOne = (
-  <div className="bg-gray-200 h-full w-full flex items-center justify-center">
+  <div className="bg-blue-200 h-full w-full flex items-center justify-center">
     <Card className="p-4">Pane One Content</Card>
   </div>
 );
 const paneTwo = (
-  <div className="bg-gray-300 h-full w-full flex items-center justify-center">
+  <div className="bg-green-200 h-full w-full flex items-center justify-center">
     <Card className="p-4">Pane Two Content</Card>
   </div>
 );
 const paneThree = (
-  <div className="bg-gray-400 h-full w-full flex items-center justify-center">
+  <div className="bg-yellow-200 h-full w-full flex items-center justify-center">
     <Card className="p-4">Pane Three Content</Card>
   </div>
 );
 const paneFour = (
-  <div className="bg-gray-500 h-full w-full flex items-center justify-center">
+  <div className="bg-red-200 h-full w-full flex items-center justify-center">
     <Card className="p-4">Pane Four Content</Card>
   </div>
 );
 
-const args = {
+const defaultArgs: IQuadLayoutProps = {
   containers: [paneOne, paneTwo, paneThree, paneFour],
 };
 
@@ -85,7 +85,7 @@ const args = {
  * Demonstrates a basic usage of the QuadLayout component.
  */
 export const Basic: Story = {
-  // args,
+  args: defaultArgs,
   play: playBasic,
 };
 
@@ -95,7 +95,7 @@ export const Basic: Story = {
  */
 export const FlipOne: Story = {
   args: {
-    // ...args,
+    ...defaultArgs,
     flipQuadrants: [true, false, false, false],
   },
   play: playFlipOne,

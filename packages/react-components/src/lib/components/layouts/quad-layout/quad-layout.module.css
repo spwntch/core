@@ -3,7 +3,7 @@
 }
 
 .pane {
-  @apply flex items-center justify-center bg-gray-200 h-full w-full;
+  @apply flex items-center justify-center h-full w-full;
 }
 
 .pane:nth-child(odd) {
