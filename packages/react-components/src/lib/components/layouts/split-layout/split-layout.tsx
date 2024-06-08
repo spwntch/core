@@ -4,13 +4,13 @@ import styles from './split-layout.module.css';
 
 export interface ISplitLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
-  split: 'horizontal' | 'vertical';
+  split?: 'horizontal' | 'vertical';
   flip?: boolean;
   containers: [ReactNode, ReactNode];
 }
 
 export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
-  ({ className, split, flip, containers, ...props }, ref) => {
+  ({ className, split = 'horizontal', flip, containers, ...props }, ref) => {
     return (
       <div
         className={cn(
