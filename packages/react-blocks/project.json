@@ -1,0 +1,9 @@
+{
+  "name": "react-blocks",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-blocks/src",
+  "projectType": "library",
+  "tags": ["tech:react"],
+  "// targets": "to see all targets run: nx show project react-blocks --web",
+  "targets": {}
+}

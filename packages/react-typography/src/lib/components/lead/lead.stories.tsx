@@ -1,6 +1,5 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Lead, ILeadProps } from './lead';
+import { ILeadProps, Lead } from './lead';
 
 export default {
   title: 'typography/lead',

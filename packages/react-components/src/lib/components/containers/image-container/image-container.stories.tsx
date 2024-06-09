@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  BackgroundImageContainer,
+  ImageContainer,
   IBackgroundImageContainerProps,
 } from './image-container';
 import { Card } from '@/react-ui';
@@ -32,9 +32,9 @@ It serves as a versatile container for displaying content with a styled backgrou
 This component is flexible and can be used in various sections of a webpage to enhance the visual appeal by adding a background image.
 `;
 
-const meta: Meta<typeof BackgroundImageContainer> = {
+const meta: Meta<typeof ImageContainer> = {
   title: 'components/containers/image-container',
-  component: BackgroundImageContainer,
+  component: ImageContainer,
   decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
@@ -74,7 +74,7 @@ const meta: Meta<typeof BackgroundImageContainer> = {
 
 export default meta;
 
-type Story = StoryObj<typeof BackgroundImageContainer>;
+type Story = StoryObj<typeof ImageContainer>;
 
 const image = {
   src: '/images/guy-sitting-at-tech-control-station.webp',
@@ -159,7 +159,6 @@ export const Blurred: Story = {
   },
   play: playBasic,
 };
-
 
 /**
  * Edge Blurred BackgroundImageContainer example.

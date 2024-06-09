@@ -12,7 +12,7 @@ export interface IBackgroundImageContainerProps
   blur?: 'edges' | boolean;
 }
 
-export const BackgroundImageContainer = forwardRef<
+export const ImageContainer = forwardRef<
   HTMLDivElement,
   IBackgroundImageContainerProps
 >(({ className, image, rounded, blur, children, ...props }, ref) => {
@@ -36,6 +36,6 @@ export const BackgroundImageContainer = forwardRef<
   );
 });
 
-BackgroundImageContainer.displayName = 'BackgroundImageContainer';
+ImageContainer.displayName = 'BackgroundImageContainer';
 
-export default BackgroundImageContainer;
+export default ImageContainer;

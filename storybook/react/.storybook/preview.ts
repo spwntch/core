@@ -24,6 +24,7 @@ export const parameters: Parameters = {
         ['complete-example', '*'],
         'components',
         ['layouts', 'containers',  'groups', 'grids', 'carousels', 'content', 'media', 'heroes', '*'],
+        'blocks',
         'shell',
         [
           'theme-provider',
