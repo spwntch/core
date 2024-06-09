@@ -2,11 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 import LogoCloud, { ILogoCloudProps } from './logo-cloud';
-import {
-  playBasic,
-  playWithTitle,
-  playWithoutTitle,
-} from './logo-cloud.specs';
+import { playBasic, playWithTitle, playWithoutTitle } from './logo-cloud.specs';
 
 const componentDescription = `
 ### Overview
@@ -64,6 +60,17 @@ export default meta;
 
 type Story = StoryObj<typeof LogoCloud>;
 
+const logos = [
+  { src: '/client-logos/nairobi-colored.svg', alt: 'This is a fake logo.' },
+  { src: '/client-logos/hamilton-colored.svg', alt: 'This is a fake logo.' },
+  { src: '/client-logos/theo-colored.svg', alt: 'This is a fake logo.' },
+  { src: '/client-logos/brooklyn-colored.svg', alt: 'This is a fake logo.' },
+  { src: '/client-logos/oslo-colored.svg', alt: 'This is a fake logo.' },
+  { src: '/client-logos/phoenix-colored.svg', alt: 'This is a fake logo.' },
+  { src: '/client-logos/scale-colored.svg', alt: 'This is a fake logo.' },
+  { src: '/client-logos/milano-colored.svg', alt: 'This is a fake logo.' },
+];
+
 /**
  * Basic LogoCloud example.
  * Demonstrates a basic usage of the LogoCloud component.
@@ -71,12 +78,7 @@ type Story = StoryObj<typeof LogoCloud>;
 export const Basic: Story = {
   args: {
     title: 'Our Partners',
-    logos: [
-      { src: '/client-logos/nairobi-colored.svg', alt: 'This is a fake logo.' },
-      { src: '/client-logos/hamilton-colored.svg', alt: 'This is a fake logo.' },
-      { src: '/client-logos/theo-colored.svg', alt: 'This is a fake logo.' },
-      { src: '/client-logos/brooklyn-colored.svg', alt: 'This is a fake logo.' },
-    ],
+    logos,
   },
   play: playBasic,
 };
@@ -93,6 +95,10 @@ export const WithPrimaryBackground: Story = {
       { src: '/client-logos/hamilton-white.svg', alt: 'This is a fake logo.' },
       { src: '/client-logos/theo-white.svg', alt: 'This is a fake logo.' },
       { src: '/client-logos/brooklyn-white.svg', alt: 'This is a fake logo.' },
+      { src: '/client-logos/oslo-white.svg', alt: 'This is a fake logo.' },
+      { src: '/client-logos/phoenix-white.svg', alt: 'This is a fake logo.' },
+      { src: '/client-logos/scale-white.svg', alt: 'This is a fake logo.' },
+      { src: '/client-logos/milano-white.svg', alt: 'This is a fake logo.' },
     ],
     className: '!bg-primary !text-primary-foreground',
   },
@@ -105,12 +111,7 @@ export const WithPrimaryBackground: Story = {
  */
 export const WithoutTitle: Story = {
   args: {
-    logos: [
-      { src: '/client-logos/nairobi-colored.svg', alt: 'This is a fake logo.' },
-      { src: '/client-logos/hamilton-colored.svg', alt: 'This is a fake logo.' },
-      { src: '/client-logos/theo-colored.svg', alt: 'This is a fake logo.' },
-      { src: '/client-logos/brooklyn-colored.svg', alt: 'This is a fake logo.' },
-    ],
+    logos,
   },
   play: playWithoutTitle,
 };
