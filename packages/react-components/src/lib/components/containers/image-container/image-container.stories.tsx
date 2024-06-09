@@ -1,9 +1,12 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { BackgroundImageContainer, IBackgroundImageContainerProps } from './background-image-container';
+import {
+  BackgroundImageContainer,
+  IBackgroundImageContainerProps,
+} from './image-container';
 import { Card } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
-import { playBasic } from './background-image-container.specs';
+import { playBasic } from './image-container.specs';
 
 const componentDescription = `
 ### Overview
@@ -14,8 +17,8 @@ It serves as a versatile container for displaying content with a styled backgrou
 ### Props
 - \`className\`: Additional class name(s) for the container.
 - \`image\`: The image object containing the \`src\`, \`alt\`, and \`darken\` properties.
-- \`rounded\`: The rounding size (\`xs\`, \`sm\`, \`md\`, \`lg\`, \`xl\`, \`2xl\`).
-- \`blur\`: A boolean indicating if the background image should be blurred.
+- \`rounded\`: The rounding size (\`xs\`, \`sm\`, \`md\`, \`lg\`, \`xl\`, \`xxl\`, \`full\`).
+- \`blur\`: A boolean indicating if the background image should be blurred, or the string 'edges' to blur only the edges.
 - \`children\`: The content to be displayed inside the container.
 
 ### Example
@@ -30,7 +33,7 @@ This component is flexible and can be used in various sections of a webpage to e
 `;
 
 const meta: Meta<typeof BackgroundImageContainer> = {
-  title: 'components/containers/background-image-container',
+  title: 'components/containers/image-container',
   component: BackgroundImageContainer,
   decorators: [withFullPage],
   tags: ['autodocs'],
@@ -54,11 +57,13 @@ const meta: Meta<typeof BackgroundImageContainer> = {
     rounded: {
       description: 'The rounding size',
       control: 'select',
-      options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
     },
     blur: {
-      description: 'A boolean indicating if the background image should be blurred',
-      control: 'boolean',
+      description:
+        'A boolean indicating if the background image should be blurred',
+      control: 'select',
+      options: ['edges', true, false],
     },
     children: {
       description: 'The content to be displayed inside the container',
@@ -106,7 +111,7 @@ export const Light: Story = {
       darken: false,
     },
     children: (
-      <div className="h-full flex items-center justify-center" >
+      <div className="h-full flex items-center justify-center">
         <Card className="p-4 opacity-75">Your Content Here</Card>
       </div>
     ),
@@ -138,7 +143,7 @@ export const CustomContent: Story = {
 export const Rounded: Story = {
   args: {
     ...defaultArgs,
-    rounded: 'lg',
+    rounded: 'xxl',
   },
   play: playBasic,
 };
@@ -150,19 +155,6 @@ export const Rounded: Story = {
 export const Blurred: Story = {
   args: {
     ...defaultArgs,
-    blur: true,
-  },
-  play: playBasic,
-};
-
-/**
- * Rounded and Blurred BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with rounded corners and a blurred background image.
- */
-export const RoundedBlurred: Story = {
-  args: {
-    ...defaultArgs,
-    rounded: 'xxl',
     blur: true,
   },
   play: playBasic,

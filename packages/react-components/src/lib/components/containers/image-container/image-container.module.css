@@ -1,51 +1,58 @@
-.background-container {
+.container {
   @apply h-full w-full p-0 relative;
 }
 
-.background-image {
+.image {
   @apply absolute inset-0 -z-10 h-full w-full object-cover;
 }
 
-.background-image--darken {
+.image--darken {
   @apply brightness-50;
 }
 
-.background-image--blur {
+.image--blur {
   @apply filter blur-md;
 }
 
-.background-image--blur-edges {
+.image--blur-edges {
   @apply filter blur-none;
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, transparent 100%);
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 60%,
+    transparent 100%
+  );
   mask-size: cover;
   mask-repeat: no-repeat;
 }
-
-
-
-
 
 .inner-content {
   @apply relative h-full w-full;
 }
 
-
-.sm-rounded {
+.xs-rounded {
   @apply rounded-sm;
 }
 
-.md-rounded {
+.sm-rounded {
   @apply rounded-md;
 }
 
-.lg-rounded {
+.md-rounded {
   @apply rounded-lg;
 }
 
-.xl-rounded {
+.lg-rounded {
   @apply rounded-xl;
 }
 
-.xxl-rounded {
+.xl-rounded {
   @apply rounded-2xl;
+}
+
+.xxl-rounded {
+  @apply rounded-3xl;
+}
+
+.full-rounded {
+  @apply rounded-full;
 }
