@@ -23,7 +23,7 @@ export const parameters: Parameters = {
         'typography',
         ['complete-example', '*'],
         'components',
-        ['layouts', 'containers',  'groups', 'grids', 'content', 'heroes', '*'],
+        ['layouts', 'containers',  'groups', 'grids', 'carousels', 'content', 'media', 'heroes', '*'],
         'shell',
         [
           'theme-provider',
