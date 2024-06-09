@@ -1,0 +1,9 @@
+{
+  "name": "reat-page-sectiions",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/reat-page-sectiions/src",
+  "projectType": "library",
+  "tags": ["tech:react"],
+  "// targets": "to see all targets run: nx show project reat-page-sectiions --web",
+  "targets": {}
+}

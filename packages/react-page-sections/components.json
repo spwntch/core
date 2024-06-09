@@ -9,7 +9,7 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "@/react-content/lib/components",
-    "utils": "@/react-content/lib/utils"
+    "components": "@/reat-page-sectiions/lib/components",
+    "utils": "@/reat-page-sectiions/lib/utils"
   }
 }
