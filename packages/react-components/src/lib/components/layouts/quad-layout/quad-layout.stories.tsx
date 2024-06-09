@@ -37,7 +37,8 @@ const meta: Meta<typeof QuadLayout> = {
   },
   argTypes: {
     flipQuadrants: {
-      description: 'An array of four boolean values to flip each quadrant independently',
+      description:
+        'An array of four boolean values to flip each quadrant independently',
       control: 'object',
     },
     className: {
@@ -87,16 +88,4 @@ const defaultArgs: IQuadLayoutProps = {
 export const Basic: Story = {
   args: defaultArgs,
   play: playBasic,
-};
-
-/**
- * Flip One QuadLayout example.
- * Demonstrates the QuadLayout component with the first quadrant flipped.
- */
-export const FlipOne: Story = {
-  args: {
-    ...defaultArgs,
-    flipQuadrants: [true, false, false, false],
-  },
-  play: playFlipOne,
 };

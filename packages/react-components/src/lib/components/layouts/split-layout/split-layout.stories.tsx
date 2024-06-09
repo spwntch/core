@@ -26,10 +26,9 @@ This component is flexible and can be used to create various layouts such as spl
 const meta: Meta<typeof SplitLayout> = {
   title: 'components/layouts/split-layout',
   component: SplitLayout,
-  decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
-    layout: 'fullscreen',
+    layout: 'centered',
     docs: {
       description: {
         component: componentDescription,
@@ -62,12 +61,12 @@ export default meta;
 type Story = StoryObj<typeof SplitLayout>;
 
 const paneOne = (
-  <div className="bg-gray-200 h-full w-full flex items-center justify-center">
+  <div className="bg-gray-200 h-full w-full flex items-center justify-center p-16">
     <Card className="p-4">Pane One Content</Card>
   </div>
 );
 const paneTwo = (
-  <div className="bg-gray-300 h-full w-full flex items-center justify-center">
+  <div className="bg-gray-300 h-full w-full flex items-center justify-center p-16">
     <Card className="p-4">Pane Two Content</Card>
   </div>
 );

@@ -31,7 +31,7 @@ export const BackgroundImageContainer = forwardRef<
             : blur === true && styles['image--blur']
         )}
       />
-      <div className={styles['inner-content']}>{children}</div>
+      <div className={cn(styles['inner-content'])}>{children}</div>
     </div>
   );
 });

@@ -322,8 +322,6 @@ importers:
 
   packages/react-mdx: {}
 
-  packages/react-page-sections: {}
-
   packages/react-shell:
     dependencies:
       '@spwntch/components':
