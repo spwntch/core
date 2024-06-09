@@ -54,6 +54,7 @@ export const Basic: Story = {
   args: {
     image,
     innerContent,
-    className: '',
+    className: 'text-white',
+    vAlign: 'bottom',
   },
 };
