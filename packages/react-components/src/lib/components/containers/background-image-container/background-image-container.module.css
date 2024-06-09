@@ -1,52 +1,51 @@
-/* background-image-container.module.css */
-
 .background-container {
   @apply h-full w-full p-0 relative;
 }
 
 .background-image {
-  @apply absolute inset-0 -z-10 h-full w-full object-cover ;
-}
-
-.background-image--split-left {
-  @apply md:w-[50%];
-}
-
-.background-image--split-right {
-  @apply md:w-[50%] md:ml-[50%];
-}
-
-.background-image--split-top {
-  @apply md:h-[50%];
-}
-
-.background-image--split-bottom {
-  @apply md:h-[50%] mt-[50%];
+  @apply absolute inset-0 -z-10 h-full w-full object-cover;
 }
 
 .background-image--darken {
   @apply brightness-50;
 }
 
+.background-image--blur {
+  @apply filter blur-md;
+}
+
+.background-image--blur-edges {
+  @apply filter blur-none;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, transparent 100%);
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+
+
+
+
 .inner-content {
+  @apply relative h-full w-full;
 }
 
-.inner-content--full {
-  @apply h-full;
+
+.sm-rounded {
+  @apply rounded-sm;
 }
 
-.inner-content--split-left {
-  @apply md:pl-[50%] h-full;
+.md-rounded {
+  @apply rounded-md;
 }
 
-.inner-content--split-right {
-  @apply md:pr-[50%] h-full;
+.lg-rounded {
+  @apply rounded-lg;
 }
 
-.inner-content--split-top {
-  @apply relative top-[50%] h-[50%];
+.xl-rounded {
+  @apply rounded-xl;
 }
 
-.inner-content--split-bottom {
-  @apply relative top-0 h-[50%];
+.xxl-rounded {
+  @apply rounded-2xl;
 }

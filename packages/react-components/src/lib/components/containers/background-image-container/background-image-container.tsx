@@ -8,21 +8,22 @@ export interface IBackgroundImageContainerProps
     PropsWithChildren {
   className?: string;
   image: IImage;
+  rounded?:  'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  blur?: 'edges' | boolean;
 }
 
 export const BackgroundImageContainer = forwardRef<
   HTMLDivElement,
   IBackgroundImageContainerProps
->(({ className, image, children, ...props }, ref) => {
-  const {
-    src,
-    alt,
-    darken,
-    coverage = 'full',
-  } = image;
+>(({ className, image, rounded, blur, children, ...props }, ref) => {
+  const { src, alt, darken } = image;
   return (
     <div
-      className={cn(styles['background-container'], className)}
+      className={cn(
+        styles['background-container'],
+        rounded && styles[`${rounded}-rounded`],
+        className
+      )}
       ref={ref}
       {...props}
     >
@@ -31,26 +32,12 @@ export const BackgroundImageContainer = forwardRef<
         alt={alt || `website image with src: ${src}`}
         className={cn(
           styles['background-image'],
-          coverage === 'split-left' && styles['background-image--split-left'],
-          coverage === 'split-right' && styles['background-image--split-right'],
-          coverage === 'split-top' && styles['background-image--split-top'],
-          coverage === 'split-bottom' &&
-            styles['background-image--split-bottom'],
-          darken && styles['background-image--darken']
+          darken && styles['background-image--darken'],
+          blur === 'edges' ? styles['background-image--blur-edges']:
+          blur === true && styles['background-image--blur']
         )}
       />
-      <div
-        className={cn(
-          styles['inner-content'],
-          coverage === 'full' && styles['inner-content--full'],
-          coverage === 'split-left' && styles['inner-content--split-left'],
-          coverage === 'split-right' && styles['inner-content--split-right'],
-          coverage === 'split-top' && styles['inner-content--split-top'],
-          coverage === 'split-bottom' && styles['inner-content--split-bottom']
-        )}
-      >
-        {/* {children} */}
-      </div>
+      <div className={styles['inner-content']}>{children}</div>
     </div>
   );
 });

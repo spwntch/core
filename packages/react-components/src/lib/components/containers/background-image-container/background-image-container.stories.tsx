@@ -1,26 +1,26 @@
-import { Card } from '@/react-ui';
+import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
+import { BackgroundImageContainer, IBackgroundImageContainerProps } from './background-image-container';
+import { Card } from '@/react-ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
-import BackgroundImageContainer from './background-image-container';
 import { playBasic } from './background-image-container.specs';
 
 const componentDescription = `
 ### Overview
-The \`BackgroundImageContainer\` component displays a background image with optional darkening and a background pattern. 
+The \`BackgroundImageContainer\` component displays a background image with optional darkening, rounding, and blurring.
 
 It serves as a versatile container for displaying content with a styled background.
 
 ### Props
 - \`className\`: Additional class name(s) for the container.
-- \`src\`: The URL of the background image.
-- \`darkenImage\`: Whether to darken the background image.
-- \`showBackgroundPattern\`: Whether to show a background pattern.
-- \`coverage\`: The coverage style of the background image (\`full\`, \`split-left\`, \`split-right\`, \`split-top\`, \`split-bottom\`).
+- \`image\`: The image object containing the \`src\`, \`alt\`, and \`darken\` properties.
+- \`rounded\`: The rounding size (\`xs\`, \`sm\`, \`md\`, \`lg\`, \`xl\`, \`2xl\`).
+- \`blur\`: A boolean indicating if the background image should be blurred.
 - \`children\`: The content to be displayed inside the container.
 
 ### Example
 \`\`\`
-<BackgroundImageContainer src="/path/to/image.jpg" darkenImage showBackgroundPattern>
+<BackgroundImageContainer image={{ src: '/path/to/image.jpg', darken: true }} rounded="lg" blur>
   <Content />
 </BackgroundImageContainer>
 \`\`\`
@@ -45,16 +45,24 @@ const meta: Meta<typeof BackgroundImageContainer> = {
   argTypes: {
     className: {
       description: 'Additional class name(s) for the container',
-      type: 'string',
+      control: 'text',
     },
     image: {
       description: 'The image object passed to the component',
-      // type: 'object',
-      // defaultValue: '/images/guy-sitting-at-tech-control-station.webp',
+      control: 'object',
+    },
+    rounded: {
+      description: 'The rounding size',
+      control: 'select',
+      options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+    },
+    blur: {
+      description: 'A boolean indicating if the background image should be blurred',
+      control: 'boolean',
     },
     children: {
       description: 'The content to be displayed inside the container',
-      type: 'string',
+      control: 'object',
     },
   },
 };
@@ -63,18 +71,43 @@ export default meta;
 
 type Story = StoryObj<typeof BackgroundImageContainer>;
 
+const image = {
+  src: '/images/guy-sitting-at-tech-control-station.webp',
+  alt: 'Guy sitting at tech control station',
+  darken: true,
+};
+
+const defaultArgs: IBackgroundImageContainerProps = {
+  image,
+  children: (
+    <div className="h-full flex items-center justify-center">
+      <Card className="p-4 opacity-75">Your Content Here</Card>
+    </div>
+  ),
+};
+
 /**
  * Basic BackgroundImageContainer example.
  * Demonstrates a basic usage of the BackgroundImageContainer component.
  */
 export const Basic: Story = {
+  args: defaultArgs,
+  play: playBasic,
+};
+
+/**
+ * Light BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component without darkening the background image.
+ */
+export const Light: Story = {
   args: {
     image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
+      ...image,
+      darken: false,
     },
     children: (
-      <div className="h-full flex items-center justify-center">
-        <Card className="p-4 opacity-50">Your Content Here</Card>
+      <div className="h-full flex items-center justify-center" >
+        <Card className="p-4 opacity-75">Your Content Here</Card>
       </div>
     ),
   },
@@ -82,73 +115,16 @@ export const Basic: Story = {
 };
 
 /**
- * Darkened BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with a darkened background image.
+ * Custom Content BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with custom content inside.
  */
-export const Darkened: Story = {
+export const CustomContent: Story = {
   args: {
-    image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
-      darken: true,
-    },
+    image,
     children: (
-      <div className="h-full flex items-center justify-center">
-        <Card className="p-4 opacity-50">Your Content Here</Card>
-      </div>
-    ),
-  },
-  // play: playAccessibilityTest,
-};
-
-/**
- * Multiple Items BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with multiple items inside.
- */
-export const MultipleItems: Story = {
-  args: {
-    image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
-    },
-    children: (
-      <div className="h-full flex items-center justify-center">
-        <div className="grid grid-cols-2 gap-8">
-          <Card className="p-4 opacity-50">Content item 1</Card>
-          <Card className="p-4 opacity-50">Content item 2</Card>
-          <Card className="p-4 opacity-50">Content item 3</Card>
-          <Card className="p-4 opacity-50">Content item 4</Card>
-        </div>
-      </div>
-    ),
-  },
-  // play: playMultipleItems,
-};
-
-/**
- * Empty BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with no content inside.
- */
-export const EmptyContainer: Story = {
-  args: {
-    image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
-    },
-  },
-  // play: playEmptyContainer,
-};
-
-/**
- * Split Left BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with split-left coverage.
- */
-export const SplitLeft: Story = {
-  args: {
-    image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
-      coverage: 'split-left',
-    },
-    children: (
-      <div className="h-full flex items-center justify-center">
-        <Card className="p-4 opacity-50">Your Content Here</Card>
+      <div className="h-full flex flex-col items-center justify-center">
+        <Card className="p-4 mb-4 opacity-75">Custom Content 1</Card>
+        <Card className="p-4 opacity-75">Custom Content 2</Card>
       </div>
     ),
   },
@@ -156,58 +132,51 @@ export const SplitLeft: Story = {
 };
 
 /**
- * Split Right BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with split-right coverage.
+ * Rounded BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with rounded corners.
  */
-export const SplitRight: Story = {
+export const Rounded: Story = {
   args: {
-    image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
-      coverage: 'split-right',
-    },
-    children: (
-      <div className="h-full flex items-center justify-center">
-        <Card className="p-4 opacity-50">Your Content Here</Card>
-      </div>
-    ),
+    ...defaultArgs,
+    rounded: 'lg',
   },
   play: playBasic,
 };
 
 /**
- * Split Top BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with split-top coverage.
+ * Blurred BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with a blurred background image.
  */
-export const SplitTop: Story = {
+export const Blurred: Story = {
   args: {
-    image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
-      coverage: 'split-top',
-    },
-    children: (
-      <div className="h-full flex items-center justify-center">
-        <Card className="p-4 opacity-50">Your Content Here</Card>
-      </div>
-    ),
+    ...defaultArgs,
+    blur: true,
   },
   play: playBasic,
 };
 
 /**
- * Split Bottom BackgroundImageContainer example.
- * Demonstrates the BackgroundImageContainer component with split-bottom coverage.
+ * Rounded and Blurred BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with rounded corners and a blurred background image.
  */
-export const SplitBottom: Story = {
+export const RoundedBlurred: Story = {
   args: {
-    image: {
-      src: '/images/guy-sitting-at-tech-control-station.webp',
-      coverage: 'split-bottom',
-    },
-    children: (
-      <div className="h-full flex items-center justify-center">
-        <Card className="p-4 opacity-50">Your Content Here</Card>
-      </div>
-    ),
+    ...defaultArgs,
+    rounded: 'xxl',
+    blur: true,
+  },
+  play: playBasic,
+};
+
+
+/**
+ * Edge Blurred BackgroundImageContainer example.
+ * Demonstrates the BackgroundImageContainer component with edges blurred.
+ */
+export const EdgeBlurred: Story = {
+  args: {
+    ...defaultArgs,
+    blur: 'edges',
   },
   play: playBasic,
 };
