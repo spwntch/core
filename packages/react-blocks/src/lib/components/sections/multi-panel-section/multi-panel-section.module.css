@@ -1,4 +1,8 @@
-.multi-panel-section {
+.container {
     @apply w-full;
+  }
+  
+  .hero {
+    @apply h-screen;
   }
   

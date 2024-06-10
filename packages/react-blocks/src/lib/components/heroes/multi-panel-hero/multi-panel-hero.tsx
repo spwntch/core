@@ -5,6 +5,7 @@ import styles from './multi-panel-hero.module.css';
 
 export interface IMultiPanelHeroProps extends IMultiPanelLayoutProps {
   className?: string;
+  height: number;
 }
 
 export const MultiPanelHero = forwardRef<HTMLDivElement, IMultiPanelHeroProps>(

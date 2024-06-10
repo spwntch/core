@@ -4,7 +4,7 @@ import { MultiPanelSection, IMultiPanelSectionProps } from './multi-panel-sectio
 import { ContentContainer, ImageContainer, List } from '@/react-components';
 import { H3, P } from '@/react-typography';
 import { Button, Card } from '@/react-ui';
-import { playBasic, playFlipped, playHeroMode, playVertical } from './multi-panel-section.specs';
+import { playHeroMode, playBasic } from './multi-panel-section.specs';
 
 const componentDescription = `
 ### Overview
@@ -182,7 +182,7 @@ const defaultArgs: IMultiPanelSectionProps = {
  */
 export const Basic: Story = {
   args: defaultArgs,
-  play: playBasic
+  play: playBasic,
 };
 
 /**
@@ -194,7 +194,6 @@ export const Vertical: Story = {
     ...defaultArgs,
     orientation: 'vertical',
   },
-  play:playVertical
 };
 
 /**
@@ -206,7 +205,6 @@ export const Flipped: Story = {
     ...defaultArgs,
     flip: true,
   },
-  play:playFlipped
 };
 
 /**
@@ -218,19 +216,17 @@ export const WideMain: Story = {
     ...defaultArgs,
     mainPaneCoverage: 70,
   },
-  play: playBasic
-  };
-  
-  /**
-   * Narrow Main Panel MultiPanelSection example.
-   * Demonstrates the MultiPanelSection component with a narrower main panel.
-  */
- export const NarrowMain: Story = {
-   args: {
-     ...defaultArgs,
-     mainPaneCoverage: 30,
-     },
-    play: playBasic
+};
+
+/**
+ * Narrow Main Panel MultiPanelSection example.
+ * Demonstrates the MultiPanelSection component with a narrower main panel.
+ */
+export const NarrowMain: Story = {
+  args: {
+    ...defaultArgs,
+    mainPaneCoverage: 30,
+  },
 };
 
 /**

@@ -8,7 +8,7 @@ import { cn } from '@/react-ui';
 import React from 'react';
 import styles from './image-content-section.module.css';
 
-interface ImageContentSectionProps {
+interface IImageContentSectionProps {
   image: IImage;
   innerContent?: IContent;
   className?: string;
@@ -18,7 +18,7 @@ interface ImageContentSectionProps {
   hero?: boolean;
 }
 
-export const ImageContentSection: React.FC<ImageContentSectionProps> = ({
+export const ImageContentSection: React.FC<IImageContentSectionProps> = ({
   image,
   innerContent,
   hAlign,

@@ -176,4 +176,3 @@ export const HeroMode: Story = {
   },
   play: playHeroMode,
 };
-

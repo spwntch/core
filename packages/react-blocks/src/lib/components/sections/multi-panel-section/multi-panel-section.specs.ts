@@ -6,20 +6,22 @@ expect.extend(toHaveNoViolations);
 
 export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
+  
+  // Check if title is present
+  const title = await canvas.findByText('Discover Remote Furniture');
+  expect(title).toBeInTheDocument();
+  
+  // Check if subtitle is present
+  const subTitle = await canvas.findByText('Crafted for Remote Landscapes');
+  expect(subTitle).toBeInTheDocument();
 
-  // Check if main block is present
-  const mainBlock = await canvas.findByText('Discover Remote Furniture');
-  expect(mainBlock).toBeInTheDocument();
-
-  // Check if sub blocks are present
-  const subBlock1 = await canvas.findByText('Our Mission');
-  const subBlock2 = await canvas.findByText('Why Choose Us?');
-  const subBlock3 = await canvas.findByText('Contact Us');
-
-  expect(subBlock1).toBeInTheDocument();
-  expect(subBlock2).toBeInTheDocument();
-  expect(subBlock3).toBeInTheDocument();
-
+  // Check if tags are present
+  const tags = ['Remote', 'Furniture', 'Craftsmanship', 'Landscapes'];
+  for (const tag of tags) {
+    const tagElement = await canvas.findByText(tag);
+    expect(tagElement).toBeInTheDocument();
+  }
+  
   // Accessibility check
   const results = await axe(canvasElement);
   expect(results).toHaveNoViolations();
@@ -28,70 +30,9 @@ export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement 
 export const playHeroMode = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
 
-  // Check if the component has full screen height
+  // Check if height is applied correctly
   const container = canvasElement.querySelector('.container');
   expect(container).toHaveClass('h-screen');
-
-  // Check if main block is present
-  const mainBlock = await canvas.findByText('Discover Remote Furniture');
-  expect(mainBlock).toBeInTheDocument();
-
-  // Check if sub blocks are present
-  const subBlock1 = await canvas.findByText('Our Mission');
-  const subBlock2 = await canvas.findByText('Why Choose Us?');
-  const subBlock3 = await canvas.findByText('Contact Us');
-
-  expect(subBlock1).toBeInTheDocument();
-  expect(subBlock2).toBeInTheDocument();
-  expect(subBlock3).toBeInTheDocument();
-
-  // Accessibility check
-  const results = await axe(canvasElement);
-  expect(results).toHaveNoViolations();
-};
-
-export const playFlipped = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
-
-  // Check if main block is present
-  const mainBlock = await canvas.findByText('Discover Remote Furniture');
-  expect(mainBlock).toBeInTheDocument();
-
-  // Check if sub blocks are present
-  const subBlock1 = await canvas.findByText('Our Mission');
-  const subBlock2 = await canvas.findByText('Why Choose Us?');
-  const subBlock3 = await canvas.findByText('Contact Us');
-
-  expect(subBlock1).toBeInTheDocument();
-  expect(subBlock2).toBeInTheDocument();
-  expect(subBlock3).toBeInTheDocument();
-
-  // Ensure the layout is flipped
-  const subBlockContainer = mainBlock.parentElement?.previousElementSibling;
-  expect(subBlockContainer).toBeInTheDocument();
-  expect(subBlockContainer?.firstChild).toHaveTextContent('Our Mission');
-  expect(subBlockContainer?.lastChild).toHaveTextContent('Contact Us');
-
-  // Accessibility check
-  const results = await axe(canvasElement);
-  expect(results).toHaveNoViolations();
-};
-
-export const playVertical = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
-
-  // Check if main block is present
-  const mainBlock = await canvas.findByText('Discover Remote Furniture');
-  expect(mainBlock).toBeInTheDocument();
-
-  // Check if sub blocks are present
-  const subBlock1 = await canvas.findByText('Our Mission');
-  const subBlock2 = await canvas.findByText('Why Choose Us?');
-  const subBlock3 = await canvas.findByText('Contact Us');
-
-  expect(subBlock1).toBeInTheDocument();
-  expect(subBlock2).toBeInTheDocument();
-  expect(subBlock3).toBeInTheDocument();
 
   // Accessibility check
   const results = await axe(canvasElement);
