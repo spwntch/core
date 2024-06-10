@@ -10,7 +10,7 @@ interface IPostProps extends IMdxDoc {
   onToc: (href: string) => void;
 }
 
-export const Post = ({
+export const MdxArticle = ({
   backTo,
   meta,
   toc,
