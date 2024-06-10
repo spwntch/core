@@ -1,11 +1,9 @@
-import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
-import { ContentContainer } from './content-container';
 import { Button } from '@/react-ui';
+import type { Meta, StoryObj } from '@storybook/react';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { IContent } from '../../../types';
+import { ContentContainer } from './content-container';
 import { playBasic } from './content-container.specs';
-import { Rocket, Star } from 'lucide-react';
 
 /**
  * The `ContentContainer` component displays a section with a heading, sub-heading, body text, and optional bullets and tags.
@@ -76,8 +74,6 @@ const innerContent: IContent = {
   subTitle: 'Pioneering a transformative approach to software development',
   body: [
     'Spawntech pioneers transformative software development, blending advanced DevOps, precise UX implementation, and customized development with reusable packages. Our approach integrates the latest technologies to ensure robust and scalable solutions that meet the evolving needs of our clients. By utilizing a comprehensive library of reusable packages, we can accelerate the development process and maintain high standards of quality and performance.',
-    'Innovation at unparalleled speed.',
-    "Our mission is to deliver bespoke software solutions at unparalleled speed without compromising on quality or user satisfaction. By championing lean innovation and a product-led approach, we transform our clients' complex challenges into their greatest successes. Our team of experts works closely with clients to understand their unique requirements and deliver tailored solutions that drive business growth and enhance user experience. We pride ourselves on our ability to turn visionary ideas into reality, helping our clients achieve their strategic objectives with precision and agility.",
   ],
   bullets: [
     {
