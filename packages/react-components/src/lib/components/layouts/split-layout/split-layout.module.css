@@ -1,5 +1,5 @@
 .split-layout {
-  @apply flex h-full w-full;
+  @apply flex w-full h-full;
 }
 
 .split-pane {

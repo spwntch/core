@@ -6,7 +6,7 @@ export interface ISplitLayoutProps extends React.HTMLAttributes<HTMLDivElement> 
   className?: string;
   split?: 'horizontal' | 'vertical';
   flip?: boolean;
-  containers?: [ReactNode, ReactNode];
+  containers?: [ReactNode, ReactNode] | [ReactNode, ReactNode, ReactNode] | [ReactNode, ReactNode, ReactNode, ReactNode];
 }
 
 export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
@@ -23,14 +23,11 @@ export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
         ref={ref}
         {...props}
       >
-        {containers ? (
-          <>
-            <div className={styles['split-pane']}>{containers[0]}</div>
-            <div className={styles['split-pane']}>{containers[1]}</div>
-          </>
-        ) : (
-          <div className={styles['split-pane']}>Pane One</div>
-        )}
+        {containers && containers.map((container, index) => (
+          <div key={index} className={styles['split-pane']}>
+            {container}
+          </div>
+        ))}
       </div>
     );
   }

@@ -7,11 +7,20 @@ expect.extend(toHaveNoViolations);
 export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
 
-  // Check if Pane One and Pane Two are present
+  // Check if all panes are present
   const paneOneContent = await canvas.findByText('Pane One Content');
   const paneTwoContent = await canvas.findByText('Pane Two Content');
+  const paneThreeContent = canvas.queryByText('Pane Three Content');
+  const paneFourContent = canvas.queryByText('Pane Four Content');
+
   expect(paneOneContent).toBeInTheDocument();
   expect(paneTwoContent).toBeInTheDocument();
+  if (paneThreeContent) {
+    expect(paneThreeContent).toBeInTheDocument();
+  }
+  if (paneFourContent) {
+    expect(paneFourContent).toBeInTheDocument();
+  }
 
   // Accessibility check
   const results = await axe(canvasElement);
@@ -21,11 +30,20 @@ export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement 
 export const playFlipped = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
 
-  // Check if Pane One and Pane Two are present
+  // Check if all panes are present
   const paneOneContent = await canvas.findByText('Pane One Content');
   const paneTwoContent = await canvas.findByText('Pane Two Content');
+  const paneThreeContent = canvas.queryByText('Pane Three Content');
+  const paneFourContent = canvas.queryByText('Pane Four Content');
+
   expect(paneOneContent).toBeInTheDocument();
   expect(paneTwoContent).toBeInTheDocument();
+  if (paneThreeContent) {
+    expect(paneThreeContent).toBeInTheDocument();
+  }
+  if (paneFourContent) {
+    expect(paneFourContent).toBeInTheDocument();
+  }
 
   // Accessibility check
   const results = await axe(canvasElement);
@@ -35,11 +53,20 @@ export const playFlipped = async ({ canvasElement }: { canvasElement: HTMLElemen
 export const playVertical = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
   const canvas = within(canvasElement);
 
-  // Check if Pane One and Pane Two are present
+  // Check if all panes are present
   const paneOneContent = await canvas.findByText('Pane One Content');
   const paneTwoContent = await canvas.findByText('Pane Two Content');
+  const paneThreeContent = canvas.queryByText('Pane Three Content');
+  const paneFourContent = canvas.queryByText('Pane Four Content');
+
   expect(paneOneContent).toBeInTheDocument();
   expect(paneTwoContent).toBeInTheDocument();
+  if (paneThreeContent) {
+    expect(paneThreeContent).toBeInTheDocument();
+  }
+  if (paneFourContent) {
+    expect(paneFourContent).toBeInTheDocument();
+  }
 
   // Accessibility check
   const results = await axe(canvasElement);

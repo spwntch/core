@@ -7,12 +7,12 @@ import { playBasic, playFlipped, playVertical } from './split-layout.specs';
 
 const componentDescription = `
 ### Overview
-The \`SplitLayout\` component divides the container into two sections, allowing users to place other components in each section.
+The \`SplitLayout\` component divides the container into multiple sections, allowing users to place other components in each section.
 
 ### Props
 - \`split\`: Specifies how the container should be split ('horizontal', 'vertical').
 - \`flip\`: Reverses the order of the split panes.
-- \`containers\`: An array of two elements to be placed in the split sections.
+- \`containers\`: An array of 2-4 elements to be placed in the split sections.
 
 ### Example
 \`\`\`
@@ -26,9 +26,10 @@ This component is flexible and can be used to create various layouts such as spl
 const meta: Meta<typeof SplitLayout> = {
   title: 'components/layouts/split-layout',
   component: SplitLayout,
+  decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
     docs: {
       description: {
         component: componentDescription,
@@ -50,7 +51,7 @@ const meta: Meta<typeof SplitLayout> = {
       control: 'text',
     },
     containers: {
-      description: 'An array of two elements to be placed in the split sections',
+      description: 'An array of 2-4 elements to be placed in the split sections',
       control: 'object',
     },
   },
@@ -61,13 +62,23 @@ export default meta;
 type Story = StoryObj<typeof SplitLayout>;
 
 const paneOne = (
-  <div className="bg-gray-200 h-full w-full flex items-center justify-center p-16">
+  <div className="bg-blue-200 h-full w-full flex items-center justify-center">
     <Card className="p-4">Pane One Content</Card>
   </div>
 );
 const paneTwo = (
-  <div className="bg-gray-300 h-full w-full flex items-center justify-center p-16">
+  <div className="bg-green-200 h-full w-full flex items-center justify-center">
     <Card className="p-4">Pane Two Content</Card>
+  </div>
+);
+const paneThree = (
+  <div className="bg-yellow-200 h-full w-full flex items-center justify-center">
+    <Card className="p-4">Pane Three Content</Card>
+  </div>
+);
+const paneFour = (
+  <div className="bg-red-200 h-full w-full flex items-center justify-center">
+    <Card className="p-4">Pane Four Content</Card>
   </div>
 );
 
@@ -125,4 +136,28 @@ export const FlippedVerticalSplit: Story = {
     flip: true,
   },
   play: playFlipped,
+};
+
+/**
+ * SplitLayout with three containers.
+ * Demonstrates the SplitLayout component with three containers.
+ */
+export const ThreeContainers: Story = {
+  args: {
+    ...defaultArgs,
+    containers: [paneOne, paneTwo, paneThree],
+  },
+  play: playBasic,
+};
+
+/**
+ * SplitLayout with four containers.
+ * Demonstrates the SplitLayout component with four containers.
+ */
+export const FourContainers: Story = {
+  args: {
+    ...defaultArgs,
+    containers: [paneOne, paneTwo, paneThree, paneFour],
+  },
+  play: playBasic,
 };
