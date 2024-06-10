@@ -6,9 +6,9 @@ import {
 } from '@/react-components';
 import { cn } from '@/react-ui';
 import React from 'react';
-import styles from './image-content-section.module.css';
+import styles from './image-content-block.module.css';
 
-interface IImageContentSectionProps {
+interface IImageContentBlockProps {
   image: IImage;
   innerContent?: IContent;
   className?: string;
@@ -18,7 +18,7 @@ interface IImageContentSectionProps {
   hero?: boolean;
 }
 
-export const ImageContentSection: React.FC<IImageContentSectionProps> = ({
+export const ImageContentBlock: React.FC<IImageContentBlockProps> = ({
   image,
   innerContent,
   hAlign,
@@ -45,4 +45,4 @@ export const ImageContentSection: React.FC<IImageContentSectionProps> = ({
   );
 };
 
-export default ImageContentSection;
+export default ImageContentBlock;

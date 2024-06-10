@@ -1,16 +1,16 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withFullWidth } from '../../../storybook/storybook-decorators';
-import { SplitImageContentSection } from './split-image-content-section';
+import { withFullPage, withFullWidth } from '../../storybook/storybook-decorators';
+import { SplitImageContentBlock } from './split-image-content-block';
 import {
   playBasic,
   playShort,
   playTall,
   playHeroMode,
-} from './split-image-content-section.specs';
+} from './split-image-content-block.specs';
 
 const componentDescription = `
 ### Overview
-The \`SplitImageContentSection\` component displays a split layout with an image and optional content. The split direction can be horizontal or vertical, and the layout can be flipped.
+The \`SplitImageContentBlock\` component displays a split layout with an image and optional content. The split direction can be horizontal or vertical, and the layout can be flipped.
 
 ### Props
 - \`className\`: Additional class name(s) for the component.
@@ -25,7 +25,7 @@ The \`SplitImageContentSection\` component displays a split layout with an image
 
 ### Example
 \`\`\`
-<SplitImageContentSection 
+<SplitImageContentBlock 
   image={{ src: '/path/to/image.jpg', alt: 'Image description' }}
   innerContent={{
     title: { content: 'Welcome to Spawntech' },
@@ -46,13 +46,13 @@ The \`SplitImageContentSection\` component displays a split layout with an image
 This component is flexible and can be used in various sections of a webpage to enhance the visual appeal by adding a background image.
 `;
 
-const meta: Meta<typeof SplitImageContentSection> = {
-  title: 'blocks/sections/split-image-content-section',
-  component: SplitImageContentSection,
-  decorators: [withFullWidth],
+const meta: Meta<typeof SplitImageContentBlock> = {
+  title: 'blocks/split-image-content-block',
+  component: SplitImageContentBlock,
+  decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
     docs: {
       description: {
         component: componentDescription,
@@ -104,7 +104,7 @@ const meta: Meta<typeof SplitImageContentSection> = {
 
 export default meta;
 
-type Story = StoryObj<typeof SplitImageContentSection>;
+type Story = StoryObj<typeof SplitImageContentBlock>;
 
 const image = {
   src: '/images/guy-sitting-at-tech-control-station.webp',
@@ -118,8 +118,8 @@ const innerContent = {
 };
 
 /**
- * Basic SplitImageContentSection example.
- * Demonstrates a basic usage of the SplitImageContentSection component.
+ * Basic SplitImageContentBlock example.
+ * Demonstrates a basic usage of the SplitImageContentBlock component.
  */
 export const Basic: Story = {
   args: {
@@ -133,7 +133,7 @@ export const Basic: Story = {
 };
 
 /**
- * Horizontal Flipped SplitImageContentSection example.
+ * Horizontal Flipped SplitImageContentBlock example.
  * Demonstrates the component with horizontal split and flipped layout.
  */
 export const HorizontalFlipped: Story = {
@@ -145,7 +145,7 @@ export const HorizontalFlipped: Story = {
 };
 
 /**
- * Vertical SplitImageContentSection example.
+ * Vertical SplitImageContentBlock example.
  * Demonstrates the component with vertical split layout.
  */
 export const Vertical: Story = {
@@ -157,7 +157,7 @@ export const Vertical: Story = {
 };
 
 /**
- * Vertical Flipped SplitImageContentSection example.
+ * Vertical Flipped SplitImageContentBlock example.
  * Demonstrates the component with vertical split and flipped layout.
  */
 export const VerticalFlipped: Story = {
@@ -170,7 +170,7 @@ export const VerticalFlipped: Story = {
 };
 
 /**
- * Short SplitImageContentSection example.
+ * Short SplitImageContentBlock example.
  * Demonstrates the component with a short height.
  */
 export const HorizontalShort: Story = {
@@ -182,7 +182,7 @@ export const HorizontalShort: Story = {
 };
 
 /**
- * Tall SplitImageContentSection example.
+ * Tall SplitImageContentBlock example.
  * Demonstrates the component with a tall height.
  */
 export const VerticalTall: Story = {
@@ -195,7 +195,7 @@ export const VerticalTall: Story = {
 };
 
 /**
- * Hero SplitImageContentSection example.
+ * Hero SplitImageContentBlock example.
  * Demonstrates the component with full screen height.
  */
 export const HeroMode: Story = {
@@ -212,7 +212,7 @@ export const HeroMode: Story = {
 
 /**
  * Bottom Left Hero Mode.
- * Demonstrates the SplitImageContentSection component with bottom-left aligned text content in hero mode.
+ * Demonstrates the SplitImageContentBlock component with bottom-left aligned text content in hero mode.
  */
 export const BottomLeftHero: Story = {
   args: {

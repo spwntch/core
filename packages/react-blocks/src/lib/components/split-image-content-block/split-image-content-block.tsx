@@ -7,9 +7,9 @@ import {
 } from '@/react-components';
 import { cn } from '@/react-ui';
 import React from 'react';
-import styles from './split-image-content-section.module.css';
+import styles from './split-image-content-block.module.css';
 
-interface ISplitImageContentSectionProps {
+interface ISplitImageContentBlockProps {
   image: IImage;
   innerContent?: IContent;
   split?: 'horizontal' | 'vertical';
@@ -21,7 +21,7 @@ interface ISplitImageContentSectionProps {
   vAlign?: 'top' | 'middle' | 'bottom';
 }
 
-export const SplitImageContentSection: React.FC<ISplitImageContentSectionProps> = ({
+export const SplitImageContentBlock: React.FC<ISplitImageContentBlockProps> = ({
   image,
   innerContent,
   split = 'horizontal',
@@ -34,10 +34,17 @@ export const SplitImageContentSection: React.FC<ISplitImageContentSectionProps> 
 }) => {
   const imagePane = <ImageContainer image={image} className={className} />;
   const contentPane = innerContent && (
-    <ContentContainer innerContent={innerContent} hAlign={hAlign} vAlign={vAlign} />
+    <ContentContainer
+      innerContent={innerContent}
+      hAlign={hAlign}
+      vAlign={vAlign}
+    />
   );
   return (
-    <div className={cn(styles['container'], { 'h-screen': hero })} style={!hero ? { height: `${height}px` } : undefined}>
+    <div
+      className={cn(styles['container'], { 'h-screen': hero })}
+      style={!hero ? { height: `${height}px` } : undefined}
+    >
       <SplitLayout
         split={split}
         flip={flip}
@@ -48,4 +55,4 @@ export const SplitImageContentSection: React.FC<ISplitImageContentSectionProps> 
   );
 };
 
-export default SplitImageContentSection;
+export default SplitImageContentBlock;

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withFullWidth } from '../../../storybook/storybook-decorators';
-import { ImageContentSection } from './image-content-section';
+import { withFullPage, withFullWidth } from '../../storybook/storybook-decorators';
+import { ImageContentBlock } from './image-content-block';
 import {
   playBasic,
   playHeroMode,
@@ -8,11 +8,11 @@ import {
   playRight,
   playShort,
   playTall,
-} from './image-content-section.specs';
+} from './image-content-block.specs';
 
 const componentDescription = `
 ### Overview
-The \`ImageContentSection\` component displays a background image with optional darkening, with content centered horizontally and vertically. The height of the component can be customized.
+The \`ImageContentBlock\` component displays a background image with optional darkening, with content centered horizontally and vertically. The height of the component can be customized.
 
 ### Props
 - \`className\`: Additional class name(s) for the component.
@@ -23,7 +23,7 @@ The \`ImageContentSection\` component displays a background image with optional 
 
 ### Example
 \`\`\`
-<ImageContentSection 
+<ImageContentBlock 
   image={{ src: '/path/to/image.jpg', darken: true }}
   innerContent={{
     title: { content: 'Welcome to Spawntech' },
@@ -40,13 +40,13 @@ The \`ImageContentSection\` component displays a background image with optional 
 This component is flexible and can be used in various sections of a webpage to enhance the visual appeal by adding a background image.
 `;
 
-const meta: Meta<typeof ImageContentSection> = {
-  title: 'blocks/sections/image-content-section',
-  component: ImageContentSection,
-  decorators: [withFullWidth],
+const meta: Meta<typeof ImageContentBlock> = {
+  title: 'blocks/image-content-block',
+  component: ImageContentBlock,
+  decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
     docs: {
       description: {
         component: componentDescription,
@@ -85,7 +85,7 @@ const meta: Meta<typeof ImageContentSection> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ImageContentSection>;
+type Story = StoryObj<typeof ImageContentBlock>;
 
 const image = {
   src: '/images/guy-sitting-at-tech-control-station.webp',
@@ -100,8 +100,8 @@ const innerContent = {
 };
 
 /**
- * Default ImageContentSection example.
- * Demonstrates a basic usage of the ImageContentSection component with centered content.
+ * Default ImageContentBlock example.
+ * Demonstrates a basic usage of the ImageContentBlock component with centered content.
  */
 export const Default: Story = {
   args: {
@@ -116,7 +116,7 @@ export const Default: Story = {
 
 /**
  * Left Aligned Content.
- * Demonstrates the ImageContentSection component with left aligned text content.
+ * Demonstrates the ImageContentBlock component with left aligned text content.
  */
 export const LeftAligned: Story = {
   args: {
@@ -131,7 +131,7 @@ export const LeftAligned: Story = {
 
 /**
  * Right Aligned Content.
- * Demonstrates the ImageContentSection component with right aligned text content.
+ * Demonstrates the ImageContentBlock component with right aligned text content.
  */
 export const RightAligned: Story = {
   args: {
@@ -146,7 +146,7 @@ export const RightAligned: Story = {
 
 /**
  * Top Aligned Content.
- * Demonstrates the ImageContentSection component with top aligned text content.
+ * Demonstrates the ImageContentBlock component with top aligned text content.
  */
 export const TopAligned: Story = {
   args: {
@@ -160,7 +160,7 @@ export const TopAligned: Story = {
 
 /**
  * Bottom Aligned Content.
- * Demonstrates the ImageContentSection component with bottom aligned text content.
+ * Demonstrates the ImageContentBlock component with bottom aligned text content.
  */
 export const BottomAligned: Story = {
   args: {
@@ -173,8 +173,8 @@ export const BottomAligned: Story = {
 };
 
 /**
- * Short ImageContentSection.
- * Demonstrates the ImageContentSection component with a height of 240px.
+ * Short ImageContentBlock.
+ * Demonstrates the ImageContentBlock component with a height of 240px.
  */
 export const ShortHeight: Story = {
   args: {
@@ -187,8 +187,8 @@ export const ShortHeight: Story = {
 };
 
 /**
- * Tall ImageContentSection.
- * Demonstrates the ImageContentSection component with a height of 720px.
+ * Tall ImageContentBlock.
+ * Demonstrates the ImageContentBlock component with a height of 720px.
  */
 export const TallHeight: Story = {
   args: {
@@ -201,8 +201,8 @@ export const TallHeight: Story = {
 };
 
 /**
- * ImageContentSection in Hero Mode.
- * Demonstrates the ImageContentSection component with full screen height.
+ * ImageContentBlock in Hero Mode.
+ * Demonstrates the ImageContentBlock component with full screen height.
  */
 export const HeroMode: Story = {
   args: {
@@ -216,7 +216,7 @@ export const HeroMode: Story = {
 
 /**
  * Bottom Left Hero Mode.
- * Demonstrates the ImageContentSection component with bottom-left aligned text content in hero mode.
+ * Demonstrates the ImageContentBlock component with bottom-left aligned text content in hero mode.
  */
 export const BottomLeftHero: Story = {
   args: {

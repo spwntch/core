@@ -1,15 +1,18 @@
 import { IMultiPanelLayoutProps, MultiPanelLayout } from '@/react-components';
 import { cn } from '@/react-ui';
 import { forwardRef } from 'react';
-import styles from './multi-panel-section.module.css';
+import styles from './multi-panel-block.module.css';
 
-export interface IMultiPanelSectionProps extends IMultiPanelLayoutProps {
+export interface IMultiPanelBlockProps extends IMultiPanelLayoutProps {
   className?: string;
   height?: number; // New height prop
   hero?: boolean; // New hero prop
 }
 
-export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionProps>(
+export const MultiPanelBlock = forwardRef<
+  HTMLDivElement,
+  IMultiPanelBlockProps
+>(
   (
     {
       className,
@@ -38,6 +41,6 @@ export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionPr
   }
 );
 
-MultiPanelSection.displayName = 'MultiPanelSection';
+MultiPanelBlock.displayName = 'MultiPanelSection';
 
-export default MultiPanelSection;
+export default MultiPanelBlock;

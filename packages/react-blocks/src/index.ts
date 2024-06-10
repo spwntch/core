@@ -1,1 +1,1 @@
-export * from './lib/react-blocks';
+export * from './lib/components';

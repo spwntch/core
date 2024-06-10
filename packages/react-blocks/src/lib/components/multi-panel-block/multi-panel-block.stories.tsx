@@ -3,34 +3,37 @@ import { H3, P } from '@/react-typography';
 import { Button, Card } from '@/react-ui';
 import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { withFullPage } from '../../../storybook/storybook-decorators';
-import { MultiPanelHero } from './multi-panel-hero';
 import {
-  playBasic
-} from './multi-panel-hero.specs';
+  withFullPage,
+  withFullWidth,
+} from '../../storybook/storybook-decorators';
+import { MultiPanelBlock } from './multi-panel-block';
+import { playBasic } from './multi-panel-block.specs';
 
 const componentDescription = `
 ### Overview
-The \`MultiPanelHero\` component uses the \`MultiPanelLayout\` component to create a hero section with a main panel and up to three sub-panels. This layout can be configured to be horizontal or vertical and can be flipped.
+The \`MultiPanelBlock\` component uses the \`MultiPanelLayout\` component to create a section with a main panel and up to three sub-panels. This layout can be configured to be horizontal or vertical and can be flipped.
 
 ### Props
-- \`containers\`: An array of up to four elements to be placed in the hero sections.
+- \`containers\`: An array of up to four elements to be placed in the section.
 - \`flip\`: A boolean to flip the layout.
 - \`mainPaneCoverage\`: Percentage coverage of the main panel (default is 50%).
 - \`orientation\`: Orientation of the layout, either \`horizontal\` or \`vertical\`.
+- \`height\`: Height of the section in pixels (default is 540 pixels).
+- \`hero\`: A boolean to set the section to full screen height.
 
 ### Example
 \`\`\`
-<MultiPanelHero containers={[<div>Main Panel</div>, <div>Sub Panel 1</div>, <div>Sub Panel 2</div>]} flip={true} orientation="vertical" />
+<MultiPanelBlock containers={[<div>Main Panel</div>, <div>Sub Panel 1</div>, <div>Sub Panel 2</div>]} flip={true} orientation="vertical" height={600} hero={true} />
 \`\`\`
 
 ### Notes
 This component is flexible and adapts to different screen sizes.
 `;
 
-const meta: Meta<typeof MultiPanelHero> = {
-  title: 'blocks/heroes/multi-panel-hero',
-  component: MultiPanelHero,
+const meta: Meta<typeof MultiPanelBlock> = {
+  title: 'blocks/multi-panel-block',
+  component: MultiPanelBlock,
   decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
@@ -48,7 +51,7 @@ const meta: Meta<typeof MultiPanelHero> = {
     },
     containers: {
       description:
-        'An array of up to four elements to be placed in the hero sections',
+        'An array of up to four elements to be placed in the sections',
       control: 'object',
     },
     flip: {
@@ -64,12 +67,20 @@ const meta: Meta<typeof MultiPanelHero> = {
       control: 'select',
       options: ['horizontal', 'vertical'],
     },
+    height: {
+      description: 'Height of the section in pixels',
+      control: 'number',
+    },
+    hero: {
+      description: 'A boolean to set the section to full screen height',
+      control: 'boolean',
+    },
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof MultiPanelHero>;
+type Story = StoryObj<typeof MultiPanelBlock>;
 
 const innerContent = {
   title: { content: 'Discover Remote Furniture' },
@@ -153,19 +164,20 @@ const subPanel3 = (
 );
 
 const defaultArgs = {
-  containers: [mainPanel, subPanel1, subPanel2, subPanel3] as [
-    React.ReactNode,
+  containers: [mainPanel, subPanel1, subPanel2] as [
     React.ReactNode,
     React.ReactNode,
     React.ReactNode
   ],
   mainPaneCoverage: 50,
   orientation: 'horizontal' as 'horizontal' | 'vertical',
+  height: 540, // Default height
+  hero: false, // Default hero
 };
 
 /**
- * Basic MultiPanelHero example.
- * Demonstrates a basic usage of the MultiPanelHero component.
+ * Basic MultiPanelBlock example.
+ * Demonstrates a basic usage of the MultiPanelBlock component.
  */
 export const Basic: Story = {
   args: defaultArgs,
@@ -173,20 +185,21 @@ export const Basic: Story = {
 };
 
 /**
- * Vertical MultiPanelHero example.
- * Demonstrates the MultiPanelHero component with a vertical orientation.
+ * Vertical MultiPanelBlock example.
+ * Demonstrates the MultiPanelBlock component with a vertical orientation.
  */
 export const Vertical: Story = {
   args: {
     ...defaultArgs,
     orientation: 'vertical',
+    containers: [...defaultArgs.containers, subPanel3],
   },
   play: playBasic,
 };
 
 /**
- * Flipped MultiPanelHero example.
- * Demonstrates the MultiPanelHero component with a flipped layout.
+ * Flipped MultiPanelBlock example.
+ * Demonstrates the MultiPanelBlock component with a flipped layout.
  */
 export const Flipped: Story = {
   args: {
@@ -197,8 +210,8 @@ export const Flipped: Story = {
 };
 
 /**
- * Wide Main Panel MultiPanelHero example.
- * Demonstrates the MultiPanelHero component with a wider main panel.
+ * Wide Main Panel MultiPanelBlock example.
+ * Demonstrates the MultiPanelBlock component with a wider main panel.
  */
 export const WideMain: Story = {
   args: {
@@ -209,8 +222,8 @@ export const WideMain: Story = {
 };
 
 /**
- * Narrow Main Panel MultiPanelHero example.
- * Demonstrates the MultiPanelHero component with a narrower main panel.
+ * Narrow Main Panel MultiPanelBlock example.
+ * Demonstrates the MultiPanelBlock component with a narrower main panel.
  */
 export const NarrowMain: Story = {
   args: {
@@ -221,29 +234,37 @@ export const NarrowMain: Story = {
 };
 
 /**
- * Two Sub Panels MultiPanelHero example.
- * Demonstrates the MultiPanelHero component with two sub-panels.
- */
-export const TwoSubPanels: Story = {
-  args: {
-    ...defaultArgs,
-    containers: [mainPanel, subPanel1, subPanel2] as [
-      React.ReactNode,
-      React.ReactNode,
-      React.ReactNode
-    ],
-  },
-  play: playBasic,
-};
-
-/**
- * One Sub Panel MultiPanelHero example.
- * Demonstrates the MultiPanelHero component with one sub-panel.
+ * One Sub Panel MultiPanelBlock example.
+ * Demonstrates the MultiPanelBlock component with one sub-panel.
  */
 export const OneSubPanel: Story = {
   args: {
     ...defaultArgs,
     containers: [mainPanel, subPanel1] as [React.ReactNode, React.ReactNode],
+  },
+  play: playBasic,
+};
+
+/**
+ * Custom Height MultiPanelBlock example.
+ * Demonstrates the MultiPanelBlock component with a custom height.
+ */
+export const CustomHeight: Story = {
+  args: {
+    ...defaultArgs,
+    height: 600, // Example custom height
+  },
+  play: playBasic,
+};
+
+/**
+ * Hero MultiPanelBlock example.
+ * Demonstrates the MultiPanelBlock component with full screen height.
+ */
+export const Hero: Story = {
+  args: {
+    ...defaultArgs,
+    hero: true, // Set hero to true
   },
   play: playBasic,
 };
