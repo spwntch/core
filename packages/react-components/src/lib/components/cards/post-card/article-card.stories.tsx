@@ -1,36 +1,36 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { PostCard } from './post-card';
+import { ArticleCard } from './article-card';
 
-const meta: Meta<typeof PostCard> = {
-  title: 'components/cards/post-card',
-  component: PostCard,
+const meta: Meta<typeof ArticleCard> = {
+  title: 'components/cards/article-card',
+  component: ArticleCard,
   tags: ['autodocs'],
   argTypes: {
     slug: {
-      description: 'Slug for the post',
+      description: 'Slug for the article',
       control: 'text',
     },
     coverImage: {
-      description: 'Cover image URL for the post',
+      description: 'Cover image URL for the article',
       control: 'text',
     },
     date: {
-      description: 'Publication date of the post',
+      description: 'Publication date of the article',
       control: 'text',
     },
     title: {
-      description: 'Title of the post',
+      description: 'Title of the article',
       control: 'text',
     },
     subtitle: {
-      description: 'Subtitle of the post',
+      description: 'Subtitle of the article',
       control: 'text',
     },
     tags: {
-      description: 'Tags associated with the post',
+      description: 'Tags associated with the article',
     },
     onClick: {
-      description: 'Function to handle click on the post',
+      description: 'Function to handle click on the article',
       action: 'clicked',
     },
   },
@@ -38,15 +38,15 @@ const meta: Meta<typeof PostCard> = {
 
 export default meta;
 
-type Story = StoryObj<typeof PostCard>;
+type Story = StoryObj<typeof ArticleCard>;
 
 export const Default: Story = {
   args: {
-    slug: 'example-post',
+    slug: 'example-article',
     coverImage: '/images/furniture-6.webp',
     date: 'June 10, 2024',
     title: 'Example Post Title',
-    subtitle: 'This is an example of a post subtitle.',
+    subtitle: 'This is an example of a article subtitle.',
     tags: ['Example', 'Storybook'],
     onClick: (slug: string) => {
       alert(`Post clicked: ${slug}`);
