@@ -1,11 +1,20 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { FullscreenImageContentHero } from './fullscreen-image-content-hero';
+import { ImageContentHero } from './image-content-hero';
 import { withFullPage } from '../../../storybook/storybook-decorators';
+import {
+  playBasic,
+  playBottomCenter,
+  playBottomLeft,
+  playBottomRight,
+  playTopCenter,
+  playTopLeft,
+  playTopRight,
+} from './image-content-hero.specs';
 
-const meta: Meta<typeof FullscreenImageContentHero> = {
-  title: 'blocks/heroes/fullscreen-image-content-hero',
-  component: FullscreenImageContentHero,
+const meta: Meta<typeof ImageContentHero> = {
+  title: 'blocks/heroes/image-content-hero',
+  component: ImageContentHero,
   decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
@@ -39,7 +48,7 @@ const meta: Meta<typeof FullscreenImageContentHero> = {
 
 export default meta;
 
-type Story = StoryObj<typeof FullscreenImageContentHero>;
+type Story = StoryObj<typeof ImageContentHero>;
 
 const image = {
   src: '/images/guy-sitting-at-tech-control-station.webp',
@@ -67,6 +76,7 @@ export const Basic: Story = {
     className: 'text-white',
     vAlign: 'bottom',
   },
+  play: playBasic,
 };
 
 /**
@@ -81,6 +91,7 @@ export const TopLeft: Story = {
     vAlign: 'top',
     hAlign: 'left',
   },
+  play: playTopLeft,
 };
 
 /**
@@ -95,6 +106,7 @@ export const TopCenter: Story = {
     vAlign: 'top',
     hAlign: 'center',
   },
+  play: playTopCenter,
 };
 
 /**
@@ -109,6 +121,7 @@ export const TopRight: Story = {
     vAlign: 'top',
     hAlign: 'right',
   },
+  play: playTopRight,
 };
 
 /**
@@ -123,6 +136,7 @@ export const MiddleLeft: Story = {
     vAlign: 'middle',
     hAlign: 'left',
   },
+  play: playBottomLeft,
 };
 
 /**
@@ -137,6 +151,7 @@ export const MiddleCenter: Story = {
     vAlign: 'middle',
     hAlign: 'center',
   },
+  play: playBottomCenter,
 };
 
 /**
@@ -151,6 +166,7 @@ export const MiddleRight: Story = {
     vAlign: 'middle',
     hAlign: 'right',
   },
+  play: playBottomRight,
 };
 
 /**

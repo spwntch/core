@@ -1,6 +1,6 @@
 /* header.module.css */
 .container {
-  @apply mb-10;
+  @apply mt-2 mb-4;
 }
 
 .title {

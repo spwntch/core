@@ -82,9 +82,9 @@ export const ContentContainer = forwardRef<
           <Paragraphs content={bodyContent} className={bodyClassName} />
         )}
         {innerContent.bullets && <List bullets={innerContent.bullets} />}
-        <ContentChildren alignmentClass={alignmentClass}>
+        {children && <ContentChildren alignmentClass={alignmentClass}>
           {children}
-        </ContentChildren>
+        </ContentChildren>}
       </div>
     );
   }

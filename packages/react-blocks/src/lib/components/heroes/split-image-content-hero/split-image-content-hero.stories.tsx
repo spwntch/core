@@ -2,6 +2,12 @@ import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { SplitImageContentHero } from './split-image-content-hero';
 import { withFullPage } from '../../../storybook/storybook-decorators';
+import {
+  playBasic,
+  playHorizontalFlip,
+  playVerticalFlip,
+  playVerticalSplit,
+} from './split-image-content-hero.specs';
 
 const meta: Meta<typeof SplitImageContentHero> = {
   title: 'blocks/heroes/split-image-content-hero',
@@ -66,6 +72,7 @@ export const Basic: Story = {
     className: 'text-white',
     split: 'horizontal',
   },
+  play: playBasic,
 };
 
 /**
@@ -79,6 +86,7 @@ export const VerticalSplit: Story = {
     className: 'text-white',
     split: 'vertical',
   },
+  play: playVerticalSplit,
 };
 
 /**
@@ -93,6 +101,7 @@ export const HorizontalFlip: Story = {
     split: 'horizontal',
     flip: true,
   },
+  play: playHorizontalFlip,
 };
 
 /**
@@ -107,4 +116,5 @@ export const VerticalFlip: Story = {
     split: 'vertical',
     flip: true,
   },
+  play: playVerticalFlip,
 };
