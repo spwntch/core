@@ -1,6 +1,6 @@
 /* paragraphs.module.css */
 .paragraph-container {
-  @apply mt-4 mb-8;
+  @apply mt-4 mb-8 max-w-3xl;
 }
 
 .left {

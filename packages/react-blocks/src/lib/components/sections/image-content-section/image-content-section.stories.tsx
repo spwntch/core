@@ -71,6 +71,11 @@ const meta: Meta<typeof ImageContentSection> = {
       control: 'select',
       options: ['left', 'center', 'right'],
     },
+    vAlign: {
+      description: 'Vertical alignment of the content',
+      control: 'select',
+      options: ['top', 'middle', 'bottom'],
+    },
     height: {
       description: 'Height of the header in pixels',
       control: 'number',
@@ -95,51 +100,83 @@ const innerContent = {
 };
 
 /**
- * Basic ImageContentSection example.
- * Demonstrates a basic usage of the ImageContentSection component.
+ * Default ImageContentSection example.
+ * Demonstrates a basic usage of the ImageContentSection component with centered content.
  */
-export const Basic: Story = {
+export const Default: Story = {
   args: {
     image,
     innerContent,
     className: 'text-white',
+    hAlign: 'center',
+    vAlign: 'middle',
   },
   play: playBasic,
 };
 
 /**
- * Left Aligned ImageContentSection example.
+ * Left Aligned Content.
  * Demonstrates the ImageContentSection component with left aligned text content.
  */
-export const Left: Story = {
+export const LeftAligned: Story = {
   args: {
     image,
     innerContent,
     className: 'text-white',
     hAlign: 'left',
+    vAlign: 'middle',
   },
   play: playLeft,
 };
 
 /**
- * Right Aligned ImageContentSection example.
+ * Right Aligned Content.
  * Demonstrates the ImageContentSection component with right aligned text content.
  */
-export const Right: Story = {
+export const RightAligned: Story = {
   args: {
     image,
     innerContent,
     className: 'text-white',
     hAlign: 'right',
+    vAlign: 'middle',
   },
   play: playRight,
 };
 
 /**
- * ImageContentSection example with height of 200px.
- * Demonstrates the ImageContentSection component with right aligned text content.
+ * Top Aligned Content.
+ * Demonstrates the ImageContentSection component with top aligned text content.
  */
-export const Short: Story = {
+export const TopAligned: Story = {
+  args: {
+    image,
+    innerContent,
+    className: 'text-white',
+    hAlign: 'center',
+    vAlign: 'top',
+  },
+};
+
+/**
+ * Bottom Aligned Content.
+ * Demonstrates the ImageContentSection component with bottom aligned text content.
+ */
+export const BottomAligned: Story = {
+  args: {
+    image,
+    innerContent,
+    className: 'text-white',
+    hAlign: 'center',
+    vAlign: 'bottom',
+  },
+};
+
+/**
+ * Short ImageContentSection.
+ * Demonstrates the ImageContentSection component with a height of 240px.
+ */
+export const ShortHeight: Story = {
   args: {
     image,
     innerContent,
@@ -150,10 +187,10 @@ export const Short: Story = {
 };
 
 /**
- * ImageContentSection example with height of 500px.
- * Demonstrates the ImageContentSection component with right aligned text content.
+ * Tall ImageContentSection.
+ * Demonstrates the ImageContentSection component with a height of 720px.
  */
-export const Tall: Story = {
+export const TallHeight: Story = {
   args: {
     image,
     innerContent,
@@ -164,7 +201,7 @@ export const Tall: Story = {
 };
 
 /**
- * ImageContentSection in Hero mode.
+ * ImageContentSection in Hero Mode.
  * Demonstrates the ImageContentSection component with full screen height.
  */
 export const HeroMode: Story = {
@@ -175,4 +212,19 @@ export const HeroMode: Story = {
     hero: true,
   },
   play: playHeroMode,
+};
+
+/**
+ * Bottom Left Hero Mode.
+ * Demonstrates the ImageContentSection component with bottom-left aligned text content in hero mode.
+ */
+export const BottomLeftHero: Story = {
+  args: {
+    image,
+    innerContent,
+    className: 'text-white',
+    hAlign: 'left',
+    vAlign: 'bottom',
+    hero: true,
+  },
 };
