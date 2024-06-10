@@ -9,10 +9,7 @@ export interface IMultiPanelSectionProps extends IMultiPanelLayoutProps {
   hero?: boolean; // New hero prop
 }
 
-export const MultiPanelSection = forwardRef<
-  HTMLDivElement,
-  IMultiPanelSectionProps
->(
+export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionProps>(
   (
     {
       className,
@@ -28,7 +25,7 @@ export const MultiPanelSection = forwardRef<
   ) => {
     return (
       <MultiPanelLayout
-        className={cn(styles.container, className, { 'h-screen': hero })}
+        className={cn(styles.container, className,  { 'h-screen': hero })}
         style={!hero ? { height: `${height}px` } : undefined} // Apply height only if hero is false
         flip={flip}
         mainPaneCoverage={mainPaneCoverage}
