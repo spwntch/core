@@ -5,6 +5,9 @@ import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { MultiPanelHero } from './multi-panel-hero';
+import {
+  playBasic
+} from './multi-panel-hero.specs';
 
 const componentDescription = `
 ### Overview
@@ -97,7 +100,7 @@ const subPanel1 = (
     className="m-8"
   >
     <div className="relative p-6 w-96 mx-auto ">
-      <Card className="p-4  ">
+      <Card className="p-4">
         <H3>Our Mission</H3>
         <P className="m-0 p-0">
           To bring the beauty and tranquility of remote landscapes into your
@@ -114,8 +117,8 @@ const subPanel2 = (
     image={{ src: '/images/landscape-1.webp', alt: 'Landscape Image 1' }}
     className="m-8"
   >
-    <div className="relative p-6 w-96 mx-auto ">
-      <Card className="p-4  ">
+    <div className="relative p-6 w-96 mx-auto">
+      <Card className="p-4">
         <H3 className="mb-4">Why Choose Us?</H3>
         <List
           bullets={[
@@ -136,8 +139,8 @@ const subPanel3 = (
     image={{ src: '/images/landscape-2.webp', alt: 'Landscape Image 2' }}
     className="m-8"
   >
-    <div className="relative p-6 w-96 mx-auto ">
-      <Card className="p-4  ">
+    <div className="relative p-6 w-96 mx-auto">
+      <Card className="p-4">
         <H3>Contact Us</H3>
         <P className="m-0 p-0">
           Interested in our collections? Reach out to us for more information
@@ -166,6 +169,7 @@ const defaultArgs = {
  */
 export const Basic: Story = {
   args: defaultArgs,
+  play: playBasic,
 };
 
 /**
@@ -177,6 +181,7 @@ export const Vertical: Story = {
     ...defaultArgs,
     orientation: 'vertical',
   },
+  play: playBasic,
 };
 
 /**
@@ -188,6 +193,7 @@ export const Flipped: Story = {
     ...defaultArgs,
     flip: true,
   },
+  play: playBasic,
 };
 
 /**
@@ -199,6 +205,7 @@ export const WideMain: Story = {
     ...defaultArgs,
     mainPaneCoverage: 70,
   },
+  play: playBasic,
 };
 
 /**
@@ -210,6 +217,7 @@ export const NarrowMain: Story = {
     ...defaultArgs,
     mainPaneCoverage: 30,
   },
+  play: playBasic,
 };
 
 /**
@@ -225,6 +233,7 @@ export const TwoSubPanels: Story = {
       React.ReactNode
     ],
   },
+  play: playBasic,
 };
 
 /**
@@ -236,4 +245,5 @@ export const OneSubPanel: Story = {
     ...defaultArgs,
     containers: [mainPanel, subPanel1] as [React.ReactNode, React.ReactNode],
   },
+  play: playBasic,
 };
