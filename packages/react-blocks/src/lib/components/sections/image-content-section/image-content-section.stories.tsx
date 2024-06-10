@@ -3,6 +3,7 @@ import { withFullWidth } from '../../../storybook/storybook-decorators';
 import { ImageContentSection } from './image-content-section';
 import {
   playBasic,
+  playHeroMode,
   playLeft,
   playRight,
   playShort,
@@ -161,3 +162,18 @@ export const Tall: Story = {
   },
   play: playTall,
 };
+
+/**
+ * ImageContentSection in Hero mode.
+ * Demonstrates the ImageContentSection component with full screen height.
+ */
+export const HeroMode: Story = {
+  args: {
+    image,
+    innerContent,
+    className: 'text-white',
+    hero: true,
+  },
+  play: playHeroMode,
+};
+
