@@ -1,0 +1,20 @@
+.container {
+    @apply w-full flex flex-col mx-auto;
+  }
+  
+  .header {
+    /* Add any additional header styles if needed */
+  }
+  
+  .article {
+    @apply py-1 md:py-4 px-2 flex mt-8;
+  }
+  
+  .prose-content {
+    @apply prose max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground;
+  }
+  
+  .toc {
+    @apply flex-1 pl-8;
+  }
+  

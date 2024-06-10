@@ -13,6 +13,7 @@ import styles from './post-card.module.css';
 
 interface IPostCardProps extends IMdxDocMeta {
   onClick: (slug: string) => void;
+  className?: string; // Add className prop
 }
 
 export const PostCard = ({
@@ -23,10 +24,11 @@ export const PostCard = ({
   subtitle,
   tags,
   onClick,
+  className, // Destructure className prop
 }: IPostCardProps) => {
   return (
     <Card
-      className={cn(styles.card)}
+      className={cn(styles.card, className)} // Use className prop
       onClick={() => onClick(slug)}
     >
       <CardContent className={cn(styles['card-content'])}>

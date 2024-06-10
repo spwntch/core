@@ -13,7 +13,7 @@ export const PostsGrid = ({ posts, onClickPost }: Props) => {
   return (
     <div className={cn(styles['grid-container'])}>
       {posts.map((post, index) => (
-        <PostCard key={index} {...post.meta} onClick={onClickPost} />
+        <PostCard key={index} {...post.meta} onClick={onClickPost} className="w-full" />
       ))}
     </div>
   );
