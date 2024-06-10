@@ -1,36 +1,36 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { withFullWidth } from '../../../storybook/storybook-decorators';
-import { SplitImageContentHeader } from './split-image-content-header';
+import { ImageContentSection } from './image-content-section';
 import {
   playBasic,
+  playLeft,
+  playRight,
   playShort,
   playTall,
-} from './split-image-content-header.specs';
+} from './image-content-section.specs';
 
 const componentDescription = `
 ### Overview
-The \`SplitImageContentHeader\` component displays a split layout with an image and optional content. The split direction can be horizontal or vertical, and the layout can be flipped.
+The \`ImageContentSection\` component displays a background image with optional darkening, with content centered horizontally and vertically. The height of the component can be customized.
 
 ### Props
 - \`className\`: Additional class name(s) for the component.
-- \`image\`: The image object containing the \`src\`, \`alt\` properties.
+- \`image\`: The image object containing the \`src\`, \`alt\`, and \`darken\` properties.
 - \`innerContent\`: The content object containing \`title\`, \`subTitle\`, \`body\`, and \`tags\`.
-- \`split\`: The direction to split the layout (\`horizontal\` or \`vertical\`).
-- \`flip\`: Whether to flip the layout.
+- \`hAlign\`: The horizontal alignment of the content (\`left\`, \`center\`, \`right\`).
 - \`height\`: The height of the header in pixels.
 
 ### Example
 \`\`\`
-<SplitImageContentHeader 
-  image={{ src: '/path/to/image.jpg', alt: 'Image description' }}
+<ImageContentSection 
+  image={{ src: '/path/to/image.jpg', darken: true }}
   innerContent={{
     title: { content: 'Welcome to Spawntech' },
     subTitle: { content: 'Pioneering the Future of Software Development' },
     tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js']
   }}
   className="text-white"
-  split="horizontal"
-  flip={false}
+  hAlign="center"
   height={300}
 />
 \`\`\`
@@ -39,9 +39,9 @@ The \`SplitImageContentHeader\` component displays a split layout with an image 
 This component is flexible and can be used in various sections of a webpage to enhance the visual appeal by adding a background image.
 `;
 
-const meta: Meta<typeof SplitImageContentHeader> = {
-  title: 'blocks/headers/split-image-content-header',
-  component: SplitImageContentHeader,
+const meta: Meta<typeof ImageContentSection> = {
+  title: 'blocks/sections/image-content-section',
+  component: ImageContentSection,
   decorators: [withFullWidth],
   tags: ['autodocs'],
   parameters: {
@@ -65,14 +65,10 @@ const meta: Meta<typeof SplitImageContentHeader> = {
       description: 'Additional class name(s) for the component',
       control: 'text',
     },
-    split: {
-      description: 'The direction to split the layout',
+    hAlign: {
+      description: 'Horizontal alignment of the content',
       control: 'select',
-      options: ['horizontal', 'vertical'],
-    },
-    flip: {
-      description: 'Whether to flip the layout',
-      control: 'boolean',
+      options: ['left', 'center', 'right'],
     },
     height: {
       description: 'Height of the header in pixels',
@@ -83,11 +79,12 @@ const meta: Meta<typeof SplitImageContentHeader> = {
 
 export default meta;
 
-type Story = StoryObj<typeof SplitImageContentHeader>;
+type Story = StoryObj<typeof ImageContentSection>;
 
 const image = {
   src: '/images/guy-sitting-at-tech-control-station.webp',
   alt: 'Guy sitting at tech control station',
+  darken: true,
 };
 
 const innerContent = {
@@ -97,78 +94,69 @@ const innerContent = {
 };
 
 /**
- * Basic SplitImageContentHeader example.
- * Demonstrates a basic usage of the SplitImageContentHeader component.
+ * Basic ImageContentSection example.
+ * Demonstrates a basic usage of the ImageContentSection component.
  */
 export const Basic: Story = {
   args: {
     image,
     innerContent,
     className: 'text-white',
-    split: 'horizontal',
-    flip: false,
-    height: 240,
   },
   play: playBasic,
 };
 
 /**
- * Horizontal Flipped SplitImageContentHeader example.
- * Demonstrates the component with horizontal split and flipped layout.
+ * Left Aligned ImageContentSection example.
+ * Demonstrates the ImageContentSection component with left aligned text content.
  */
-export const HorizontalFlipped: Story = {
+export const Left: Story = {
   args: {
-    ...Basic.args,
-    flip: true,
+    image,
+    innerContent,
+    className: 'text-white',
+    hAlign: 'left',
   },
-  play: playBasic,
+  play: playLeft,
 };
 
 /**
- * Vertical SplitImageContentHeader example.
- * Demonstrates the component with vertical split layout.
+ * Right Aligned ImageContentSection example.
+ * Demonstrates the ImageContentSection component with right aligned text content.
  */
-export const Vertical: Story = {
+export const Right: Story = {
   args: {
-    ...Basic.args,
-    split: 'vertical',
+    image,
+    innerContent,
+    className: 'text-white',
+    hAlign: 'right',
   },
-  play: playBasic,
+  play: playRight,
 };
 
 /**
- * Vertical Flipped SplitImageContentHeader example.
- * Demonstrates the component with vertical split and flipped layout.
- */
-export const VerticalFlipped: Story = {
-  args: {
-    ...Basic.args,
-    split: 'vertical',
-    flip: true,
-  },
-  play: playBasic,
-};
-
-/**
- * Short SplitImageContentHeader example.
- * Demonstrates the component with a short height.
+ * ImageContentSection example with height of 200px.
+ * Demonstrates the ImageContentSection component with right aligned text content.
  */
 export const Short: Story = {
   args: {
-    ...Basic.args,
+    image,
+    innerContent,
+    className: 'text-white',
     height: 180,
   },
   play: playShort,
 };
 
 /**
- * Tall SplitImageContentHeader example.
- * Demonstrates the component with a tall height.
+ * ImageContentSection example with height of 500px.
+ * Demonstrates the ImageContentSection component with right aligned text content.
  */
 export const Tall: Story = {
   args: {
-    ...Basic.args,
-    split: 'vertical',
+    image,
+    innerContent,
+    className: 'text-white',
     height: 480,
   },
   play: playTall,

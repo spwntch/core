@@ -7,7 +7,7 @@ import {
 } from '@/react-components';
 import { cn } from '@/react-ui';
 import React from 'react';
-import styles from './split-image-content-header.module.css';
+import styles from './split-image-content-section.module.css';
 
 interface ImageContentHeaderProps {
   image: IImage;
@@ -18,7 +18,7 @@ interface ImageContentHeaderProps {
   className?: string;
 }
 
-export const SplitImageContentHeader: React.FC<ImageContentHeaderProps> = ({
+export const SplitImageContentSection: React.FC<ImageContentHeaderProps> = ({
   image,
   innerContent,
   split = 'horizontal',
@@ -26,13 +26,12 @@ export const SplitImageContentHeader: React.FC<ImageContentHeaderProps> = ({
   className,
   height = 240,
 }) => {
-
   const imagePane = <ImageContainer image={image} className={className} />;
   const contentPane = innerContent && (
     <ContentContainer innerContent={innerContent} />
   );
   return (
-    <div className={styles['container']} style={{height: `${height}px`}}>
+    <div className={styles['container']} style={{ height: `${height}px` }}>
       <SplitLayout
         split={split}
         flip={flip}
@@ -43,4 +42,4 @@ export const SplitImageContentHeader: React.FC<ImageContentHeaderProps> = ({
   );
 };
 
-export default SplitImageContentHeader;
+export default SplitImageContentSection;

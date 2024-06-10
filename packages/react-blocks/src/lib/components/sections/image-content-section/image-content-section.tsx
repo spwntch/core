@@ -6,7 +6,7 @@ import {
 } from '@/react-components';
 import { cn } from '@/react-ui';
 import React from 'react';
-import styles from './image-content-header.module.css';
+import styles from './image-content-section.module.css';
 
 interface ImageContentHeaderProps {
   image: IImage;
@@ -16,7 +16,7 @@ interface ImageContentHeaderProps {
   height?: number;
 }
 
-export const ImageContentHeader: React.FC<ImageContentHeaderProps> = ({
+export const ImageContentSection: React.FC<ImageContentHeaderProps> = ({
   image,
   innerContent,
   hAlign,
@@ -41,4 +41,4 @@ export const ImageContentHeader: React.FC<ImageContentHeaderProps> = ({
   );
 };
 
-export default ImageContentHeader;
+export default ImageContentSection;
