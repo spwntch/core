@@ -9,14 +9,14 @@ import {
 import { Small } from '@/react-typography';
 import { IMdxDocMeta } from '@/react-mdx';
 import { cn } from '@/react-ui';
-import styles from './post-card.module.css';
+import styles from './article-card.module.css';
 
 interface IPostCardProps extends IMdxDocMeta {
   onClick: (slug: string) => void;
   className?: string; // Add className prop
 }
 
-export const PostCard = ({
+export const ArticleCard = ({
   slug,
   coverImage,
   date,
@@ -50,7 +50,9 @@ export const PostCard = ({
         )}
         <CardTitle>{title}</CardTitle>
         <Small>{date}</Small>
-        <CardDescription className={cn(styles['card-description'])}>{subtitle}</CardDescription>
+        <CardDescription className={cn(styles['card-description'])}>
+          {subtitle}
+        </CardDescription>
       </CardHeader>
     </Card>
   );
