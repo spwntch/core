@@ -7,12 +7,13 @@ import { playBasic, playFlipped, playVertical } from './split-layout.specs';
 
 const componentDescription = `
 ### Overview
-The \`SplitLayout\` component divides the container into multiple sections, allowing users to place other components in each section.
+The \`SplitLayout\` component divides the container into multiple sections, allowing users to place other components in each section. The main container size can be adjusted using the \`mainPaneCoverage\` prop.
 
 ### Props
 - \`split\`: Specifies how the container should be split ('horizontal', 'vertical').
 - \`flip\`: Reverses the order of the split panes.
 - \`containers\`: An array of 2-4 elements to be placed in the split sections.
+- \`mainPaneCoverage\`: Percentage coverage of the main container (default is 50%).
 
 ### Example
 \`\`\`
@@ -54,6 +55,10 @@ const meta: Meta<typeof SplitLayout> = {
       description: 'An array of 2-4 elements to be placed in the split sections',
       control: 'object',
     },
+    mainPaneCoverage: {
+      description: 'Percentage coverage of the main container (default is 50%)',
+      control: 'number',
+    },
   },
 };
 
@@ -84,6 +89,7 @@ const paneFour = (
 
 const defaultArgs = {
   split: 'horizontal' as 'horizontal' | 'vertical',
+  mainPaneCoverage: 50,
 };
 
 /**
@@ -137,6 +143,20 @@ export const FlippedVerticalSplit: Story = {
   },
   play: playFlipped,
 };
+
+/**
+ * WideMain SplitLayout example.
+ * Demonstrates the SplitLayout component with a wider main container.
+ */
+export const WideMain: Story = {
+  args: {
+    ...defaultArgs,
+    containers: [paneOne, paneTwo],
+    mainPaneCoverage: 70, // Adjust the main container coverage to 70%
+  },
+  play: playBasic,
+};
+
 
 /**
  * SplitLayout with three containers.

@@ -45,6 +45,25 @@ export const playFlipped = async ({ canvasElement }: { canvasElement: HTMLElemen
     expect(paneFourContent).toBeInTheDocument();
   }
 
+  // Ensure the layout is flipped
+  const container = paneOneContent.parentElement?.parentElement;
+  if (container) {
+    const children = Array.from(container.children);
+    if (children.length === 2) {
+      expect(children[0]).toHaveTextContent('Pane Two Content');
+      expect(children[1]).toHaveTextContent('Pane One Content');
+    } else if (children.length === 3) {
+      expect(children[0]).toHaveTextContent('Pane Two Content');
+      expect(children[1]).toHaveTextContent('Pane Three Content');
+      expect(children[2]).toHaveTextContent('Pane One Content');
+    } else if (children.length === 4) {
+      expect(children[0]).toHaveTextContent('Pane Two Content');
+      expect(children[1]).toHaveTextContent('Pane Three Content');
+      expect(children[2]).toHaveTextContent('Pane Four Content');
+      expect(children[3]).toHaveTextContent('Pane One Content');
+    }
+  }
+
   // Accessibility check
   const results = await axe(canvasElement);
   expect(results).toHaveNoViolations();
