@@ -3,13 +3,17 @@
 }
 
 .main-block {
-  @apply flex items-center justify-center bg-gray-300 h-full;
+  @apply flex items-center justify-center bg-gray-300 h-full w-full;
 }
 
 .sub-block {
-  @apply flex items-center justify-center bg-gray-200 h-full;
+  @apply flex items-center justify-center bg-gray-200 h-full w-full;
 }
 
 .vertical-split {
   @apply flex flex-col h-full;
+}
+
+.horizontal-split {
+  @apply flex flex-row h-full;
 }
