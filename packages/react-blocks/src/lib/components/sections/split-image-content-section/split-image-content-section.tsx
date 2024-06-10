@@ -16,6 +16,7 @@ interface ImageContentHeaderProps {
   flip?: boolean;
   height?: number;
   className?: string;
+  hero?: boolean;
 }
 
 export const SplitImageContentSection: React.FC<ImageContentHeaderProps> = ({
@@ -25,13 +26,14 @@ export const SplitImageContentSection: React.FC<ImageContentHeaderProps> = ({
   flip,
   className,
   height = 540,
+  hero = false,
 }) => {
   const imagePane = <ImageContainer image={image} className={className} />;
   const contentPane = innerContent && (
     <ContentContainer innerContent={innerContent} />
   );
   return (
-    <div className={styles['container']} style={{ height: `${height}px` }}>
+    <div className={cn(styles['container'], { 'h-screen': hero })} style={!hero ? { height: `${height}px` } : undefined}>
       <SplitLayout
         split={split}
         flip={flip}

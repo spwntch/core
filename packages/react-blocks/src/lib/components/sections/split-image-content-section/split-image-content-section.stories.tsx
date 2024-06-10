@@ -5,6 +5,7 @@ import {
   playBasic,
   playShort,
   playTall,
+  playHeroMode,
 } from './split-image-content-section.specs';
 
 const componentDescription = `
@@ -18,6 +19,7 @@ The \`SplitImageContentSection\` component displays a split layout with an image
 - \`split\`: The direction to split the layout (\`horizontal\` or \`vertical\`).
 - \`flip\`: Whether to flip the layout.
 - \`height\`: The height of the header in pixels.
+- \`hero\`: Boolean to apply full screen height.
 
 ### Example
 \`\`\`
@@ -32,6 +34,7 @@ The \`SplitImageContentSection\` component displays a split layout with an image
   split="horizontal"
   flip={false}
   height={300}
+  hero={true}
 />
 \`\`\`
 
@@ -77,6 +80,10 @@ const meta: Meta<typeof SplitImageContentSection> = {
     height: {
       description: 'Height of the header in pixels',
       control: 'number',
+    },
+    hero: {
+      description: 'Boolean to apply full screen height',
+      control: 'boolean',
     },
   },
 };
@@ -171,4 +178,20 @@ export const VerticalTall: Story = {
     height: 720,
   },
   play: playTall,
+};
+
+/**
+ * Hero SplitImageContentSection example.
+ * Demonstrates the component with full screen height.
+ */
+export const HeroMode: Story = {
+  args: {
+    image,
+    innerContent,
+    className: 'text-white',
+    split: 'horizontal',
+    flip: false,
+    hero: true,
+  },
+  play: playHeroMode,
 };
