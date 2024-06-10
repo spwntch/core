@@ -1,32 +1,28 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { withFullWidth } from '../../../storybook/storybook-decorators';
-import { MultiPanelSection, IMultiPanelSectionProps } from './multi-panel-section';
 import { ContentContainer, ImageContainer, List } from '@/react-components';
 import { H3, P } from '@/react-typography';
 import { Button, Card } from '@/react-ui';
-import { playHeroMode, playBasic } from './multi-panel-section.specs';
+import { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
+import { withFullPage } from '../../../storybook/storybook-decorators';
+import { MultiPanelSection } from './multi-panel-section';
+import {
+  playBasic
+} from './multi-panel-section.specs';
 
 const componentDescription = `
 ### Overview
-The \`MultiPanelSection\` component divides the container into a main block and up to three sub-blocks. The layout adjusts for different screen sizes. The \`flip\` prop allows the sub-blocks to be placed on the left and the main block on the right for horizontal orientation, or on top and the main block on the bottom for vertical orientation.
+The \`MultiPanelSection\` component uses the \`MultiPanelLayout\` component to create a section with a main panel and up to three sub-panels. This layout can be configured to be horizontal or vertical and can be flipped.
 
 ### Props
-- \`containers\`: An array of two, three, or four elements to be placed in the blocks.
+- \`containers\`: An array of up to four elements to be placed in the section.
 - \`flip\`: A boolean to flip the layout.
-- \`mainPaneCoverage\`: Percentage coverage of the main block (default is 50%).
+- \`mainPaneCoverage\`: Percentage coverage of the main panel (default is 50%).
 - \`orientation\`: Orientation of the layout, either \`horizontal\` or \`vertical\`.
-- \`height\`: Height of the section in pixels (default is 540).
-- \`hero\`: Boolean to apply full screen height.
+- \`height\`: Height of the section in pixels. If not provided, defaults to full screen height.
 
 ### Example
 \`\`\`
-<MultiPanelSection 
-  containers={[<div>Main Block Content</div>, <div>Sub Block 1 Content</div>, <div>Sub Block 2 Content</div>]} 
-  flip={true} 
-  orientation="vertical" 
-  height={300} 
-  hero={true}
-/>
+<MultiPanelSection containers={[<div>Main Panel</div>, <div>Sub Panel 1</div>, <div>Sub Panel 2</div>]} flip={true} orientation="vertical" height={600} />
 \`\`\`
 
 ### Notes
@@ -36,7 +32,7 @@ This component is flexible and adapts to different screen sizes.
 const meta: Meta<typeof MultiPanelSection> = {
   title: 'blocks/sections/multi-panel-section',
   component: MultiPanelSection,
-  decorators: [withFullWidth],
+  decorators: [withFullPage],
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -52,7 +48,8 @@ const meta: Meta<typeof MultiPanelSection> = {
       control: 'text',
     },
     containers: {
-      description: 'An array of up to four elements to be placed in the sections',
+      description:
+        'An array of up to four elements to be placed in the sections',
       control: 'object',
     },
     flip: {
@@ -60,7 +57,7 @@ const meta: Meta<typeof MultiPanelSection> = {
       control: 'boolean',
     },
     mainPaneCoverage: {
-      description: 'Percentage coverage of the main block (default is 50%)',
+      description: 'Percentage coverage of the main panel (default is 50%)',
       control: 'number',
     },
     orientation: {
@@ -69,12 +66,8 @@ const meta: Meta<typeof MultiPanelSection> = {
       options: ['horizontal', 'vertical'],
     },
     height: {
-      description: 'Height of the section in pixels (default is 540)',
+      description: 'Height of the section in pixels',
       control: 'number',
-    },
-    hero: {
-      description: 'Boolean to apply full screen height',
-      control: 'boolean',
     },
   },
 };
@@ -112,7 +105,7 @@ const subPanel1 = (
     className="m-8"
   >
     <div className="relative p-6 w-96 mx-auto ">
-      <Card className="p-4" style={{ opacity: 0.9 }}>
+      <Card className="p-4">
         <H3>Our Mission</H3>
         <P className="m-0 p-0">
           To bring the beauty and tranquility of remote landscapes into your
@@ -129,8 +122,8 @@ const subPanel2 = (
     image={{ src: '/images/landscape-1.webp', alt: 'Landscape Image 1' }}
     className="m-8"
   >
-    <div className="relative p-6 w-96 mx-auto ">
-      <Card className="p-4" style={{ opacity: 0.9 }}>
+    <div className="relative p-6 w-96 mx-auto">
+      <Card className="p-4">
         <H3 className="mb-4">Why Choose Us?</H3>
         <List
           bullets={[
@@ -151,8 +144,8 @@ const subPanel3 = (
     image={{ src: '/images/landscape-2.webp', alt: 'Landscape Image 2' }}
     className="m-8"
   >
-    <div className="relative p-6 w-96 mx-auto ">
-      <Card className="p-4" style={{ opacity: 0.9 }}>
+    <div className="relative p-6 w-96 mx-auto">
+      <Card className="p-4">
         <H3>Contact Us</H3>
         <P className="m-0 p-0">
           Interested in our collections? Reach out to us for more information
@@ -164,7 +157,7 @@ const subPanel3 = (
   </ImageContainer>
 );
 
-const defaultArgs: IMultiPanelSectionProps = {
+const defaultArgs = {
   containers: [mainPanel, subPanel1, subPanel2, subPanel3] as [
     React.ReactNode,
     React.ReactNode,
@@ -172,8 +165,7 @@ const defaultArgs: IMultiPanelSectionProps = {
     React.ReactNode
   ],
   mainPaneCoverage: 50,
-  orientation: 'horizontal',
-  height: 540,
+  orientation: 'horizontal' as 'horizontal' | 'vertical',
 };
 
 /**
@@ -194,6 +186,7 @@ export const Vertical: Story = {
     ...defaultArgs,
     orientation: 'vertical',
   },
+  play: playBasic,
 };
 
 /**
@@ -205,6 +198,7 @@ export const Flipped: Story = {
     ...defaultArgs,
     flip: true,
   },
+  play: playBasic,
 };
 
 /**
@@ -216,6 +210,7 @@ export const WideMain: Story = {
     ...defaultArgs,
     mainPaneCoverage: 70,
   },
+  play: playBasic,
 };
 
 /**
@@ -227,6 +222,7 @@ export const NarrowMain: Story = {
     ...defaultArgs,
     mainPaneCoverage: 30,
   },
+  play: playBasic,
 };
 
 /**
@@ -242,6 +238,7 @@ export const TwoSubPanels: Story = {
       React.ReactNode
     ],
   },
+  play: playBasic,
 };
 
 /**
@@ -253,16 +250,17 @@ export const OneSubPanel: Story = {
     ...defaultArgs,
     containers: [mainPanel, subPanel1] as [React.ReactNode, React.ReactNode],
   },
+  play: playBasic,
 };
 
 /**
- * HeroMode MultiPanelSection example.
- * Demonstrates the MultiPanelSection component with full screen height.
+ * Custom Height MultiPanelSection example.
+ * Demonstrates the MultiPanelSection component with a custom height.
  */
-export const HeroMode: Story = {
+export const CustomHeight: Story = {
   args: {
     ...defaultArgs,
-    hero: true,
+    height: 600, // Example custom height
   },
-  play: playHeroMode,
+  play: playBasic,
 };

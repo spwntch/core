@@ -1,23 +1,30 @@
+import { IMultiPanelLayoutProps, MultiPanelLayout } from '@/react-components';
 import { cn } from '@/react-ui';
-import React, { forwardRef, ReactNode } from 'react';
-import { MultiPanelLayout, IMultiPanelLayoutProps } from '@/react-components';
+import { forwardRef } from 'react';
 import styles from './multi-panel-section.module.css';
 
 export interface IMultiPanelSectionProps extends IMultiPanelLayoutProps {
   className?: string;
-  height?: number;
-  hero?: boolean;
+  height?: number; // New height prop
 }
 
 export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionProps>(
-  ({ className, containers, flip = false, mainPaneCoverage = 50, orientation = 'horizontal', height = 540, hero = false, ...props }, ref) => {
+  (
+    {
+      className,
+      containers,
+      flip = false,
+      mainPaneCoverage = 50,
+      orientation = 'horizontal',
+      height, // New height prop
+      ...props
+    },
+    ref
+  ) => {
     return (
       <MultiPanelLayout
-        className={cn(
-          styles['container'],
-          hero ? styles['hero'] : `h-[${height}px]`,
-          className
-        )}
+        className={cn(styles.container, className)}
+        style={height ? { height: `${height}px` } : undefined} // Apply height if provided
         flip={flip}
         mainPaneCoverage={mainPaneCoverage}
         orientation={orientation}
