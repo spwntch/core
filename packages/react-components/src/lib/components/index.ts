@@ -11,4 +11,5 @@ export * from './grids/logo-cloud/logo-cloud';
 export * from './groups/button-group/button-group';
 export * from './layouts/quad-layout/quad-layout';
 export * from './layouts/split-layout/split-layout';
+export * from './layouts/multi-panel-layout/multi-panel-layout';
 export * from './media/youtube-player/youtube-player';
