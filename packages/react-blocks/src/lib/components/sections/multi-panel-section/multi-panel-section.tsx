@@ -6,9 +6,13 @@ import styles from './multi-panel-section.module.css';
 export interface IMultiPanelSectionProps extends IMultiPanelLayoutProps {
   className?: string;
   height?: number; // New height prop
+  hero?: boolean; // New hero prop
 }
 
-export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionProps>(
+export const MultiPanelSection = forwardRef<
+  HTMLDivElement,
+  IMultiPanelSectionProps
+>(
   (
     {
       className,
@@ -17,14 +21,15 @@ export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionPr
       mainPaneCoverage = 50,
       orientation = 'horizontal',
       height = 540, // Default height set to 540
+      hero = false, // Default hero to false
       ...props
     },
     ref
   ) => {
     return (
       <MultiPanelLayout
-        className={cn(styles.container, className)}
-        style={{ height: `${height}px` }} // Apply height, defaulting to 540px if not provided
+        className={cn(styles.container, className, { 'h-screen': hero })}
+        style={!hero ? { height: `${height}px` } : undefined} // Apply height only if hero is false
         flip={flip}
         mainPaneCoverage={mainPaneCoverage}
         orientation={orientation}

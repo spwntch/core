@@ -17,10 +17,11 @@ The \`MultiPanelSection\` component uses the \`MultiPanelLayout\` component to c
 - \`mainPaneCoverage\`: Percentage coverage of the main panel (default is 50%).
 - \`orientation\`: Orientation of the layout, either \`horizontal\` or \`vertical\`.
 - \`height\`: Height of the section in pixels (default is 540 pixels).
+- \`hero\`: A boolean to set the section to full screen height.
 
 ### Example
 \`\`\`
-<MultiPanelSection containers={[<div>Main Panel</div>, <div>Sub Panel 1</div>, <div>Sub Panel 2</div>]} flip={true} orientation="vertical" height={600} />
+<MultiPanelSection containers={[<div>Main Panel</div>, <div>Sub Panel 1</div>, <div>Sub Panel 2</div>]} flip={true} orientation="vertical" height={600} hero={true} />
 \`\`\`
 
 ### Notes
@@ -66,6 +67,10 @@ const meta: Meta<typeof MultiPanelSection> = {
     height: {
       description: 'Height of the section in pixels',
       control: 'number',
+    },
+    hero: {
+      description: 'A boolean to set the section to full screen height',
+      control: 'boolean',
     },
   },
 };
@@ -161,15 +166,10 @@ const defaultArgs = {
     React.ReactNode,
     React.ReactNode
   ],
-  // containers: [mainPanel, subPanel1, subPanel2, subPanel3] as [
-  //   React.ReactNode,
-  //   React.ReactNode,
-  //   React.ReactNode,
-  //   React.ReactNode
-  // ],
   mainPaneCoverage: 50,
   orientation: 'horizontal' as 'horizontal' | 'vertical',
   height: 540, // Default height
+  hero: false, // Default hero
 };
 
 /**
@@ -230,7 +230,6 @@ export const NarrowMain: Story = {
   play: playBasic,
 };
 
-
 /**
  * One Sub Panel MultiPanelSection example.
  * Demonstrates the MultiPanelSection component with one sub-panel.
@@ -251,6 +250,18 @@ export const CustomHeight: Story = {
   args: {
     ...defaultArgs,
     height: 600, // Example custom height
+  },
+  play: playBasic,
+};
+
+/**
+ * Hero MultiPanelSection example.
+ * Demonstrates the MultiPanelSection component with full screen height.
+ */
+export const Hero: Story = {
+  args: {
+    ...defaultArgs,
+    hero: true, // Set hero to true
   },
   play: playBasic,
 };
