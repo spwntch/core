@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Post } from './mdx-article';
+import { MdxArticle } from './mdx-article';
 
-const meta: Meta<typeof Post> = {
+const meta: Meta<typeof MdxArticle> = {
   title: 'mdx/mdx-article',
-  component: Post,
+  component: MdxArticle,
   tags: ['autodocs'],
   argTypes: {
     backTo: {
@@ -16,7 +16,7 @@ const meta: Meta<typeof Post> = {
     },
     toc: {
       description: 'Table of contents',
-    //   control: 'array',
+      //   control: 'array',
     },
     content: {
       description: 'Content of the post',
@@ -35,7 +35,7 @@ const meta: Meta<typeof Post> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Post>;
+type Story = StoryObj<typeof MdxArticle>;
 
 export const Default: Story = {
   args: {
@@ -44,7 +44,10 @@ export const Default: Story = {
     //   title: 'Sample Post Title',
     //   date: 'June 11, 2024',
     // },
-    toc: [{ label: 'Introduction', href: '#introduction' }, { label: 'Conclusion', href: '#conclusion' }],
+    toc: [
+      { label: 'Introduction', href: '#introduction' },
+      { label: 'Conclusion', href: '#conclusion' },
+    ],
     // content: '<p>This is the content of the post.</p>',
     onBackTo: (href: string) => {
       alert(`Back to: ${href}`);
