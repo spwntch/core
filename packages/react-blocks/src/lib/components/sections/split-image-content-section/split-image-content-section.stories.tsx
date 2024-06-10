@@ -107,7 +107,6 @@ export const Basic: Story = {
     className: 'text-white',
     split: 'horizontal',
     flip: false,
-    height: 240,
   },
   play: playBasic,
 };
@@ -156,7 +155,7 @@ export const VerticalFlipped: Story = {
 export const HorizontalShort: Story = {
   args: {
     ...Basic.args,
-    height: 180,
+    height: 240,
   },
   play: playShort,
 };
@@ -169,7 +168,7 @@ export const VerticalTall: Story = {
   args: {
     ...Basic.args,
     split: 'vertical',
-    height: 480,
+    height: 720,
   },
   play: playTall,
 };

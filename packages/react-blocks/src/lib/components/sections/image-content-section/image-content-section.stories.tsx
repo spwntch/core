@@ -143,7 +143,7 @@ export const Short: Story = {
     image,
     innerContent,
     className: 'text-white',
-    height: 180,
+    height: 240,
   },
   play: playShort,
 };
@@ -157,7 +157,7 @@ export const Tall: Story = {
     image,
     innerContent,
     className: 'text-white',
-    height: 480,
+    height: 720,
   },
   play: playTall,
 };

@@ -21,7 +21,7 @@ export const ImageContentSection: React.FC<ImageContentHeaderProps> = ({
   innerContent,
   hAlign,
   className,
-  height = 240,
+  height = 540,
 }) => {
   return (
     <div

@@ -24,7 +24,7 @@ export const SplitImageContentSection: React.FC<ImageContentHeaderProps> = ({
   split = 'horizontal',
   flip,
   className,
-  height = 240,
+  height = 540,
 }) => {
   const imagePane = <ImageContainer image={image} className={className} />;
   const contentPane = innerContent && (
