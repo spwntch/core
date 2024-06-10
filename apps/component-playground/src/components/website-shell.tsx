@@ -7,37 +7,20 @@ import {
 import { useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 
-/**
- * Props for the SiteShell component.
- */
 export interface SiteShellProps {
   underContruction?: boolean;
-  /**
-   * Configuration options for the navbar.
-   */
   navbar?: {
-    /**
-     * Additional CSS classes for the navbar.
-     */
     classNames?: string;
-    /**
-     * Alignment of the navbar.
-     */
     logoHeight?: number;
     alignment?: 'start' | 'center' | 'end';
   };
   githubUrl?: string;
-  /**
-   * Determines whether to display shell information.
-   */
-  displayShellInfo?: boolean;
 }
 
 export const WebsiteShell = ({
   underContruction,
   navbar,
   githubUrl,
-  // displayShellInfo,
   children,
 }: SiteShellProps & PropsWithChildren) => {
   const router = useRouter();
@@ -57,7 +40,6 @@ export const WebsiteShell = ({
       />
       <main className="h-full  flex flex-col overflow-y">
         {children}
-        {/* {displayShellInfo && <ShellInfo />} */}
         {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
       </main>
     </div>

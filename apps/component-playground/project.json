@@ -21,6 +21,11 @@
             "input": "assets/spwn/brand/public",
             "glob": "*.webp",
             "output": "brand"
+          },
+          {
+            "input": "assets/spwn/images/public",
+            "glob": "*.webp",
+            "output": "images"
           }
         ]
       }
