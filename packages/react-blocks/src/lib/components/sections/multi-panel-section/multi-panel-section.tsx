@@ -9,10 +9,7 @@ export interface IMultiPanelSectionProps extends IMultiPanelLayoutProps {
   hero?: boolean; // New hero prop
 }
 
-export const MultiPanelSection = forwardRef<
-  HTMLDivElement,
-  IMultiPanelSectionProps
->(
+export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionProps>(
   (
     {
       className,
