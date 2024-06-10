@@ -1,6 +1,6 @@
+import { Logo } from '../brand';
 import { ShellProvider } from './shell-provider';
 import type { Meta, StoryObj } from '@storybook/react';
-// import { BasicDocs } from '../../../lib/docs-templates';
 
 /**
  *
@@ -41,7 +41,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof ShellProvider> = {
   title: 'shell/shell-provider',
 
-  // parameters: { docs: { page: BasicDocs } },
   tags: ['autodocs'],
   component: ShellProvider,
   args: {
@@ -56,7 +55,6 @@ const meta: Meta<typeof ShellProvider> = {
       },
       markText: 'spawntech',
     },
-    // children: <DekstopTopNavbar />,
   },
 };
 export default meta;
@@ -65,12 +63,15 @@ type Story = StoryObj<typeof ShellProvider>;
 
 export const Primary: Story = {
   name: 'ShellProvider with Logo in light mode',
+  args: {
+    children: <Logo />,
+  },
 };
 
 export const InDarkMode: Story = {
   name: 'ShellProvider with Mark in dark mode.',
   args: {
-    // children: <Mark />,
+    children: <Logo variant="mark" />,
   },
   parameters: {
     themes: {
