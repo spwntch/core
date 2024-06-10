@@ -3,11 +3,9 @@ import { H3, P } from '@/react-typography';
 import { Button, Card } from '@/react-ui';
 import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { withFullPage } from '../../../storybook/storybook-decorators';
+import { withFullPage, withFullWidth } from '../../../storybook/storybook-decorators';
 import { MultiPanelSection } from './multi-panel-section';
-import {
-  playBasic
-} from './multi-panel-section.specs';
+import { playBasic } from './multi-panel-section.specs';
 
 const componentDescription = `
 ### Overview
@@ -18,7 +16,7 @@ The \`MultiPanelSection\` component uses the \`MultiPanelLayout\` component to c
 - \`flip\`: A boolean to flip the layout.
 - \`mainPaneCoverage\`: Percentage coverage of the main panel (default is 50%).
 - \`orientation\`: Orientation of the layout, either \`horizontal\` or \`vertical\`.
-- \`height\`: Height of the section in pixels. If not provided, defaults to full screen height.
+- \`height\`: Height of the section in pixels (default is 540 pixels).
 
 ### Example
 \`\`\`
@@ -32,10 +30,10 @@ This component is flexible and adapts to different screen sizes.
 const meta: Meta<typeof MultiPanelSection> = {
   title: 'blocks/sections/multi-panel-section',
   component: MultiPanelSection,
-  decorators: [withFullPage],
+  decorators: [withFullWidth],
   tags: ['autodocs'],
   parameters: {
-    layout: 'fullscreen',
+    layout: 'centered',
     docs: {
       description: {
         component: componentDescription,
@@ -158,14 +156,20 @@ const subPanel3 = (
 );
 
 const defaultArgs = {
-  containers: [mainPanel, subPanel1, subPanel2, subPanel3] as [
-    React.ReactNode,
+  containers: [mainPanel, subPanel1, subPanel2] as [
     React.ReactNode,
     React.ReactNode,
     React.ReactNode
   ],
+  // containers: [mainPanel, subPanel1, subPanel2, subPanel3] as [
+  //   React.ReactNode,
+  //   React.ReactNode,
+  //   React.ReactNode,
+  //   React.ReactNode
+  // ],
   mainPaneCoverage: 50,
   orientation: 'horizontal' as 'horizontal' | 'vertical',
+  height: 540, // Default height
 };
 
 /**
@@ -185,6 +189,7 @@ export const Vertical: Story = {
   args: {
     ...defaultArgs,
     orientation: 'vertical',
+    containers: [...defaultArgs.containers, subPanel3]
   },
   play: playBasic,
 };
@@ -225,21 +230,6 @@ export const NarrowMain: Story = {
   play: playBasic,
 };
 
-/**
- * Two Sub Panels MultiPanelSection example.
- * Demonstrates the MultiPanelSection component with two sub-panels.
- */
-export const TwoSubPanels: Story = {
-  args: {
-    ...defaultArgs,
-    containers: [mainPanel, subPanel1, subPanel2] as [
-      React.ReactNode,
-      React.ReactNode,
-      React.ReactNode
-    ],
-  },
-  play: playBasic,
-};
 
 /**
  * One Sub Panel MultiPanelSection example.

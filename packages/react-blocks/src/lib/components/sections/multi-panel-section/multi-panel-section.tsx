@@ -16,7 +16,7 @@ export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionPr
       flip = false,
       mainPaneCoverage = 50,
       orientation = 'horizontal',
-      height, // New height prop
+      height = 540, // Default height set to 540
       ...props
     },
     ref
@@ -24,7 +24,7 @@ export const MultiPanelSection = forwardRef<HTMLDivElement, IMultiPanelSectionPr
     return (
       <MultiPanelLayout
         className={cn(styles.container, className)}
-        style={height ? { height: `${height}px` } : undefined} // Apply height if provided
+        style={{ height: `${height}px` }} // Apply height, defaulting to 540px if not provided
         flip={flip}
         mainPaneCoverage={mainPaneCoverage}
         orientation={orientation}
