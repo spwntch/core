@@ -20,6 +20,8 @@ The \`SplitImageContentSection\` component displays a split layout with an image
 - \`flip\`: Whether to flip the layout.
 - \`height\`: The height of the header in pixels.
 - \`hero\`: Boolean to apply full screen height.
+- \`hAlign\`: Horizontal alignment of the content (\`left\`, \`center\`, \`right\`).
+- \`vAlign\`: Vertical alignment of the content (\`top\`, \`middle\`, \`bottom\`).
 
 ### Example
 \`\`\`
@@ -35,6 +37,8 @@ The \`SplitImageContentSection\` component displays a split layout with an image
   flip={false}
   height={300}
   hero={true}
+  hAlign="left"
+  vAlign="bottom"
 />
 \`\`\`
 
@@ -84,6 +88,16 @@ const meta: Meta<typeof SplitImageContentSection> = {
     hero: {
       description: 'Boolean to apply full screen height',
       control: 'boolean',
+    },
+    hAlign: {
+      description: 'Horizontal alignment of the content',
+      control: 'select',
+      options: ['left', 'center', 'right'],
+    },
+    vAlign: {
+      description: 'Vertical alignment of the content',
+      control: 'select',
+      options: ['top', 'middle', 'bottom'],
     },
   },
 };
@@ -192,6 +206,24 @@ export const HeroMode: Story = {
     split: 'horizontal',
     flip: false,
     hero: true,
+  },
+  play: playHeroMode,
+};
+
+/**
+ * Bottom Left Hero Mode.
+ * Demonstrates the SplitImageContentSection component with bottom-left aligned text content in hero mode.
+ */
+export const BottomLeftHero: Story = {
+  args: {
+    image,
+    innerContent,
+    className: 'text-white',
+    split: 'horizontal',
+    flip: false,
+    hero: true,
+    hAlign: 'left',
+    vAlign: 'bottom',
   },
   play: playHeroMode,
 };
