@@ -12,7 +12,6 @@ import {
   playShort,
   playTall,
 } from './content-block.specs';
-import { IContent } from '@/react-components';
 
 const componentDescription = `
 ### Overview
@@ -92,18 +91,18 @@ export default meta;
 
 type Story = StoryObj<typeof ContentBlock>;
 
-const innerContent: IContent = {
+const innerContent = {
   title: { content: 'Welcome to Spawntech' },
   subTitle: { content: 'Pioneering the Future of Software Development' },
   body: [
     'Spawntech is at the forefront of transforming software development, blending advanced DevOps, precise UX implementation, and customized development.',
   ],
-  tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
   bullets: [
     { body: 'Innovative Solutions', emoji: '🚀' },
     { body: 'Expert Team', emoji: '👩‍💻' },
     { body: 'Cutting-edge Technology', emoji: '🔧' },
   ],
+  tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
 };
 
 /**

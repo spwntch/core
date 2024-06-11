@@ -19,6 +19,14 @@ export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement 
   const bodyContent = await canvas.findByText('Spawntech is at the forefront of transforming software development, blending advanced DevOps, precise UX implementation, and customized development.');
   expect(bodyContent).toBeInTheDocument();
 
+  // Check if the bullets are present
+  const bullet1 = await canvas.findByText('Innovative Solutions');
+  expect(bullet1).toBeInTheDocument();
+  const bullet2 = await canvas.findByText('Expert Team');
+  expect(bullet2).toBeInTheDocument();
+  const bullet3 = await canvas.findByText('Cutting-edge Technology');
+  expect(bullet3).toBeInTheDocument();
+
   // Accessibility check
   const results = await axe(canvasElement);
   expect(results).toHaveNoViolations();
