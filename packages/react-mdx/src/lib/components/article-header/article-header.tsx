@@ -1,22 +1,26 @@
 import { Button, cn } from '@/react-ui';
 import { ArrowBigLeft } from 'lucide-react';
 import { IMdxDocMeta } from '../../types';
-import styles from './mdx-article-header.module.css';
+import styles from './article-header.module.css';
 import { ImageContentBlock } from '@/react-blocks';
 
-interface IMdxArticleHeaderProps extends IMdxDocMeta {
+interface IArticleHeaderProps extends IMdxDocMeta {
   backTo?: { label?: string; href: string };
   onBackTo?: (href: string) => void;
+  hAlign?: 'left' | 'center' | 'right';
+  vAlign?: 'top' | 'middle' | 'bottom';
 }
 
-export const MdxArticleHeader = ({
+export const ArticleHeader = ({
   backTo,
   title,
   subtitle,
   tags,
   coverImage,
   onBackTo,
-}: IMdxArticleHeaderProps) => {
+  hAlign = 'center',
+  vAlign = 'middle',
+}: IArticleHeaderProps) => {
   return (
     <div className={cn(styles.container)}>
       {backTo && onBackTo && (
@@ -32,25 +36,15 @@ export const MdxArticleHeader = ({
       <ImageContentBlock
         image={{ src: coverImage!, darken: true }}
         innerContent={{
-          title: { content: 'Welcome to Spawntech' },
-          subTitle: {
-            content: 'Pioneering the Future of Software Development',
-          },
-          tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
+          title: { content: title },
+          subTitle: subtitle && { content: subtitle },
+          tags: tags,
         }}
         className="text-white"
-        hAlign="center"
+        hAlign={hAlign}
+        vAlign={vAlign}
         height={300}
       />
-      Copy
-      {/* 
-        Uncomment and update the following code when BasicHeader and BackgroundImageHeader are available.
-        {coverImage ? (
-          <BackgroundImageHeader header={{ heading: title, subHeading: subtitle, tags }} image={{ src: coverImage }} />
-        ) : (
-          <BasicHeader header={{ heading: title, subHeading: subtitle, tags }} />
-        )} 
-      */}
     </div>
   );
 };
