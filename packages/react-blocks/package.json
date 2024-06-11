@@ -1,12 +1,27 @@
 {
-  "name": "@/react-blocks",
-  "version": "0.0.1",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "name": "@spwntch/blocks",
+  "version": "0.54.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": {
+      "default": "./dist/style.css"
     }
-  }
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "sandbox"
+  ],
+  "author": "spwntch",
+  "license": "MIT"
 }
