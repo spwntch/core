@@ -1,0 +1,11 @@
+.container {
+  @apply pb-4;
+}
+
+.back-button {
+  @apply flex gap-2 pb-4;
+}
+
+.icon {
+  @apply h-5 w-5;
+}
