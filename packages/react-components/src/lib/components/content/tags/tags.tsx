@@ -15,6 +15,7 @@ export const Tags: React.FC<ITagsProps> = ({ tags, className }) => {
           <Badge className={styles.tag}>{tag}</Badge>
         </div>
       ))}
+      <div className={styles['tags-fade']} />
     </div>
   );
 };

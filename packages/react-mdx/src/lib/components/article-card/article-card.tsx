@@ -10,8 +10,9 @@ import { Small } from '@/react-typography';
 import { cn } from '@/react-ui';
 import styles from './article-card.module.css';
 import { IMdxDocMeta } from '../../types';
+import { Tags } from '@/react-components'; // Import the Tags component
 
-interface IArticleCardProps extends IMdxDocMeta {
+interface IPostCardProps extends IMdxDocMeta {
   onClick: (slug: string) => void;
   className?: string; // Add className prop
 }
@@ -25,7 +26,7 @@ export const ArticleCard = ({
   tags,
   onClick,
   className, // Destructure className prop
-}: IArticleCardProps) => {
+}: IPostCardProps) => {
   return (
     <Card
       className={cn(styles.card, className)} // Use className prop
@@ -40,13 +41,7 @@ export const ArticleCard = ({
       </CardContent>
       <CardHeader>
         {tags?.length && (
-          <ul className={cn(styles['tags-list'])}>
-            {tags.map((category, index) => (
-              <li key={index}>
-                <Badge>{category}</Badge>
-              </li>
-            ))}
-          </ul>
+          <Tags tags={tags} className={styles['tags-container']} />
         )}
         <CardTitle>{title}</CardTitle>
         <Small>{date}</Small>
