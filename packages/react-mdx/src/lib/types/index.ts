@@ -22,6 +22,9 @@ export interface IMdxDocFrontMatter {
   authorName?: string;
   authorAvatar?: string;
   tags?: string[];
+  categories: string[];
+  keywords: string[];
+  abstract: string[];
   published?: boolean;
 }
 
