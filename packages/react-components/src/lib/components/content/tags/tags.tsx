@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, cn } from '@/react-ui';
+import { Badge } from '@/react-ui';
 import styles from './tags.module.css';
 
 interface ITagsProps {
@@ -7,12 +7,14 @@ interface ITagsProps {
   className?: string;
 }
 
-export const Tags: React.FC<ITagsProps> = ({ tags, className }) => (
-  <div className={cn(styles['tags-container'], className)}>
-    {tags.map((tag, index) => (
-      <Badge key={index}>{tag}</Badge>
-    ))}
-  </div>
-);
-
-export default Tags;
+export const Tags: React.FC<ITagsProps> = ({ tags, className }) => {
+  return (
+    <div className={`${styles['tags-container']} ${className}`}>
+      {tags.map((tag, index) => (
+        <div key={index}>
+          <Badge className={styles.tag}>{tag}</Badge>
+        </div>
+      ))}
+    </div>
+  );
+};
