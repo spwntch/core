@@ -1,11 +1,10 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Contact } from './contact';
 import {
   withBrandProvider,
   withFullWidth,
 } from '../../../../storybook/storybook-decorators';
-import { playBasic, playAccessibilityTest } from './contact.specs';
+import { Contact } from './contact';
+import { playAccessibilityTest, playBasic } from './contact.specs';
 
 const componentDescription = `
 ### Overview

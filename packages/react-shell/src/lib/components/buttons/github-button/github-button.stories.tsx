@@ -1,7 +1,6 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { GithubButton } from './github-button';
-import { playBasic, playAccessibilityTest } from './github-button.specs';
+import { playAccessibilityTest, playBasic } from './github-button.specs';
 
 const componentDescription = `
 ### Overview

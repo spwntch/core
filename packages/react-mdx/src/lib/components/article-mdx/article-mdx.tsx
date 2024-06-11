@@ -1,7 +1,6 @@
-import React from 'react';
 import { cn } from '@/react-ui';
-import styles from './article-mdx.module.css';
 import { IMdxDoc } from '../../types';
+import styles from './article-mdx.module.css';
 
 interface IArticleProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
@@ -11,11 +10,11 @@ interface IArticleProps extends IMdxDoc {
 
 export const ArticleMdx = ({
   backTo,
-  meta,
+  // meta,
   toc,
   content,
   onBackTo,
-  onToc,
+  // onToc,
 }: IArticleProps) => {
   return (
     <div className={cn(styles.container)}>

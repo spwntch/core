@@ -1,8 +1,7 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Tagline } from './tagline';
 import { withBrandProvider } from '../../../storybook/storybook-decorators';
-import { playBasic, playAccessibilityTest } from './tagline.specs';
+import { Tagline } from './tagline';
+import { playAccessibilityTest, playBasic } from './tagline.specs';
 
 const componentDescription = `
 ### Overview

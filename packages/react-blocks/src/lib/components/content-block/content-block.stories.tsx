@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  withFullPage,
-  withFullWidth,
+  withFullPage
 } from '../../storybook/storybook-decorators';
 import { ContentBlock } from './content-block';
 import {

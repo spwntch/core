@@ -1,11 +1,10 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Social } from './social';
 import {
   withBrandProvider,
   withFullWidth,
 } from '../../../../storybook/storybook-decorators';
-import { playBasic, playAccessibilityTest } from './social.specs';
+import { Social } from './social';
+import { playAccessibilityTest, playBasic } from './social.specs';
 
 const componentDescription = `
 ### Overview

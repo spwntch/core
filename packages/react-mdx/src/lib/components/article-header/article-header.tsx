@@ -1,8 +1,8 @@
+import { ImageContentBlock } from '@/react-blocks';
 import { Button, cn } from '@/react-ui';
 import { ArrowBigLeft } from 'lucide-react';
 import { IMdxDocMeta } from '../../types';
 import styles from './article-header.module.css';
-import { ImageContentBlock } from '@/react-blocks';
 
 interface IArticleHeaderProps extends IMdxDocMeta {
   backTo?: { label?: string; href: string };
@@ -33,18 +33,20 @@ export const ArticleHeader = ({
           <span>{backTo.label || 'Back'}</span>
         </Button>
       )}
-      <ImageContentBlock
-        image={{ src: coverImage!, darken: true }}
-        innerContent={{
-          title: { content: title },
-          subTitle: subtitle && { content: subtitle },
-          tags: tags,
-        }}
-        className="text-white"
-        hAlign={hAlign}
-        vAlign={vAlign}
-        height={300}
-      />
+      {coverImage && (
+        <ImageContentBlock
+          image={{ src: coverImage, darken: true }}
+          innerContent={{
+            title: { content: title },
+            subTitle: subtitle && { content: subtitle },
+            tags: tags,
+          }}
+          className="text-white"
+          hAlign={hAlign}
+          vAlign={vAlign}
+          height={300}
+        />
+      )}
     </div>
   );
 };

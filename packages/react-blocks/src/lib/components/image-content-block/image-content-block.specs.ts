@@ -56,7 +56,6 @@ export const playRight = async ({ canvasElement }: { canvasElement: HTMLElement 
 };
 
 export const playShort = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
 
   // Check if height is applied correctly
   const container = canvasElement.querySelector('.image-content-header');
@@ -68,7 +67,6 @@ export const playShort = async ({ canvasElement }: { canvasElement: HTMLElement 
 };
 
 export const playTall = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
 
   // Check if height is applied correctly
   const container = canvasElement.querySelector('.image-content-header');

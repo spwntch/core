@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react';
 import { ButtonGroup } from '@/react-components';
-import { Button, cn } from '@/react-ui';
+import { cn } from '@/react-ui';
+import React, { forwardRef } from 'react';
+import { NavToolbar } from '..';
 import { Logo } from '../../brand';
 import { GithubButton, ThemeToggleButton } from '../../buttons';
-import { NavToolbar } from '..';
 import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 import styles from './desktop-top-navbar.module.css';
 

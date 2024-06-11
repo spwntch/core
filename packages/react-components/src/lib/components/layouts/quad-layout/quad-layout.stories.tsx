@@ -1,9 +1,8 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import { QuadLayout, IQuadLayoutProps } from './quad-layout';
 import { Card } from '@/react-ui';
+import { Meta, StoryObj } from '@storybook/react';
 import { withFullPage } from '../../../storybook/storybook-decorators';
-import { playBasic, playFlipOne } from './quad-layout.specs';
+import { IQuadLayoutProps, QuadLayout } from './quad-layout';
+import { playBasic } from './quad-layout.specs';
 
 const componentDescription = `
 ### Overview

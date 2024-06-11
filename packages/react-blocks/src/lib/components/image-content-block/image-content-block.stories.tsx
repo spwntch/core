@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withFullPage, withFullWidth } from '../../storybook/storybook-decorators';
+import { withFullPage } from '../../storybook/storybook-decorators';
 import { ImageContentBlock } from './image-content-block';
 import {
   playBasic,

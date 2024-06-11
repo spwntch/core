@@ -1,6 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
 import { YoutubePlayer } from './youtube-player';
 import { playBasic } from './youtube-player.specs';
 
