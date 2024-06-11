@@ -1,6 +1,7 @@
+import React from 'react';
 import { cn } from '@/react-ui';
-import { IMdxDoc } from '../../types';
 import styles from './article.module.css';
+import { IMdxDoc } from '../../types';
 
 interface IArticleProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
@@ -26,7 +27,9 @@ export const Article = ({
         )}
         <div className={cn(styles['prose-content'])}>{content}</div>
         {toc?.length && (
-          <div className={cn(styles.toc)}>{/* TOC content */}</div>
+          <div className={cn(styles.toc)}>
+            {/* TOC content */}
+          </div>
         )}
       </article>
     </div>
