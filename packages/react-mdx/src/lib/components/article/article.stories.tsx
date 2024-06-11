@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { MdxArticle } from './mdx-article';
+import { Article } from './article';
 
-const meta: Meta<typeof MdxArticle> = {
-  title: 'mdx/mdx-article',
-  component: MdxArticle,
+const meta: Meta<typeof Article> = {
+  title: 'mdx/article',
+  component: Article,
   tags: ['autodocs'],
   argTypes: {
     backTo: {
@@ -35,7 +35,7 @@ const meta: Meta<typeof MdxArticle> = {
 
 export default meta;
 
-type Story = StoryObj<typeof MdxArticle>;
+type Story = StoryObj<typeof Article>;
 
 export const Default: Story = {
   args: {
