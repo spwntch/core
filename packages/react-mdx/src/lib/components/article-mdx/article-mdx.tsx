@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/react-ui';
-import styles from './article.module.css';
+import styles from './article-mdx.module.css';
 import { IMdxDoc } from '../../types';
 
 interface IArticleProps extends IMdxDoc {
