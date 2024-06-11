@@ -3,7 +3,7 @@ import { Tags } from './tags';
 import { playBasic, playManyTags } from './tags.specs';
 
 const meta: Meta<typeof Tags> = {
-  title: 'components/tags',
+  title: 'components/content/tags',
   component: Tags,
   tags: ['autodocs'],
   parameters: {
