@@ -11,7 +11,7 @@ import { cn } from '@/react-ui';
 import styles from './article-card.module.css';
 import { IMdxDocMeta } from '../../types';
 
-interface IPostCardProps extends IMdxDocMeta {
+interface IArticleCardProps extends IMdxDocMeta {
   onClick: (slug: string) => void;
   className?: string; // Add className prop
 }
@@ -25,7 +25,7 @@ export const ArticleCard = ({
   tags,
   onClick,
   className, // Destructure className prop
-}: IPostCardProps) => {
+}: IArticleCardProps) => {
   return (
     <Card
       className={cn(styles.card, className)} // Use className prop

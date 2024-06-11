@@ -11,8 +11,8 @@ const config: StorybookConfig = {
       from: '../../../assets/spwn/under-construction/public',
       to: '/under-construction',
     },
-    { from: '../../../assets/spwn/blog', to: '/blog' },
     { from: '../../../assets/storybook/client-logos', to: '/client-logos' },
+    { from: '../../../assets/storybook/articles/public', to: '/articles' },
     {
       from: '../../../assets/interact/client-logos/public',
       to: '/client-logos',
