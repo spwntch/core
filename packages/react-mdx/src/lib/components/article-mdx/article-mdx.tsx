@@ -9,7 +9,7 @@ interface IArticleProps extends IMdxDoc {
   onToc?: (href: string) => void;
 }
 
-export const Article = ({
+export const ArticleMdx = ({
   backTo,
   meta,
   toc,
@@ -27,9 +27,7 @@ export const Article = ({
         )}
         <div className={cn(styles['prose-content'])}>{content}</div>
         {toc?.length && (
-          <div className={cn(styles.toc)}>
-            {/* TOC content */}
-          </div>
+          <div className={cn(styles.toc)}>{/* TOC content */}</div>
         )}
       </article>
     </div>
