@@ -1,4 +1,10 @@
-/* tags.module.css */
 .tags-container {
-  @apply flex flex-wrap gap-2;
+  @apply flex gap-2;
+}
+
+.tag {
+  @apply rounded-full px-3 py-1 text-sm whitespace-nowrap overflow-hidden text-ellipsis;
+  max-width: 160px; /* Set a max width for tags */
+  display: inline-block;
+  flex-shrink: 0; /* Prevent tags from shrinking */
 }
