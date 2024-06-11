@@ -1,8 +1,8 @@
 "use client"
-import { WebsiteShell } from '../components/website-shell';
-import { brand, primaryNav } from '../config';
-import './global.css';
 import { ShellProvider } from '@/react-shell';
+import { WebsiteShell } from '../components/website-shell';
+import { brand } from '../config';
+import './global.css';
 
 
 export default function RootLayout({

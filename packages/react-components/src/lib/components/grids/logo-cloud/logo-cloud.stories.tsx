@@ -1,7 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
-import LogoCloud, { ILogoCloudProps } from './logo-cloud';
+import LogoCloud from './logo-cloud';
 import { playBasic, playWithTitle, playWithoutTitle } from './logo-cloud.specs';
 
 const componentDescription = `

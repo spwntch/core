@@ -1,0 +1,26 @@
+[NX Daemon Server] - 2024-06-11T14:28:20.919Z - Started listening on: /var/folders/tc/wk467jc11zqc2dd4mxl2bc1h0000gn/T/1940aea1de0fa0826b01/d.sock
+[NX Daemon Server] - 2024-06-11T14:28:20.921Z - [WATCHER]: Subscribed to changes within: /Users/zpydee/Documents/Github/spwntch/core (native)
+[NX Daemon Server] - 2024-06-11T14:28:20.926Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-11T14:28:20.927Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-06-11T14:28:20.927Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-11T14:28:20.928Z - [REQUEST]: Client Request for Project Graph Received
+Plugin listed in `nx.json` not found: @nx/next/plugin
+Plugin listed in `nx.json` not found: @nx/storybook/plugin
+Plugin listed in `nx.json` not found: @nx/vite/plugin
+Plugin listed in `nx.json` not found: @nx/eslint/plugin
+[NX Daemon Server] - 2024-06-11T14:28:20.967Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Could not load plugin @nx/next/plugin
+LoadPluginError: Could not load plugin @nx/next/plugin
+    at loadNxPluginAsync (/Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/project-graph/plugins/loader.js:207:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async loadNxPlugins (/Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/project-graph/plugins/internal-api.js:84:9)
+    at async getPlugins (/Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/daemon/server/plugins.js:14:33)
+    at async getCachedSerializedProjectGraphPromise (/Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:35:25)
+    at async handleRequestProjectGraph (/Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/daemon/server/server.js:130:16)
+    at async handleMessage (/Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/daemon/server/server.js:89:9)
+    at async /Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/daemon/server/server.js:55:9
+[NX Daemon Server] - 2024-06-11T14:28:20.967Z - Done responding to the client null
+[NX Daemon Server] - 2024-06-11T14:28:20.967Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 39. Response time: 0.
+[NX Daemon Server] - 2024-06-11T14:28:20.968Z - Time taken for 'Load Nx Plugin: /Users/zpydee/Library/pnpm/store/v3/tmp/dlx-38491/node_modules/.pnpm/nx@19.2.3/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 6.137625ms
+[NX Daemon Server] - 2024-06-11T14:28:20.968Z - Closed a connection. Number of open connections: 0

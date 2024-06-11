@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withFullPage, withFullWidth } from '../../storybook/storybook-decorators';
+import { withFullPage } from '../../storybook/storybook-decorators';
 import { SplitImageContentBlock } from './split-image-content-block';
 import {
   playBasic,
+  playHeroMode,
   playShort,
   playTall,
-  playHeroMode,
 } from './split-image-content-block.specs';
 
 const componentDescription = `

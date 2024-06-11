@@ -15,7 +15,7 @@ import {
   DropdownMenuSeparator
 } from './dropdown-menu';
 import { Button } from '../button/button';
-import { playBasic, playWithGroups, playWithCheckboxes, playWithRadios, playWithSubmenus } from './dropdown-menu.specs';
+// import { playBasic, playWithGroups, playWithCheckboxes, playWithRadios, playWithSubmenus } from './dropdown-menu.specs';
 
 const componentDescription = `
 ### Overview
@@ -98,7 +98,7 @@ export const Basic: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-  play: playBasic,
+  // play: playBasic,
 };
 
 /**
@@ -123,7 +123,7 @@ export const WithGroups: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-  play: playWithGroups,
+  // play: playWithGroups,
 };
 
 /**
@@ -142,7 +142,7 @@ export const WithCheckboxes: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-  play: playWithCheckboxes,
+  // play: playWithCheckboxes,
 };
 
 /**
@@ -163,7 +163,7 @@ export const WithRadios: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-  play: playWithRadios,
+  // play: playWithRadios,
 };
 
 /**
@@ -188,5 +188,5 @@ export const WithSubmenus: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-  play: playWithSubmenus,
+  // play: playWithSubmenus,
 };

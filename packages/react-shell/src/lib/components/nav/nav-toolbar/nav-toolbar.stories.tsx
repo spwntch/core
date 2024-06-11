@@ -1,7 +1,6 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { NavToolbar } from './nav-toolbar';
 import { withFullWidth, withNavProvider } from '../../../storybook/storybook-decorators';
+import { NavToolbar } from './nav-toolbar';
 import { playBasic } from './nav-toolbar.specs';
 
 const componentDescription = `

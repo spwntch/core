@@ -1,16 +1,15 @@
+import { Tags } from '@/react-components'; // Import the Tags component
+import { Small } from '@/react-typography';
 import {
-  Badge,
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
+  cn
 } from '@/react-ui';
-import { Small } from '@/react-typography';
-import { cn } from '@/react-ui';
-import styles from './article-card.module.css';
 import { IMdxDocMeta } from '../../types';
-import { Tags } from '@/react-components'; // Import the Tags component
+import styles from './article-card.module.css';
 
 interface IPostCardProps extends IMdxDocMeta {
   onClick: (slug: string) => void;

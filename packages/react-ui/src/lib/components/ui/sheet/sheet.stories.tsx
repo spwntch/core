@@ -1,16 +1,14 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
+import { Button } from '../button/button';
 import {
   Sheet,
-  SheetTrigger,
   SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
   SheetDescription,
-  SheetClose,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
 } from './sheet';
-import { Button } from '../button/button';
 import { playBasic, playWithHelpContent } from './sheet.specs';
 
 const componentDescription = `

@@ -1,12 +1,10 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Legal } from './legal';
 import {
   withBrandProvider,
-  withFullPage,
-  withFullWidth,
+  withFullWidth
 } from '../../../../storybook/storybook-decorators';
-import { playBasic, playAccessibilityTest } from './legal.specs';
+import { Legal } from './legal';
+import { playAccessibilityTest, playBasic } from './legal.specs';
 
 const componentDescription = `
 ### Overview

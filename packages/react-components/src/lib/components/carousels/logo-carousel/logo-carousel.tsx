@@ -1,4 +1,4 @@
-import { H2, H3 } from '@/react-typography';
+import { H2 } from '@/react-typography';
 import { Carousel, CarouselContent, CarouselItem } from '@/react-ui';
 import Autoplay from 'embla-carousel-autoplay';
 import { useRef } from 'react';

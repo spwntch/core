@@ -4,19 +4,27 @@ import { axe, toHaveNoViolations } from 'jest-axe';
 
 expect.extend(toHaveNoViolations);
 
-export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+export const playBasic = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
   const canvas = within(canvasElement);
-  
+
   // Check if the title is present
   const title = await canvas.findByText('Welcome to Spawntech');
   expect(title).toBeInTheDocument();
-  
+
   // Check if the subtitle is present
-  const subtitle = await canvas.findByText('Pioneering the Future of Software Development');
+  const subtitle = await canvas.findByText(
+    'Pioneering the Future of Software Development'
+  );
   expect(subtitle).toBeInTheDocument();
-  
+
   // Check if the body content is present
-  const bodyContent = await canvas.findByText('Spawntech is at the forefront of transforming software development, blending advanced DevOps, precise UX implementation, and customized development.');
+  const bodyContent = await canvas.findByText(
+    'Spawntech is at the forefront of transforming software development, blending advanced DevOps, precise UX implementation, and customized development.'
+  );
   expect(bodyContent).toBeInTheDocument();
 
   // Check if the bullets are present
@@ -32,9 +40,12 @@ export const playBasic = async ({ canvasElement }: { canvasElement: HTMLElement 
   expect(results).toHaveNoViolations();
 };
 
-export const playHeroMode = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
-  
+export const playHeroMode = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+
   // Check if the component has the hero class
   const container = canvasElement.querySelector('.h-screen');
   expect(container).toBeInTheDocument();
@@ -44,9 +55,13 @@ export const playHeroMode = async ({ canvasElement }: { canvasElement: HTMLEleme
   expect(results).toHaveNoViolations();
 };
 
-export const playLeft = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+export const playLeft = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
   const canvas = within(canvasElement);
-  
+
   // Check if the title is present and left-aligned
   const title = await canvas.findByText('Welcome to Spawntech');
   expect(title).toBeInTheDocument();
@@ -58,9 +73,13 @@ export const playLeft = async ({ canvasElement }: { canvasElement: HTMLElement }
   expect(results).toHaveNoViolations();
 };
 
-export const playRight = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+export const playRight = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
   const canvas = within(canvasElement);
-  
+
   // Check if the title is present and right-aligned
   const title = await canvas.findByText('Welcome to Spawntech');
   expect(title).toBeInTheDocument();
@@ -72,9 +91,12 @@ export const playRight = async ({ canvasElement }: { canvasElement: HTMLElement 
   expect(results).toHaveNoViolations();
 };
 
-export const playShort = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
-  
+export const playShort = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+
   // Check if the component has the correct height
   const container = canvasElement.querySelector('.container');
   expect(container).toHaveStyle('height: 240px');
@@ -84,9 +106,12 @@ export const playShort = async ({ canvasElement }: { canvasElement: HTMLElement 
   expect(results).toHaveNoViolations();
 };
 
-export const playTall = async ({ canvasElement }: { canvasElement: HTMLElement }) => {
-  const canvas = within(canvasElement);
-  
+export const playTall = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+
   // Check if the component has the correct height
   const container = canvasElement.querySelector('.container');
   expect(container).toHaveStyle('height: 720px');

@@ -1,10 +1,9 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { UnderConstructionFooter } from './under-construction-footer';
 import {
-  withFullWidth,
   withBrandProvider,
+  withFullWidth,
 } from '../../../storybook/storybook-decorators';
+import { UnderConstructionFooter } from './under-construction-footer';
 import { playBasic, playDarkMode } from './under-construction-footer.specs';
 
 const componentDescription = `

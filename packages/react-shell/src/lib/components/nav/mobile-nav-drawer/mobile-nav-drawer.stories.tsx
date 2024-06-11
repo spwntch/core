@@ -1,7 +1,6 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { withBrandProvider, withFullWidth, withNavProvider } from '../../../storybook/storybook-decorators';
 import { MobileNavDrawer } from './mobile-nav-drawer';
-import { withFullWidth, withNavProvider, withBrandProvider } from '../../../storybook/storybook-decorators';
 import { playBasic } from './mobile-nav-drawer.specs';
 
 /**

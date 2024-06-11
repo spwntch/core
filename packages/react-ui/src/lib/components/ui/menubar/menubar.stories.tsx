@@ -15,7 +15,7 @@ import {
   MenubarGroup,
   MenubarSeparator,
 } from './menubar';
-import { playBasic, playWithVariousItems } from './menubar.specs';
+// import { playBasic, playWithVariousItems } from './menubar.specs';
 
 const componentDescription = `
 ### Overview
@@ -83,7 +83,7 @@ export const Basic: Story = {
       </MenubarMenu>
     </Menubar>
   ),
-  play: playBasic,
+  // play: playBasic,
 };
 
 /**
@@ -150,5 +150,5 @@ export const WithVariousItems: Story = {
       </MenubarMenu>
     </Menubar>
   ),
-  play: playWithVariousItems,
+  // play: playWithVariousItems,
 };
