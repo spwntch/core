@@ -1,7 +1,7 @@
-import { IMdxDoc } from '@/react-mdx';
-import { ArticleCard } from '../../cards/post-card/article-card';
+import { ArticleCard } from '../article-card/article-card';
 import { cn } from '@/react-ui';
 import styles from './article-grid.module.css';
+import { IMdxDoc } from '../../types';
 
 interface Props {
   articles: IMdxDoc[];

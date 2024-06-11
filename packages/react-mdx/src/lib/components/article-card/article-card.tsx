@@ -7,9 +7,9 @@ import {
   CardTitle,
 } from '@/react-ui';
 import { Small } from '@/react-typography';
-import { IMdxDocMeta } from '@/react-mdx';
 import { cn } from '@/react-ui';
 import styles from './article-card.module.css';
+import { IMdxDocMeta } from '../../types';
 
 interface IPostCardProps extends IMdxDocMeta {
   onClick: (slug: string) => void;

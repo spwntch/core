@@ -2,6 +2,7 @@ import { Button, cn } from '@/react-ui';
 import { ArrowBigLeft } from 'lucide-react';
 import { IMdxDocMeta } from '../../types';
 import styles from './mdx-article-header.module.css';
+import { ImageContentBlock } from '@/react-blocks';
 
 interface IMdxArticleHeaderProps extends IMdxDocMeta {
   backTo?: { label?: string; href: string };
@@ -28,6 +29,20 @@ export const MdxArticleHeader = ({
           <span>{backTo.label || 'Back'}</span>
         </Button>
       )}
+      <ImageContentBlock
+        image={{ src: coverImage!, darken: true }}
+        innerContent={{
+          title: { content: 'Welcome to Spawntech' },
+          subTitle: {
+            content: 'Pioneering the Future of Software Development',
+          },
+          tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
+        }}
+        className="text-white"
+        hAlign="center"
+        height={300}
+      />
+      Copy
       {/* 
         Uncomment and update the following code when BasicHeader and BackgroundImageHeader are available.
         {coverImage ? (
