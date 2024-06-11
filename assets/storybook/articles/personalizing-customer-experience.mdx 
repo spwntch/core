@@ -1,0 +1,20 @@
+---
+slug: 'personalizing-customer-experience'
+date: '2022-05-05'
+title: 'Personalizing Customer Experience'
+subtitle: 'Techniques for Effective Personalization'
+coverImage: '/articles/personalizing-customer-experience.webp'
+authorName: 'Tom White'
+authorAvatar: '/tom.png'
+tags: ['Personalization', 'Customer Experience', 'CX']
+categories: ['Marketing', 'CX']
+keywords: ['Personalization', 'Customer Experience', 'CX']
+abstract: [
+  'Discover techniques to personalize customer experiences.',
+  'Learn how to use data to drive effective personalization.',
+  'Enhance customer satisfaction with tailored experiences.'
+]
+published: true
+---
+
+<p>This is the content of the post.</p>
