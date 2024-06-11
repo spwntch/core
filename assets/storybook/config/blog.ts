@@ -1,5 +1,4 @@
-import { IPost } from '@/react-blog';
-import { IPageSectionContent } from '@/react-components';
+import { IPost } from "../../../packages/react-blog/src/lib/types";
 
 export const articles: IPost[] = [
   {
