@@ -12,7 +12,7 @@ const config: StorybookConfig = {
       to: '/under-construction',
     },
     { from: '../../../assets/storybook/client-logos', to: '/client-logos' },
-    { from: '../../../assets/storybook/articles/public', to: '/articles' },
+    { from: '../../../assets/storybook/articles/cover-images/public', to: '/articles/cover-images' },
     {
       from: '../../../assets/interact/client-logos/public',
       to: '/client-logos',
