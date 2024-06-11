@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { ArticleGrid } from './article-grid';
 
 const meta: Meta<typeof ArticleGrid> = {
-  title: 'components/grids/article-grid',
+  title: 'mdx/article-grid',
   component: ArticleGrid,
   tags: ['autodocs'],
   argTypes: {
