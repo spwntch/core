@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Article } from './article';
+import { Article } from './article-mdx';
 import { articles } from '../../storybook/storybook-config';
 import { H1, P, Ul, Ol, Li, H2 } from '@/react-typography';
 
@@ -28,7 +28,7 @@ The \`Article\` component displays an article with its metadata, content, and op
 `;
 
 const meta: Meta<typeof Article> = {
-  title: 'mdx/article',
+  title: 'mdx/article-mdx',
   component: Article,
   tags: ['autodocs'],
   parameters: {
