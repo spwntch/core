@@ -1,2 +1,2 @@
-export * from './page-content';
+export * from './content';
 export * from './image';

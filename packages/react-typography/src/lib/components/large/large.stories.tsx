@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ILargeProps, Large } from './large';
+import { Large } from './large';
 
-export default {
+const meta: Meta<typeof Large> = {
   title: 'typography/large',
   component: Large,
   tags: ['autodocs'],
@@ -13,7 +13,9 @@ export default {
   },
 } as Meta<typeof Large>;
 
-type Story = StoryObj<ILargeProps>;
+export default meta;
+
+type Story = StoryObj<typeof Large>;
 
 /**
  * Default Large story

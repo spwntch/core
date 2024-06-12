@@ -1,3 +1,3 @@
-export * from './logo'
-export * from './mark'
-export * from './tagline'
+export * from './logo/logo'
+export * from './tagline/tagline'
+export * from './brand-provider/brand-provider'

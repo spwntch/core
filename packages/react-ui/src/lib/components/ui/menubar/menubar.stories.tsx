@@ -1,64 +1,121 @@
+import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import {
   Menubar,
-  MenubarCheckboxItem,
+  MenubarMenu,
+  MenubarTrigger,
   MenubarContent,
   MenubarItem,
-  MenubarMenu,
+  MenubarCheckboxItem,
   MenubarRadioGroup,
   MenubarRadioItem,
-  MenubarSeparator,
   MenubarSub,
-  MenubarSubContent,
   MenubarSubTrigger,
-  MenubarTrigger,
+  MenubarSubContent,
+  MenubarGroup,
+  MenubarSeparator,
 } from './menubar';
+// import { playBasic, playWithVariousItems } from './menubar.specs';
+
+const componentDescription = `
+### Overview
+The \`Menubar\` component provides a flexible and customizable menu bar system.
+
+### Props
+- \`MenubarTrigger\`: The element that toggles the visibility of the menu.
+- \`MenubarContent\`: The container for the menu items.
+- \`MenubarItem\`: A standard item within the menu.
+- \`MenubarCheckboxItem\`: An item that includes a checkbox.
+- \`MenubarRadioItem\`: An item that behaves like a radio button.
+- \`MenubarLabel\`: A label for grouping items within the menu.
+- \`MenubarSeparator\`: A visual separator between groups of items.
+- \`MenubarShortcut\`: A span element for displaying keyboard shortcuts.
+- \`MenubarGroup\`: A grouping of multiple menu items.
+- \`MenubarPortal\`: A portal for rendering the menu in a different part of the DOM.
+- \`MenubarSub\`: A container for creating sub-menus.
+- \`MenubarSubTrigger\`: The trigger for displaying sub-menus.
+- \`MenubarSubContent\`: The container for sub-menu items.
+- \`MenubarRadioGroup\`: A group of radio items.
+
+### Example
+\`\`\`
+<Menubar>
+  <MenubarMenu>
+    <MenubarTrigger>File</MenubarTrigger>
+    <MenubarContent>
+      <MenubarItem>New File</MenubarItem>
+      <MenubarItem>Open File</MenubarItem>
+    </MenubarContent>
+  </MenubarMenu>
+</Menubar>
+\`\`\`
+`;
 
 const meta: Meta<typeof Menubar> = {
   title: 'ui/menubar',
   component: Menubar,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: componentDescription,
+      },
+    },
+  },
 };
 
 export default meta;
 
+type Story = StoryObj<typeof Menubar>;
+
 /**
- * Basic Menubar example with a few items.
+ * Basic Menubar example.
  */
-export const Basic: StoryObj<typeof Menubar> = {
-  render: (args) => (
-    <Menubar {...args}>
+export const Basic: Story = {
+  render: () => (
+    <Menubar>
       <MenubarMenu>
         <MenubarTrigger>File</MenubarTrigger>
         <MenubarContent>
           <MenubarItem>New File</MenubarItem>
           <MenubarItem>Open File</MenubarItem>
-          <MenubarItem>Save</MenubarItem>
+        </MenubarContent>
+      </MenubarMenu>
+    </Menubar>
+  ),
+  // play: playBasic,
+};
+
+/**
+ * Menubar with different types of items.
+ */
+export const WithVariousItems: Story = {
+  render: () => (
+    <Menubar>
+      <MenubarMenu>
+        <MenubarTrigger>File</MenubarTrigger>
+        <MenubarContent>
+          <MenubarItem>New File</MenubarItem>
+          <MenubarItem>Open File</MenubarItem>
           <MenubarSeparator />
-          <MenubarItem>Exit</MenubarItem>
+          <MenubarItem>Save</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
         <MenubarTrigger>Edit</MenubarTrigger>
         <MenubarContent>
-          <MenubarItem>Undo</MenubarItem>
-          <MenubarItem>Redo</MenubarItem>
+          <MenubarGroup>
+            <MenubarItem>Undo</MenubarItem>
+            <MenubarItem>Redo</MenubarItem>
+          </MenubarGroup>
           <MenubarSeparator />
-          <MenubarItem>Cut</MenubarItem>
-          <MenubarItem>Copy</MenubarItem>
-          <MenubarItem>Paste</MenubarItem>
+          <MenubarGroup>
+            <MenubarItem>Cut</MenubarItem>
+            <MenubarItem>Copy</MenubarItem>
+            <MenubarItem>Paste</MenubarItem>
+          </MenubarGroup>
         </MenubarContent>
       </MenubarMenu>
-    </Menubar>
-  ),
-};
-
-/**
- * Menubar example with checkbox items.
- */
-export const WithCheckboxes: StoryObj<typeof Menubar> = {
-  render: (args) => (
-    <Menubar {...args}>
       <MenubarMenu>
         <MenubarTrigger>Options</MenubarTrigger>
         <MenubarContent>
@@ -67,16 +124,6 @@ export const WithCheckboxes: StoryObj<typeof Menubar> = {
           <MenubarCheckboxItem>Option 3</MenubarCheckboxItem>
         </MenubarContent>
       </MenubarMenu>
-    </Menubar>
-  ),
-};
-
-/**
- * Menubar example with radio items.
- */
-export const WithRadios: StoryObj<typeof Menubar> = {
-  render: (args) => (
-    <Menubar {...args}>
       <MenubarMenu>
         <MenubarTrigger>View</MenubarTrigger>
         <MenubarContent>
@@ -87,16 +134,6 @@ export const WithRadios: StoryObj<typeof Menubar> = {
           </MenubarRadioGroup>
         </MenubarContent>
       </MenubarMenu>
-    </Menubar>
-  ),
-};
-
-/**
- * Menubar example with submenus.
- */
-export const WithSubmenus: StoryObj<typeof Menubar> = {
-  render: (args) => (
-    <Menubar {...args}>
       <MenubarMenu>
         <MenubarTrigger>Tools</MenubarTrigger>
         <MenubarContent>
@@ -113,4 +150,5 @@ export const WithSubmenus: StoryObj<typeof Menubar> = {
       </MenubarMenu>
     </Menubar>
   ),
+  // play: playWithVariousItems,
 };

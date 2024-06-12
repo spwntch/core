@@ -1,0 +1,76 @@
+```
+// component specs example
+import { expect } from '@storybook/jest';
+// import type { PlayFunctionContext } from '@storybook/react';
+import { within } from '@storybook/testing-library';
+import { axe, toHaveNoViolations } from 'jest-axe';
+
+expect.extend(toHaveNoViolations);
+
+export const playBasic = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const content = await canvas.findByText('Your Content Here');
+
+  // Initial state check
+  expect(content).toBeInTheDocument();
+
+  // Accessibility check
+  const results = await axe(canvasElement);
+  expect(results).toHaveNoViolations();
+};
+
+export const playMultipleItems = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const content1 = await canvas.findByText('Content item 1');
+  const content2 = await canvas.findByText('Content item 2');
+  const content3 = await canvas.findByText('Content item 3');
+
+  // Check initial state
+  expect(content1).toBeInTheDocument();
+  expect(content2).toBeInTheDocument();
+  expect(content3).toBeInTheDocument();
+
+  // Accessibility check
+  const results = await axe(canvasElement);
+  expect(results).toHaveNoViolations();
+};
+
+export const playAccessibilityTest = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const results = await axe(canvasElement);
+  expect(results).toHaveNoViolations();
+};
+
+export const playEmptyContainer = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  expect(canvas.queryByText('Content goes here')).not.toBeInTheDocument();
+};
+
+export const playLargeNumberOfItems = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  for (let i = 0; i < 50; i++) {
+    const content = await canvas.findByText(`Content item ${i}`);
+    expect(content).toBeInTheDocument();
+  }
+};
+
+```

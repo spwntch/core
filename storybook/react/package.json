@@ -6,5 +6,12 @@
   "scripts": {},
   "keywords": [],
   "author": "Spawntech",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@spwntch/tailwind": "latest",
+    "@spwntch/ui": "latest",
+    "@spwntch/typography": "latest",
+    "@spwntch/components": "latest",
+    "@spwntch/shell": "latest"
+  }
 }

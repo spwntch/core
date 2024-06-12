@@ -1,0 +1,38 @@
+/* desktop-top-navbar.module.css */
+
+.header {
+    @apply sticky top-0 z-50;
+  }
+  
+  .container {
+    @apply flex p-2 pb-4 items-center;
+  }
+  
+  .logo {
+    @apply cursor-pointer;
+  }
+  
+  .nav {
+    @apply hidden md:flex mx-10;
+  }
+  
+  .nav-start {
+    @apply justify-start;
+  }
+  
+  .nav-center {
+    @apply justify-center;
+  }
+  
+  .nav-end {
+    @apply justify-end;
+  }
+  
+  .theme-toggle-button {
+    @apply ml-2;
+  }
+  
+  .mobile-nav-drawer {
+    @apply block md:hidden;
+  }
+  

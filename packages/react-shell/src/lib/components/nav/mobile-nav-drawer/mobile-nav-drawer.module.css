@@ -1,0 +1,29 @@
+/* mobile-nav-drawer.module.css */
+
+.trigger-button {
+  @apply ml-2;
+}
+
+.menu-icon {
+  @apply h-[1.2rem] w-[1.2rem];
+}
+
+.sheet-content {
+  @apply w-[260px];
+}
+
+.sheet-header {
+  @apply pt-2;
+}
+
+.logo {
+  @apply mx-auto;
+}
+
+.sheet-description {
+  @apply text-center;
+}
+
+.separator {
+  @apply mt-4;
+}

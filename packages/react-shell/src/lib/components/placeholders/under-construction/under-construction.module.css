@@ -1,0 +1,9 @@
+/* under-construction.module.css */
+
+.container {
+  @apply m-4 p-4 h-full flex flex-col items-center border-4 border-dashed border-muted text-muted-foreground;
+}
+
+.content {
+  @apply w-full pt-8 px-4;
+}
