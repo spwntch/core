@@ -1620,3 +1620,12 @@ LoadPluginError: Could not load plugin @nx/next/plugin
 [NX Daemon Server] - 2024-06-12T12:47:18.351Z - Done responding to the client project-graph
 [NX Daemon Server] - 2024-06-12T12:47:18.351Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
 [NX Daemon Server] - 2024-06-12T12:47:18.354Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-06-12T13:10:17.132Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-12T13:10:22.878Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-12T13:10:22.931Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-12T13:10:22.982Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-12T13:10:23.034Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-12T13:10:23.260Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-12T13:10:23.260Z - [WATCHER]: Stopping the watcher for /Users/zpydee/Documents/Github/spwntch/core (sources)
+[NX Daemon Server] - 2024-06-12T13:10:23.260Z - [WATCHER]: Stopping the watcher for /Users/zpydee/Documents/Github/spwntch/core (outputs)
+[NX Daemon Server] - 2024-06-12T13:10:23.260Z - Server stopped because: "NX_VERSION_CHANGED"

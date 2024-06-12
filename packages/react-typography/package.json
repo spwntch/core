@@ -9,8 +9,7 @@
   "types": "./dist/index.d.ts",
   "keywords": [
     "react",
-    "vite",
-    "sandbox"
+    "vite"
   ],
   "author": "spwntch",
   "license": "MIT",
