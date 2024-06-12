@@ -5,10 +5,13 @@ import { IMdxDoc } from '../../types';
 
 interface Props {
   articles: IMdxDoc[];
-  onClickPost: (slug: string) => void;
+  onClickArticle: (slug: string) => void;
 }
 
-export const ArticleGrid = ({ articles: posts, onClickPost }: Props) => {
+export const ArticleGrid = ({
+  articles: posts,
+  onClickArticle,
+}: Props) => {
   if (!posts?.length) return <div>no posts</div>;
   return (
     <div className={cn(styles['grid-container'])}>
@@ -16,7 +19,7 @@ export const ArticleGrid = ({ articles: posts, onClickPost }: Props) => {
         <ArticleCard
           key={index}
           {...post.meta}
-          onClick={onClickPost}
+          onClick={onClickArticle}
           className="w-full"
         />
       ))}

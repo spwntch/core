@@ -48,7 +48,7 @@ const meta: Meta<typeof ArticleGrid> = {
       description: 'An array of articles to be displayed in the grid',
       control: 'object',
     },
-    onClickPost: {
+    onClickArticle: {
       description: 'Function to handle click events on the articles',
       action: 'clicked',
     },
@@ -66,7 +66,7 @@ type Story = StoryObj<typeof ArticleGrid>;
 export const Default: Story = {
   args: {
     articles: articles,
-    onClickPost: (slug) => console.log(`Navigating to article: ${slug}`),
+    onClickArticle: (slug) => console.log(`Navigating to article: ${slug}`),
   },
   play: playBasic,
 };
@@ -78,7 +78,7 @@ export const Default: Story = {
 export const Empty: Story = {
   args: {
     articles: [],
-    onClickPost: (slug) => console.log(`Navigating to article: ${slug}`),
+    onClickArticle: (slug) => console.log(`Navigating to article: ${slug}`),
   },
   play: playEmpty,
 };
@@ -90,8 +90,7 @@ export const Empty: Story = {
 export const SingleArticle: Story = {
   args: {
     articles: articles.slice(0, 1),
-    onClickPost: (slug) => console.log(`Navigating to article: ${slug}`),
+    onClickArticle: (slug) => console.log(`Navigating to article: ${slug}`),
   },
   play: playSingleArticle,
 };
-
