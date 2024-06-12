@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/typography",
-  "version": "0.55.0",
+  "version": "0.55.1",
   "files": [
     "dist"
   ],
@@ -15,7 +15,7 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/tailwind": "~0.55.0"
+    "@spwntch/tailwind": "~0.55.1"
   },
   "devDependencies": {
     "storybook": "8.1.1"
