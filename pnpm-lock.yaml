@@ -297,7 +297,7 @@ importers:
   packages/react-components:
     dependencies:
       '@spwntch/tailwind':
-        specifier: ~0.55.2
+        specifier: ~0.55.3
         version: link:../tailwind
       embla-carousel-autoplay:
         specifier: ^8.1.3
@@ -308,10 +308,10 @@ importers:
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: ~0.55.2
+        specifier: ~0.55.3
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: ~0.55.2
+        specifier: ~0.55.3
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
@@ -323,7 +323,7 @@ importers:
   packages/react-typography:
     dependencies:
       '@spwntch/tailwind':
-        specifier: ~0.55.2
+        specifier: ~0.55.3
         version: link:../tailwind
     devDependencies:
       storybook:
@@ -354,7 +354,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.3.1)(react@18.3.1)
       '@spwntch/tailwind':
-        specifier: ~0.55.2
+        specifier: ~0.55.3
         version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.0
