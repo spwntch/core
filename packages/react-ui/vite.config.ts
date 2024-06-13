@@ -33,6 +33,17 @@ export default defineConfig({
       entry: {
         index: 'src/index.ts',
         accordion: 'src/lib/components/ui/accordion/accordion.tsx',
+        avatar: 'src/lib/components/ui/avatar/avatar.tsx',
+        badge: 'src/lib/components/ui/badge/badge.tsx',
+        button: 'src/lib/components/ui/button/button.tsx',
+        card: 'src/lib/components/ui/card/card.tsx',
+        carousel: 'src/lib/components/ui/carousel/carousel.tsx',
+        'dropdown-menu':
+          'src/lib/components/ui/dropdown-menu/dropdown-menu.tsx',
+        menubar: 'src/lib/components/ui/menubar/menubar.tsx',
+        'navigation-menu':
+          'src/lib/components/ui/navigation-menu/navigation-menu.tsx',
+        sheet: 'src/lib/components/ui/sheet/sheet.tsx',
       },
       name: 'react-ui',
       fileName: 'index',
