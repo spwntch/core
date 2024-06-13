@@ -60,8 +60,7 @@ export default defineConfig({
         'lucide-react',
         'tailwind-merge',
         'tailwind-animate',
-
-        //   '@/tailwind/tailwind.css',
+        '@spwntch/tailwind',
       ],
     },
   },
