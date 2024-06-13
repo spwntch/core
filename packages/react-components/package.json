@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/components",
-  "version": "0.61.2",
+  "version": "0.61.3",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -24,7 +24,7 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/tailwind": "~0.61.2",
+    "@spwntch/tailwind": "~0.61.3",
     "embla-carousel-autoplay": "^8.1.3"
   }
 }
