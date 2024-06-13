@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/mdx",
-  "version": "0.61.16",
+  "version": "0.61.17",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -24,6 +24,6 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/tailwind": "0.61.16"
+    "@spwntch/tailwind": "0.61.17"
   }
 }
