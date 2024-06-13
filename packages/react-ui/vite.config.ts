@@ -46,7 +46,6 @@ export default defineConfig({
         sheet: 'src/lib/components/ui/sheet/sheet.tsx',
       },
       name: 'react-ui',
-      fileName: 'index',
       formats: ['es'],
     },
     rollupOptions: {
