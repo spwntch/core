@@ -297,13 +297,13 @@ importers:
   packages/react-components:
     devDependencies:
       '@spwntch/tailwind':
-        specifier: 0.61.12
+        specifier: 0.61.13
         version: link:../tailwind
       '@spwntch/typography':
-        specifier: 0.61.12
+        specifier: 0.61.13
         version: link:../react-typography
       '@spwntch/ui':
-        specifier: 0.61.12
+        specifier: 0.61.13
         version: link:../react-ui
       embla-carousel-autoplay:
         specifier: ^8.1.3
@@ -312,16 +312,16 @@ importers:
   packages/react-mdx:
     dependencies:
       '@spwntch/tailwind':
-        specifier: 0.61.12
+        specifier: 0.61.13
         version: link:../tailwind
 
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: 0.61.12
+        specifier: 0.61.13
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: 0.61.12
+        specifier: 0.61.13
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
@@ -333,7 +333,7 @@ importers:
   packages/react-typography:
     devDependencies:
       '@spwntch/tailwind':
-        specifier: 0.61.12
+        specifier: 0.61.13
         version: link:../tailwind
 
   packages/react-ui:
