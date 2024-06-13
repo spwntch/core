@@ -7,6 +7,15 @@
   ],
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": {
+      "default": "./dist/style.css"
+    }
+  },
   "keywords": [
     "react",
     "vite"
