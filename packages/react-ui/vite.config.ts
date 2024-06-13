@@ -38,7 +38,7 @@ export default defineConfig({
         '@radix-ui/react-menubar',
         '@radix-ui/react-navigation-menu',
         '@radix-ui/react-slot',
-        '@spwntch/tailwind',
+        // '@spwntch/tailwind',
         'class-variance-authority',
         'clsx',
         'embla-carousel-react',
