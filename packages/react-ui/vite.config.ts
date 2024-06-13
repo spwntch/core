@@ -52,7 +52,7 @@ export default defineConfig({
       ],
       output: {
         assetFileNames: 'assets/[name][extname]',
-        entryFileNames: '[name][extname]',
+        entryFileNames: '[name].mjs',
       },
     },
   },
