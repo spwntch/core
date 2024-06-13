@@ -16,7 +16,11 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       tsconfigPath: join(__dirname, 'tsconfig.lib.json'),
-      exclude: ['**/*.stories.tsx', '**/*.specs.ts'],
+      exclude: [
+        '**/*.stories.tsx',
+        '**/*.specs.ts',
+        '**/storybook-decorators.tsx',
+      ],
     }),
   ],
   build: {
@@ -26,7 +30,10 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
     lib: {
-      entry: 'src/index.ts',
+      entry: {
+        index: 'src/index.ts',
+        accordion: 'src/lib/components/ui/accordion/accordion.tsx',
+      },
       name: 'react-ui',
       fileName: 'index',
       formats: ['es'],
