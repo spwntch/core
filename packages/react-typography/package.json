@@ -25,6 +25,6 @@
   "author": "spwntch",
   "license": "MIT",
   "devDependencies": {
-    "@spwntch/tailwind": "~0.61.8"
+    "@spwntch/tailwind": "0.61.8"
   }
 }
