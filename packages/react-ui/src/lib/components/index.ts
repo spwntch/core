@@ -1,4 +1,3 @@
-import '@/tailwind/tailwind.css';
 export * from './ui/accordion/accordion';
 export * from './ui/avatar/avatar';
 export * from './ui/button/button';
