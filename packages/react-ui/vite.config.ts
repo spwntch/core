@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc';
 import * as path from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   root: __dirname,
@@ -11,6 +12,7 @@ export default defineConfig({
   plugins: [
     react(),
     nxViteTsPaths(),
+    libInjectCss(),
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
@@ -38,7 +40,6 @@ export default defineConfig({
         '@radix-ui/react-menubar',
         '@radix-ui/react-navigation-menu',
         '@radix-ui/react-slot',
-        // '@spwntch/tailwind',
         'class-variance-authority',
         'clsx',
         'embla-carousel-react',
