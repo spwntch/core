@@ -44,9 +44,6 @@ export default defineConfig({
     rollupOptions: {
       // External packages that should not be bundled into your library.
       external: [
-        'react',
-        'react-dom',
-        'react/jsx-runtime',
         '@radix-ui/react-accordion',
         '@radix-ui/react-avatar',
         '@radix-ui/react-dialog',
@@ -54,13 +51,16 @@ export default defineConfig({
         '@radix-ui/react-menubar',
         '@radix-ui/react-navigation-menu',
         '@radix-ui/react-slot',
+        '@spwntch/tailwind',
         'class-variance-authority',
         'clsx',
         'embla-carousel-react',
         'lucide-react',
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
         'tailwind-merge',
         'tailwind-animate',
-        '@spwntch/tailwind',
       ],
     },
   },
