@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/components",
-  "version": "0.61.10",
+  "version": "0.61.11",
   "files": [
     "dist",
     "!dist/package.json"
@@ -24,9 +24,9 @@
   "author": "spwntch",
   "license": "MIT",
   "devDependencies": {
-    "@spwntch/tailwind": "0.61.10",
-    "@spwntch/ui": "0.61.10",
-    "@spwntch/typography": "0.61.10",
+    "@spwntch/tailwind": "0.61.11",
+    "@spwntch/ui": "0.61.11",
+    "@spwntch/typography": "0.61.11",
     "embla-carousel-autoplay": "^8.1.3"
   }
 }
