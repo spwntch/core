@@ -48,7 +48,6 @@ export default defineConfig({
         'react-dom',
         'react/jsx-runtime',
         '@radix-ui/react-accordion',
-        '@radix-ui/react-accordion',
         '@radix-ui/react-avatar',
         '@radix-ui/react-dialog',
         '@radix-ui/react-dropdown-menu',
