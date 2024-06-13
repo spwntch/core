@@ -7,22 +7,19 @@ import { extname, relative } from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/react-typography',
-
   plugins: [
     react(),
     nxViteTsPaths(),
-    libInjectCss(),
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
+      exclude: ['**/*.stories.tsx', '**/*.specs.ts'],
     }),
   ],
-
   build: {
     outDir: './dist',
     reportCompressedSize: true,
@@ -33,7 +30,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'react-typography',
       fileName: 'index',
-      formats: ['es', 'cjs'],
+      formats: ['es'],
     },
     rollupOptions: {
       input: Object.fromEntries(
@@ -49,7 +46,12 @@ export default defineConfig({
         entryFileNames: '[name].js',
       },
 
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: [
+        '@spwntch/tailwind',
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+      ],
     },
   },
 });
