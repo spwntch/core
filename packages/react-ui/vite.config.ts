@@ -5,6 +5,8 @@ import * as path from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import { globSync } from 'glob';
+import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
   root: __dirname,
@@ -50,6 +52,23 @@ export default defineConfig({
         'tailwind-merge',
         'tailwind-animate',
       ],
+      input: Object.fromEntries(
+        globSync('src/**/*.js').map((file) => [
+          // This remove `src/` as well as the file extension from each
+          // file, so e.g. src/nested/foo.js becomes nested/foo
+          path.relative(
+            'src',
+            file.slice(0, file.length - path.extname(file).length)
+          ),
+          // This expands the relative paths to absolute paths, so e.g.
+          // src/nested/foo becomes /project/src/nested/foo.js
+          fileURLToPath(new URL(file, import.meta.url)),
+        ])
+      ),
+      output: {
+        assetFileNames: 'assets/[name][extname]',
+        entryFileNames: '[name].js',
+      },
     },
   },
 });
