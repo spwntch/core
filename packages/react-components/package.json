@@ -1,16 +1,15 @@
 {
   "name": "@spwntch/components",
   "version": "0.61.8",
-  "main": "./dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "!dist/package.json"
   ],
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./styles": {
@@ -19,12 +18,14 @@
   },
   "keywords": [
     "react",
-    "vite"
+    "vite",
+    "spawntech base components"
   ],
   "author": "spwntch",
   "license": "MIT",
-  "dependencies": {
-    "@spwntch/tailwind": "~0.61.8",
+  "devDependencies": {
+    "@spwntch/ui": "~0.61.8",
+    "@spwntch/typography": "~0.61.8",
     "embla-carousel-autoplay": "^8.1.3"
   }
 }

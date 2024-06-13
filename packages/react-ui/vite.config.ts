@@ -30,7 +30,6 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      // External packages that should not be bundled into your library.
       external: [
         '@radix-ui/react-accordion',
         '@radix-ui/react-avatar',
