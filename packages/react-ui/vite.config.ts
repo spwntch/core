@@ -15,7 +15,7 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
-      exclude: ['**/*.stories.tsx', '**/*.specs.ts', 'src/__index.ts'],
+      exclude: ['**/*.stories.tsx', '**/*.specs.ts'],
     }),
   ],
 
