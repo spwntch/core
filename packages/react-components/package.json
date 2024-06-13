@@ -24,6 +24,7 @@
   "author": "spwntch",
   "license": "MIT",
   "devDependencies": {
+    "@spwntch/tailwind": "0.61.8",
     "@spwntch/ui": "~0.61.8",
     "@spwntch/typography": "~0.61.8",
     "embla-carousel-autoplay": "^8.1.3"

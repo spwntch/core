@@ -31,6 +31,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
+        '@spwntch/tailwind',
         '@spwntch/ui',
         '@spwntch/typography',
         'embla-carousel-autoplay',
