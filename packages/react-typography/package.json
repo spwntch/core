@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/typography",
-  "version": "0.61.14",
+  "version": "0.61.15",
   "files": [
     "dist",
     "!dist/package.json"
@@ -25,6 +25,6 @@
   "author": "spwntch",
   "license": "MIT",
   "devDependencies": {
-    "@spwntch/tailwind": "0.61.14"
+    "@spwntch/tailwind": "0.61.15"
   }
 }
