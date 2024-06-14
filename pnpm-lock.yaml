@@ -99,6 +99,15 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.3.1)(react@18.3.1)
+      '@spwntch/components':
+        specifier: latest
+        version: link:packages/react-components
+      '@spwntch/typography':
+        specifier: latest
+        version: link:packages/react-typography
+      '@spwntch/ui':
+        specifier: latest
+        version: link:packages/react-ui
       '@storybook/addon-docs':
         specifier: ^8.1.1
         version: 8.1.9(@types/react-dom@18.3.0)(prettier@3.3.2)
@@ -315,16 +324,16 @@ importers:
   packages/react-mdx:
     dependencies:
       '@spwntch/tailwind':
-        specifier: 0.61.27
+        specifier: latest
         version: link:../tailwind
 
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: 0.61.27
+        specifier: latest
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: 0.61.27
+        specifier: latest
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
