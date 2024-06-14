@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import styles from './lead.module.css';
 
 export interface ILeadProps
@@ -15,11 +15,7 @@ export interface ILeadProps
 export const Lead = forwardRef<HTMLParagraphElement, ILeadProps>(
   ({ className, ...props }, ref) => {
     return (
-      <p
-        ref={ref}
-        className={cn(styles.lead, className)}
-        {...props}
-      >
+      <p ref={ref} className={cn(styles.lead, className)} {...props}>
         {props.children}
       </p>
     );

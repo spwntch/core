@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import styles from './ol.module.css';
 
 export interface OlProps
@@ -15,11 +15,7 @@ export interface OlProps
 export const Ol = forwardRef<HTMLOListElement, OlProps>(
   ({ className, ...props }, ref) => {
     return (
-      <ol
-        ref={ref}
-        className={cn(styles.ol, className)}
-        {...props}
-      >
+      <ol ref={ref} className={cn(styles.ol, className)} {...props}>
         {props.children}
       </ol>
     );

@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import styles from './h3.module.css';
 
 export interface IH3Props
@@ -15,11 +15,7 @@ export interface IH3Props
 export const H3 = forwardRef<HTMLHeadingElement, IH3Props>(
   ({ className, ...props }, ref) => {
     return (
-      <h3
-        ref={ref}
-        className={cn(styles.h3, className)}
-        {...props}
-      >
+      <h3 ref={ref} className={cn(styles.h3, className)} {...props}>
         {props.children}
       </h3>
     );
