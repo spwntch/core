@@ -297,11 +297,11 @@ importers:
   packages/react-components:
     dependencies:
       '@spwntch/typography':
-        specifier: 0.61.21
-        version: 0.61.21(@spwntch/ui@0.61.21)
+        specifier: latest
+        version: link:../react-typography
       '@spwntch/ui':
-        specifier: 0.61.21
-        version: 0.61.21(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-menubar@1.0.4)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-slot@1.0.2)(class-variance-authority@0.7.0)(clsx@2.1.1)(embla-carousel-react@8.1.5)(jest-axe@8.0.0)(lucide-react@0.378.0)(tailwind-merge@2.3.0)(tailwindcss-animate@1.0.7)
+        specifier: latest
+        version: link:../react-ui
       embla-carousel-autoplay:
         specifier: ^8.1.3
         version: 8.1.5(embla-carousel@8.1.5)
@@ -336,8 +336,8 @@ importers:
   packages/react-typography:
     dependencies:
       '@spwntch/ui':
-        specifier: 0.61.20
-        version: 0.61.20(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-menubar@1.0.4)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-slot@1.0.2)(class-variance-authority@0.7.0)(clsx@2.1.1)(embla-carousel-react@8.1.5)(jest-axe@8.0.0)(lucide-react@0.378.0)(tailwind-merge@2.3.0)(tailwindcss-animate@1.0.7)
+        specifier: latest
+        version: link:../react-ui
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -4865,82 +4865,6 @@ packages:
       '@sinonjs/commons': 3.0.1
     dev: true
 
-  /@spwntch/typography@0.61.21(@spwntch/ui@0.61.21):
-    resolution: {integrity: sha512-sDbrC1ERQnSbGrHQNsDuackxZSmVisW5wG3vWq3DdNMpZQDVDsG5ajz8oVTIVkFga9dpA2W6SpYpxUHyRBjZLQ==}
-    peerDependencies:
-      '@spwntch/ui': 0.61.20
-    dependencies:
-      '@spwntch/ui': 0.61.21(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-menubar@1.0.4)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-slot@1.0.2)(class-variance-authority@0.7.0)(clsx@2.1.1)(embla-carousel-react@8.1.5)(jest-axe@8.0.0)(lucide-react@0.378.0)(tailwind-merge@2.3.0)(tailwindcss-animate@1.0.7)
-    dev: false
-
-  /@spwntch/ui@0.61.20(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-menubar@1.0.4)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-slot@1.0.2)(class-variance-authority@0.7.0)(clsx@2.1.1)(embla-carousel-react@8.1.5)(jest-axe@8.0.0)(lucide-react@0.378.0)(tailwind-merge@2.3.0)(tailwindcss-animate@1.0.7):
-    resolution: {integrity: sha512-HwUJlPwNuoRi40t0xA17Go+BGIECS9wSaEx2GRf9wz1dqAIpTSm+GDuhR45ZX/YUZ5vwUy1mEkTnwcyDzlfOYg==}
-    peerDependencies:
-      '@radix-ui/react-accordion': ^1.1.2
-      '@radix-ui/react-avatar': ^1.0.4
-      '@radix-ui/react-dialog': ^1.0.5
-      '@radix-ui/react-dropdown-menu': ^2.0.6
-      '@radix-ui/react-menubar': ^1.0.4
-      '@radix-ui/react-navigation-menu': ^1.1.4
-      '@radix-ui/react-slot': ^1.0.2
-      class-variance-authority: ^0.7.0
-      clsx: ^2.1.1
-      embla-carousel-react: ^8.1.3
-      jest-axe: ^8.0.0
-      lucide-react: ^0.378.0
-      tailwind-merge: ^2.3.0
-      tailwindcss-animate: ^1.0.7
-    dependencies:
-      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-dropdown-menu': 2.0.6(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-menubar': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-navigation-menu': 1.1.4(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.3.1)(react@18.3.1)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.1
-      embla-carousel-react: 8.1.5(react@18.3.1)
-      jest-axe: 8.0.0
-      lucide-react: 0.378.0(react@18.3.1)
-      tailwind-merge: 2.3.0
-      tailwindcss-animate: 1.0.7(tailwindcss@3.4.3)
-    dev: false
-
-  /@spwntch/ui@0.61.21(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-menubar@1.0.4)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-slot@1.0.2)(class-variance-authority@0.7.0)(clsx@2.1.1)(embla-carousel-react@8.1.5)(jest-axe@8.0.0)(lucide-react@0.378.0)(tailwind-merge@2.3.0)(tailwindcss-animate@1.0.7):
-    resolution: {integrity: sha512-aBBwQh6KIodkR3NaNyB3cQva+zHAyt+Q37tCKxCZZYPLnyJ9V7IkDJZuo3QCE8bSDpxkE5x9DuPPw+J5V0EI/w==}
-    peerDependencies:
-      '@radix-ui/react-accordion': ^1.1.2
-      '@radix-ui/react-avatar': ^1.0.4
-      '@radix-ui/react-dialog': ^1.0.5
-      '@radix-ui/react-dropdown-menu': ^2.0.6
-      '@radix-ui/react-menubar': ^1.0.4
-      '@radix-ui/react-navigation-menu': ^1.1.4
-      '@radix-ui/react-slot': ^1.0.2
-      class-variance-authority: ^0.7.0
-      clsx: ^2.1.1
-      embla-carousel-react: ^8.1.3
-      jest-axe: ^8.0.0
-      lucide-react: ^0.378.0
-      tailwind-merge: ^2.3.0
-      tailwindcss-animate: ^1.0.7
-    dependencies:
-      '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-dropdown-menu': 2.0.6(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-menubar': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-navigation-menu': 1.1.4(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.3.1)(react@18.3.1)
-      class-variance-authority: 0.7.0
-      clsx: 2.1.1
-      embla-carousel-react: 8.1.5(react@18.3.1)
-      jest-axe: 8.0.0
-      lucide-react: 0.378.0(react@18.3.1)
-      tailwind-merge: 2.3.0
-      tailwindcss-animate: 1.0.7(tailwindcss@3.4.3)
-    dev: false
-
   /@storybook/addon-actions@8.1.1:
     resolution: {integrity: sha512-EEBjOMuQOdCSVrwPQEkJFc42I0TWj/bK+8lboV0jXi61ZI3okDPCJ/04vu5iTvX0HjRoYqqwBjyYj0Crf7ihag==}
     dependencies:
@@ -7649,21 +7573,21 @@ packages:
       path-browserify: 1.0.1
     dev: true
 
-  /@vue/compiler-core@3.4.27:
-    resolution: {integrity: sha512-E+RyqY24KnyDXsCuQrI+mlcdW3ALND6U7Gqa/+bVwbcpcR3BRRIckFoz7Qyd4TTlnugtwuI7YgjbvsLmxb+yvg==}
+  /@vue/compiler-core@3.4.28:
+    resolution: {integrity: sha512-yJ6CFFu6qDYB4RrF9LJ1DU7Cq7rgODBrwHoiadvHSBGhMHcROl5AOp9WEPDba5J9OEptUdpSPVZb7q++MO/7vA==}
     dependencies:
       '@babel/parser': 7.24.7
-      '@vue/shared': 3.4.27
+      '@vue/shared': 3.4.28
       entities: 4.5.0
       estree-walker: 2.0.2
       source-map-js: 1.2.0
     dev: true
 
-  /@vue/compiler-dom@3.4.27:
-    resolution: {integrity: sha512-kUTvochG/oVgE1w5ViSr3KUBh9X7CWirebA3bezTbB5ZKBQZwR2Mwj9uoSKRMFcz4gSMzzLXBPD6KpCLb9nvWw==}
+  /@vue/compiler-dom@3.4.28:
+    resolution: {integrity: sha512-CgBwv48EMETKijnzKB8swa00aEkmXFDbEHOZqeUPKPDZE9DM51RlKA+9/9zPStioCP+v3SC+UjzQfARsFefhqw==}
     dependencies:
-      '@vue/compiler-core': 3.4.27
-      '@vue/shared': 3.4.27
+      '@vue/compiler-core': 3.4.28
+      '@vue/shared': 3.4.28
     dev: true
 
   /@vue/language-core@1.8.27(typescript@5.4.5):
@@ -7676,8 +7600,8 @@ packages:
     dependencies:
       '@volar/language-core': 1.11.1
       '@volar/source-map': 1.11.1
-      '@vue/compiler-dom': 3.4.27
-      '@vue/shared': 3.4.27
+      '@vue/compiler-dom': 3.4.28
+      '@vue/shared': 3.4.28
       computeds: 0.0.1
       minimatch: 9.0.4
       muggle-string: 0.3.1
@@ -7686,8 +7610,8 @@ packages:
       vue-template-compiler: 2.7.16
     dev: true
 
-  /@vue/shared@3.4.27:
-    resolution: {integrity: sha512-DL3NmY2OFlqmYYrzp39yi3LDkKxa5vZVwxWdQ3rG0ekuWscHraeIbnI8t+aZK7qhYqEqWKTUdijadunb9pnrgA==}
+  /@vue/shared@3.4.28:
+    resolution: {integrity: sha512-2b+Vuv5ichZQZPmRJfniHQkBSNigmRsRkr17bkYqBFy3J88T4lB7dRbAX/rx8qr9v0cr8Adg6yP872xhxGmh0w==}
     dev: true
 
   /@webassemblyjs/ast@1.12.1:
@@ -7880,16 +7804,16 @@ packages:
   /acorn-globals@7.0.1:
     resolution: {integrity: sha512-umOSDSDrfHbTNPuNpC2NSnnA3LUrqpevPb4T9jRx4MagXNS0rs+gwiTcAvqCRmsD6utzsrzNt+ebm00SNWiC3Q==}
     dependencies:
-      acorn: 8.11.3
-      acorn-walk: 8.3.2
+      acorn: 8.12.0
+      acorn-walk: 8.3.3
     dev: true
 
-  /acorn-import-attributes@1.9.5(acorn@8.11.3):
+  /acorn-import-attributes@1.9.5(acorn@8.12.0):
     resolution: {integrity: sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==}
     peerDependencies:
       acorn: ^8
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
     dev: true
 
   /acorn-jsx@5.3.2(acorn@7.4.1):
@@ -7900,21 +7824,23 @@ packages:
       acorn: 7.4.1
     dev: true
 
-  /acorn-jsx@5.3.2(acorn@8.11.3):
+  /acorn-jsx@5.3.2(acorn@8.12.0):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
 
   /acorn-walk@7.2.0:
     resolution: {integrity: sha512-OPdCF6GsMIP+Az+aWfAAOEt2/+iVDKE7oy6lJ098aoe59oAmK76qV6Gw60SbZ8jHuG2wH058GF4pLFbYamYrVA==}
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /acorn-walk@8.3.2:
-    resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
+  /acorn-walk@8.3.3:
+    resolution: {integrity: sha512-MxXdReSRhGO7VlFe1bRG/oI7/mdLV9B9JJT0N8vZOhF7gFRR5l3M8W9G8JxmKV+JC5mGqJ0QvqfSOLsCPa4nUw==}
     engines: {node: '>=0.4.0'}
+    dependencies:
+      acorn: 8.12.0
 
   /acorn@7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
@@ -7922,8 +7848,8 @@ packages:
     hasBin: true
     dev: true
 
-  /acorn@8.11.3:
-    resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+  /acorn@8.12.0:
+    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -8305,7 +8231,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001633
+      caniuse-lite: 1.0.30001634
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -8687,7 +8613,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001633
+      caniuse-lite: 1.0.30001634
       electron-to-chromium: 1.4.802
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.1)
@@ -8810,13 +8736,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001633
+      caniuse-lite: 1.0.30001634
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite@1.0.30001633:
-    resolution: {integrity: sha512-6sT0yf/z5jqf8tISAgpJDrmwOpLsrpnyCdD/lOZKvKkkJK4Dn0X5i7KF7THEZhOq+30bmhwBlNEaqPUiHiKtZg==}
+  /caniuse-lite@1.0.30001634:
+    resolution: {integrity: sha512-fbBYXQ9q3+yp1q1gBk86tOFs4pyn/yxFm5ZNP18OXJDfA3txImOY9PhfxVggZ4vRHDqoU8NrKU81eN0OtzOgRA==}
 
   /caseless@0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
@@ -10795,8 +10721,8 @@ packages:
     resolution: {integrity: sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
+      acorn: 8.12.0
+      acorn-jsx: 5.3.2(acorn@8.12.0)
       eslint-visitor-keys: 3.4.3
     dev: true
 
@@ -11306,8 +11232,8 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
     dev: true
 
-  /flow-parser@0.237.2:
-    resolution: {integrity: sha512-mvI/kdfr3l1waaPbThPA8dJa77nHXrfZIun+SWvFwSwDjmeByU7mGJGRmv1+7guU6ccyLV8e1lqZA1lD4iMGnQ==}
+  /flow-parser@0.238.0:
+    resolution: {integrity: sha512-VE7XSv1epljsIN2YeBnxCmGJihpNIAnLLu/pPOdA+Gkso7qDltJwUi6vfHjgxdBbjSdAuPGnhuOHJUQG+yYwIg==}
     engines: {node: '>=0.4.0'}
     dev: true
 
@@ -13372,7 +13298,7 @@ packages:
       '@babel/register': 7.24.6(@babel/core@7.24.7)
       babel-core: 7.0.0-bridge.0(@babel/core@7.24.7)
       chalk: 4.1.2
-      flow-parser: 0.237.2
+      flow-parser: 0.238.0
       graceful-fs: 4.2.11
       micromatch: 4.0.7
       neo-async: 2.6.2
@@ -13394,7 +13320,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.6
-      acorn: 8.11.3
+      acorn: 8.12.0
       acorn-globals: 7.0.1
       cssom: 0.5.0
       cssstyle: 2.3.0
@@ -13517,7 +13443,7 @@ packages:
     resolution: {integrity: sha512-WYDyuc/uFcGp6YtM2H0uKmUwieOuzeE/5YocFJLnLfclZ4inf3mRn8ZVy1s7Hxji7Jxm6Ss8gqpexD/GlKoGgg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
       semver: 7.6.2
@@ -14466,8 +14392,8 @@ packages:
   /micromark-extension-mdxjs@1.0.1:
     resolution: {integrity: sha512-7YA7hF6i5eKOfFUzZ+0z6avRG52GpWR8DL+kN47y3f2KhxbBZMhmxe7auOeaTBrW2DenbbZTf1ea9tA2hDpC2Q==}
     dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
+      acorn: 8.12.0
+      acorn-jsx: 5.3.2(acorn@8.12.0)
       micromark-extension-mdx-expression: 1.0.8
       micromark-extension-mdx-jsx: 1.0.5
       micromark-extension-mdx-md: 1.0.1
@@ -14973,7 +14899,7 @@ packages:
   /mlly@1.7.1:
     resolution: {integrity: sha512-rrVRZRELyQzrIUAVMHxP97kv+G786pHmOKzuFII8zDYahFBS7qnHh2AlYSl1GAHhaMPCz6/oHjVMcfFYgFYHgA==}
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
       pathe: 1.1.2
       pkg-types: 1.1.1
       ufo: 1.5.3
@@ -15113,7 +15039,7 @@ packages:
       '@next/env': 14.2.3
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001633
+      caniuse-lite: 1.0.30001634
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -18365,7 +18291,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.11.3
+      acorn: 8.12.0
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: true
@@ -18630,8 +18556,8 @@ packages:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 18.16.9
-      acorn: 8.11.3
-      acorn-walk: 8.3.2
+      acorn: 8.12.0
+      acorn-walk: 8.3.3
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
@@ -19004,7 +18930,7 @@ packages:
     resolution: {integrity: sha512-d6Mhq8RJeGA8UfKCu54Um4lFA0eSaRa3XxdAJg8tIdxbu1ubW0hBCZUL7yI2uGyYCRndvbK8FLHzqy2XKfeMsg==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
       chokidar: 3.6.0
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.2
@@ -19403,7 +19329,7 @@ packages:
       '@vitest/spy': 1.6.0
       '@vitest/ui': 1.6.0(vitest@1.6.0)
       '@vitest/utils': 1.6.0
-      acorn-walk: 8.3.2
+      acorn-walk: 8.3.3
       chai: 4.4.1
       debug: 4.3.5
       execa: 8.0.1
@@ -19633,8 +19559,8 @@ packages:
       '@webassemblyjs/ast': 1.12.1
       '@webassemblyjs/wasm-edit': 1.12.1
       '@webassemblyjs/wasm-parser': 1.12.1
-      acorn: 8.11.3
-      acorn-import-attributes: 1.9.5(acorn@8.11.3)
+      acorn: 8.12.0
+      acorn-import-attributes: 1.9.5(acorn@8.12.0)
       browserslist: 4.23.1
       chrome-trace-event: 1.0.4
       enhanced-resolve: 5.17.0
