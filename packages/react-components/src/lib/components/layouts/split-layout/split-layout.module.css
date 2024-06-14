@@ -1,7 +1,0 @@
-.split-layout {
-  @apply flex w-full h-full;
-}
-
-.split-pane {
-  @apply flex-1;
-}

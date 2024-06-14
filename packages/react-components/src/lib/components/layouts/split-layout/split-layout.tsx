@@ -1,6 +1,5 @@
 import { cn } from '@spwntch/ui';
 import React, { forwardRef, ReactNode } from 'react';
-import styles from './split-layout.module.css';
 
 export interface ISplitLayoutProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -39,7 +38,7 @@ export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
     return (
       <div
         className={cn(
-          styles['split-layout'],
+          'flex w-full h-full',
           isHorizontal ? 'flex-row' : 'flex-col',
           flip && (isHorizontal ? 'flex-row-reverse' : 'flex-col-reverse'),
           className
@@ -51,7 +50,7 @@ export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
           containers.map((container, index) => (
             <div
               key={index}
-              className={styles['split-pane']}
+              className="flex-1"
               style={index === 0 ? mainPaneStyle : otherPaneStyle}
             >
               {container}

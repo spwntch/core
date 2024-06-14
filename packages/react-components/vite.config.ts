@@ -50,6 +50,12 @@ export default defineConfig({
           'src/lib/components/grids/logo-cloud/logo-cloud.tsx',
         'groups_button-group':
           'src/lib/components/groups/button-group/button-group.tsx',
+        'layouts_multi-panel-layout':
+          'src/lib/components/layouts/multi-panel-layout/multi-panel-layout.tsx',
+        'layouts_quad-layout':
+          'src/lib/components/layouts/quad-layout/quad-layout.tsx',
+        'layouts_split-layout':
+          'src/lib/components/layouts/split-layout/split-layout.tsx',
       },
       name: 'react-components',
       formats: ['es'],
