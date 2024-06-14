@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/shell",
-  "version": "0.61.26",
+  "version": "0.61.27",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -24,8 +24,8 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/components": "0.61.26",
-    "@spwntch/tailwind": "0.61.26",
+    "@spwntch/components": "0.61.27",
+    "@spwntch/tailwind": "0.61.27",
     "lucide-react": "^0.360.0",
     "next-themes": "^0.3.0"
   }
