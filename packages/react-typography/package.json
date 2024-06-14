@@ -16,6 +16,8 @@
   "author": "spwntch",
   "license": "MIT",
   "peerDependencies": {
-    "@spwntch/ui": "0.61.20"
+    "@spwntch/ui": "0.61.20",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }

@@ -1,9 +1,10 @@
 /// <reference types='vitest' />
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
-import dts from 'vite-plugin-dts';
-import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import react from '@vitejs/plugin-react-swc';
+import * as path from 'path';
+import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   root: __dirname,
@@ -11,10 +12,12 @@ export default defineConfig({
   plugins: [
     react(),
     nxViteTsPaths(),
+    libInjectCss(),
+
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
-      exclude: ['**/*.stories.tsx', '**/*.specs.ts'],
+      exclude: ['**/storybook/*', '**/*.stories.tsx', '**/*.specs.ts'],
     }),
   ],
   build: {
@@ -24,17 +27,20 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
     lib: {
-      entry: 'src/index.ts',
+      entry: {
+        index: 'src/index.ts',
+      },
       name: 'react-components',
-      fileName: 'index',
       formats: ['es'],
     },
     rollupOptions: {
       external: [
-        '@spwntch/tailwind',
         '@spwntch/ui',
         '@spwntch/typography',
         'embla-carousel-autoplay',
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
       ],
     },
   },
