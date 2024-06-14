@@ -12,7 +12,6 @@ import {
   getBodyContentAndClassName,
   getTagsContentAndClassName,
 } from './content-container.utils';
-import styles from './content-container.module.css';
 
 export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -40,6 +39,22 @@ export const ContentContainer = forwardRef<
   ) => {
     const alignmentClass = `${vAlign}-${hAlign}`;
 
+    const containerClass = cn(
+      'w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-3 max-w-7xl mx-auto',
+      {
+        'justify-start items-start text-left': alignmentClass === 'top-left',
+        'justify-start items-center text-center': alignmentClass === 'top-center',
+        'justify-start items-end text-right': alignmentClass === 'top-right',
+        'justify-center items-start text-left': alignmentClass === 'middle-left',
+        'justify-center items-center text-center': alignmentClass === 'middle-center',
+        'justify-center items-end text-right': alignmentClass === 'middle-right',
+        'justify-end items-start text-left': alignmentClass === 'bottom-left',
+        'justify-end items-center text-center': alignmentClass === 'bottom-center',
+        'justify-end items-end text-right': alignmentClass === 'bottom-right',
+      },
+      className
+    );
+
     const { titleContent, titleClassName } = getTitleContentAndClassName(
       innerContent.title
     );
@@ -53,15 +68,7 @@ export const ContentContainer = forwardRef<
     );
 
     return (
-      <div
-        className={cn(
-          styles.container,
-          styles[`container--${alignmentClass}`],
-          className
-        )}
-        ref={ref}
-        {...props}
-      >
+      <div className={containerClass} ref={ref} {...props}>
         {innerContent.announcement && (
           <Announcement
             message={innerContent.announcement.message}
