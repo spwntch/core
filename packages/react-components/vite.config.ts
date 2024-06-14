@@ -46,6 +46,10 @@ export default defineConfig({
           'src/lib/components/content/paragraphs/paragraphs.tsx',
         'content_tags':
           'src/lib/components/content/tags/tags.tsx',
+        'grids_logo-cloud':
+          'src/lib/components/grids/logo-cloud/logo-cloud.tsx',
+        'groups_button-group':
+          'src/lib/components/groups/button-group/button-group.tsx',
       },
       name: 'react-components',
       formats: ['es'],
