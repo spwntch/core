@@ -2,7 +2,6 @@ import React from 'react';
 import { cn } from '@spwntch/ui';
 import { H2, H3 } from '@spwntch/typography';
 import { Tags } from '../../content/tags/tags';
-import styles from './header.module.css';
 
 interface IHeaderProps {
   titleContent?: string;
@@ -23,19 +22,38 @@ export const Header: React.FC<IHeaderProps> = ({
   tagsClassName,
   alignment = 'center',
 }) => (
-  <div className={cn(styles.container, styles[alignment])}>
+  <div
+    className={cn(
+      'mt-2 mb-4',
+      {
+        'text-left': alignment === 'left',
+        'text-center': alignment === 'center',
+        'text-right': alignment === 'right',
+      }
+    )}
+  >
     {titleContent && (
-      <H2 className={cn(styles.title, titleClassName)}>{titleContent}</H2>
+      <H2 className={cn('text-2xl font-bold mb-2 mt-6', titleClassName)}>
+        {titleContent}
+      </H2>
     )}
     {subTitleContent && (
-      <H3 className={cn(styles['sub-title'], subTitleClassName)}>
+      <H3 className={cn('text-xl font-semibold mb-2 mt-4', subTitleClassName)}>
         {subTitleContent}
       </H3>
     )}
     {tagsContent && (
       <Tags
         tags={tagsContent}
-        className={cn(styles.tags, styles[`tags-${alignment}`], tagsClassName)}
+        className={cn(
+          'mt-4',
+          {
+            'justify-start': alignment === 'left',
+            'justify-center': alignment === 'center',
+            'justify-end': alignment === 'right',
+          },
+          tagsClassName
+        )}
       />
     )}
   </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '@spwntch/ui';
-import styles from './content-children.module.css';
 
 interface ContentChildrenProps {
   alignmentClass: string;
@@ -15,8 +14,18 @@ export const ContentChildren: React.FC<ContentChildrenProps> = ({
 }) => (
   <div
     className={cn(
-      styles.childrenContainer,
-      styles[`childrenContainer--${alignmentClass}`],
+      'mt-8 flex gap-8',
+      {
+        'justify-start items-start': alignmentClass === 'top-left',
+        'justify-start items-center': alignmentClass === 'top-center',
+        'justify-start items-end': alignmentClass === 'top-right',
+        'justify-center items-start': alignmentClass === 'middle-left',
+        'justify-center items-center': alignmentClass === 'middle-center',
+        'justify-center items-end': alignmentClass === 'middle-right',
+        'justify-end items-start': alignmentClass === 'bottom-left',
+        'justify-end items-center': alignmentClass === 'bottom-center',
+        'justify-end items-end': alignmentClass === 'bottom-right',
+      },
       className
     )}
   >
