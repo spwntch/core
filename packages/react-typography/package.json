@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/typography",
-  "version": "0.61.23",
+  "version": "0.61.24",
   "files": [
     "dist",
     "!dist/package.json"

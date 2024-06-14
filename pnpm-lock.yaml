@@ -315,16 +315,16 @@ importers:
   packages/react-mdx:
     dependencies:
       '@spwntch/tailwind':
-        specifier: 0.61.23
+        specifier: 0.61.24
         version: link:../tailwind
 
   packages/react-shell:
     dependencies:
       '@spwntch/components':
-        specifier: 0.61.23
+        specifier: 0.61.24
         version: link:../react-components
       '@spwntch/tailwind':
-        specifier: 0.61.23
+        specifier: 0.61.24
         version: link:../tailwind
       lucide-react:
         specifier: ^0.360.0
