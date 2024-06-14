@@ -13,7 +13,6 @@ export default defineConfig({
     react(),
     nxViteTsPaths(),
     libInjectCss(),
-
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
@@ -29,7 +28,12 @@ export default defineConfig({
     lib: {
       entry: {
         index: 'src/index.ts',
-        // 'carousels_logo-carousel':'src/lib/components/carousels/logo-carousel/logo-carousel.tsx'
+        // 'carousels_logo-carousel':
+        //   'src/lib/components/carousels/logo-carousel/logo-carousel.tsx',
+        // 'containers_content-container':
+          // 'src/lib/components/containers/content-container/content-container.tsx',
+        // 'containers_image-container':
+        //   'src/lib/components/containers/image-container/image-container.tsx',
       },
       name: 'react-components',
       formats: ['es'],
