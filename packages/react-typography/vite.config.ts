@@ -24,18 +24,15 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
     lib: {
-      entry: 'src/index.ts',
+      entry: {
+        index: 'src/index.ts',
+        // blockquote: 'src/lib/components/blockquote/blockquote.tsx',
+      },
       name: 'react-typography',
-      fileName: 'index',
       formats: ['es'],
     },
     rollupOptions: {
-      external: [
-        '@spwntch/tailwind',
-        'react',
-        'react-dom',
-        'react/jsx-runtime',
-      ],
+      external: ['@spwntch/ui'],
     },
   },
 });

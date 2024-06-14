@@ -24,7 +24,7 @@
   ],
   "author": "spwntch",
   "license": "MIT",
-  "devDependencies": {
-    "@spwntch/tailwind": "0.61.18"
+  "peerDependencies": {
+    "@spwntch/ui": "0.61.18"
   }
 }
