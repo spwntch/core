@@ -1,7 +1,6 @@
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { IImage } from '../../../types';
-import styles from './image-container.module.css';
 
 export interface IBackgroundImageContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -18,20 +17,34 @@ export const ImageContainer = forwardRef<
 >(({ className, image, rounded, blur, children, ...props }, ref) => {
   const { src, alt, darken } = image;
   return (
-    <div className={cn(styles['container'], className)} ref={ref} {...props}>
+    <div className={cn('relative h-full w-full', className)} ref={ref} {...props}>
       <img
         src={src}
         alt={alt || `website image with src: ${src}`}
         className={cn(
-          styles['image'],
-          rounded && styles[`${rounded}-rounded`],
-          darken && styles['image--darken'],
-          blur === 'edges'
-            ? styles['image--blur-edges']
-            : blur === true && styles['image--blur']
+          'absolute inset-0 -z-10 h-full w-full object-cover',
+          rounded === 'xs' && 'rounded-sm',
+          rounded === 'sm' && 'rounded-md',
+          rounded === 'md' && 'rounded-lg',
+          rounded === 'lg' && 'rounded-xl',
+          rounded === 'xl' && 'rounded-2xl',
+          rounded === 'xxl' && 'rounded-3xl',
+          rounded === 'full' && 'rounded-full',
+          darken && 'brightness-50',
+          blur === 'edges' && 'filter blur-none',
+          blur === true && 'filter blur-md',
+          blur === 'edges' && `
+            mask-image: radial-gradient(
+              ellipse at center,
+              rgba(0, 0, 0, 1) 60%,
+              transparent 100%
+            );
+            mask-size: cover;
+            mask-repeat: no-repeat;
+          `
         )}
       />
-      <div className={cn(styles['inner-content'])}>{children}</div>
+      <div className='relative h-full w-full'>{children}</div>
     </div>
   );
 });

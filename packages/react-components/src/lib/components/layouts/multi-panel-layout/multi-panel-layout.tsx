@@ -1,6 +1,5 @@
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import React, { forwardRef, ReactNode } from 'react';
-import styles from './multi-panel-layout.module.css';
 
 export interface IMultiPanelLayoutProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -10,7 +9,7 @@ export interface IMultiPanelLayoutProps
     | [ReactNode, ReactNode, ReactNode]
     | [ReactNode, ReactNode, ReactNode, ReactNode];
   flip?: boolean;
-  mainPaneCoverage?: number; // Changed to mainPaneCoverage
+  mainPaneCoverage?: number;
   orientation?: 'horizontal' | 'vertical';
 }
 
@@ -50,23 +49,20 @@ export const MultiPanelLayout = forwardRef<
     return (
       <div
         className={cn(
-          styles['multi-panel-layout'],
-          isHorizontal ? styles['horizontal-split'] : styles['vertical-split'],
+          'flex w-full h-full',
+          isHorizontal ? 'flex-row h-full' : 'flex-col h-full',
           className
         )}
         ref={ref}
         {...props}
       >
-        <div className={styles['main-block']} style={mainBlockStyle}>
+        <div className="flex items-center justify-center h-full w-full" style={mainBlockStyle}>
           {containers ? containers[0] : 'Main Block'}
         </div>
-        <div
-          className={styles['vertical-split']}
-          style={subBlockContainerStyle}
-        >
+        <div style={subBlockContainerStyle}>
           {containers &&
             containers.slice(1).map((container, index) => (
-              <div key={index} className={styles['sub-block']}>
+              <div key={index} className="flex items-center justify-center h-full w-full">
                 {container}
               </div>
             ))}

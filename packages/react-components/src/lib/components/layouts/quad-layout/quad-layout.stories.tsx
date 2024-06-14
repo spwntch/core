@@ -1,4 +1,4 @@
-import { Card } from '@/react-ui';
+import { Card } from '@spwntch/ui';
 import { Meta, StoryObj } from '@storybook/react';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { IQuadLayoutProps, QuadLayout } from './quad-layout';

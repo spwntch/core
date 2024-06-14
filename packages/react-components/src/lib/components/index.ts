@@ -1,3 +1,5 @@
+import '@/tailwind/tailwind.css';
+
 export * from './carousels/logo-carousel/logo-carousel';
 export * from './containers/image-container/image-container';
 export * from './containers/content-container/content-container';

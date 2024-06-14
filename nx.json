@@ -72,7 +72,8 @@
         "previewTargetName": "preview",
         "testTargetName": "test",
         "serveTargetName": "serve",
-        "serveStaticTargetName": "serve-static"
+        "serveStaticTargetName": "serve-static",
+        "dependsOn": ["^build"]
       }
     },
     {

@@ -1,9 +1,14 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { MultiPanelLayout, IMultiPanelLayoutProps } from './multi-panel-layout';
-import { Card } from '@/react-ui';
+import { Card } from '@spwntch/ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
-import { playBasic, playFlip, playTwoSubBlocks, playOneSubBlock } from './multi-panel-layout.specs';
+import {
+  playBasic,
+  playFlip,
+  playTwoSubBlocks,
+  playOneSubBlock,
+} from './multi-panel-layout.specs';
 
 const componentDescription = `
 ### Overview
