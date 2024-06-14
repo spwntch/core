@@ -16,6 +16,6 @@
   "author": "spwntch",
   "license": "MIT",
   "peerDependencies": {
-    "@spwntch/ui": "0.61.18"
+    "@spwntch/ui": "0.61.20"
   }
 }
