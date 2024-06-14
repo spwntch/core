@@ -44,6 +44,7 @@ export default defineConfig({
         'navigation-menu':
           'src/lib/components/ui/navigation-menu/navigation-menu.tsx',
         sheet: 'src/lib/components/ui/sheet/sheet.tsx',
+        cn: 'src/lib/utils/cn.ts',
       },
       name: 'react-ui',
       formats: ['es'],
