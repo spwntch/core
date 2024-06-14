@@ -1,7 +1,7 @@
 import React from 'react';
-import { H3 } from '@/react-typography';
+import { H3 } from '@spwntch/typography';
 import styles from './logo-cloud.module.css';
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 
 export interface ILogoCloudProps {
   title?: string;

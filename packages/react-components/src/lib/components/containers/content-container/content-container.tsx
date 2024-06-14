@@ -1,4 +1,4 @@
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import { PropsWithChildren, forwardRef } from 'react';
 import { IContent } from '../../../types';
 import { Announcement } from '../../content/announcement/announcement';
@@ -82,9 +82,11 @@ export const ContentContainer = forwardRef<
           <Paragraphs content={bodyContent} className={bodyClassName} />
         )}
         {innerContent.bullets && <List bullets={innerContent.bullets} />}
-        {children && <ContentChildren alignmentClass={alignmentClass}>
-          {children}
-        </ContentChildren>}
+        {children && (
+          <ContentChildren alignmentClass={alignmentClass}>
+            {children}
+          </ContentChildren>
+        )}
       </div>
     );
   }

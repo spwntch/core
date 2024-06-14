@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from '@/react-ui';
+import { Badge } from '@spwntch/ui';
 import styles from './tags.module.css';
 
 interface ITagsProps {

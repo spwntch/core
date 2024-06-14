@@ -1,6 +1,6 @@
 import React from 'react';
-import { cn } from '@/react-ui';
-import { P } from '@/react-typography';
+import { cn } from '@spwntch/ui';
+import { P } from '@spwntch/typography';
 import styles from './paragraphs.module.css';
 
 export type ParagraphAlignment = 'left' | 'center' | 'right' | 'justified';

@@ -1,4 +1,4 @@
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { IImage } from '../../../types';
 import styles from './image-container.module.css';

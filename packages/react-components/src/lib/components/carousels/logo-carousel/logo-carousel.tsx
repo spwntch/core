@@ -1,5 +1,5 @@
-import { H2 } from '@/react-typography';
-import { Carousel, CarouselContent, CarouselItem } from '@/react-ui';
+import { H2 } from '@spwntch/typography';
+import { Carousel, CarouselContent, CarouselItem } from '@spwntch/ui';
 import Autoplay from 'embla-carousel-autoplay';
 import { useRef } from 'react';
 import styles from './logo-carousel.module.css';

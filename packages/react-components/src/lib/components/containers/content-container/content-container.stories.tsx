@@ -1,4 +1,4 @@
-import { Button } from '@/react-ui';
+import { Button } from '@spwntch/ui';
 import type { Meta, StoryObj } from '@storybook/react';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { IContent } from '../../../types';

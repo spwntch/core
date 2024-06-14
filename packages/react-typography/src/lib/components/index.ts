@@ -1,3 +1,5 @@
+import '@/tailwind/tailwind.css';
+
 export * from './blockquote/blockquote';
 export * from './h1/h1';
 export * from './h2/h2';
@@ -18,4 +20,3 @@ export * from './table/td';
 export * from './table/th';
 export * from './table/thead';
 export * from './table/tr';
-// export const sayHello = () => console.log('Hello from react-typography');

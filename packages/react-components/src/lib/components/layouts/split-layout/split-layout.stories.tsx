@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { SplitLayout } from './split-layout';
-import { Card } from '@/react-ui';
+import { Card } from '@spwntch/ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { playBasic, playFlipped, playVertical } from './split-layout.specs';
 
@@ -52,7 +52,8 @@ const meta: Meta<typeof SplitLayout> = {
       control: 'text',
     },
     containers: {
-      description: 'An array of 2-4 elements to be placed in the split sections',
+      description:
+        'An array of 2-4 elements to be placed in the split sections',
       control: 'object',
     },
     mainPaneCoverage: {
@@ -156,7 +157,6 @@ export const WideMain: Story = {
   },
   play: playBasic,
 };
-
 
 /**
  * SplitLayout with three containers.

@@ -4,7 +4,7 @@ import {
   ImageContainer,
   IBackgroundImageContainerProps,
 } from './image-container';
-import { Card } from '@/react-ui';
+import { Card } from '@spwntch/ui';
 import { withFullPage } from '../../../storybook/storybook-decorators';
 import { playBasic } from './image-container.specs';
 

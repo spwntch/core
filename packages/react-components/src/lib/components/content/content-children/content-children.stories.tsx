@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { ContentChildren } from './content-children';
-import { Button } from '@/react-ui';
+import { Button } from '@spwntch/ui';
 import { playBasic } from './content-children.specs';
 
 const componentDescription = `
@@ -16,7 +16,7 @@ The \`ContentChildren\` component is a flexible container designed to align its 
 ### Example
 \`\`\`tsx
 import { ContentChildren } from './content-children';
-import { Button } from '@/react-ui';
+import { Button } from '@spwntch/ui';
 
 <ContentChildren alignmentClass="middle-center">
   <Button>Get Started</Button>
