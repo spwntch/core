@@ -15,7 +15,7 @@ export interface IH3Props
 export const H3 = forwardRef<HTMLHeadingElement, IH3Props>(
   ({ className, ...props }, ref) => {
     return (
-      <h3 ref={ref} className={cn(styles.h3, className)} {...props}>
+      <h3 ref={ref} className={cn('scroll-m-20 text-2xl font-semibold tracking-tight', className)} {...props}>
         {props.children}
       </h3>
     );

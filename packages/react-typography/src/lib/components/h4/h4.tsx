@@ -15,7 +15,7 @@ export interface IH4Props
 export const H4 = forwardRef<HTMLHeadingElement, IH4Props>(
   ({ className, ...props }, ref) => {
     return (
-      <h4 ref={ref} className={cn(styles.h4, className)} {...props}>
+      <h4 ref={ref} className={cn('scroll-m-20 text-xl font-semibold tracking-tight', className)} {...props}>
         {props.children}
       </h4>
     );

@@ -17,7 +17,10 @@ export const H1 = forwardRef<HTMLHeadingElement, IH1Props>(
     return (
       <h1
         ref={ref}
-        className={cn(styles.h1, className)}
+        className={cn(
+          'scroll-m-20  font-extrabold, tracking-tight text-4xl lg:text-5xl',
+          className
+        )}
         {...props}
       >
         {props.children}
