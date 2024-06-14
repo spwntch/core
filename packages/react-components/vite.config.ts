@@ -29,7 +29,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: 'src/index.ts',
-        'carousels_logo-carousel':'src/lib/components/carousels/logo-carousel/logo-carousel.tsx'
+        // 'carousels_logo-carousel':'src/lib/components/carousels/logo-carousel/logo-carousel.tsx'
       },
       name: 'react-components',
       formats: ['es'],
