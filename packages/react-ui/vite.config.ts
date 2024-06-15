@@ -66,7 +66,7 @@ export default defineConfig({
         'react-dom',
         'react/jsx-runtime',
         'tailwind-merge',
-        'tailwind-animate',
+        'tailwindcss-animate',
       ],
     },
   },

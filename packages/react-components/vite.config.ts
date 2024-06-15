@@ -62,12 +62,16 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
+        '@react-hooks-library/core',
         '@spwntch/ui',
         '@spwntch/typography',
         'embla-carousel-autoplay',
+        'lucide-react',
         'react',
+        'react-is',
         'react-dom',
-        'react/jsx-runtime',
+        'react/jsx-runtime'
+
       ],
     },
   },
