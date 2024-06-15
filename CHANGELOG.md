@@ -1,3 +1,7 @@
+## 0.61.31 (2024-06-15)
+
+This was a version bump only, there were no code changes.
+
 ## 0.61.30 (2024-06-15)
 
 This was a version bump only, there were no code changes.
