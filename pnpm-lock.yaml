@@ -306,10 +306,10 @@ importers:
   packages/react-components:
     dependencies:
       '@spwntch/typography':
-        specifier: latest
+        specifier: 0.61.30
         version: link:../react-typography
       '@spwntch/ui':
-        specifier: latest
+        specifier: 0.61.30
         version: link:../react-ui
       embla-carousel-autoplay:
         specifier: ^8.1.3
@@ -345,7 +345,7 @@ importers:
   packages/react-typography:
     dependencies:
       '@spwntch/ui':
-        specifier: latest
+        specifier: 0.61.30
         version: link:../react-ui
       react:
         specifier: 18.3.1
