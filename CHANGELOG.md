@@ -1,3 +1,7 @@
+## 0.62.0 (2024-06-15)
+
+This was a version bump only, there were no code changes.
+
 ## 0.61.33 (2024-06-15)
 
 
