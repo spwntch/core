@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/components",
-  "version": "0.61.31",
+  "version": "0.61.32",
   "files": [
     "dist",
     "!dist/package.json"
