@@ -1,6 +1,5 @@
 import { cn } from '@spwntch/ui';
 import React, { PropsWithChildren, forwardRef } from 'react';
-import styles from './li.module.css';
 
 export interface ILiProps
   extends React.HTMLAttributes<HTMLLIElement>,
@@ -15,7 +14,7 @@ export interface ILiProps
 export const Li = forwardRef<HTMLLIElement, ILiProps>(
   ({ className, ...props }, ref) => {
     return (
-      <li ref={ref} className={cn(styles.li, className)} {...props}>
+      <li ref={ref} className={cn('margin-top: 0.5rem', className)} {...props}>
         {props.children}
       </li>
     );

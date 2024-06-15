@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '@spwntch/ui';
-import styles from './table.module.css';
 
 export interface ITheadProps
   extends React.HTMLAttributes<HTMLTableSectionElement> {
@@ -12,5 +11,5 @@ export interface ITheadProps
  * Use this component to wrap the table header rows.
  */
 export const Thead: React.FC<ITheadProps> = ({ className, ...props }) => {
-  return <thead className={cn(styles.thead, className)} {...props} />;
+  return <thead className={cn(className)} {...props} />;
 };
