@@ -1,3 +1,5 @@
+import '@/tailwind/tailwind.css';
+
 export * from './brand';
 export * from './buttons';
 export * from './footer';

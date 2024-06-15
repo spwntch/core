@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '@spwntch/ui';
-import styles from './table.module.css';
 
 export interface ITdProps extends React.TdHTMLAttributes<HTMLTableCellElement> {
   className?: string;
@@ -11,5 +10,15 @@ export interface ITdProps extends React.TdHTMLAttributes<HTMLTableCellElement> {
  * Use this component within table rows.
  */
 export const Td: React.FC<ITdProps> = ({ className, ...props }) => {
-  return <td className={cn(styles.td, className)} {...props} />;
+  return (
+    <td
+      className={cn(
+        'border px-4 py-2 text-left',
+        props.align === 'center' && 'text-center',
+        props.align === 'right' && 'text-right',
+        className
+      )}
+      {...props}
+    />
+  );
 };

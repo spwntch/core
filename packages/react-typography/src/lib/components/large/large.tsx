@@ -1,6 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '@spwntch/ui';
-import styles from './large.module.css';
 
 export interface ILargeProps
   extends React.HTMLAttributes<HTMLParagraphElement>,
@@ -15,7 +14,7 @@ export interface ILargeProps
 export const Large = forwardRef<HTMLParagraphElement, ILargeProps>(
   ({ className, ...props }, ref) => {
     return (
-      <p ref={ref} className={cn(styles.large, className)} {...props}>
+      <p ref={ref} className={cn('text-lg font-semibold', className)} {...props}>
         {props.children}
       </p>
     );
