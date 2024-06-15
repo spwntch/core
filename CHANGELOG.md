@@ -1,3 +1,14 @@
+## 0.61.33 (2024-06-15)
+
+
+### 🩹 Fixes
+
+- shell and mdx package import tailwind assets relative ([e934c30](https://github.com/spwntch/core/commit/e934c30))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.61.32 (2024-06-15)
 
 This was a version bump only, there were no code changes.

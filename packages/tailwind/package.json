@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/tailwind",
-  "version": "0.61.32",
+  "version": "0.61.33",
   "author": "spwntch",
   "license": "MIT",
   "main": "./src/index.js",
