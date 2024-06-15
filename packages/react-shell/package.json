@@ -24,8 +24,7 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/components": "latest",
-    "@spwntch/tailwind": "latest",
+    "@spwntch/components": "0.61",
     "lucide-react": "^0.360.0",
     "next-themes": "^0.3.0"
   }

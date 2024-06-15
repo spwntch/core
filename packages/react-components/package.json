@@ -16,8 +16,8 @@
   "author": "spwntch",
   "license": "MIT",
   "peerDependencies": {
-    "@spwntch/typography": "0.61.30",
-    "@spwntch/ui": "0.61.30",
+    "@spwntch/typography": "0.61",
+    "@spwntch/ui": "0.61",
     "embla-carousel-autoplay": "^8.1.3",
     "react": "18.3.1",
     "react-dom": "18.3.1"

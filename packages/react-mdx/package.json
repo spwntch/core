@@ -24,6 +24,5 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/tailwind": "latest"
   }
 }
