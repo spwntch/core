@@ -1,6 +1,6 @@
-import React from 'react';
-import { cn } from '@spwntch/ui';
 import { P } from '@spwntch/typography';
+import { cn } from '@spwntch/ui';
+import React from 'react';
 
 export type ParagraphAlignment = 'left' | 'center' | 'right' | 'justified';
 

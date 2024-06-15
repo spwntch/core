@@ -1,5 +1,5 @@
-import React from 'react';
 import { Badge } from '@spwntch/ui';
+import React from 'react';
 
 interface ITagsProps {
   tags: string[];

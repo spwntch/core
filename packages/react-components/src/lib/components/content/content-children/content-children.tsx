@@ -1,5 +1,5 @@
-import React from 'react';
 import { cn } from '@spwntch/ui';
+import React from 'react';
 
 interface ContentChildrenProps {
   alignmentClass: string;

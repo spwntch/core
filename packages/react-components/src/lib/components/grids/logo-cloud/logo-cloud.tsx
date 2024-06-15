@@ -1,6 +1,6 @@
-import React from 'react';
 import { H3 } from '@spwntch/typography';
 import { cn } from '@spwntch/ui';
+import React from 'react';
 
 export interface ILogoCloudProps {
   title?: string;

@@ -1,6 +1,6 @@
-import React from 'react';
-import { cn } from '@spwntch/ui';
 import { H2, H3 } from '@spwntch/typography';
+import { cn } from '@spwntch/ui';
+import React from 'react';
 import { Tags } from '../../content/tags/tags';
 
 interface IHeaderProps {
