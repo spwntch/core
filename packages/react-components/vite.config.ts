@@ -34,18 +34,15 @@ export default defineConfig({
           'src/lib/components/containers/content-container/content-container.tsx',
         'containers_image-container':
           'src/lib/components/containers/image-container/image-container.tsx',
-        'content_announcement':
+        content_announcement:
           'src/lib/components/content/announcement/announcement.tsx',
         'content_content-children':
           'src/lib/components/content/content-children/content-children.tsx',
-        'content_header':
-          'src/lib/components/content/header/header.tsx',
-        'content_list':
-          'src/lib/components/content/list/list.tsx',
-        'content_paragraphs':
+        content_header: 'src/lib/components/content/header/header.tsx',
+        content_list: 'src/lib/components/content/list/list.tsx',
+        content_paragraphs:
           'src/lib/components/content/paragraphs/paragraphs.tsx',
-        'content_tags':
-          'src/lib/components/content/tags/tags.tsx',
+        content_tags: 'src/lib/components/content/tags/tags.tsx',
         'grids_logo-cloud':
           'src/lib/components/grids/logo-cloud/logo-cloud.tsx',
         'groups_button-group':
@@ -68,10 +65,9 @@ export default defineConfig({
         'embla-carousel-autoplay',
         'lucide-react',
         'react',
-        'react-is',
+        'react/jsx-runtime',
         'react-dom',
-        'react/jsx-runtime'
-
+        'react-youtube',
       ],
     },
   },
