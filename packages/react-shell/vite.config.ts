@@ -36,6 +36,7 @@ export default defineConfig({
         '@spwntch/ui',
         '@spwntch/typography',
         '@spwntch/components',
+        'lucide-react',
         'next-themes',
         'react',
         'react/jsx-runtime',
