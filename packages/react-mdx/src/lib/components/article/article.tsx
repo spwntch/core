@@ -11,7 +11,7 @@ interface IArticleProps extends IMdxDoc {
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
 }
-‰
+
 export const Article = ({
   backTo,
   meta,
