@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/typography",
-  "version": "0.62.1",
+  "version": "0.62.2",
   "files": [
     "dist",
     "!dist/package.json"
@@ -16,8 +16,6 @@
   "author": "spwntch",
   "license": "MIT",
   "peerDependencies": {
-    "@spwntch/ui": "0.62",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "@spwntch/ui": "0.62"
   }
 }

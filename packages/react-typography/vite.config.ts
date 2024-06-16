@@ -53,7 +53,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['@spwntch/ui', 'react', 'react-dom', 'react/jsx-runtime'],
+      external: ['@spwntch/ui', 'react', 'react/jsx-runtime'],
     },
   },
 });

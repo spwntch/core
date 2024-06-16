@@ -16,7 +16,7 @@ export const Small = forwardRef<HTMLParagraphElement, ISmallProps>(
     return (
       <p
         ref={ref}
-        className={cn('text-sm font-medium leading-none', className)}
+        className={cn('text-sm font-medium leading-none my-2', className)}
         {...props}
       >
         {props.children}
