@@ -1,5 +1,5 @@
 import { ArticleCard } from '../article-card/article-card';
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import styles from './article-grid.module.css';
 import { IMdxDoc } from '../../types';
 

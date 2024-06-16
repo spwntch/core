@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { ArticleMdx } from './article-mdx';
 import { articles } from '../../storybook/storybook-config';
-import { H1, P, Ul, Ol, Li, H2 } from '@/react-typography';
+import { H1, P, Ul, Ol, Li, H2 } from '@spwntch/typography';
 
 const componentDescription = `
 ### Overview

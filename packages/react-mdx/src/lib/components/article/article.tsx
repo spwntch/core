@@ -1,9 +1,8 @@
-import React from 'react';
-import { cn } from '@/react-ui';
-import styles from './article.module.css';
+import { cn } from '@spwntch/ui';
 import { IMdxDoc } from '../../types';
 import { ArticleHeader } from '../article-header/article-header';
 import { ArticleMdx } from '../article-mdx/article-mdx';
+import styles from './article.module.css';
 
 interface IArticleProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
@@ -12,7 +11,7 @@ interface IArticleProps extends IMdxDoc {
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
 }
-
+‰
 export const Article = ({
   backTo,
   meta,
