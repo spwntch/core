@@ -1,26 +1,21 @@
 {
   "name": "@spwntch/blocks",
-  "version": "0.62.2",
+  "version": "0.62.3",
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./styles": {
-      "default": "./dist/style.css"
-    }
-  },
   "keywords": [
     "react",
-    "vite"
+    "vite",
+    "spawntech layout components"
   ],
   "author": "spwntch",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "@spwntch/components": "0.62",
+    "@spwntch/typography": "0.62",
+    "@spwntch/ui": "0.62"
+  }
 }
