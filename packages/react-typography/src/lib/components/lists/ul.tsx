@@ -1,5 +1,6 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '@spwntch/ui';
+import styles from './ul.module.css';
 
 export interface IUlProps
   extends React.HTMLAttributes<HTMLUListElement>,
@@ -14,7 +15,7 @@ export interface IUlProps
 export const Ul = forwardRef<HTMLUListElement, IUlProps>(
   ({ className, ...props }, ref) => {
     return (
-      <ul ref={ref} className={cn('my-6 mb-6 ml-6 list-disc', className)} {...props}>
+      <ul ref={ref} className={cn(styles.ul, className)} {...props}>
         {props.children}
       </ul>
     );

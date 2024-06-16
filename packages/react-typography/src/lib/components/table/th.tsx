@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@spwntch/ui';
+import styles from './table.module.css';
 
 export interface IThProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
   className?: string;
@@ -10,15 +11,5 @@ export interface IThProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
  * Use this component within table header rows.
  */
 export const Th: React.FC<IThProps> = ({ className, ...props }) => {
-  return (
-    <th
-      className={cn(
-        'border px-4 py-2 text-left font-bold',
-        props.align === 'center' && 'text-center',
-        props.align === 'right' && 'text-right',
-        className
-      )}
-      {...props}
-    />
-  );
+  return <th className={cn(styles.th, className)} {...props} />;
 };
