@@ -1,4 +1,3 @@
-'use client';
 import { H3 } from '@spwntch/typography';
 import React, { forwardRef } from 'react';
 import { useBrand } from '../../brand/brand-provider/brand-provider';

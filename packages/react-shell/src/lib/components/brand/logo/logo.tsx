@@ -2,6 +2,7 @@ import { cn } from '@spwntch/ui';
 import { forwardRef } from 'react';
 import { useBrand } from '../brand-provider/brand-provider';
 
+
 export interface ILogoProps {
   className?: string;
   /**
