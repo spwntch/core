@@ -1,4 +1,6 @@
+import React from 'react';
 import { cn } from '@/react-ui';
+import styles from './article.module.css';
 import { IMdxDoc } from '../../types';
 import { ArticleHeader } from '../article-header/article-header';
 import { ArticleMdx } from '../article-mdx/article-mdx';
@@ -22,7 +24,7 @@ export const Article = ({
   vAlign = 'middle',
 }: IArticleProps) => {
   return (
-    <div className={cn('w-full', 'flex flex-col')}>
+    <div className={cn(styles.container, 'flex flex-col')}>
       <ArticleHeader
         backTo={backTo}
         onBackTo={onBackTo}

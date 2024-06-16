@@ -1,4 +1,4 @@
-import { Tags } from '@spwntch/components'; // Import the Tags component
+import { Tags } from '@/react-components'; // Import the Tags component
 import { Small } from '@/react-typography';
 import {
   Card,
@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  cn,
+  cn
 } from '@/react-ui';
 import { IMdxDocMeta } from '../../types';
 import styles from './article-card.module.css';
@@ -28,10 +28,10 @@ export const ArticleCard = ({
 }: IPostCardProps) => {
   return (
     <Card
-      className={cn('max-w-2xl mx-auto cursor-pointer', className)} // Use className prop
+      className={cn(styles.card, className)} // Use className prop
       onClick={() => onClick(slug)}
     >
-      <CardContent className="m-0 p-0">
+      <CardContent className={cn(styles['card-content'])}>
         <img
           className={cn(styles['card-image'])}
           alt="post cover image"
@@ -40,7 +40,7 @@ export const ArticleCard = ({
       </CardContent>
       <CardHeader>
         {tags?.length && (
-          <Tags tags={tags} className={styles['tags-list']} />
+          <Tags tags={tags} className={styles['tags-container']} />
         )}
         <CardTitle>{title}</CardTitle>
         <Small>{date}</Small>
