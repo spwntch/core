@@ -63,7 +63,6 @@ export default defineConfig({
         'embla-carousel-react',
         'lucide-react',
         'react',
-        'react-dom',
         'react/jsx-runtime',
         'tailwind-merge',
         'tailwindcss-animate',
