@@ -1,7 +1,7 @@
 import React, { forwardRef, PropsWithChildren } from 'react';
 import { Globe, Mail, Phone } from 'lucide-react';
 import { useBrand } from '../../../brand/brand-provider/brand-provider';
-import { H3 } from '@/react-typography';
+import { H3 } from '@spwntch/typography';
 import styles from './contact.module.css';
 
 export interface IContactProps

@@ -1,4 +1,4 @@
-import { H3 } from '@/react-typography';
+import { H3 } from '@spwntch/typography';
 import React, { forwardRef, PropsWithChildren } from 'react';
 import { useBrand } from '../../../brand/brand-provider/brand-provider';
 import SocialIcon, {

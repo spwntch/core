@@ -1,5 +1,5 @@
-import { ButtonGroup } from '@/react-components';
-import { cn } from '@/react-ui';
+import { ButtonGroup } from '@spwntch/components';
+import { cn } from '@spwntch/ui';
 import React, { forwardRef } from 'react';
 import { NavToolbar } from '..';
 import { Logo } from '../../brand';

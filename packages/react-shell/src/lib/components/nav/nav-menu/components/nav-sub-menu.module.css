@@ -1,0 +1,16 @@
+.accordion-container {
+    @apply mt-2 w-full;
+  }
+  
+  .accordion-item {
+    @apply border-none;
+  }
+  
+  .accordion-trigger {
+    @apply text-sm px-4 py-3 rounded-md hover:no-underline hover:bg-accent hover:text-accent-foreground focus:bg-none;
+  }
+  
+  .accordion-content {
+    @apply mt-3;
+  }
+  

@@ -3,13 +3,15 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/react-ui';
+} from '@spwntch/ui';
 import { INavLink, INavMenu } from '../../nav-provider/nav-provider';
 import { NavSubMenuLink } from './nav-sub-menu-link';
+import styles from './nav-sub-menu.module.css';
 
 interface INavSubMenuProps extends INavMenu {
   onLinkTo: (href: string) => void;
 }
+
 export const NavSubMenu = ({ label, children, onLinkTo }: INavSubMenuProps) => {
   const pickMenuItem = (item: INavMenu) => {
     // ONLY IF WE HAVE SUBMENU...
@@ -28,13 +30,17 @@ export const NavSubMenu = ({ label, children, onLinkTo }: INavSubMenuProps) => {
   };
 
   return (
-    <Accordion type="single" collapsible className="mt-2 w-full">
-      <AccordionItem value="item-1" className="border-none  ">
-        <AccordionTrigger className="text-sm px-4 hover:no-underline py-3 rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-none">
+    <Accordion
+      type="single"
+      collapsible
+      className={styles['accordion-container']}
+    >
+      <AccordionItem value="item-1" className={styles['accordion-item']}>
+        <AccordionTrigger className={styles['accordion-trigger']}>
           {label}
         </AccordionTrigger>
         <AccordionContent>
-          <ul className="mt-3">
+          <ul className={styles['accordion-content']}>
             {children?.map((item) => pickMenuItem(item))}
           </ul>
         </AccordionContent>

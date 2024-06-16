@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuList } from '@/react-ui';
+import { NavigationMenu, NavigationMenuList } from '@spwntch/ui';
 import {
   INavItem,
   INavLink,
@@ -7,7 +7,7 @@ import {
 } from '../nav-provider/nav-provider';
 import { NavMenuLink } from './components/nav-menu-link';
 import { NavSubMenu } from './components/nav-sub-menu';
-// import { NavMenuItem } from './nav-item';
+import styles from './nav-menu.module.css';
 
 export interface INavMenuProps {
   /**
@@ -49,9 +49,9 @@ export const NavMenu = ({
   return (
     <NavigationMenu
       orientation="vertical"
-      className="pl-1 max-w-none justify-start"
+      className={styles['navigation-menu']}
     >
-      <NavigationMenuList className="flex-col max-w-none w-[210px] ">
+      <NavigationMenuList className={styles['navigation-menu-list']}>
         {items.map((item) => pickNavItem(item))}
       </NavigationMenuList>
     </NavigationMenu>

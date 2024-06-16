@@ -1,0 +1,8 @@
+.navigation-menu {
+    @apply pl-1 max-w-none justify-start;
+  }
+  
+  .navigation-menu-list {
+    @apply flex-col max-w-none w-[210px];
+  }
+  

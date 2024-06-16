@@ -2,7 +2,7 @@ import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuTrigger,
-} from '@/react-ui';
+} from '@spwntch/ui';
 import { NavToolbarMenuLink } from './nav-toolbar-menu-link';
 import { INavLink, INavMenu } from '../../nav-provider/nav-provider';
 

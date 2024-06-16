@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@spwntch/ui';
+import styles from './table.module.css';
 
 export interface ITrProps extends React.HTMLAttributes<HTMLTableRowElement> {
   className?: string;
@@ -10,5 +11,5 @@ export interface ITrProps extends React.HTMLAttributes<HTMLTableRowElement> {
  * Use this component to wrap individual table cells.
  */
 export const Tr: React.FC<ITrProps> = ({ className, ...props }) => {
-  return <tr className={cn('m-0 border-t p-0 even:bg-muted', className)} {...props} />;
+  return <tr className={cn(styles.tr, className)} {...props} />;
 };

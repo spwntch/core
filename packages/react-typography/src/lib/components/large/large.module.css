@@ -1,0 +1,4 @@
+.large {
+  font-size: 1.125rem; /* corresponds to text-lg */
+  font-weight: 600; /* corresponds to font-semibold */
+}

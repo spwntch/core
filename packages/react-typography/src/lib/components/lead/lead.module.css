@@ -1,0 +1,5 @@
+.lead {
+    font-size: 1.25rem; /* corresponds to text-xl */
+    color: var(--muted-foreground); /* corresponds to text-muted-foreground, assuming it's defined in your CSS variables */
+  }
+  

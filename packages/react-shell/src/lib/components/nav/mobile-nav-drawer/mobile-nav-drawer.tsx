@@ -9,7 +9,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/react-ui';
+} from '@spwntch/ui';
 import { Menu } from 'lucide-react';
 import { useNav } from '../nav-provider/nav-provider';
 import { Logo } from '../../brand';
@@ -21,7 +21,9 @@ interface IMobileNavDrawerProps {
   onLinkTo: (href: string) => void;
 }
 
-export const MobileNavDrawer: React.FC<IMobileNavDrawerProps> = ({ onLinkTo }) => {
+export const MobileNavDrawer: React.FC<IMobileNavDrawerProps> = ({
+  onLinkTo,
+}) => {
   const [open, setOpen] = useState(false);
   const { navItems } = useNav();
 

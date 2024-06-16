@@ -7,6 +7,7 @@ import {
 } from '@/react-components';
 import { cn } from '@spwntch/ui';
 import React from 'react';
+import styles from './split-image-content-block.module.css';
 
 interface ISplitImageContentBlockProps {
   image: IImage;
@@ -41,13 +42,13 @@ export const SplitImageContentBlock: React.FC<ISplitImageContentBlockProps> = ({
   );
   return (
     <div
-      className={cn('w-full', hero && 'h-screen', className)}
+      className={cn(styles['container'], { 'h-screen': hero })}
       style={!hero ? { height: `${height}px` } : undefined}
     >
       <SplitLayout
         split={split}
         flip={flip}
-        className="h-full"
+        className={styles['split-layout']}
         containers={[imagePane, contentPane]}
       />
     </div>

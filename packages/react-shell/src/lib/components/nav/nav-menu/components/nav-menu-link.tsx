@@ -3,8 +3,9 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
-} from '@/react-ui';
+} from '@spwntch/ui';
 import { INavLink } from '../../nav-provider/nav-provider';
+import styles from './nav-menu-link.module.css';
 
 type INavToolbarLinkProps = INavLink;
 
@@ -14,11 +15,11 @@ export const NavMenuLink = ({
   onLinkTo,
 }: INavToolbarLinkProps) => {
   return (
-    <NavigationMenuItem className="w-full mt-2 ">
+    <NavigationMenuItem className={styles['navigation-menu-item']}>
       <NavigationMenuLink
         className={cn(
           navigationMenuTriggerStyle(),
-          'w-full justify-start ml-0'
+          styles['navigation-menu-link']
         )}
         onSelect={() => onLinkTo(href)}
       >

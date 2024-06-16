@@ -1,8 +1,9 @@
 {
   "name": "@spwntch/blocks",
-  "version": "0.62.3",
+  "version": "0.63.1",
   "files": [
-    "dist"
+    "dist",
+    "!dist/package.json"
   ],
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -14,8 +15,8 @@
   "author": "spwntch",
   "license": "MIT",
   "peerDependencies": {
-    "@spwntch/components": "0.62",
-    "@spwntch/typography": "0.62",
-    "@spwntch/ui": "0.62"
+    "@spwntch/components": "0.63",
+    "@spwntch/typography": "0.63",
+    "@spwntch/ui": "0.63"
   }
 }

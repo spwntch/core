@@ -1,0 +1,7 @@
+.p {
+  line-height: 1.75rem; /* corresponds to leading-7 */
+}
+
+.p:not(:first-child) {
+  margin-top: 1.5rem; /* corresponds to [&:not(:first-child)]:mt-6 */
+}

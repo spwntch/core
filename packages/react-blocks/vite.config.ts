@@ -45,6 +45,7 @@ export default defineConfig({
         '@spwntch/components',
         'lucide-react',
         'react',
+        'react-dom',
         'react/jsx-runtime',
       ],
     },

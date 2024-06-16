@@ -1,0 +1,39 @@
+.table {
+    @apply w-full;
+  }
+  
+  .thead {
+    /* @apply; */
+  }
+  
+  .tbody {
+    /* @apply; */
+  }
+  
+  .tr {
+    @apply m-0 border-t p-0 even:bg-muted;
+  }
+  
+  .th {
+    @apply border px-4 py-2 text-left font-bold;
+  }
+  
+  .th[align='center'] {
+    @apply text-center;
+  }
+  
+  .th[align='right'] {
+    @apply text-right;
+  }
+  
+  .td {
+    @apply border px-4 py-2 text-left;
+  }
+  
+  .td[align='center'] {
+    @apply text-center;
+  }
+  
+  .td[align='right'] {
+    @apply text-right;
+  }

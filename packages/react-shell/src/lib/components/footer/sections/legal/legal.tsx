@@ -1,4 +1,4 @@
-import { P } from '@/react-typography';
+import { P } from '@spwntch/typography';
 import { forwardRef } from 'react';
 import {
   IBrandLegal,

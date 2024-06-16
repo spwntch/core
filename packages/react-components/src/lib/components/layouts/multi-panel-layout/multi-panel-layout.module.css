@@ -1,0 +1,19 @@
+.multi-panel-layout {
+  @apply flex w-full h-full;
+}
+
+.main-block {
+  @apply flex items-center justify-center  h-full w-full;
+}
+
+.sub-block {
+  @apply flex items-center justify-center  h-full w-full;
+}
+
+.vertical-split {
+  @apply flex flex-col h-full;
+}
+
+.horizontal-split {
+  @apply flex flex-row h-full;
+}

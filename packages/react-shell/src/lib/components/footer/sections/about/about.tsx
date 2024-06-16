@@ -1,5 +1,5 @@
 import React, { forwardRef, PropsWithChildren } from 'react';
-import { H3, Small } from '@/react-typography';
+import { H3, Small } from '@spwntch/typography';
 import { useBrand } from '../../../brand/brand-provider/brand-provider';
 import styles from './about.module.css';
 

@@ -1,4 +1,3 @@
-'use client';
 
 import React from 'react';
 import {
@@ -8,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   cn,
-} from '@/react-ui';
+} from '@spwntch/ui';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import styles from './theme-toggle-button.module.css';
