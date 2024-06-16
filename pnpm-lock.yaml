@@ -331,7 +331,26 @@ importers:
         specifier: ^0.378.0
         version: 0.378.0(react@18.3.1)
 
-  packages/react-mdx: {}
+  packages/react-mdx:
+    dependencies:
+      '@spwntch/blocks':
+        specifier: '0.62'
+        version: link:../react-blocks
+      '@spwntch/components':
+        specifier: '0.62'
+        version: link:../react-components
+      '@spwntch/typography':
+        specifier: '0.62'
+        version: link:../react-typography
+      '@spwntch/ui':
+        specifier: '0.62'
+        version: link:../react-ui
+      lucide-react:
+        specifier: ^0.378.0
+        version: 0.378.0(react@18.3.1)
+      rehype-toc:
+        specifier: ^3.0.2
+        version: 3.0.2
 
   packages/react-shell:
     dependencies:
