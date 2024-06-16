@@ -1,0 +1,58 @@
+.container {
+  @apply relative h-full w-full;
+}
+
+.image {
+  @apply absolute inset-0 -z-10 h-full w-full object-cover;
+}
+
+.image--darken {
+  @apply brightness-50;
+}
+
+.image--blur {
+  @apply filter blur-md;
+}
+
+.image--blur-edges {
+  @apply filter blur-none;
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 60%,
+    transparent 100%
+  );
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+.inner-content {
+  @apply relative h-full w-full;
+}
+
+.xs-rounded {
+  @apply rounded-sm;
+}
+
+.sm-rounded {
+  @apply rounded-md;
+}
+
+.md-rounded {
+  @apply rounded-lg;
+}
+
+.lg-rounded {
+  @apply rounded-xl;
+}
+
+.xl-rounded {
+  @apply rounded-2xl;
+}
+
+.xxl-rounded {
+  @apply rounded-3xl;
+}
+
+.full-rounded {
+  @apply rounded-full;
+}

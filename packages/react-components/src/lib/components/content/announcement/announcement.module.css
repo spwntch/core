@@ -1,0 +1,16 @@
+/* announcement.module.css */
+.announcement-container {
+  @apply relative rounded-full px-3 py-1 text-sm leading-6 text-foreground ring-1 ring-ring/20 hover:ring-ring/30 mb-4 w-fit max-w-5xl flex items-center;
+}
+
+.announcement-message {
+  @apply w-fit;
+}
+
+.announcement-link {
+  @apply ml-3 font-semibold text-primary w-fit text-nowrap;
+}
+
+.absolute-inset {
+  @apply absolute inset-0;
+}
