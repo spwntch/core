@@ -13561,8 +13561,8 @@ packages:
       language-subtag-registry: 0.3.23
     dev: true
 
-  /launch-editor@2.6.1:
-    resolution: {integrity: sha512-eB/uXmFVpY4zezmGp5XtU21kwo7GBbKB+EQ+UZeWtGb9yAM5xt/Evk+lYH3eRNAtId+ej4u7TYPFZ07w4s7rRw==}
+  /launch-editor@2.7.0:
+    resolution: {integrity: sha512-KAc66u6LxWL8MifQ94oG3YGKYWDwz/Gi0T15lN//GaQoZe08vQGFJxrXkPAeu50UXgvJPPaRKVGuP1TRUm/aHQ==}
     dependencies:
       picocolors: 1.0.1
       shell-quote: 1.8.1
@@ -19484,7 +19484,7 @@ packages:
       html-entities: 2.5.2
       http-proxy-middleware: 2.0.6(@types/express@4.17.21)
       ipaddr.js: 2.2.0
-      launch-editor: 2.6.1
+      launch-editor: 2.7.0
       open: 8.4.2
       p-retry: 4.6.2
       rimraf: 3.0.2
