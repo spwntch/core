@@ -1,6 +1,6 @@
 {
   "name": "@spwntch/shell",
-  "version": "0.63.0",
+  "version": "0.63.1",
   "files": [
     "dist",
     "!dist/package.json"
@@ -15,9 +15,9 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/components": "0.63",
-    "@spwntch/typography": "0.63",
-    "@spwntch/ui": "0.63",
+    "@spwntch/components": "0.63.1",
+    "@spwntch/typography": "0.63.1",
+    "@spwntch/ui": "0.63.1",
     "lucide-react": "^0.378.0",
     "next-themes": "^0.3.0"
   }
