@@ -16,7 +16,7 @@ The \`GithubButton\` component renders a button that links to a specified Github
 \`\`\`
 
 ### Notes
-This component uses the \`Button\` component from \`@/react-ui\` and the \`Github\` icon from \`lucide-react\`.
+This component uses the \`Button\` component from \`@spwntch/ui\` and the \`Github\` icon from \`lucide-react\`.
 `;
 
 const meta: Meta<typeof GithubButton> = {

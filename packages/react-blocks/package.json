@@ -2,7 +2,8 @@
   "name": "@spwntch/blocks",
   "version": "0.62.3",
   "files": [
-    "dist"
+    "dist",
+    "!dist/package.json"
   ],
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

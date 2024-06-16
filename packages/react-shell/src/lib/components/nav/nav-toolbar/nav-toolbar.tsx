@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuList } from '@/react-ui';
+import { NavigationMenu, NavigationMenuList } from '@spwntch/ui';
 import {
   INavItem,
   INavLink,

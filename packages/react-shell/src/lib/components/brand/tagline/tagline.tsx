@@ -1,8 +1,10 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { Small } from '@/react-typography';
+import { Small } from '@spwntch/typography';
 import { useBrand } from '../brand-provider/brand-provider';
 
-export interface ITaglineProps extends React.HTMLAttributes<HTMLDivElement>, PropsWithChildren {
+export interface ITaglineProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    PropsWithChildren {
   className?: string;
 }
 

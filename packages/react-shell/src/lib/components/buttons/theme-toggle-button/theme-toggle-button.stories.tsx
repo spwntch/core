@@ -16,7 +16,7 @@ The \`ThemeToggleButton\` component allows users to toggle between light, dark, 
 \`\`\`
 
 ### Notes
-This component uses the \`Button\`, \`DropdownMenu\`, \`DropdownMenuContent\`, \`DropdownMenuItem\`, and \`DropdownMenuTrigger\` components from \`@/react-ui\`.
+This component uses the \`Button\`, \`DropdownMenu\`, \`DropdownMenuContent\`, \`DropdownMenuItem\`, and \`DropdownMenuTrigger\` components from \`@spwntch/ui\`.
 `;
 
 const meta: Meta<typeof ThemeToggleButton> = {

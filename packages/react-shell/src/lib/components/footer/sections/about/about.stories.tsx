@@ -19,7 +19,7 @@ The \`About\` component displays information about the brand.
 \`\`\`
 
 ### Notes
-This component uses the \`H3\` and \`Small\` components from \`@/react-typography\`.
+This component uses the \`H3\` and \`Small\` components from \`@spwntch/typography\`.
 `;
 
 const meta: Meta<typeof About> = {
