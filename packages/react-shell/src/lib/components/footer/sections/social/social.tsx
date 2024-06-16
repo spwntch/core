@@ -1,10 +1,10 @@
-import { H3 } from '@/react-typography';
+import { H3 } from '@spwntch/typography';
+import { cn } from '@spwntch/ui';
 import React, { forwardRef, PropsWithChildren } from 'react';
 import { useBrand } from '../../../brand/brand-provider/brand-provider';
 import SocialIcon, {
   SocialPlatform,
 } from '../../../social/social-icon/social-icon';
-import styles from './social.module.css';
 
 export interface ISocialProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -17,9 +17,9 @@ export const Social = forwardRef<HTMLDivElement, ISocialProps>(
     const { social } = useBrand();
 
     return (
-      <div className={`${styles.container} ${className}`} ref={ref} {...props}>
-        <H3 className={styles.title}>Follow Us</H3>
-        <ul className={styles.list}>
+      <div className={cn('p-4', className)} ref={ref} {...props}>
+        <H3 className="text-2xl font-semibold">Follow Us</H3>
+        <ul className="{styles.list}">
           {social &&
             Object.keys(social).map((platform) => (
               <li key={platform}>

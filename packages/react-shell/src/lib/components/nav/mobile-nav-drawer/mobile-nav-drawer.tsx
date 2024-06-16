@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import {
   Button,
@@ -9,19 +8,20 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/react-ui';
+} from '@spwntch/ui';
 import { Menu } from 'lucide-react';
 import { useNav } from '../nav-provider/nav-provider';
 import { Logo } from '../../brand';
 import { Tagline } from '../../brand/tagline/tagline';
 import { NavMenu } from '../nav-menu/nav-menu';
-import styles from './mobile-nav-drawer.module.css';
 
 interface IMobileNavDrawerProps {
   onLinkTo: (href: string) => void;
 }
 
-export const MobileNavDrawer: React.FC<IMobileNavDrawerProps> = ({ onLinkTo }) => {
+export const MobileNavDrawer: React.FC<IMobileNavDrawerProps> = ({
+  onLinkTo,
+}) => {
   const [open, setOpen] = useState(false);
   const { navItems } = useNav();
 
@@ -29,22 +29,22 @@ export const MobileNavDrawer: React.FC<IMobileNavDrawerProps> = ({ onLinkTo }) =
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild className={styles['trigger-button']}>
+      <SheetTrigger asChild className="ml-2">
         <Button variant="outline" size="icon">
-          <Menu className={styles['menu-icon']} />
+          <Menu className="h-[1.2rem] w-[1.2rem]" />
           <span className="sr-only">Open menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent className={styles['sheet-content']}>
-        <SheetHeader className={styles['sheet-header']}>
+      <SheetContent className="w-[260px]">
+        <SheetHeader className="pt-2">
           <SheetTitle>
-            <Logo width={180} className={styles.logo} />
+            <Logo width={180} className="mx-auto" />
           </SheetTitle>
-          <SheetDescription asChild className={styles['sheet-description']}>
+          <SheetDescription asChild className="text-center">
             <Tagline />
           </SheetDescription>
         </SheetHeader>
-        <DropdownMenuSeparator className={styles.separator} />
+        <DropdownMenuSeparator className="mt-4" />
         <NavMenu
           onLinkTo={(href) => {
             setOpen(false);

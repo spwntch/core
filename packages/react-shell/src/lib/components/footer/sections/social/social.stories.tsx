@@ -19,7 +19,7 @@ The \`Social\` component displays the social media links of the brand.
 \`\`\`
 
 ### Notes
-This component uses the \`H3\` component from \`@/react-typography\` and icons from \`lucide-react\`.
+This component uses the \`H3\` component from \`@spwntch/typography\` and icons from \`lucide-react\`.
 `;
 
 const meta: Meta<typeof Social> = {

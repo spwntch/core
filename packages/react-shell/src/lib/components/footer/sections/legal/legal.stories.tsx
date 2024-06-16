@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
   withBrandProvider,
-  withFullWidth
+  withFullWidth,
 } from '../../../../storybook/storybook-decorators';
 import { Legal } from './legal';
 import { playAccessibilityTest, playBasic } from './legal.specs';
@@ -20,7 +20,7 @@ The \`Legal\` component displays legal information of the brand.
 \`\`\`
 
 ### Notes
-This component uses the \`P\` component from \`@/react-typography\`.
+This component uses the \`P\` component from \`@spwntch/typography\`.
 `;
 
 const meta: Meta<typeof Legal> = {

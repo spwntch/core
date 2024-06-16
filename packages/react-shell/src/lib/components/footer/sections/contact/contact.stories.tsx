@@ -19,7 +19,7 @@ The \`Contact\` component displays the contact information of the brand.
 \`\`\`
 
 ### Notes
-This component uses the \`H3\` component from \`@/react-typography\` and icons from \`lucide-react\`.
+This component uses the \`H3\` component from \`@spwntch/typography\` and icons from \`lucide-react\`.
 `;
 
 const meta: Meta<typeof Contact> = {

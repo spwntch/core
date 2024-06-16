@@ -1,9 +1,0 @@
-/* nav-toolbar.module.css */
-
-.navigation-menu {
-  /* Add any styles here if necessary */
-}
-
-.navigation-menu-list {
-  @apply flex-col max-w-none w-[210px];
-}
