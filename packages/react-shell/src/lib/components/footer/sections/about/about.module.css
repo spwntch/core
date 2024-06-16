@@ -1,0 +1,14 @@
+/* about.module.css */
+
+.container {
+    @apply p-4;
+  }
+  
+  .title {
+    @apply mb-4;
+  }
+  
+  .paragraph {
+    @apply mb-2;
+  }
+  
