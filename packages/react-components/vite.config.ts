@@ -53,6 +53,8 @@ export default defineConfig({
           'src/lib/components/layouts/quad-layout/quad-layout.tsx',
         'layouts_split-layout':
           'src/lib/components/layouts/split-layout/split-layout.tsx',
+        'media_youtube-player':
+          'src/lib/components/media/youtube-player/youtube-player.tsx',
       },
       name: 'react-components',
       formats: ['es'],
