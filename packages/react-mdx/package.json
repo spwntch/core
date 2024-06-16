@@ -15,10 +15,10 @@
   "author": "spwntch",
   "license": "MIT",
   "dependencies": {
-    "@spwntch/ui": "0.63.0",
-    "@spwntch/typography": "0.63.0",
-    "@spwntch/components": "0.63.0",
-    "@spwntch/blocks": "0.63.0",
+    "@spwntch/ui": "0.63",
+    "@spwntch/typography": "0.63",
+    "@spwntch/components": "0.63",
+    "@spwntch/blocks": "0.63",
     "lucide-react": "^0.378.0",
     "rehype-toc": "^3.0.2"
   }
