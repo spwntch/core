@@ -1,11 +1,9 @@
 import { ContentContainer, ImageContainer, List } from '@/react-components';
-import { H3, P } from '@/react-typography';
-import { Button, Card } from '@/react-ui';
+import { H3, P } from '@spwntch/typography';
+import { Button, Card } from '@spwntch/ui';
 import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import {
-  withFullPage
-} from '../../storybook/storybook-decorators';
+import { withFullPage } from '../../storybook/storybook-decorators';
 import { MultiPanelBlock } from './multi-panel-block';
 import { playBasic } from './multi-panel-block.specs';
 

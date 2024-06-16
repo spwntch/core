@@ -4,9 +4,8 @@ import {
   IImage,
   ImageContainer,
 } from '@/react-components';
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import React from 'react';
-import styles from './image-content-block.module.css';
 
 interface IImageContentBlockProps {
   image: IImage;
@@ -29,7 +28,7 @@ export const ImageContentBlock: React.FC<IImageContentBlockProps> = ({
 }) => {
   return (
     <div
-      className={cn(styles.container, className, { 'h-screen': hero })}
+      className={cn('w-full', hero && 'h-screen', className)}
       style={!hero ? { height: `${height}px` } : undefined}
     >
       <ImageContainer image={image}>
