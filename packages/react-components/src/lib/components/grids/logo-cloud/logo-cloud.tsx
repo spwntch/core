@@ -1,4 +1,5 @@
 import { H3 } from '@spwntch/typography';
+import styles from './logo-cloud.module.css';
 import { cn } from '@spwntch/ui';
 import React from 'react';
 
@@ -15,17 +16,13 @@ export const LogoCloud: React.FC<ILogoCloudProps> = ({
 }) => {
   if (!logos?.length) return null;
   return (
-    <div className={cn('mx-auto bg-primary-foreground text-primary', className)}>
-      {title && <H3 className="text-center pt-4">{title}</H3>}
-      <div
-        className={cn(
-          'py-8 px-8 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4'
-        )}
-      >
+    <div className={cn(styles['logo-cloud'], className)}>
+      {title && <H3 className={styles['logo-cloud-title']}>{title}</H3>}
+      <div className={styles['logo-cloud-grid']}>
         {logos.map((logo) => (
           <img
             key={logo.src}
-            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            className={styles['logo']}
             src={logo.src}
             alt={logo.alt}
           />
