@@ -15,14 +15,7 @@ export interface IH2Props
 export const H2 = forwardRef<HTMLHeadingElement, IH2Props>(
   ({ className, ...props }, ref) => {
     return (
-      <h2
-        ref={ref}
-        className={cn(
-          'scroll-m-20 border-b mt-8 pb-2 text-3xl font-semibold tracking-tight ',
-          className
-        )}
-        {...props}
-      >
+      <h2 ref={ref} className={cn(styles.h2, className)} {...props}>
         {props.children}
       </h2>
     );
