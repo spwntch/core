@@ -1,11 +1,4 @@
-.card {
-    @apply max-w-2xl mx-auto cursor-pointer;
-  }
-  
-  .card-content {
-    @apply m-0 p-0;
-  }
-  
+
   .card-image {
     @apply object-cover object-center rounded-t w-full h-60;
   }

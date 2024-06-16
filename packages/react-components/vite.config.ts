@@ -66,6 +66,7 @@ export default defineConfig({
         'lucide-react',
         'react-youtube',
         'react',
+        'react-dom',
         'react/jsx-runtime',
       ],
     },
