@@ -1,12 +1,11 @@
-'use client';
 import { H3 } from '@spwntch/typography';
-import { cn } from '@spwntch/ui';
 import React, { forwardRef } from 'react';
 import { useBrand } from '../../brand/brand-provider/brand-provider';
 import { SocialIcon } from '../../social/social-icon/social-icon';
 import { About } from '../sections/about/about';
 import { Contact } from '../sections/contact/contact';
 import { Legal } from '../sections/legal/legal';
+import styles from './under-construction-footer.module.css';
 
 export interface IUnderConstructionFooterProps
   extends React.HTMLAttributes<HTMLElement> {
@@ -20,21 +19,14 @@ export const UnderConstructionFooter = forwardRef<
   const { underConstructionUrl, social } = useBrand();
 
   return (
-    <footer
-      className={cn(
-        'relative isolate bg-background text-foreground pt-12 pb-3',
-        className
-      )}
-      ref={ref}
-      {...props}
-    >
-      <div className="mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+    <footer className={`${styles.footer} ${className}`} ref={ref} {...props}>
+      <div className={styles.container}>
+        <div className={styles['footer-grid']}>
           <About />
           <Contact />
           <div>
             <H3>Under Construction</H3>
-            <div className="flex gap-16">
+            <div className={styles['under-construction']}>
               <img
                 width={100}
                 height={25}

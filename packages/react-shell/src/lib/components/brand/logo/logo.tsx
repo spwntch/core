@@ -2,6 +2,7 @@ import { cn } from '@spwntch/ui';
 import { forwardRef } from 'react';
 import { useBrand } from '../brand-provider/brand-provider';
 
+
 export interface ILogoProps {
   className?: string;
   /**
@@ -28,7 +29,7 @@ export const Logo = forwardRef<HTMLImageElement, ILogoProps>(
     width = variant === 'logo' ? width || height * 4 : height;
 
     return (
-      <div className={cn('w-fit h-fit', className)} onClick={onClick}>
+      <div className={cn(' w-fit h-fit', className)} onClick={onClick}>
         {logo?.light && (
           <img
             ref={ref}

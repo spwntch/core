@@ -1,7 +1,7 @@
-import { cn } from '@spwntch/ui';
-import { H3, Small } from '@spwntch/typography';
 import React, { forwardRef, PropsWithChildren } from 'react';
+import { H3, Small } from '@spwntch/typography';
 import { useBrand } from '../../../brand/brand-provider/brand-provider';
+import styles from './about.module.css';
 
 export interface IAboutProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -14,11 +14,11 @@ export const About = forwardRef<HTMLDivElement, IAboutProps>(
     const { about } = useBrand();
 
     return (
-      <div className={cn('p4', className)} ref={ref} {...props}>
-        <H3 className="mb-4">{about?.title || 'About Us'}</H3>
+      <div className={`${styles.container} ${className}`} ref={ref} {...props}>
+        <H3 className={styles.title}>{about?.title || 'About Us'}</H3>
         <div>
           {about?.body?.map((paragraph, index) => (
-            <Small key={index} className="mb-2">
+            <Small key={index} className={styles.paragraph}>
               {paragraph}
             </Small>
           ))}

@@ -78,6 +78,7 @@ export default defineConfig({
         'next-themes',
         'next/navigation',
         'react',
+        'react-dom',
         'react/jsx-runtime',
       ],
     },

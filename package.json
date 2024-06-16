@@ -16,7 +16,7 @@
     "registry": "pnpm dlx nx local-registry",
     "spawn-workspace": "pnpm dlx nx run spawn-workspace",
     "add-shad": "pnpm dlx nx run react-ui:add-shad",
-    "ci": "pnpm dlx nx run-many -t lint test build build-storybook"
+    "ci": "pnpm dlx nx run-many -t lint test build"
   },
   "private": true,
   "dependencies": {

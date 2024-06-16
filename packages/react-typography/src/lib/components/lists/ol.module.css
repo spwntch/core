@@ -1,0 +1,3 @@
+.ol {
+    @apply my-6 ml-6 list-decimal;
+  }

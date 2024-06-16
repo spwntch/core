@@ -1,9 +1,10 @@
-import { forwardRef } from 'react';
-import { Facebook } from './facebook';
-import { Instagram } from './instagram';
+import React, { forwardRef } from 'react';
+import styles from './social-icon.module.css';
 import { LinkedIn } from './linkedin';
-import { Twitter } from './twitter';
+import { Facebook } from './facebook';
 import { YouTube } from './youtube';
+import { Instagram } from './instagram';
+import { Twitter } from './twitter';
 
 export type SocialPlatform = 'linkedin' | 'facebook' | 'youtube' | 'instagram' | 'twitter';
 
@@ -30,11 +31,11 @@ export const SocialIcon = forwardRef<HTMLAnchorElement, ISocialIconProps>(
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className={`underline hover:text-blue-300 ${className}`}
+        className={`${styles.link} ${className}`}
         ref={ref}
         {...props}
       >
-        <IconComponent className="w-6 h-6" />
+        <IconComponent className={styles.icon} />
       </a>
     );
   }

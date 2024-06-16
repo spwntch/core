@@ -1,6 +1,6 @@
 import { P } from '@spwntch/typography';
+import styles from './paragraphs.module.css';
 import { cn } from '@spwntch/ui';
-import React from 'react';
 
 export type ParagraphAlignment = 'left' | 'center' | 'right' | 'justified';
 
@@ -16,16 +16,7 @@ export const Paragraphs: React.FC<IParagraphsProps> = ({
   alignment = 'left',
 }) => (
   <div
-    className={cn(
-      'mt-4 mb-8 max-w-3xl',
-      {
-        'text-left': alignment === 'left',
-        'text-center': alignment === 'center',
-        'text-right': alignment === 'right',
-        'text-justify': alignment === 'justified',
-      },
-      className
-    )}
+    className={cn(styles['paragraph-container'], styles[alignment], className)}
   >
     {content.map((paragraph, index) => (
       <P key={index}>{paragraph}</P>

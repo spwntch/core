@@ -1,13 +1,13 @@
-import { Tags } from '@/react-components'; // Import the Tags component
-import { Small } from '@/react-typography';
+import { Tags } from '@spwntch/components'; // Import the Tags component
+import { Small } from '@spwntch/typography';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-  cn
-} from '@/react-ui';
+  cn,
+} from '@spwntch/ui';
 import { IMdxDocMeta } from '../../types';
 import styles from './article-card.module.css';
 

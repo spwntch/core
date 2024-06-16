@@ -1,4 +1,4 @@
-import { cn } from '@/react-ui';
+import { cn } from '@spwntch/ui';
 import { IMdxDoc } from '../../types';
 import styles from './article-mdx.module.css';
 

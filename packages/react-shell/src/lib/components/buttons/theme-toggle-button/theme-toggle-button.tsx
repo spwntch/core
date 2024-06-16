@@ -1,5 +1,5 @@
-'use client';
 
+import React from 'react';
 import {
   Button,
   DropdownMenu,
@@ -10,7 +10,7 @@ import {
 } from '@spwntch/ui';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import React from 'react';
+import styles from './theme-toggle-button.module.css';
 
 export const ThemeToggleButton: React.FC<{ className?: string }> = ({
   className,
@@ -21,19 +21,9 @@ export const ThemeToggleButton: React.FC<{ className?: string }> = ({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon" className={className}>
-          <Sun
-            className={cn(
-              'h-[1.2rem] w-[1.2rem] transition-all',
-              'dark:hidden'
-            )}
-          />
-          <Moon
-            className={cn(
-              'h-[1.2rem] w-[1.2rem] transition-all',
-              'hidden dark:block'
-            )}
-          />
-          <span className="sr-only">Toggle theme</span>
+          <Sun className={cn(styles['icon'], 'dark:hidden')} />
+          <Moon className={cn(styles['icon'], 'hidden dark:block')} />
+          <span className={styles['screen-reader-text']}>Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

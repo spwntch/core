@@ -1,0 +1,17 @@
+/* under-construction-footer.module.css */
+
+.footer {
+    @apply relative isolate bg-background text-foreground pt-12 pb-3;
+  }
+  
+  .container {
+    @apply mx-auto px-4;
+  }
+  
+  .footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-12 mb-8;
+  }
+  
+  .under-construction {
+    @apply flex gap-16;
+  }

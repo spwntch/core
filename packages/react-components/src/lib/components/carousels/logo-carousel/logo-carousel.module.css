@@ -1,0 +1,24 @@
+.logo-carousel-container {
+    @apply mx-auto;
+  }
+  
+  .logo-carousel-title {
+    @apply text-primary text-center;
+  }
+  
+  .logo-carousel-content {
+    @apply py-8 px-8;
+  }
+  
+  .logo-carousel-item {
+    @apply flex justify-center basis-1/3;
+  }
+  
+  .logo-container {
+    @apply p-4;
+  }
+  
+  .logo-image {
+    @apply col-span-2 max-h-12 w-full object-contain lg:col-span-1;
+  }
+  

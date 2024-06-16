@@ -1,8 +1,8 @@
-import { H3 } from '@spwntch/typography';
-import { cn } from '@spwntch/ui';
-import { Globe, Mail, Phone } from 'lucide-react';
 import React, { forwardRef, PropsWithChildren } from 'react';
+import { Globe, Mail, Phone } from 'lucide-react';
 import { useBrand } from '../../../brand/brand-provider/brand-provider';
+import { H3 } from '@spwntch/typography';
+import styles from './contact.module.css';
 
 export interface IContactProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -15,14 +15,14 @@ export const Contact = forwardRef<HTMLDivElement, IContactProps>(
     const { contact } = useBrand();
 
     return (
-      <div className={cn('p-4', className)} ref={ref} {...props}>
-        <H3 className="text-2xl font-semibold">Contact</H3>
-        <ul className="text-sm leading-relaxed">
+      <div className={`${styles.container} ${className}`} ref={ref} {...props}>
+        <H3 className={styles.title}>Contact</H3>
+        <ul className={styles.list}>
           <li>
-            <Globe className="inline h-5 w-5 mr-2" />
+            <Globe className={styles.icon} />
             <a
               href={`https://${contact?.website}`}
-              className="underline hover: text-blue-300"
+              className={styles.link}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -30,16 +30,13 @@ export const Contact = forwardRef<HTMLDivElement, IContactProps>(
             </a>
           </li>
           <li>
-            <Mail className="inline h-5 w-5 mr-2" />
-            <a
-              href={`mailto:${contact?.mail}`}
-              className="underline hover: text-blue-300"
-            >
+            <Mail className={styles.icon} />
+            <a href={`mailto:${contact?.mail}`} className={styles.link}>
               {contact?.mail}
             </a>
           </li>
           <li>
-            <Phone className="inline h-5 w-5 mr-2" />
+            <Phone className={styles.icon} />
             {contact?.phone}
           </li>
         </ul>

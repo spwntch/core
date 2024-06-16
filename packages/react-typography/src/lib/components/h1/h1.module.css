@@ -1,0 +1,13 @@
+.h1 {
+    scroll-margin: 20px; /* corresponds to scroll-m-20 */
+    font-size: 2.25rem; /* corresponds to text-4xl */
+    font-weight: 800; /* corresponds to font-extrabold */
+    letter-spacing: -0.025em; /* corresponds to tracking-tight */
+  }
+  
+  @media (min-width: 1024px) {
+    .h1 {
+      font-size: 3rem; /* corresponds to lg:text-5xl */
+    }
+  }
+  

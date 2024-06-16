@@ -1,10 +1,10 @@
 import { P } from '@spwntch/typography';
-import { cn } from '@spwntch/ui';
 import { forwardRef } from 'react';
 import {
   IBrandLegal,
   useBrand,
 } from '../../../brand/brand-provider/brand-provider';
+import styles from './legal.module.css';
 
 type ILegalProps = {
   override?: IBrandLegal;
@@ -18,23 +18,12 @@ export const Legal = forwardRef<HTMLDivElement, ILegalProps>(
     const data = override || legal;
 
     return (
-      <div
-        className={cn(
-          'mt-8 flex justify-between items-center text-xs md:text-sm leading-relaxed',
-          className
-        )}
-        ref={ref}
-        {...props}
-      >
+      <div className={`${styles.container} ${className}`} ref={ref} {...props}>
         <P>
           © {data?.copyrightYear} {data?.companyName}. All Rights Reserved.
         </P>
-        <div className="flex gap-4">
-          <a
-            href="/privacy"
-            target="_blank"
-            className="underline hover:text-blue-300"
-          >
+        <div className={styles.links}>
+          <a href="/privacy" target="_blank" className={styles.link}>
             Privacy Policy
           </a>
         </div>

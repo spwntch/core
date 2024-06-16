@@ -1,5 +1,6 @@
-import { cn } from '@spwntch/ui';
 import React, { PropsWithChildren, forwardRef } from 'react';
+import { cn } from '@spwntch/ui';
+import styles from './p.module.css';
 
 export interface IPProps
   extends React.HTMLAttributes<HTMLParagraphElement>,
@@ -14,7 +15,7 @@ export interface IPProps
 export const P = forwardRef<HTMLParagraphElement, IPProps>(
   ({ className, ...props }, ref) => {
     return (
-      <p ref={ref} className={cn('leading-7 [&:not(:first-child)]:mt-6', className)} {...props}>
+      <p ref={ref} className={cn(styles.p, className)} {...props}>
         {props.children}
       </p>
     );

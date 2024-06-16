@@ -1,5 +1,6 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '@spwntch/ui';
+import styles from './lead.module.css';
 
 export interface ILeadProps
   extends React.HTMLAttributes<HTMLParagraphElement>,
@@ -14,7 +15,7 @@ export interface ILeadProps
 export const Lead = forwardRef<HTMLParagraphElement, ILeadProps>(
   ({ className, ...props }, ref) => {
     return (
-      <p ref={ref} className={cn('text-xl text-muted-foreground', className)} {...props}>
+      <p ref={ref} className={cn(styles.lead, className)} {...props}>
         {props.children}
       </p>
     );

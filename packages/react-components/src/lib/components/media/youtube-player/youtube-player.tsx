@@ -1,16 +1,16 @@
 import { useMediaQuery } from '@react-hooks-library/core';
 import React, { useState } from 'react';
 import YouTube from 'react-youtube';
+import styles from './youtube-player.module.css';
 
 export interface IYoutubePlayerProps {
+  /** The ID of the YouTube video to be played */
   id: string;
+  /** The URL of the thumbnail image to be displayed initially */
   thumbnailUrl: string;
 }
 
-export const YoutubePlayer: React.FC<IYoutubePlayerProps> = ({
-  id,
-  thumbnailUrl,
-}) => {
+export const YoutubePlayer: React.FC<IYoutubePlayerProps> = ({ id, thumbnailUrl }) => {
   const is2Xl = useMediaQuery('(min-width: 1536px)');
   const isXl = useMediaQuery('(min-width: 1280px)');
   const isLg = useMediaQuery('(min-width: 1024px)');
@@ -24,15 +24,7 @@ export const YoutubePlayer: React.FC<IYoutubePlayerProps> = ({
       <img
         src={thumbnailUrl}
         alt="youtube-vid-placeholder"
-        className={`
-          mx-auto w-[320px] h-[180px] 
-          sm:w-[592px] sm:h-[333px] 
-          md:w-[672px] md:h-[378px] 
-          lg:w-[464px] lg:h-[261px] 
-          xl:w-[592px] xl:h-[333px] 
-          2xl:w-[720px] 2xl:h-[405px] 
-          lg:mx-0 sm:mb-6 md:mb-12 lg:mb-0 xl:mb-3 2xl:mb-0
-        `}
+        className={styles['thumbnail']}
         onClick={() => setDisplayPlayer(true)}
       />
     );
@@ -53,12 +45,7 @@ export const YoutubePlayer: React.FC<IYoutubePlayerProps> = ({
   const playerOptions = { playerVars: { autoplay: 1 }, ...playerSize };
 
   return (
-    <div
-      className={`
-        h-[180px] sm:h-[357px] md:h-[426px] lg:h-auto xl:h-[345px] 2xl:h-[405px] 
-        mx-auto lg:mx-0 xl:mx-1
-      `}
-    >
+    <div className={styles['player-container']}>
       <YouTube videoId={id} opts={playerOptions} />
     </div>
   );

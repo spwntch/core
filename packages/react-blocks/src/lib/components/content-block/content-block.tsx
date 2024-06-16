@@ -1,6 +1,7 @@
 import { ContentContainer, IContent } from '@/react-components';
 import { cn } from '@spwntch/ui';
 import React from 'react';
+import styles from './content-block.module.css';
 
 interface IContentBlockProps {
   innerContent: IContent;
@@ -21,7 +22,7 @@ export const ContentBlock: React.FC<IContentBlockProps> = ({
 }) => {
   return (
     <div
-      className={cn('w-full', hero && 'h-screen', className)}
+      className={cn(styles.container, className, { [styles.hero]: hero })}
       style={!hero ? { height: `${height}px` } : undefined}
     >
       <ContentContainer

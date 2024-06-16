@@ -1,0 +1,9 @@
+/* theme-toggle-button.module.css */
+
+.icon {
+  @apply h-[1.2rem] w-[1.2rem] transition-all;
+}
+
+.screen-reader-text {
+  @apply sr-only;
+}

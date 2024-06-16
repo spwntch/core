@@ -1,27 +1,25 @@
 {
   "name": "@spwntch/mdx",
-  "version": "0.62.3",
+  "version": "0.62.4",
   "main": "./dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "!dist/package.json"
   ],
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./styles": {
-      "default": "./dist/style.css"
-    }
-  },
   "keywords": [
     "react",
     "vite"
   ],
   "author": "spwntch",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "@spwntch/ui": "0.62",
+    "@spwntch/typography": "0.62",
+    "@spwntch/components": "0.62",
+    "@spwntch/blocks": "0.62",
+    "lucide-react": "^0.378.0",
+    "rehype-toc": "^3.0.2"
+  }
 }

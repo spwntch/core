@@ -1,6 +1,7 @@
 import { IMultiPanelLayoutProps, MultiPanelLayout } from '@/react-components';
 import { cn } from '@spwntch/ui';
 import { forwardRef } from 'react';
+import styles from './multi-panel-block.module.css';
 
 export interface IMultiPanelBlockProps extends IMultiPanelLayoutProps {
   className?: string;
@@ -27,7 +28,7 @@ export const MultiPanelBlock = forwardRef<
   ) => {
     return (
       <MultiPanelLayout
-        className={cn('w-full', hero && 'h-screen', className)}
+        className={cn(styles.container, hero && styles.hero, className)}
         style={!hero ? { height: `${height}px` } : undefined} // Apply height only if hero is false
         flip={flip}
         mainPaneCoverage={mainPaneCoverage}
