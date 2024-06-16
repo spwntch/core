@@ -1,6 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '@spwntch/ui';
-import styles from './inline-code.module.css';
 
 export interface IInlineCodeProps
   extends React.HTMLAttributes<HTMLParagraphElement>,
@@ -15,7 +14,14 @@ export interface IInlineCodeProps
 export const InlineCode = forwardRef<HTMLParagraphElement, IInlineCodeProps>(
   ({ className, ...props }, ref) => {
     return (
-      <code ref={ref} className={cn(styles.code, className)} {...props}>
+      <code
+        ref={ref}
+        className={cn(
+          'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
+          className
+        )}
+        {...props}
+      >
         {props.children}
       </code>
     );

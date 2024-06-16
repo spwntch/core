@@ -1,6 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
 import { cn } from '@spwntch/ui';
-import styles from './h1.module.css';
 
 export interface IH1Props
   extends React.HTMLAttributes<HTMLHeadingElement>,
@@ -18,7 +17,7 @@ export const H1 = forwardRef<HTMLHeadingElement, IH1Props>(
       <h1
         ref={ref}
         className={cn(
-          'scroll-m-20  font-extrabold, tracking-tight text-4xl lg:text-5xl',
+          'scroll-m-20  font-extrabold, tracking-tight text-4xl lg:text-5xl mt-2 mb-8',
           className
         )}
         {...props}

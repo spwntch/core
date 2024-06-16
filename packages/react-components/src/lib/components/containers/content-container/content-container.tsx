@@ -7,10 +7,10 @@ import { Header } from '../../content/header/header';
 import { List } from '../../content/list/list';
 import { Paragraphs } from '../../content/paragraphs/paragraphs';
 import {
-  getTitleContentAndClassName,
-  getSubTitleContentAndClassName,
   getBodyContentAndClassName,
+  getSubTitleContentAndClassName,
   getTagsContentAndClassName,
+  getTitleContentAndClassName,
 } from './content-container.utils';
 
 export interface ContentContainerProps
