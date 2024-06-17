@@ -42,6 +42,7 @@ export async function createLibraryGenerator(
     directory: options.directory,
     bundler: 'vite',
     compiler: 'babel',
+    component: true,
     linter: Linter.EsLint,
     style: 'tailwind',
   });
