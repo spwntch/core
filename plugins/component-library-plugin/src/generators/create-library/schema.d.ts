@@ -1,5 +1,5 @@
 export interface CreateLibraryGeneratorSchema {
-  directory: string;
+  directory: 'libs' | 'packages' | string;
   name: string;
   publishable?: boolean;
   addStories?: boolean;

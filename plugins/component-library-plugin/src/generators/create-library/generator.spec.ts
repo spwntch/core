@@ -7,8 +7,8 @@ import { CreateLibraryGeneratorSchema } from './schema';
 describe('create-library generator', () => {
   let tree: Tree;
   const options: CreateLibraryGeneratorSchema = {
+    directory: 'libs',
     name: 'test',
-    directory: 'libs/test',
   };
 
   beforeEach(() => {
