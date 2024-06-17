@@ -4,35 +4,36 @@
   "title": "",
   "type": "object",
   "properties": {
-    "name": {
+    "directory": {
       "type": "string",
-      "description": "What shall we name this component library?",
-      "$default": {
-        "$source": "argv",
-        "index": 1
-      },
-      "x-prompt": "What shall we name this component library?"
+      "description": "Relative to your workspace root, where should we put this library (directory only)?"
     },
     "publishable": {
       "type": "boolean",
       "description": "Should this library be published to npm?",
       "$default": {
-        "$source": "argv",
-        "index": 2,
         "value": false
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "What shall we name this component library?",
+      "$default": {
+        "$source": "argv",
+        "index": 0
       },
-      "x-prompt": "Should this library be published to npm?"
+      "x-prompt": "What shall we name this component library?"
     },
     "addStories": {
       "type": "boolean",
       "description": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?",
       "$default": {
         "$source": "argv",
-        "index": 3,
+        "index": 1,
         "value": false
       },
       "x-prompt": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?"
     }
   },
-  "required": ["name", "directory"]
+  "required": ["name"]
 }

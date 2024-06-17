@@ -15,9 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spwntch/component-library-plugin": [
-        "plugins/component-library-plugin/src/index.ts"
-      ],
       "@/react-blocks": ["packages/react-blocks/src/index.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-mdx": ["packages/react-mdx/src/index.ts"],
@@ -25,7 +22,10 @@
       "@/react-storybook": ["storybook/react/src/index.ts"],
       "@/react-typography": ["packages/react-typography/src/index.ts"],
       "@/react-ui": ["packages/react-ui/src/index.ts"],
-      "@/tailwind/*": ["packages/tailwind/src/*"]
+      "@/tailwind/*": ["packages/tailwind/src/*"],
+      "@spwntch/component-library-plugin": [
+        "plugins/component-library-plugin/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

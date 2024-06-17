@@ -1,4 +1,4 @@
-// <%= directory %>/<%= name %>.ts
+// <%= directory %>/<%= name %>/src/lib/utils/say-hello-to/say-hello-to.ts
 
 export const sayHelloTo = (name: string): string => {
   return `Hello, ${name}!`;
