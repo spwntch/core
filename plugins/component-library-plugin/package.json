@@ -1,5 +1,5 @@
 {
-  "name": "@spwntch/component-plugin",
+  "name": "@spwntch/component-library-plugin",
   "private": true,
   "version": "0.63.0",
   "type": "commonjs",
