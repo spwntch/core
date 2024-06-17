@@ -7,6 +7,8 @@ import {
 import * as path from 'path';
 import { addLinter } from './lib/utils/add-linter';
 import { CreateLibraryGeneratorSchema } from './schema';
+import { libraryGenerator } from '@nx/react';
+import { Linter } from '@nx/eslint';
 
 export async function createLibraryGenerator(
   tree: Tree,
@@ -14,26 +16,35 @@ export async function createLibraryGenerator(
 ) {
   options.directory =
     options.directory || (options.publishable ? 'packages' : 'libs');
-  const projectRoot = `${options.directory}/${options.name}`;
+  // const projectRoot = `${options.directory}/${options.name}`;
 
-  addProjectConfiguration(tree, options.name, {
-    root: projectRoot,
-    projectType: 'library',
-    sourceRoot: `${projectRoot}/src`,
-    targets: {
-      'extract-tailwind': {
-        executor: '@spwntch/component-library-plugin:extract-tailwind',
-        options: {},
-      },
-      'add-docs': {
-        executor: '@spwntch/component-library-plugin:add-docs',
-        options: {},
-      },
-    },
+  // addProjectConfiguration(tree, options.name, {
+  //   root: projectRoot,
+  //   projectType: 'library',
+  //   sourceRoot: `${projectRoot}/src`,
+  //   targets: {
+  //     'extract-tailwind': {
+  //       executor: '@spwntch/component-library-plugin:extract-tailwind',
+  //       options: {},
+  //     },
+  //     'add-docs': {
+  //       executor: '@spwntch/component-library-plugin:add-docs',
+  //       options: {},
+  //     },
+  //   },
+  // });
+
+  // generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
+  // await addLinter(tree, projectRoot, options);
+
+  await libraryGenerator(tree, {
+    name: options.name,
+    directory: options.directory,
+    bundler: 'vite',
+    compiler: 'babel',
+    linter: Linter.EsLint,
+    style: 'tailwind',
   });
-
-  generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
-  await addLinter(tree, projectRoot, options);
   await formatFiles(tree);
 }
 
