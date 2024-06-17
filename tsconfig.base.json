@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@/component-plugin": ["plugins/component-plugin/src/index.ts"],
       "@/react-blocks": ["packages/react-blocks/src/index.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
       "@/react-mdx": ["packages/react-mdx/src/index.ts"],

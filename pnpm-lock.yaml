@@ -432,6 +432,12 @@ importers:
 
   packages/tailwind: {}
 
+  plugins/component-plugin:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.6.3
+
 packages:
 
   /@adobe/css-tools@4.4.0:
