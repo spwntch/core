@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/component-library-plugin": [
+      "@spwntch/component-library-plugin": [
         "plugins/component-library-plugin/src/index.ts"
       ],
       "@/react-blocks": ["packages/react-blocks/src/index.ts"],
