@@ -2,7 +2,7 @@ import {
   addProjectConfiguration,
   formatFiles,
   generateFiles,
-  Tree
+  Tree,
 } from '@nx/devkit';
 import * as path from 'path';
 import { addLinter } from './lib/utils/add-linter';
@@ -20,13 +20,21 @@ export async function createLibraryGenerator(
     root: projectRoot,
     projectType: 'library',
     sourceRoot: `${projectRoot}/src`,
-    targets: {},
+    targets: {
+      'extract-tailwind': {
+        executor: '@spwntch/component-library-plugin:extract-tailwind',
+        options: {},
+      },
+      'add-docs': {
+        executor: '@spwntch/component-library-plugin:add-docs',
+        options: {},
+      },
+    },
   });
 
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await addLinter(tree, projectRoot, options);
   await formatFiles(tree);
 }
-
 
 export default createLibraryGenerator;
