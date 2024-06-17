@@ -437,6 +437,12 @@ importers:
       '@nx/devkit':
         specifier: 19.1.2
         version: 19.1.2(nx@19.1.2)
+      '@spwntch/components':
+        specifier: '0.63'
+        version: link:../../packages/react-components
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
       tslib:
         specifier: ^2.3.0
         version: 2.6.3
