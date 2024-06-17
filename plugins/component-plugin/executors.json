@@ -1,0 +1,14 @@
+{
+  "executors": {
+    "extract-tailwind": {
+      "implementation": "./src/executors/extract-tailwind/executor",
+      "schema": "./src/executors/extract-tailwind/schema.json",
+      "description": "extracts taiwind utility classes from a react component into a module.css file, to enable vite-plugin-lib-inject-css benefits."
+    },
+    "add-docs": {
+      "implementation": "./src/executors/add-docs/executor",
+      "schema": "./src/executors/add-docs/schema.json",
+      "description": "adds documentation to the component using spawntech's own AI tech"
+    }
+  }
+}
