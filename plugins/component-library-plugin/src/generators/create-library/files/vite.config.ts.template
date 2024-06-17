@@ -31,7 +31,7 @@ export default defineConfig({
       entry: {
         index: 'src/index.ts'
       },
-      name: <%= name %>,
+      name: '<%= name %>',
       formats: ['es'],
     },
     rollupOptions: {
