@@ -432,7 +432,7 @@ importers:
 
   packages/tailwind: {}
 
-  plugins/component-plugin:
+  plugins/component-library-plugin:
     dependencies:
       tslib:
         specifier: ^2.3.0
