@@ -12,6 +12,6 @@ export async function addLinter(
     linter: Linter.EsLint,
     skipFormat: true,
     tsConfigPaths: [joinPathFragments(projectRoot, 'tsconfig.json')],
-    eslintFilePatterns: [`${projectRoot}/**/*.{ts,tsx`],
+    eslintFilePatterns: [`${projectRoot}/**/*.{ts,tsx)`],
   });
 }
