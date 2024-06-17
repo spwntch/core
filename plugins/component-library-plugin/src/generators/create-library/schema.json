@@ -4,23 +4,23 @@
   "title": "",
   "type": "object",
   "properties": {
+    "directory": {
+      "type": "string",
+      "description": "Relative to your workspace root, where should we put this library (directory only)?",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Relative to your workspace root, where should we put this library (directory only)?"
+    },
     "name": {
       "type": "string",
       "description": "What shall we name this component library?",
       "$default": {
         "$source": "argv",
-        "index": 0
+        "index": 2
       },
       "x-prompt": "What shall we name this component library?"
-    },
-    "directory": {
-      "type": "string",
-      "description": "Relative to your workspace root, where should we put this library?",
-      "$default": {
-        "$source": "argv",
-        "index": 1
-      },
-      "x-prompt": "Relative to your workspace root, where should we put this library?"
     },
     "publishable": {
       "type": "boolean",

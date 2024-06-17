@@ -11,7 +11,7 @@ export async function createLibraryGenerator(
   tree: Tree,
   options: CreateLibraryGeneratorSchema
 ) {
-  const projectRoot = `libs/${options.name}`;
+  const projectRoot = `${options.directory}/${options.name}`;
   addProjectConfiguration(tree, options.name, {
     root: projectRoot,
     projectType: 'library',
