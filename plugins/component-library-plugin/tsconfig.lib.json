@@ -7,7 +7,9 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/generators/create-library/files/src/lib/utils/say-hello-to/say-hello-to.ts.template"
+    "src/generators/create-library/files/src/lib/utils/say-hello-to/say-hello-to.ts.template",
+    "src/generators/create-library/files/src/lib/utils/say-hello-to/say-hello-to.ts",
+    "src/generators/create-library/files/src/lib/utils/index.ts"
   ],
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
 }
