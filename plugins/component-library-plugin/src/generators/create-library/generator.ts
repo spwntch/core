@@ -13,13 +13,16 @@ export async function createLibraryGenerator(
   tree: Tree,
   options: CreateLibraryGeneratorSchema
 ) {
-  const projectRoot = `${options.directory}/${options.name}`;
+  const directory = options.publishable ? 'packages' : 'libs';
+  const projectRoot = `${directory}/${options.name}`;
+
   addProjectConfiguration(tree, options.name, {
     root: projectRoot,
     projectType: 'library',
     sourceRoot: `${projectRoot}/src`,
     targets: {},
   });
+  
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   // await addLinter(tree, projectRoot, options);
   await formatFiles(tree);
