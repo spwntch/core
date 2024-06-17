@@ -2,10 +2,10 @@ import {
   addProjectConfiguration,
   formatFiles,
   generateFiles,
-  // joinPathFragments,
+  joinPathFragments,
   Tree,
 } from '@nx/devkit';
-// import { Linter, lintProjectGenerator } from '@nx/eslint';
+import { Linter, lintProjectGenerator } from '@nx/eslint';
 import * as path from 'path';
 import { CreateLibraryGeneratorSchema } from './schema';
 
@@ -25,23 +25,23 @@ export async function createLibraryGenerator(
   });
 
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
-  // await addLinter(tree, projectRoot, options);
+  await addLinter(tree, projectRoot, options);
   await formatFiles(tree);
 }
 
-// async function addLinter(
-//   tree: Tree,
-//   projectRoot: string,
-//   options: CreateLibraryGeneratorSchema
-// ) {
-//   const task = await lintProjectGenerator(tree, {
-//     project: options.name,
-//     linter: Linter.EsLint,
-//     skipFormat: true,
-//     tsConfigPaths: [joinPathFragments(projectRoot, 'tsconfig.json')],
-//     eslintFilePatterns: [`${projectRoot}/**/*.{ts,tsx`],
-//   });
-//   return task;
-// }
+async function addLinter(
+  tree: Tree,
+  projectRoot: string,
+  options: CreateLibraryGeneratorSchema
+) {
+  const task = await lintProjectGenerator(tree, {
+    project: options.name,
+    linter: Linter.EsLint,
+    skipFormat: true,
+    tsConfigPaths: [joinPathFragments(projectRoot, 'tsconfig.json')],
+    eslintFilePatterns: [`${projectRoot}/**/*.{ts,tsx`],
+  });
+  return task;
+}
 
 export default createLibraryGenerator;
