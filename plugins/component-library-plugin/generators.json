@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "create-library": {
+      "factory": "./src/generators/create-library/generator",
+      "schema": "./src/generators/create-library/schema.json",
+      "description": "creates a new component library, configured with our vite preferences, and a first sample component."
+    }
+  }
+}
