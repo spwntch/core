@@ -7,7 +7,10 @@
   "typings": "./src/index.d.ts",
   "dependencies": {
     "@nx/devkit": "19.1.2",
-    "tslib": "^2.3.0"
+    "@spwntch/components": "0.63",
+    "tslib": "^2.3.0",
+    "react": "18.3.1"
+
   },
   "executors": "./executors.json",
   "generators": "./generators.json"
