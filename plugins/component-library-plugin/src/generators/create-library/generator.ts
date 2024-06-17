@@ -34,14 +34,13 @@ async function addLinter(
   projectRoot: string,
   options: CreateLibraryGeneratorSchema
 ) {
-  const task = await lintProjectGenerator(tree, {
+  return await lintProjectGenerator(tree, {
     project: options.name,
     linter: Linter.EsLint,
     skipFormat: true,
     tsConfigPaths: [joinPathFragments(projectRoot, 'tsconfig.json')],
     eslintFilePatterns: [`${projectRoot}/**/*.{ts,tsx`],
   });
-  return task;
 }
 
 export default createLibraryGenerator;
