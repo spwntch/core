@@ -17,6 +17,7 @@
     "paths": {
       "@/react-blocks": ["packages/react-blocks/src/index.ts"],
       "@/react-components": ["packages/react-components/src/index.ts"],
+      "@/react-integrations": ["packages/react-integrations/src/index.ts"],
       "@/react-mdx": ["packages/react-mdx/src/index.ts"],
       "@/react-shell": ["packages/react-shell/src/index.ts"],
       "@/react-storybook": ["storybook/react/src/index.ts"],

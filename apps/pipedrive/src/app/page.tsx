@@ -1,5 +1,7 @@
+"use client"
+import { PipedriveForm } from '@/react-integrations';
 export default function Index() {
   return (
-   <div className="text-7xl text-primary">hello world</div>
+    <PipedriveForm formId="c6CWqx9lufmNwKC7yKXVAXc99QdyMQZhGKNouMh7U00Eki439PXuvUJRJ5BpnTSzGr" />
   );
 }
