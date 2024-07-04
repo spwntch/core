@@ -1,14 +1,10 @@
 import {
-  addProjectConfiguration,
   formatFiles,
-  generateFiles,
-  Tree,
+  Tree
 } from '@nx/devkit';
-import * as path from 'path';
-import { addLinter } from './lib/utils/add-linter';
-import { CreateLibraryGeneratorSchema } from './schema';
-import { libraryGenerator } from '@nx/react';
 import { Linter } from '@nx/eslint';
+import { libraryGenerator } from '@nx/react';
+import { CreateLibraryGeneratorSchema } from './schema';
 
 export async function createLibraryGenerator(
   tree: Tree,
