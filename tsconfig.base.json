@@ -23,7 +23,7 @@
       "@/react-typography": ["packages/react-typography/src/index.ts"],
       "@/react-ui": ["packages/react-ui/src/index.ts"],
       "@/tailwind/*": ["packages/tailwind/src/*"],
-      "@spwntch/component-library-plugin": [
+      "~/component-library-plugin": [
         "plugins/component-library-plugin/src/index.ts"
       ]
     }
