@@ -435,8 +435,8 @@ importers:
   plugins/component-library:
     dependencies:
       '@nx/devkit':
-        specifier: 19.1.2
-        version: 19.1.2(nx@19.4.0)
+        specifier: 19.4.0
+        version: 19.4.0(nx@19.4.0)
       tslib:
         specifier: ^2.3.0
         version: 2.6.3
@@ -3038,14 +3038,6 @@ packages:
       - verdaccio
     dev: true
 
-  /@nrwl/devkit@19.1.2(nx@19.1.2):
-    resolution: {integrity: sha512-vWI+OrTICE9Yw6C/jIwxybnvavI9dnQJ7tpzFbLcSVfFAGdFtYJGCLVe40IkWcvUfELoVmzpXtKP/sPy0D7J9w==}
-    dependencies:
-      '@nx/devkit': 19.1.2(nx@19.1.2)
-    transitivePeerDependencies:
-      - nx
-    dev: false
-
   /@nrwl/devkit@19.1.2(nx@19.4.0):
     resolution: {integrity: sha512-vWI+OrTICE9Yw6C/jIwxybnvavI9dnQJ7tpzFbLcSVfFAGdFtYJGCLVe40IkWcvUfELoVmzpXtKP/sPy0D7J9w==}
     dependencies:
@@ -3060,7 +3052,6 @@ packages:
       '@nx/devkit': 19.4.0(nx@19.4.0)
     transitivePeerDependencies:
       - nx
-    dev: true
 
   /@nrwl/eslint-plugin-nx@19.4.0(@swc-node/register@1.9.2)(@swc/core@1.5.7)(@types/node@18.16.9)(@typescript-eslint/parser@7.15.0)(eslint-config-prettier@9.1.0)(eslint@8.57.0)(nx@19.4.0)(typescript@5.4.5)(verdaccio@5.31.1):
     resolution: {integrity: sha512-YJitJG8RAzUIYSDOadfINEccaMxdiZclPyySLHULFEZy/IH7ns69i6pjisO7gUpM+GqKa/iLAVBxAUomMQt8vQ==}
@@ -3420,7 +3411,7 @@ packages:
     peerDependencies:
       nx: '>= 17 <= 20'
     dependencies:
-      '@nrwl/devkit': 19.1.2(nx@19.1.2)
+      '@nrwl/devkit': 19.1.2(nx@19.4.0)
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
@@ -3464,7 +3455,6 @@ packages:
       tmp: 0.2.3
       tslib: 2.6.3
       yargs-parser: 21.1.1
-    dev: true
 
   /@nx/eslint-plugin@19.4.0(@swc-node/register@1.9.2)(@swc/core@1.5.7)(@types/node@18.16.9)(@typescript-eslint/parser@7.15.0)(eslint-config-prettier@9.1.0)(eslint@8.57.0)(nx@19.4.0)(typescript@5.4.5)(verdaccio@5.31.1):
     resolution: {integrity: sha512-X+qba2SSgGVHw2vSac9yqFDsr1bolhHL4T8b15hkSrSY7ncUSqypap5IQxDtoI/J4UsnALoKWBmK8+PM12e4EQ==}
