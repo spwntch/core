@@ -1,10 +1,5 @@
 {
   "generators": {
-    "my-generator": {
-      "factory": "./src/generators/my-generator/generator",
-      "schema": "./src/generators/my-generator/schema.json",
-      "description": "my-generator generator"
-    },
     "create-library": {
       "factory": "./src/generators/create-library/generator",
       "schema": "./src/generators/create-library/schema.json",
