@@ -15,6 +15,9 @@
   "author": "<%= scope %>",
   "license": "MIT",
   "peerDependencies": {
+    "@spwntch/blocks": "0.63",
+    "@spwntch/components": "0.63",
+    "@spwntch/shell": "0.63",
     "@spwntch/typography": "0.63",
     "@spwntch/ui": "0.63",
     "lucide-react": "^0.378.0"
