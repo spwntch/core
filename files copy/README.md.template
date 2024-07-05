@@ -1,7 +1,0 @@
-# <%= name %>
-
-This library was generated with [Spawntech](https://docs.spaawntech.io).
-
-## Running unit tests
-
-Run `nx test <%= name %>` to execute the unit tests via [Vitest](https://vitest.dev/).
