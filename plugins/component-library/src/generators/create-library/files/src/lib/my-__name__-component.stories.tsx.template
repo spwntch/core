@@ -14,7 +14,7 @@ The \`My<%= className %>Component\` renders a welcoming message with customizabl
 
 ### Example
 \`\`\`
-<My<%= className %>Component className="text-red-500 animate-pulse" />
+<My<%= className %>Component />
 \`\`\`
 
 ### Notes
@@ -46,7 +46,5 @@ export default meta;
 type Story = StoryObj<typeof My<%= className %>Component>;
 
 export const Basic: Story = {
-  args: {
-    className: 'text-red-500 animate-pulse',
-  },
+  args: {},
 };
