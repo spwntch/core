@@ -1,3 +1,4 @@
+
 import styles from './template.module.css';
 
 export function Template() {

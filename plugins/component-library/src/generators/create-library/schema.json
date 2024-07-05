@@ -9,14 +9,6 @@
       "description": "Relative to your workspace root, where should we put this library (directory only)?",
       "alias": "d"
     },
-    "publishable": {
-      "type": "boolean",
-      "description": "Should this library be published to npm?",
-      "$default": {
-        "value": false
-      },
-      "alias": "p"
-    },
     "name": {
       "type": "string",
       "description": "What shall we name this component library?",
@@ -27,17 +19,26 @@
       "x-prompt": "What shall we name this component library?",
       "alias": "n"
     },
-    "addStories": {
+    "publishable": {
       "type": "boolean",
-      "description": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?",
+      "description": "Will this library be published to npm?",
       "$default": {
-        "$source": "argv",
-        "index": 1,
         "value": false
       },
-      "x-prompt": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?",
-      "alias": "s"
+      "x-prompt": "Will this library be published to npm?",
+      "alias": "p"
     }
+    // "addStories": {
+    //   "type": "boolean",
+    //   "description": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?",
+    //   "$default": {
+    //     "$source": "argv",
+    //     "index": 1,
+    //     "value": false
+    //   },
+    //   "x-prompt": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?",
+    //   "alias": "s"
+    // }
   },
   "required": ["name"]
 }
