@@ -10,7 +10,7 @@ interface IMy<%= className %>ComponentProps {
 const My<%= className %>Component = forwardRef<HTMLDivElement, IMy<%= className %>ComponentProps>(({ className }, ref) => {
   return (
     <div ref={ref} className={`${styles['container']} ${className}`}>
-      <h1>Welcome to My<%= className %>Component!</h1>
+      <h1 className={`${styles['heading']}`}>Welcome to My<%= className %>Component!</h1>
     </div>
   );
 });
