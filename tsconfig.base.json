@@ -22,7 +22,8 @@
       "@/react-storybook": ["storybook/react/src/index.ts"],
       "@/react-typography": ["packages/react-typography/src/index.ts"],
       "@/react-ui": ["packages/react-ui/src/index.ts"],
-      "@/tailwind/*": ["packages/tailwind/src/*"]
+      "@/tailwind/*": ["packages/tailwind/src/*"],
+      "@spwntch/component-library": ["plugins/component-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,50 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { expect } from '@storybook/jest';
+import { toHaveNoViolations } from 'jest-axe';
+import My<%= className %>Component from './my-<%= name %>-component';
+
+expect.extend(toHaveNoViolations);
+
+const componentDescription = `
+### Overview
+The \`My<%= className %>Component\` renders a welcoming message with customizable styles.
+
+### Props
+- \`className\`: Additional class names for styling.
+
+### Example
+\`\`\`
+<My<%= className %>Component />
+\`\`\`
+
+### Notes
+This component can be styled further using TailwindCSS classes provided via the \`className\` prop.
+`;
+
+const meta: Meta<typeof My<%= className %>Component> = {
+  title: '_generator/<%= name %>/My<%= className %>Component',
+  component: My<%= className %>Component,
+  tags: ['autodocs'],
+  argTypes: {
+    className: {
+      control: 'text',
+      description: 'Additional class names for styling',
+      defaultValue: '',
+    },
+  },
+  args: { },
+  parameters: {
+    docs: {
+      description: {
+        component: componentDescription,
+      },
+    },
+  },
+};
+export default meta;
+
+type Story = StoryObj<typeof My<%= className %>Component>;
+
+export const Basic: Story = {
+  args: {},
+};

@@ -24,6 +24,7 @@ const config: StorybookConfig = {
   },
   stories: [
     '../src/docs/**/!(_)*.mdx',
+    '../../../libs/**/src/**/!(_)*.stories.@(js|jsx|ts|tsx)',
     '../../../packages/**/src/**/!(_)*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [

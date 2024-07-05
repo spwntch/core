@@ -1,6 +1,6 @@
 {
-  "name": "@spwntch/blocks",
-  "version": "0.63.0",
+  "name": "<%= scope %>/<%= name %>",
+  "version": "<%= version %>",
   "files": [
     "dist",
     "!dist/package.json"
@@ -10,13 +10,16 @@
   "keywords": [
     "react",
     "vite",
-    "spawntech layout components"
+    "spawntech component library"
   ],
-  "author": "spwntch",
+  "author": "<%= scope %>",
   "license": "MIT",
   "peerDependencies": {
+    "@spwntch/blocks": "0.63",
     "@spwntch/components": "0.63",
+    "@spwntch/shell": "0.63",
     "@spwntch/typography": "0.63",
-    "@spwntch/ui": "0.63"
+    "@spwntch/ui": "0.63",
+    "lucide-react": "^0.378.0"
   }
 }

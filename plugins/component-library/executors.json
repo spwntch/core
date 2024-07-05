@@ -1,0 +1,14 @@
+{
+  "executors": {
+    "add-docs": {
+      "implementation": "./src/executors/add-docs/executor",
+      "schema": "./src/executors/add-docs/schema.json",
+      "description": "add-docs executor"
+    },
+    "extract-tailwind": {
+      "implementation": "./src/executors/extract-tailwind/executor",
+      "schema": "./src/executors/extract-tailwind/schema.json",
+      "description": "extract-tailwind executor"
+    }
+  }
+}

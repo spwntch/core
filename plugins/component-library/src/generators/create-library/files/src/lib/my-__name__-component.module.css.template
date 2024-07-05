@@ -1,0 +1,8 @@
+/* my-<%= name %>-component.module.css */
+.container {
+  @apply p-4 bg-blue-500 text-white;
+}
+
+.heading {
+  @apply text-3xl
+}
