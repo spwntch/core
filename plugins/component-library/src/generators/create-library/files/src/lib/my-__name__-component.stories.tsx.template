@@ -1,33 +1,54 @@
-/* my-<%= name %>-component.tsx */
-
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
+import { expect } from '@storybook/jest';
+import { toHaveNoViolations } from 'jest-axe';
 import My<%= className %>Component from './my-<%= name %>-component';
 
-export default {
+expect.extend(toHaveNoViolations);
+
+const componentDescription = `
+### Overview
+The \`My<%= className %>Component\` renders a welcoming message with customizable styles.
+
+### Props
+- \`className\`: Additional class names for styling.
+
+### Example
+\`\`\`
+<My<%= className %>Component className="text-red-500 animate-pulse" />
+\`\`\`
+
+### Notes
+This component can be styled further using TailwindCSS classes provided via the \`className\` prop.
+`;
+
+const meta: Meta<typeof My<%= className %>Component> = {
   title: '_generator/<%= name %>/My<%= className %>Component',
   component: My<%= className %>Component,
   tags: ['autodocs'],
   argTypes: {
     className: {
+      control: 'text',
       description: 'Additional class names for styling',
-      type: 'string',
       defaultValue: '',
     },
   },
-} as ComponentMeta<typeof My<%= className %>Component>;
+  args: {
+    className: 'text-red-500 animate-pulse',
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: componentDescription,
+      },
+    },
+  },
+};
+export default meta;
 
-/**
- * @story
- * @component My<%= className %>Component
- * @description This component renders a welcoming message.
- * 
- * @example
- * <My<%= className %>Component />
- */
-const Template: ComponentStory<typeof My<%= className %>Component> = (args) => <My<%= className %>Component {...args} />;
+type Story = StoryObj<typeof My<%= className %>Component>;
 
-export const Default = Template.bind({});
-Default.args = {
-  className: '',
+export const Basic: Story = {
+  args: {
+    className: 'text-red-500 animate-pulse',
+  },
 };

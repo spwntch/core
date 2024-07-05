@@ -1,6 +1,7 @@
 /* my-<%= name %>-component.stories.tsx */
 
 import React, { forwardRef } from 'react';
+import { cn } from '@spwntch/ui';
 import styles from './my-<%= name %>-component.module.css';
 
 interface IMy<%= className %>ComponentProps {
@@ -9,7 +10,7 @@ interface IMy<%= className %>ComponentProps {
 
 const My<%= className %>Component = forwardRef<HTMLDivElement, IMy<%= className %>ComponentProps>(({ className }, ref) => {
   return (
-    <div ref={ref} className={`${styles['container']} ${className}`}>
+    <div ref={ref} className={cn(`${styles['container']}`, className)}>
       <h1 className={`${styles['heading']}`}>Welcome to My<%= className %>Component!</h1>
     </div>
   );
