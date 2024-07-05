@@ -1,10 +1,12 @@
 import {
   formatFiles,
+  generateFiles,
   Tree
 } from '@nx/devkit';
 import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
 import { CreateLibraryGeneratorSchema } from './schema';
+import { join } from 'path';
 
 export async function createLibraryGenerator(
   tree: Tree,
@@ -12,7 +14,7 @@ export async function createLibraryGenerator(
 ) {
   options.directory =
     options.directory || (options.publishable ? 'packages' : 'libs');
-  // const projectRoot = `${options.directory}/${options.name}`;
+  const projectRoot = `${options.directory}/${options.name}`;
 
   // addProjectConfiguration(tree, options.name, {
   //   root: projectRoot,
@@ -30,9 +32,8 @@ export async function createLibraryGenerator(
   //   },
   // });
 
-  // generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   // await addLinter(tree, projectRoot, options);
-
+  
   await libraryGenerator(tree, {
     name: options.name,
     directory: options.directory,
@@ -42,6 +43,7 @@ export async function createLibraryGenerator(
     linter: Linter.EsLint,
     style: 'tailwind',
   });
+  generateFiles(tree, join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
 }
 
