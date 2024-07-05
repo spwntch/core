@@ -1,0 +1,11 @@
+import styles from './template.module.css';
+
+export function Template() {
+  return (
+    <div className={styles['container']}>
+      <h1>Welcome to Template!</h1>
+    </div>
+  );
+}
+
+export default Template;

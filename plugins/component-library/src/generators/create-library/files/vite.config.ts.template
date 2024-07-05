@@ -8,7 +8,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/react-blocks',
+  cacheDir: '../../node_modules/.vite/libs/<%= name %>',
 
   plugins: [
     react(),
@@ -20,26 +20,34 @@ export default defineConfig({
       exclude: ['**/storybook/*', '**/*.stories.tsx', '**/*.specs.ts'],
     }),
   ],
+
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+
+  // Configuration for building your library.
+  // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
     outDir: './dist',
-    emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
     lib: {
-      entry: {
-        index: 'src/index.ts'
-      },
+      // Could also be a dictionary or array of multiple entry points.
+      entry: { index: 'src/index.ts' },
       name: '<%= name %>',
-      formats: ['es'],
+      fileName: 'index',
+      // Change this to the formats you want to support.
+      // Don't forget to update your package.json as well.
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
+      // External packages that should not be bundled into your library.
       external: [
         '@spwntch/ui',
         '@spwntch/typography',
-        '@spwntch/components',
-        'lucide-react',
         'react',
         'react-dom',
         'react/jsx-runtime',
