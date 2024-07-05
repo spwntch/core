@@ -20,9 +20,9 @@ export async function createLibraryGenerator(
     ...options,
     name: names(options.name).fileName,
     scope: readJson(tree, 'package.json').name,
-    directory: options.directory || (options.publishable ? 'packages' : 'libs'),
+    directory: options.publishable ? 'packages' : 'libs',
   };
-  const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
+  // const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
 
   // addProjectConfiguration(tree, resolvedOptions.name, {
   //   root: projectRoot,
@@ -44,7 +44,7 @@ export async function createLibraryGenerator(
 
   await libraryGenerator(tree, {
     name: options.name,
-    directory: options.directory,
+    directory: resolvedOptions.directory,
     bundler: 'vite',
     compiler: 'babel',
     publishable: options.publishable,
