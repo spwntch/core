@@ -17,7 +17,6 @@ const My<%= className %>Component = forwardRef<HTMLDivElement, IMy<%= className 
     subTitle: { content: 'Pioneering the Future of Software Development' },
     tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js']
   }}
-  className="text-white"
   hAlign="center"
   vAlign="middle"
   height={300}
