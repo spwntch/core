@@ -2,7 +2,7 @@
 
 import React, { forwardRef } from 'react';
 import { cn } from '@spwntch/ui';
-import { ContentBlock } from '@spwntch/blocks';
+import { ContentBlock } from '@/react-blocks';
 import styles from './my-<%= name %>-component.module.css';
 
 interface IMy<%= className %>ComponentProps {
