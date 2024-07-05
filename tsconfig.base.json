@@ -23,10 +23,7 @@
       "@/react-typography": ["packages/react-typography/src/index.ts"],
       "@/react-ui": ["packages/react-ui/src/index.ts"],
       "@/tailwind/*": ["packages/tailwind/src/*"],
-      "@spwntch/component-library": ["plugins/component-library/src/index.ts"],
-      "~/component-library-plugin": [
-        "plugins/component-library-plugin/src/index.ts"
-      ]
+      "@spwntch/component-library": ["plugins/component-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
