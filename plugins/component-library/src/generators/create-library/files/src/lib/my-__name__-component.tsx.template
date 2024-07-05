@@ -14,10 +14,14 @@ const My<%= className %>Component = forwardRef<HTMLDivElement, IMy<%= className 
      <ContentBlock
         className={className}
         innerContent={{
-          title: { content: 'A Boilerplate for your Componen' },
+          title: { content: 'A Boilerplate for your Component' },
           subTitle: {
             content: 'Use Spawntech components to build your user interface...',
           },
+          body: [
+            'This component serves as an example of how you can compose Spawntech building blocks to build amazing user interfaces.',
+            'Check these guides out for more information.'
+          ],
           tags: ['@spwntch/ui', '@spwntch/typography', '@spwntch/components', '@spwntch/blocks'],
         }}
         hAlign="center"
