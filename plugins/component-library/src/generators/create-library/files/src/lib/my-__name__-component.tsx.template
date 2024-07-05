@@ -11,16 +11,19 @@ interface IMy<%= className %>ComponentProps {
 
 const My<%= className %>Component = forwardRef<HTMLDivElement, IMy<%= className %>ComponentProps>(({ className }, ref) => {
   return (
-    <ContentBlock 
-  innerContent={{
-    title: { content: 'Welcome to Spawntech' },
-    subTitle: { content: 'Pioneering the Future of Software Development' },
-    tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js']
-  }}
-  hAlign="center"
-  vAlign="middle"
-  height={300}
-/>
+     <ContentBlock
+        className={className}
+        innerContent={{
+          title: { content: 'Welcome to Spawntech' },
+          subTitle: {
+            content: 'Pioneering the Future of Software Development',
+          },
+          tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
+        }}
+        hAlign="center"
+        vAlign="middle"
+        height={300}
+      />
   );
 });
 
