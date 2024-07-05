@@ -22,7 +22,7 @@ export async function createLibraryGenerator(
     scope: readJson(tree, 'package.json').name,
     directory: options.publishable ? 'packages' : 'libs',
   };
-  // const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
+  const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
 
   // addProjectConfiguration(tree, resolvedOptions.name, {
   //   root: projectRoot,
@@ -53,8 +53,8 @@ export async function createLibraryGenerator(
     linter: Linter.EsLint,
     style: 'css',
   });
-  // generateFiles(tree, join(__dirname, 'files'), projectRoot, resolvedOptions);
-  // await formatFiles(tree);
+  generateFiles(tree, join(__dirname, 'files'), projectRoot, resolvedOptions);
+  await formatFiles(tree);
 }
 
 export default createLibraryGenerator;
