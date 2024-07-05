@@ -32,9 +32,7 @@ const meta: Meta<typeof My<%= className %>Component> = {
       defaultValue: '',
     },
   },
-  args: {
-    className: 'text-red-500 animate-pulse',
-  },
+  args: { },
   parameters: {
     docs: {
       description: {
