@@ -12,6 +12,7 @@
     "name": {
       "type": "string",
       "description": "What shall we name this component library?",
+      "default": "ui",
       "$default": {
         "$source": "argv",
         "index": 0
@@ -22,23 +23,10 @@
     "publishable": {
       "type": "boolean",
       "description": "Will this library be published to npm?",
-      "$default": {
-        "value": false
-      },
+      "default": false,
       "x-prompt": "Will this library be published to npm?",
       "alias": "p"
     }
-    // "addStories": {
-    //   "type": "boolean",
-    //   "description": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?",
-    //   "$default": {
-    //     "$source": "argv",
-    //     "index": 1,
-    //     "value": false
-    //   },
-    //   "x-prompt": "Does your workspace support Storybook? If so, should we add stories to the library for your first component?",
-    //   "alias": "s"
-    // }
   },
   "required": ["name"]
 }

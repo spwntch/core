@@ -1,0 +1,33 @@
+/* my-<%= name %>-component.tsx */
+
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import My<%= className %>Component from './my-<%= name %>-component';
+
+export default {
+  title: '_generator/<%= name %>/My<%= className %>Component',
+  component: My<%= className %>Component,
+  tags: ['autodocs'],
+  argTypes: {
+    className: {
+      description: 'Additional class names for styling',
+      type: 'string',
+      defaultValue: '',
+    },
+  },
+} as ComponentMeta<typeof My<%= className %>Component>;
+
+/**
+ * @story
+ * @component My<%= className %>Component
+ * @description This component renders a welcoming message.
+ * 
+ * @example
+ * <My<%= className %>Component />
+ */
+const Template: ComponentStory<typeof My<%= className %>Component> = (args) => <My<%= className %>Component {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  className: '',
+};

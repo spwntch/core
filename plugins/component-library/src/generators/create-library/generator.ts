@@ -1,16 +1,14 @@
 import {
-  addProjectConfiguration,
   formatFiles,
   generateFiles,
   names,
   readJson,
-  Tree,
+  Tree
 } from '@nx/devkit';
-import { join } from 'path';
-import { addLinter } from './lib/add-linter';
-import { CreateLibraryGeneratorSchema } from './schema';
-import { libraryGenerator } from '@nx/react';
 import { Linter } from '@nx/eslint';
+import { libraryGenerator } from '@nx/react';
+import { join } from 'path';
+import { CreateLibraryGeneratorSchema } from './schema';
 
 export async function createLibraryGenerator(
   tree: Tree,
@@ -18,29 +16,14 @@ export async function createLibraryGenerator(
 ) {
   const resolvedOptions = {
     ...options,
-    name: names(options.name).fileName,
-    scope: readJson(tree, 'package.json').name,
     directory: options.publishable ? 'packages' : 'libs',
+    scope: readJson(tree, 'package.json').name,
+    name: names(options.name).fileName,
+    className: names(options.name).className,
+    version: readJson(tree, 'package.json').version,
   };
   const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
 
-  // addProjectConfiguration(tree, resolvedOptions.name, {
-  //   root: projectRoot,
-  //   projectType: 'library',
-  //   sourceRoot: `${projectRoot}/src`,
-  //   targets: {
-  //     'extract-tailwind': {
-  //       executor: '@spwntch/component-library:extract-tailwind',
-  //       options: {},
-  //     },
-  //     'add-docs': {
-  //       executor: '@spwntch/component-library:add-docs',
-  //       options: {},
-  //     },
-  //   },
-  // });
-
-  // await addLinter(tree, projectRoot, resolvedOptions);
 
   await libraryGenerator(tree, {
     name: options.name,
@@ -49,7 +32,6 @@ export async function createLibraryGenerator(
     compiler: 'babel',
     publishable: options.publishable,
     importPath: `@/${resolvedOptions.name}`,
-    component: true,
     linter: Linter.EsLint,
     style: 'css',
   });

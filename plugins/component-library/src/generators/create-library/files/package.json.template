@@ -1,0 +1,22 @@
+{
+  "name": "<%= scope %>/<%= name %>",
+  "version": "<%= version %>",
+  "files": [
+    "dist",
+    "!dist/package.json"
+  ],
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "react",
+    "vite",
+    "spawntech component library"
+  ],
+  "author": "<%= scope %>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@spwntch/typography": "0.63",
+    "@spwntch/ui": "0.63",
+    "lucide-react": "^0.378.0"
+  }
+}
