@@ -1,12 +1,14 @@
+import { Tree } from '@nx/devkit';
 import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, readProjectConfiguration } from '@nx/devkit';
 
-import { createLibraryGenerator } from './generator';
 import { CreateLibraryGeneratorSchema } from './schema';
 
 describe('create-library generator', () => {
   let tree: Tree;
-  const options: CreateLibraryGeneratorSchema = { name: 'test' };
+  const options: CreateLibraryGeneratorSchema = {
+    name: 'test',
+    publishable: false,
+  };
 
   beforeEach(() => {
     tree = createTreeWithEmptyWorkspace();
