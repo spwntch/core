@@ -14,15 +14,15 @@ const My<%= className %>Component = forwardRef<HTMLDivElement, IMy<%= className 
      <ContentBlock
         className={className}
         innerContent={{
-          title: { content: 'Welcome to Spawntech' },
+          title: { content: 'A Boilerplate for your Componen' },
           subTitle: {
-            content: 'Pioneering the Future of Software Development',
+            content: 'Use Spawntech components to build your user interface...',
           },
-          tags: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
+          tags: ['@spwntch/ui', '@spwntch/typography', '@spwntch/components', '@spwntch/blocks'],
         }}
         hAlign="center"
         vAlign="middle"
-        height={300}
+        height={600}
       />
   );
 });
