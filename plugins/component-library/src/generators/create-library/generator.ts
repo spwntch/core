@@ -1,5 +1,4 @@
 import {
-  addProjectConfiguration,
   formatFiles,
   generateFiles,
   names,
@@ -10,8 +9,8 @@ import {
 import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
 import { join } from 'path';
-import { CreateLibraryGeneratorSchema } from './schema';
 import addComponentGenerator from '../add-component/generator';
+import { CreateLibraryGeneratorSchema } from './schema';
 
 export async function createLibraryGenerator(
   tree: Tree,
@@ -25,7 +24,6 @@ export async function createLibraryGenerator(
     className: names(options.name).className,
     version: readJson(tree, 'package.json').version,
   };
-  const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
 
   await libraryGenerator(tree, {
     name: options.name,
@@ -37,6 +35,8 @@ export async function createLibraryGenerator(
     linter: Linter.EsLint,
     style: 'css',
   });
+
+  const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
 
   updateProjectConfiguration(tree, resolvedOptions.name, {
     root: projectRoot,
