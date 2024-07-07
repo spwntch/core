@@ -4,6 +4,25 @@
   "title": "AddDocs executor",
   "description": "",
   "type": "object",
-  "properties": {},
-  "required": []
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The project where an existing component is located.",
+      "x-prompt": "In which project is this component located?",
+      "x-dropdown": "projects"
+    },
+    "componentDir": {
+      "type": "string",
+      "description": "The directory where the component is located, relative to the project src directory.",
+      "x-prompt": "Where is your component located, relative to the project's src directory?",
+      "default": "lib/components/..."
+    },
+    "addTests": {
+      "type": "boolean",
+      "description": "Add storybook play specs for the component.",
+      "default": true,
+      "x-prompt": "Would you like to add tests for the component?"
+    }
+  },
+  "required": ["project", "componentDir"]
 }
