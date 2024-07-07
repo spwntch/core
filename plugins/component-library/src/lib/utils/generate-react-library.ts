@@ -1,7 +1,6 @@
-import { generateFiles, Tree } from '@nx/devkit';
+import { Tree } from '@nx/devkit';
 import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
-import { join } from 'path';
 
 export const generateReactLibrary = async (
   tree: Tree,
@@ -24,5 +23,5 @@ export const generateReactLibrary = async (
     style: 'css',
   });
 
-  return generateFiles(tree, join(__dirname, 'files'), projectRoot, options);
+  return; // generateFiles(tree, join(__dirname, 'files'), projectRoot, options);
 };
