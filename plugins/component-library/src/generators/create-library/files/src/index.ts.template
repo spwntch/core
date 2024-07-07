@@ -1,1 +1,2 @@
-export * from './lib/components/my-<%= name %>-component/my-<%= name %>-component';
+// export your React component here.
+// e.g. export * from './lib/components/my-ui-component/my-ui-component;
