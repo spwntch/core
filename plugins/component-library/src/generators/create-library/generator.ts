@@ -1,6 +1,5 @@
 import { formatFiles, names, readJson, Tree } from '@nx/devkit';
 import { addProjectTargets, generateReactLibrary } from '../../lib/utils';
-import addComponentGenerator from '../add-component/generator';
 import { CreateLibraryGeneratorSchema } from './schema';
 
 export async function createLibraryGenerator(
@@ -20,11 +19,6 @@ export async function createLibraryGenerator(
 
   await generateReactLibrary(tree, projectRoot, resolvedOptions);
   addProjectTargets(tree, projectRoot, resolvedOptions);
-
-  await addComponentGenerator(tree, {
-    name: 'button',
-    projectRoot,
-  });
 
   await formatFiles(tree);
 }
