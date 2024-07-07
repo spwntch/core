@@ -1,14 +1,16 @@
-import { Tree } from '@nx/devkit';
+import { generateFiles, Tree } from '@nx/devkit';
 import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
+import { join } from 'path';
 
 export const generateReactLibrary = async (
   tree: Tree,
   projectRoot: string,
   options: {
-    name: string;
+    generatorDir: string;
     directory: string;
     publishable: boolean;
+    name: string;
     [key: string]: unknown;
   }
 ): Promise<void> => {
@@ -23,5 +25,10 @@ export const generateReactLibrary = async (
     style: 'css',
   });
 
-  return; // generateFiles(tree, join(__dirname, 'files'), projectRoot, options);
+  return generateFiles(
+    tree,
+    join(options.generatorDir, 'files'),
+    projectRoot,
+    options
+  );
 };
