@@ -3,7 +3,7 @@ import { ExecutorContext } from '@nx/devkit';
 import { AddDocsExecutorSchema } from './schema';
 import executor from './executor';
 
-const options: AddDocsExecutorSchema = {};
+const options: AddDocsExecutorSchema = { component: 'my-ui-component' };
 const context: ExecutorContext = {
   root: '',
   cwd: process.cwd(),
