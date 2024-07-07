@@ -1,4 +1,12 @@
-import { formatFiles, generateFiles, names, readJson, Tree } from '@nx/devkit';
+import {
+  addProjectConfiguration,
+  formatFiles,
+  generateFiles,
+  names,
+  readJson,
+  Tree,
+  updateProjectConfiguration,
+} from '@nx/devkit';
 import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
 import { join } from 'path';
@@ -29,6 +37,16 @@ export async function createLibraryGenerator(
     linter: Linter.EsLint,
     style: 'css',
   });
+
+  updateProjectConfiguration(tree, resolvedOptions.name, {
+    root: projectRoot,
+    targets: {
+      'add-docs': {
+        executor: '@spwntch/component-library:add-docs',
+      },
+    },
+  });
+
   generateFiles(tree, join(__dirname, 'files'), projectRoot, resolvedOptions);
 
   await addComponentGenerator(tree, {
