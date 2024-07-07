@@ -1,14 +1,9 @@
-import {
-  formatFiles,
-  generateFiles,
-  names,
-  readJson,
-  Tree
-} from '@nx/devkit';
+import { formatFiles, generateFiles, names, readJson, Tree } from '@nx/devkit';
 import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
 import { join } from 'path';
 import { CreateLibraryGeneratorSchema } from './schema';
+import addComponentGenerator from '../add-component/generator';
 
 export async function createLibraryGenerator(
   tree: Tree,
@@ -24,7 +19,6 @@ export async function createLibraryGenerator(
   };
   const projectRoot = `${resolvedOptions.directory}/${resolvedOptions.name}`;
 
-
   await libraryGenerator(tree, {
     name: options.name,
     directory: resolvedOptions.directory,
@@ -36,6 +30,12 @@ export async function createLibraryGenerator(
     style: 'css',
   });
   generateFiles(tree, join(__dirname, 'files'), projectRoot, resolvedOptions);
+
+  await addComponentGenerator(tree, {
+    name: 'button',
+    projectRoot,
+  });
+
   await formatFiles(tree);
 }
 

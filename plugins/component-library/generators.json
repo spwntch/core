@@ -4,6 +4,11 @@
       "factory": "./src/generators/create-library/generator",
       "schema": "./src/generators/create-library/schema.json",
       "description": "create-library generator"
+    },
+    "add-component": {
+      "factory": "./src/generators/add-component/generator",
+      "schema": "./src/generators/add-component/schema.json",
+      "description": "adds a spawntech style component to your component-library. you can optionally adds docs and specs too..."
     }
   }
 }
