@@ -1,3 +1,5 @@
+import { Shell } from '../components/shell';
+import { brand } from '../config';
 import './global.css';
 
 export const metadata = {
@@ -10,9 +12,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const navbar = {
+    logoHeight: 52
+  }
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Shell brand={brand} navbar={navbar}>{children}</Shell>
+      </body>
     </html>
   );
 }
