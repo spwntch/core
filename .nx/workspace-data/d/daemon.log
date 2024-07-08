@@ -1629,3 +1629,47 @@ LoadPluginError: Could not load plugin @nx/next/plugin
 [NX Daemon Server] - 2024-06-12T13:10:23.260Z - [WATCHER]: Stopping the watcher for /Users/zpydee/Documents/Github/spwntch/core (sources)
 [NX Daemon Server] - 2024-06-12T13:10:23.260Z - [WATCHER]: Stopping the watcher for /Users/zpydee/Documents/Github/spwntch/core (outputs)
 [NX Daemon Server] - 2024-06-12T13:10:23.260Z - Server stopped because: "NX_VERSION_CHANGED"
+[NX Daemon Server] - 2024-07-08T11:24:07.398Z - Started listening on: /var/folders/tc/wk467jc11zqc2dd4mxl2bc1h0000gn/T/1940aea1de0fa0826b01/d.sock
+[NX Daemon Server] - 2024-07-08T11:24:07.399Z - [WATCHER]: Subscribed to changes within: /Users/zpydee/Documents/Github/spwntch/core (native)
+[NX Daemon Server] - 2024-07-08T11:24:07.404Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-08T11:24:07.405Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-07-08T11:24:07.406Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-08T11:24:07.406Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-07-08T11:24:07.924Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-07-08T11:24:07.924Z - [REQUEST]: 
+[NX Daemon Server] - 2024-07-08T11:24:07.924Z - [REQUEST]: 
+[33mThe CJS build of Vite's Node API is deprecated. See https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[NX Daemon Server] - 2024-07-08T11:24:08.996Z - Time taken for 'Load Nx Plugin: /Users/zpydee/Documents/Github/spwntch/core/node_modules/.pnpm/nx@19.4.0_@swc-node+register@1.9.2_@swc+core@1.5.7/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 164.31929099559784ms
+[NX Daemon Server] - 2024-07-08T11:24:09.457Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-07-08T11:24:09.459Z - Time taken for 'total for creating and serializing project graph' 2050.8857499957085ms
+[NX Daemon Server] - 2024-07-08T11:24:09.473Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-07-08T11:24:09.473Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2051. Response time: 16.
+[NX Daemon Server] - 2024-07-08T11:24:09.478Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-07-08T11:24:09.480Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-07-08T11:24:09.480Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-07-08T11:24:09.483Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-07-08T11:24:09.667Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-08T11:24:09.667Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-07-08T11:24:09.668Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-08T11:24:09.668Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-07-08T11:24:09.668Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-07-08T11:24:09.670Z - Time taken for 'total for creating and serializing project graph' 0.17395800352096558ms
+[NX Daemon Server] - 2024-07-08T11:24:09.671Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-07-08T11:24:09.671Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2024-07-08T11:24:09.674Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-07-08T11:24:09.674Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-07-08T11:24:09.675Z - Time taken for 'total for creating and serializing project graph' 0.08862501382827759ms
+[NX Daemon Server] - 2024-07-08T11:24:09.677Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-07-08T11:24:09.677Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2024-07-08T11:24:09.680Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-07-08T11:54:45.203Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:46.840Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:51.937Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:51.990Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:52.043Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:52.095Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:52.147Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:52.387Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-07-08T11:54:52.387Z - [WATCHER]: Stopping the watcher for /Users/zpydee/Documents/Github/spwntch/core (sources)
+[NX Daemon Server] - 2024-07-08T11:54:52.388Z - [WATCHER]: Stopping the watcher for /Users/zpydee/Documents/Github/spwntch/core (outputs)
+[NX Daemon Server] - 2024-07-08T11:54:52.388Z - Server stopped because: "NX_VERSION_CHANGED"
