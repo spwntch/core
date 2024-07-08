@@ -1,4 +1,4 @@
-import '@/tailwind/tailwind.css';
+import '@spwntch/tailwind/tailwind.css';
 
 export * from './content-block/content-block';
 export * from './image-content-block/image-content-block';

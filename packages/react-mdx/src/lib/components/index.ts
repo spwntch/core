@@ -1,4 +1,4 @@
-import '@/tailwind/tailwind.css';
+import '@spwntch/tailwind/tailwind.css';
 
 export * from './article/article';
 export * from './article-card/article-card';

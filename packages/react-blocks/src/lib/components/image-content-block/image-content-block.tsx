@@ -3,7 +3,7 @@ import {
   IContent,
   IImage,
   ImageContainer,
-} from '@/react-components';
+} from '@spwntch/components';
 import { cn } from '@spwntch/ui';
 import React from 'react';
 import styles from './image-content-block.module.css';

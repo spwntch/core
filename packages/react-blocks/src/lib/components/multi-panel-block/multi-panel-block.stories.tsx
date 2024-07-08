@@ -1,4 +1,4 @@
-import { ContentContainer, ImageContainer, List } from '@/react-components';
+import { ContentContainer, ImageContainer, List } from '@spwntch/components';
 import { H3, P } from '@spwntch/typography';
 import { Button, Card } from '@spwntch/ui';
 import { Meta, StoryObj } from '@storybook/react';

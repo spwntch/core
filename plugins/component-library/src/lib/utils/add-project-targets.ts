@@ -14,9 +14,8 @@ export const addProjectTargets = (
     root: projectRoot,
     targets: {
       'add-docs': {
-        executor: '@spwntch/component-library:add-docs',
+        executor: '@spwn/component-library:add-docs',
       },
     },
   });
 };
-

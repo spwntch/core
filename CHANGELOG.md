@@ -24,12 +24,11 @@ This was a version bump only, there were no code changes.
 
 ## 0.61.33 (2024-06-15)
 
-
 ### 🩹 Fixes
 
 - shell and mdx package import tailwind assets relative ([e934c30](https://github.com/spwntch/core/commit/e934c30))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -203,13 +202,12 @@ This was a version bump only, there were no code changes.
 
 ## 0.53.1 (2024-05-22)
 
-
 ### 🚀 Features
 
-- adds a boilerplate @/react-typography package ([9318ce3](https://github.com/spwntch/core/commit/9318ce3))
+- adds a boilerplate @spwntch/typography package ([9318ce3](https://github.com/spwntch/core/commit/9318ce3))
 - adds h1-4 ([a0e4748](https://github.com/spwntch/core/commit/a0e4748))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -235,12 +233,11 @@ This was a version bump only, there were no code changes.
 
 ## 0.52.31 (2024-05-22)
 
-
 ### 🩹 Fixes
 
 - uses standard shadcn/ui components without styles extracted ([25821c0](https://github.com/spwntch/core/commit/25821c0))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -250,17 +247,15 @@ This was a version bump only, there were no code changes.
 
 ## 0.52.29 (2024-05-21)
 
-
 ### 🩹 Fixes
 
-- pull data- classws back into  sheet.tsx ([7aacd88](https://github.com/spwntch/core/commit/7aacd88))
+- pull data- classws back into sheet.tsx ([7aacd88](https://github.com/spwntch/core/commit/7aacd88))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.28 (2024-05-21)
-
 
 ### 🚀 Features
 
@@ -270,7 +265,7 @@ This was a version bump only, there were no code changes.
 
 - ci error ([e007201](https://github.com/spwntch/core/commit/e007201))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -304,22 +299,20 @@ This was a version bump only, there were no code changes.
 
 ## 0.52.20 (2024-05-17)
 
-
 ### 🚀 Features
 
-- adds accordion to @/react-ui ([7a6bb6b](https://github.com/spwntch/core/commit/7a6bb6b))
+- adds accordion to @spwntch/ui ([7a6bb6b](https://github.com/spwntch/core/commit/7a6bb6b))
 - adds badge ([51766f1](https://github.com/spwntch/core/commit/51766f1))
 - adds card ([8d6121d](https://github.com/spwntch/core/commit/8d6121d))
 - adds menubar ([0c6eff8](https://github.com/spwntch/core/commit/0c6eff8))
 - adds navigation-menu ([811dce5](https://github.com/spwntch/core/commit/811dce5))
 - adds sheet ([8ffd2fb](https://github.com/spwntch/core/commit/8ffd2fb))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.18 (2024-05-11)
-
 
 ### 🚀 Features
 
@@ -333,12 +326,11 @@ This was a version bump only, there were no code changes.
 - remove our sayHello function ([8820802](https://github.com/spwntch/core/commit/8820802))
 - ci (lint) ([fb96687](https://github.com/spwntch/core/commit/fb96687))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.17 (2024-05-09)
-
 
 ### 🚀 Features
 
@@ -349,53 +341,49 @@ This was a version bump only, there were no code changes.
 - swtich to 2-column grid at md for youtube-with-content ([4965d4b](https://github.com/spwntch/core/commit/4965d4b))
 - as a general rule now, body props go from string to string[] to allow for paragraphs ([a7934a6](https://github.com/spwntch/core/commit/a7934a6))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.16 (2024-05-09)
-
 
 ### 🩹 Fixes
 
 - remove max-w-3xl from image children container ([03d1af6](https://github.com/spwntch/core/commit/03d1af6))
 - remove blue border ([7d9b217](https://github.com/spwntch/core/commit/7d9b217))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.15 (2024-05-05)
 
-
 ### 🚀 Features
 
 - capability to place hder conten right. ([c876b09](https://github.com/spwntch/core/commit/c876b09))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.14 (2024-05-04)
-
 
 ### 🩹 Fixes
 
 - some layout improvements ([db3b3c3](https://github.com/spwntch/core/commit/db3b3c3))
 - a more explicit youtube interface ([aedd77b](https://github.com/spwntch/core/commit/aedd77b))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.13 (2024-05-04)
 
-
 ### 🚀 Features
 
 - adds a youtube-player ([2cfe0ee](https://github.com/spwntch/core/commit/2cfe0ee))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -405,12 +393,11 @@ This was a version bump only, there were no code changes.
 
 ## 0.52.11 (2024-05-04)
 
-
 ### 🚀 Features
 
 - adds a title opportunity to our logo cloud ([9a522ef](https://github.com/spwntch/core/commit/9a522ef))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -432,12 +419,11 @@ This was a version bump only, there were no code changes.
 
 ## 0.52.6 (2024-05-02)
 
-
 ### 🩹 Fixes
 
 - optimise card-header padding ([bc79fd2](https://github.com/spwntch/core/commit/bc79fd2))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -447,35 +433,32 @@ This was a version bump only, there were no code changes.
 
 ## 0.52.4 (2024-05-02)
 
-
 ### 🩹 Fixes
 
 - more styling fixes ([0d9622b](https://github.com/spwntch/core/commit/0d9622b))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.3 (2024-05-02)
-
 
 ### 🩹 Fixes
 
 - add m-0 to card image ([e68bb93](https://github.com/spwntch/core/commit/e68bb93))
 - allow card ts to be a bit wder ([881b0ba](https://github.com/spwntch/core/commit/881b0ba))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.52.2 (2024-05-02)
 
-
 ### 🩹 Fixes
 
 - trying to resolvecard grid styling ([cdd829e](https://github.com/spwntch/core/commit/cdd829e))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -485,46 +468,42 @@ This was a version bump only, there were no code changes.
 
 ## 0.52.0 (2024-05-02)
 
-
 ### 🚀 Features
 
 - adds a card grid ([d830c75](https://github.com/spwntch/core/commit/d830c75))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.38 (2024-05-02)
 
-
 ### 🩹 Fixes
 
 - a touch less vertical padding ([05a0d60](https://github.com/spwntch/core/commit/05a0d60))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.37 (2024-05-02)
-
 
 ### 🩹 Fixes
 
 - if empty array passed into logos, return null ([3e04725](https://github.com/spwntch/core/commit/3e04725))
 - adds key to logo img ([6f76132](https://github.com/spwntch/core/commit/6f76132))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.36 (2024-05-02)
 
-
 ### 🚀 Features
 
 - adds logo cloud ([19eb377](https://github.com/spwntch/core/commit/19eb377))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -618,12 +597,11 @@ This was a version bump only, there were no code changes.
 
 ## 0.51.13 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - adds back relative isolate ([176d723](https://github.com/spwntch/core/commit/176d723))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -633,122 +611,111 @@ This was a version bump only, there were no code changes.
 
 ## 0.51.11 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - adds a w-full to artcile tag ([118240a](https://github.com/spwntch/core/commit/118240a))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.10 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - adds a w-full to Post ([dbd8fc2](https://github.com/spwntch/core/commit/dbd8fc2))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.9 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - an attempt to get a well-laid-out post ([b921ed0](https://github.com/spwntch/core/commit/b921ed0))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.8 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - adjusts Post padding in mobile ([54744dd](https://github.com/spwntch/core/commit/54744dd))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.7 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - refines desktop-nav padding ([c9625b3](https://github.com/spwntch/core/commit/c9625b3))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.6 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - moves left margin into MobileNavDrawer ([49a9726](https://github.com/spwntch/core/commit/49a9726))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.5 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - removes mobile menu button when there's no nav items ([80cc22d](https://github.com/spwntch/core/commit/80cc22d))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.4 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - attempt to finalise mobile styling ([12febed](https://github.com/spwntch/core/commit/12febed))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.3 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - remove relative isolate from artcile ([4b83cef](https://github.com/spwntch/core/commit/4b83cef))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.2 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - removes max-w-none from post article ([535191c](https://github.com/spwntch/core/commit/535191c))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.51.1 (2024-05-01)
 
-
 ### 🩹 Fixes
 
 - hide post-toc under md ([afb7443](https://github.com/spwntch/core/commit/afb7443))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -758,34 +725,31 @@ This was a version bump only, there were no code changes.
 
 ## 0.50.11 (2024-04-30)
 
-
 ### 🚀 Features
 
 - clicking a TOC item triggers an evnet ([25f4806](https://github.com/spwntch/core/commit/25f4806))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.10 (2024-04-30)
 
-
 ### 🩹 Fixes
 
 - adds a key to toc items ([ab44cac](https://github.com/spwntch/core/commit/ab44cac))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.9 (2024-04-30)
 
-
 ### 🚀 Features
 
 - adds a TOC list in right post column ([2d6e7ed](https://github.com/spwntch/core/commit/2d6e7ed))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -795,85 +759,77 @@ This was a version bump only, there were no code changes.
 
 ## 0.50.7 (2024-04-30)
 
-
 ### 🚀 Features
 
 - adds a width to the toc div ([7c97b13](https://github.com/spwntch/core/commit/7c97b13))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.6 (2024-04-30)
 
-
 ### 🚀 Features
 
 - adds a simple pre for our toc ([cc2b1e6](https://github.com/spwntch/core/commit/cc2b1e6))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.5 (2024-04-30)
 
-
 ### 🚀 Features
 
 - adds @tailwind/typography support to @spwntch/blog ([5e49e5a](https://github.com/spwntch/core/commit/5e49e5a))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.4 (2024-04-30)
 
-
 ### 🩹 Fixes
 
 - give post-card a cursor ([f1a3910](https://github.com/spwntch/core/commit/f1a3910))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.3 (2024-04-30)
-
 
 ### 🚀 Features
 
 - adds a post header ([58582f5](https://github.com/spwntch/core/commit/58582f5))
 - adds a post and cleans up ([22d70c4](https://github.com/spwntch/core/commit/22d70c4))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.2 (2024-04-30)
-
 
 ### 🚀 Features
 
 - adds a post-card ([a90a114](https://github.com/spwntch/core/commit/a90a114))
 - adds a posts grid ([d432c06](https://github.com/spwntch/core/commit/d432c06))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.1 (2024-04-30)
 
-
 ### 🚀 Features
 
 - adds a bunch of boilerplate components to reacxt-blog ([b63ee37](https://github.com/spwntch/core/commit/b63ee37))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.50.0 (2024-04-29)
-
 
 ### 🚀 Features
 
@@ -881,7 +837,7 @@ This was a version bump only, there were no code changes.
 - adds a boilerplate @/blog packagr ([d31f609](https://github.com/spwntch/core/commit/d31f609))
 - adds mdx types ([7d0b9cf](https://github.com/spwntch/core/commit/7d0b9cf))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -891,17 +847,15 @@ This was a version bump only, there were no code changes.
 
 ## 0.42.2 (2024-04-25)
 
-
 ### 🩹 Fixes
 
 - add ref to some components missing it which use forwardRef ([d6e5e02](https://github.com/spwntch/core/commit/d6e5e02))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.42.1 (2024-04-25)
-
 
 ### 🚀 Features
 
@@ -912,12 +866,11 @@ This was a version bump only, there were no code changes.
 
 - remove utisl from react-mdx to get Introduction.mdx to display table ([e5c730f](https://github.com/spwntch/core/commit/e5c730f))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.42.0 (2024-04-25)
-
 
 ### 🚀 Features
 
@@ -925,7 +878,7 @@ This was a version bump only, there were no code changes.
 - adds a collection of page-headers ([77e19dd](https://github.com/spwntch/core/commit/77e19dd))
 - adds a collection of page-headers ([d499388](https://github.com/spwntch/core/commit/d499388))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -935,12 +888,11 @@ This was a version bump only, there were no code changes.
 
 ## 0.41.0 (2024-04-23)
 
-
 ### 🚀 Features
 
 - updates github images and main readme. ([890fa84](https://github.com/spwntch/core/commit/890fa84))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -950,35 +902,32 @@ This was a version bump only, there were no code changes.
 
 ## 0.39.0 (2024-04-22)
 
-
 ### 🚀 Features
 
 - adds nav toolbar menu support ([6961c2b](https://github.com/spwntch/spwn/commit/6961c2b))
 - adds onLinkto to NavMenuSubLink ([bfbfa13](https://github.com/spwntch/spwn/commit/bfbfa13))
-- mobile nav menu gets  sub-menu ([112ee68](https://github.com/spwntch/spwn/commit/112ee68))
+- mobile nav menu gets sub-menu ([112ee68](https://github.com/spwntch/spwn/commit/112ee68))
 
 ### 🩹 Fixes
 
 - adds aschild prop to nav-menu-sub-link Navigation MenueIte ([67d7062](https://github.com/spwntch/spwn/commit/67d7062))
 - this should be the correct asChild strategy ([25fe00f](https://github.com/spwntch/spwn/commit/25fe00f))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.38.1 (2024-04-22)
 
-
 ### 🚀 Features
 
 - adds basic nav-menu link support ([d49adc0](https://github.com/spwntch/spwn/commit/d49adc0))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.38.0 (2024-04-22)
-
 
 ### 🚀 Features
 
@@ -990,12 +939,11 @@ This was a version bump only, there were no code changes.
 - remove pathname from under-construction ([1a0030d](https://github.com/spwntch/spwn/commit/1a0030d))
 - adds cursor-pointer ([31d3e66](https://github.com/spwntch/spwn/commit/31d3e66))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.37.0 (2024-04-20)
-
 
 ### 🚀 Features
 
@@ -1003,19 +951,18 @@ This was a version bump only, there were no code changes.
 - adds non-functional mobile nav menu ([663dbf9](https://github.com/spwntch/spwn/commit/663dbf9))
 - adds under-contruction-footer ([8852a42](https://github.com/spwntch/spwn/commit/8852a42))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.36.0 (2024-04-20)
-
 
 ### 🚀 Features
 
 - adds a github button ([403b82b](https://github.com/spwntch/spwn/commit/403b82b))
 - adds gihub support to navbar ([0061ff3](https://github.com/spwntch/spwn/commit/0061ff3))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -1025,7 +972,6 @@ This was a version bump only, there were no code changes.
 
 ## 0.34.0 (2024-04-17)
 
-
 ### 🚀 Features
 
 - **getting-started-docs:** adds some custom home page content ([478c935](https://github.com/spwntch/spwn/commit/478c935))
@@ -1034,23 +980,21 @@ This was a version bump only, there were no code changes.
 
 - **getting-started-docs:** justifies text left ([0f5ab0d](https://github.com/spwntch/spwn/commit/0f5ab0d))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.33.1 (2024-04-17)
 
-
 ### 🚀 Features
 
 - **getting-started-docs:** adds custom components for the app ([cb95d68](https://github.com/spwntch/spwn/commit/cb95d68))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
 ## 0.33.0 (2024-04-17)
-
 
 ### 🚀 Features
 
@@ -1064,7 +1008,7 @@ This was a version bump only, there were no code changes.
 
 - **sample-website:** fix linting error ([2a994b2](https://github.com/spwntch/spwn/commit/2a994b2))
 
-### ❤️  Thank You
+### ❤️ Thank You
 
 - zpydee @zpydee
 
@@ -1072,7 +1016,7 @@ This was a version bump only, there were no code changes.
 
 ### 🩹 Fixes
 
-- import @/tailwind/styles in component packafges ([b130dc8](https://github.com/spwntch/spwn/commit/b130dc8))
+- import @spwntch/tailwind/styles in component packafges ([b130dc8](https://github.com/spwntch/spwn/commit/b130dc8))
 - **react-components:** import from '../../tailwind/src/tailwind.css' to get component's displaying ([c20f671](https://github.com/spwntch/spwn/commit/c20f671))
 - **storybook:** affect changes to get build and serve ([db3155e](https://github.com/spwntch/spwn/commit/db3155e))
 
@@ -1374,7 +1318,7 @@ This was a version bump only, there were no code changes.
 
 ### 🩹 Fixes
 
-- add a ts path for @/tailwind/\* ([5f6a532](https://github.com/spwntch/workspace-generator/commit/5f6a532))
+- add a ts path for @spwntch/tailwind/\* ([5f6a532](https://github.com/spwntch/workspace-generator/commit/5f6a532))
 - **rewact-components:** Update welcome message in ReactComponents component ([0bf4a60](https://github.com/spwntch/workspace-generator/commit/0bf4a60))
 
 ### ❤️ Thank You
@@ -1407,7 +1351,7 @@ This was a version bump only, there were no code changes.
 
 - **react-components:** add boilerplate vite react lib ([462024a](https://github.com/spwntch/workspace-generator/commit/462024a))
 - **react-components:** add tailwind basics ([679cd3e](https://github.com/spwntch/workspace-generator/commit/679cd3e))
-- **react-components:** add @/tailwind exports ([1df1e56](https://github.com/spwntch/workspace-generator/commit/1df1e56))
+- **react-components:** add @spwntch/tailwind exports ([1df1e56](https://github.com/spwntch/workspace-generator/commit/1df1e56))
 
 ### 🩹 Fixes
 

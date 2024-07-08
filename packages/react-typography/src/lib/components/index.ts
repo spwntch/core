@@ -1,4 +1,4 @@
-import '@/tailwind/tailwind.css';
+import '@spwntch/tailwind/tailwind.css';
 
 export * from './blockquote/blockquote';
 export * from './h1/h1';

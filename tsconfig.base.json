@@ -1,30 +1,54 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/react-blocks": ["packages/react-blocks/src/index.ts"],
-      "@/react-components": ["packages/react-components/src/index.ts"],
-      "@/react-mdx": ["packages/react-mdx/src/index.ts"],
-      "@/react-shell": ["packages/react-shell/src/index.ts"],
-      "@/react-storybook": ["storybook/react/src/index.ts"],
-      "@/react-typography": ["packages/react-typography/src/index.ts"],
-      "@/react-ui": ["packages/react-ui/src/index.ts"],
-      "@/tailwind/*": ["packages/tailwind/src/*"],
-      "@spwntch/component-library": ["plugins/component-library/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "esnext",
+		"lib": [
+			"es2020",
+			"dom"
+		],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@spwntch/blocks": [
+				"packages/react-blocks/src/index.ts"
+			],
+			"@spwntch/components": [
+				"packages/react-components/src/index.ts"
+			],
+			"@spwntch/mdx": [
+				"packages/react-mdx/src/index.ts"
+			],
+			"@spwntch/shell": [
+				"packages/react-shell/src/index.ts"
+			],
+			"@/react-storybook": [
+				"storybook/react/src/index.ts"
+			],
+			"@spwntch/typography": [
+				"packages/react-typography/src/index.ts"
+			],
+			"@spwntch/ui": [
+				"packages/react-ui/src/index.ts"
+			],
+			"@spwntch/tailwind/*": [
+				"packages/tailwind/src/*"
+			],
+			"@spwn/component-library": [
+				"plugins/component-library/src/index.ts"
+			]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		"tmp"
+	]
 }

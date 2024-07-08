@@ -9,7 +9,7 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "@/react-ui/lib/components",
-    "utils": "@/react-ui/lib/utils"
+    "components": "@spwntch/ui/lib/components",
+    "utils": "@spwntch/ui/lib/utils"
   }
 }

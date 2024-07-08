@@ -4,7 +4,7 @@ import {
   IImage,
   ImageContainer,
   SplitLayout,
-} from '@/react-components';
+} from '@spwntch/components';
 import { cn } from '@spwntch/ui';
 import React from 'react';
 import styles from './split-image-content-block.module.css';

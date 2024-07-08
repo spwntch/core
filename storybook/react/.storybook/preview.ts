@@ -1,4 +1,4 @@
-import '@/tailwind/tailwind.css';
+import '@spwntch/tailwind/tailwind.css';
 
 import { Decorator, Parameters } from '@storybook/react';
 import { withThemeToggle } from '../src/lib/decorators';
@@ -23,7 +23,18 @@ export const parameters: Parameters = {
         'typography',
         ['complete-example', '*'],
         'components',
-        ['layouts', 'containers',  'groups', 'grids', 'carousels', 'cards', 'content', 'media', 'heroes', '*'],
+        [
+          'layouts',
+          'containers',
+          'groups',
+          'grids',
+          'carousels',
+          'cards',
+          'content',
+          'media',
+          'heroes',
+          '*',
+        ],
         'blocks',
         'shell',
         [

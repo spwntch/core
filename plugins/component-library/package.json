@@ -1,5 +1,5 @@
 {
-  "name": "@spwntch/component-library",
+  "name": "@spwn/component-library",
   "version": "0.0.1",
   "dependencies": {
     "@nx/devkit": "19.4.0",

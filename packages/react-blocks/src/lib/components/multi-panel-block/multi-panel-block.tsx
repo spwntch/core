@@ -1,4 +1,4 @@
-import { IMultiPanelLayoutProps, MultiPanelLayout } from '@/react-components';
+import { IMultiPanelLayoutProps, MultiPanelLayout } from '@spwntch/components';
 import { cn } from '@spwntch/ui';
 import { forwardRef } from 'react';
 import styles from './multi-panel-block.module.css';

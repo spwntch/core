@@ -1,4 +1,4 @@
-import { ContentContainer, IContent } from '@/react-components';
+import { ContentContainer, IContent } from '@spwntch/components';
 import { cn } from '@spwntch/ui';
 import React from 'react';
 import styles from './content-block.module.css';
