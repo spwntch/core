@@ -10,6 +10,11 @@
       "options": {
         "assets": [
           {
+            "input": "assets/spwn/under-construction/public",
+            "glob": "*.webp",
+            "output": "under-construction"
+          },
+          {
             "input": "assets/txb/brand/public",
             "glob": "*.webp",
             "output": "brand"

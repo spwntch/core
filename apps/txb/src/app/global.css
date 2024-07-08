@@ -3,7 +3,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* #FFFFFF (White) */
+    --background: 210 16% 96%; /* #F9F9F9 (Light Gray) */
     --foreground: 210 20% 20%; /* #333333 (Dark Gray) */
     --card: 0 0% 100%; /* #FFFFFF (White) */
     --card-foreground: 210 20% 20%; /* #333333 (Dark Gray) */

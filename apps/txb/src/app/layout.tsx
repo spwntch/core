@@ -13,12 +13,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const navbar = {
-    logoHeight: 52
-  }
+    logoHeight: 46,
+  };
   return (
     <html lang="en">
       <body>
-        <Shell brand={brand} navbar={navbar}>{children}</Shell>
+        <Shell brand={brand} navbar={navbar} underContruction>
+          {children}
+        </Shell>
       </body>
     </html>
   );

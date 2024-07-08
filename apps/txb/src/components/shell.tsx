@@ -35,7 +35,7 @@ export const Shell = ({
 
   return (
     <ShellProvider brand={brand}>
-      <div className="h-full flex flex-col mx-auto md:container">
+      <div className="h-screen ">
         <DesktopTopNavbar
           classNames={`${navbar?.classNames} bg-background`}
           navAlignment={navbar?.alignment}
@@ -43,10 +43,9 @@ export const Shell = ({
           githubUrl={githubUrl}
           onLinkTo={handleLinkTo}
         />
-        <main className="h-full flex flex-col overflow-y">
-          {children}
-          {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
-        </main>
+
+        <main >{children}</main>
+        {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
       </div>
     </ShellProvider>
   );
