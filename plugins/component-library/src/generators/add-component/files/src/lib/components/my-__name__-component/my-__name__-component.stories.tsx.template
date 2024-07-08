@@ -22,7 +22,7 @@ This component can be styled further using TailwindCSS classes provided via the 
 `;
 
 const meta: Meta<typeof My<%= className %>Component> = {
-  title: '_generator/<%= name %>/My<%= className %>Component',
+  title: '_generator/<%= name %>/my-<%= name %>-component',
   component: My<%= className %>Component,
   tags: ['autodocs'],
   argTypes: {

@@ -5,16 +5,10 @@
   "description": "",
   "type": "object",
   "properties": {
-    "project": {
+    "component": {
       "type": "string",
-      "description": "The project where an existing component is located.",
-      "x-prompt": "In which project is this component located?",
-      "x-dropdown": "projects"
-    },
-    "componentDir": {
-      "type": "string",
-      "description": "The directory where the component is located, relative to the project src directory.",
-      "x-prompt": "Where is your component located, relative to the project's src directory?",
+      "description": "The name of the component directory where the component is located.",
+      "x-prompt": "What is the component directory name where your component is located?",
       "default": "lib/components/..."
     },
     "addTests": {
@@ -24,5 +18,5 @@
       "x-prompt": "Would you like to add tests for the component?"
     }
   },
-  "required": ["project", "componentDir"]
+  "required": ["component"]
 }
