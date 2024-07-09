@@ -1,21 +1,17 @@
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 
-import { CreateLibraryGeneratorSchema } from './schema';
 
 describe('create-library generator', () => {
-  let tree: Tree;
-  const options: CreateLibraryGeneratorSchema = {
-    name: 'test',
-    publishable: false,
-  };
+  // let tree: Tree;
+  // const options: CreateLibraryGeneratorSchema = {
+  //   name: 'test',
+  //   publishable: false,
+  // };
 
-  beforeEach(() => {
-    tree = createTreeWithEmptyWorkspace();
-  });
+  // beforeEach(() => {
+  //   tree = createTreeWithEmptyWorkspace();
+  // });
 
   it('is a sanity test', async () => {
-    console.log(tree);
     expect(true).toBeTruthy();
   });
 
