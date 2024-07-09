@@ -8,6 +8,7 @@ import { IContent, IImage, YoutubePlayer } from '@/react-components';
 import LogoCarousel from 'packages/react-components/src/lib/components/carousels/logo-carousel/logo-carousel';
 import { clientLogos } from '../config';
 import { Divide } from 'lucide-react';
+import { cn } from '@/react-ui';
 
 const home = () => {
   const image: IImage = {
@@ -45,7 +46,7 @@ const home = () => {
           vAlign="top"
         />
       </div> */}
-      <div className="text-primary text-7xl">hello</div>
+      <div className={cn("text-primary text-7xl")}>hello</div>
       {/* <LogoCarousel className="bg-white" logos={clientLogos} /> */}
       {/* <MultiPanelBlock
         containers={[
