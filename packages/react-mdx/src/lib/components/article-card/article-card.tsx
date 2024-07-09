@@ -6,8 +6,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  cn
 } from '@/react-ui';
+import { cn } from '@/utils';
+
 import { IMdxDocMeta } from '../../types';
 import styles from './article-card.module.css';
 

@@ -1,5 +1,7 @@
 import { ImageContentBlock } from '@/react-blocks';
-import { Button, cn } from '@/react-ui';
+import { Button } from '@/react-ui';
+import { cn } from '@/utils';
+
 import { ArrowBigLeft } from 'lucide-react';
 import { IMdxDocMeta } from '../../types';
 import styles from './article-header.module.css';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import { P } from '@/react-typography';
 import styles from './paragraphs.module.css';
 

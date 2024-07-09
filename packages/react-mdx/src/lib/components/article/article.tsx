@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import styles from './article.module.css';
 import { IMdxDoc } from '../../types';
 import { ArticleHeader } from '../article-header/article-header';

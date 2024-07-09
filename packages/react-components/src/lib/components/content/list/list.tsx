@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import { Avatar, AvatarImage, AvatarFallback } from '@/react-ui';
 import { Dot } from 'lucide-react';
 import styles from './list.module.css';

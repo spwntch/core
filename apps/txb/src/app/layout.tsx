@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Shell brand={brand} navbar={navbar} underContruction>
+        {/* <Shell brand={brand} navbar={navbar} underContruction> */}
           {children}
-        </Shell>
+        {/* </Shell> */}
       </body>
     </html>
   );

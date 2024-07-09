@@ -1,5 +1,5 @@
 import { IMultiPanelLayoutProps, MultiPanelLayout } from '@/react-components';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import { forwardRef } from 'react';
 import styles from './multi-panel-block.module.css';
 

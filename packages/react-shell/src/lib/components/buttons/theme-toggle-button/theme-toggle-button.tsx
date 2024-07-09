@@ -7,8 +7,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-  cn,
 } from '@/react-ui';
+import { cn } from '@/utils';
+
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import styles from './theme-toggle-button.module.css';

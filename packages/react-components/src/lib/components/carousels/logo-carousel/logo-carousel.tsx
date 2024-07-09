@@ -1,8 +1,9 @@
 import { H2 } from '@/react-typography';
-import { Carousel, CarouselContent, CarouselItem, cn } from '@/react-ui';
+import { Carousel, CarouselContent, CarouselItem } from '@/react-ui';
 import Autoplay from 'embla-carousel-autoplay';
 import { PropsWithChildren, useRef } from 'react';
 import styles from './logo-carousel.module.css';
+import { cn } from '@/utils';
 
 export interface LogoCarouselProps {
   logos: string[];

@@ -4,7 +4,7 @@ import {
   IImage,
   ImageContainer,
 } from '@/react-components';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import React from 'react';
 import styles from './image-content-block.module.css';
 

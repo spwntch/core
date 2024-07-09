@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { ChevronDown } from "lucide-react";
-import { cn } from "../../../utils"; // Adjust the path as necessary to reach utils correctly
+import * as React from 'react';
+import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/utils'; // Adjust the path as necessary to reach utils correctly
 import styles from './navigation-menu.module.css';
 
 const NavigationMenu = React.forwardRef<
@@ -42,7 +42,8 @@ const NavigationMenuTrigger = React.forwardRef<
     className={cn(styles['navigation-menu-trigger'], 'group', className)}
     {...props}
   >
-    {children} <ChevronDown className={styles['chevron-down']} aria-hidden="true" />
+    {children}{' '}
+    <ChevronDown className={styles['chevron-down']} aria-hidden="true" />
   </NavigationMenuPrimitive.Trigger>
 ));
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
@@ -73,7 +74,8 @@ const NavigationMenuViewport = React.forwardRef<
     />
   </div>
 ));
-NavigationMenuViewport.displayName = NavigationMenuPrimitive.Viewport.displayName;
+NavigationMenuViewport.displayName =
+  NavigationMenuPrimitive.Viewport.displayName;
 
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,
@@ -87,7 +89,8 @@ const NavigationMenuIndicator = React.forwardRef<
     <div className={styles['indicator-inner']} />
   </NavigationMenuPrimitive.Indicator>
 ));
-NavigationMenuIndicator.displayName = NavigationMenuPrimitive.Indicator.displayName;
+NavigationMenuIndicator.displayName =
+  NavigationMenuPrimitive.Indicator.displayName;
 
 export {
   NavigationMenu,

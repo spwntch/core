@@ -1,5 +1,5 @@
 import { ButtonGroup } from '@/react-components';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import React, { forwardRef } from 'react';
 import { NavToolbar } from '..';
 import { Logo } from '../../brand';

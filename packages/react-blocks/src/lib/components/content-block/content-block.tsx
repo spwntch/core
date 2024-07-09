@@ -1,5 +1,5 @@
 import { ContentContainer, IContent } from '@/react-components';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import React from 'react';
 import styles from './content-block.module.css';
 

@@ -1,4 +1,4 @@
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import React, { forwardRef, ReactNode } from 'react';
 import styles from './multi-panel-layout.module.css';
 

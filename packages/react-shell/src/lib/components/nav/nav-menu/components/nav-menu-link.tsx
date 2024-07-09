@@ -1,9 +1,10 @@
 import {
-  cn,
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
 } from '@/react-ui';
+import { cn } from '@/utils';
+
 import { INavLink } from '../../nav-provider/nav-provider';
 
 type INavToolbarLinkProps = INavLink;

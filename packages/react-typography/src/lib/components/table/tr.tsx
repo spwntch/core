@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/react-ui';
+import { cn } from '@/utils';
 import styles from './table.module.css';
 
 export interface ITrProps extends React.HTMLAttributes<HTMLTableRowElement> {
