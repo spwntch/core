@@ -69,3 +69,20 @@ export const Basic: Story = {
   },
   play: playBasic,
 };
+
+export const WithNoTitle: Story = {
+  args: {
+    logos: [
+      '/client-logos/brooklyn-colored.svg',
+      '/client-logos/hamilton-colored.svg',
+      '/client-logos/milano-colored.svg',
+      '/client-logos/nairobi-colored.svg',
+      '/client-logos/oslo-colored.svg',
+      '/client-logos/phoenix-colored.svg',
+      '/client-logos/san-francisco-colored.svg',
+      '/client-logos/scale-colored.svg',
+      '/client-logos/theo-colored.svg',
+    ],
+  },
+  play: playBasic,
+};

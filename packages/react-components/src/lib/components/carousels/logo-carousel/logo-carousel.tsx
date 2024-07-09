@@ -1,25 +1,26 @@
 import { H2 } from '@/react-typography';
-import { Carousel, CarouselContent, CarouselItem } from '@/react-ui';
+import { Carousel, CarouselContent, CarouselItem, cn } from '@/react-ui';
 import Autoplay from 'embla-carousel-autoplay';
-import { useRef } from 'react';
+import { PropsWithChildren, useRef } from 'react';
 import styles from './logo-carousel.module.css';
 
 export interface LogoCarouselProps {
-  title: string;
   logos: string[];
+  title?: string;
+  className?:string
 }
 
-const LogoCarousel: React.FC<LogoCarouselProps> = ({ title, logos }) => {
+const LogoCarousel: React.FC<LogoCarouselProps> = ({ logos, title,className }) => {
   if (!logos?.length) return null;
-  const carouselOptions = { loop: true, duration: 4000 };
+  const carouselOptions = { loop: true, duration: 6000 };
   const plugin = useRef(Autoplay({ delay: 0, jump: false }));
   return (
     <Carousel
-      className={styles['logo-carousel']}
+      className={cn(styles['logo-carousel'], className)}
       opts={carouselOptions}
       plugins={[plugin.current]}
     >
-      <H2 className={styles['logo-carousel-title']}>{title}</H2>
+      {title && <H2 className={styles['logo-carousel-title']}>{title}</H2>}
       <CarouselContent className={styles['carousel-content']}>
         {logos.map((logo, index) => (
           <CarouselItem key={index} className={styles['carousel-item']}>
