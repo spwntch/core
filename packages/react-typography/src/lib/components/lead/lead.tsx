@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import styles from './lead.module.css';
 
 export interface ILeadProps

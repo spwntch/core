@@ -1,4 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage, cn } from '@spwntch/ui';
+import { Avatar, AvatarFallback, AvatarImage } from '@spwntch/ui';
+import { cn } from '@/utils';
 import { Dot } from 'lucide-react';
 import styles from './list.module.css';
 import { IBullet } from '../../../types';

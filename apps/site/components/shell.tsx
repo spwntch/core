@@ -34,19 +34,19 @@ export const Shell = ({
   };
 
   return (
-    <ShellProvider brand={brand}>
+    // <ShellProvider brand={brand}>
       <div className="h-screen ">
-        <DesktopTopNavbar
+        {/* <DesktopTopNavbar
           classNames={`${navbar?.classNames} bg-background`}
           navAlignment={navbar?.alignment}
           logoHeight={navbar?.logoHeight}
           githubUrl={githubUrl}
           onLinkTo={handleLinkTo}
-        />
+        /> */}
 
         <main>{children}</main>
-        {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
+        {/* {underContruction ? <UnderConstructionFooter /> : <RegularFooter />} */}
       </div>
-    </ShellProvider>
+    // </ShellProvider>
   );
 };

@@ -1,5 +1,5 @@
+import { cn } from '@/utils';
 import React from 'react';
-import { cn } from '@spwntch/ui';
 import styles from './blockquote.module.css';
 
 export interface IBlockquoteProps

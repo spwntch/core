@@ -1,4 +1,4 @@
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import styles from './content-children.module.css';
 
 interface ContentChildrenProps {

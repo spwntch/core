@@ -1,15 +1,15 @@
 
-import React from 'react';
+import { cn } from '@/utils';
 import {
   Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-  cn,
 } from '@spwntch/ui';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import React from 'react';
 import styles from './theme-toggle-button.module.css';
 
 export const ThemeToggleButton: React.FC<{ className?: string }> = ({

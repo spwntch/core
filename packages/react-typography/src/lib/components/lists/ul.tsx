@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import styles from './ul.module.css';
 
 export interface IUlProps

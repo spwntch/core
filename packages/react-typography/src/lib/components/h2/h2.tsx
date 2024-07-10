@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, forwardRef } from 'react';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import styles from './h2.module.css';
 
 export interface IH2Props

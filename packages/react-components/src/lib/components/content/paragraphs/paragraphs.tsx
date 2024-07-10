@@ -1,6 +1,6 @@
+import { cn } from '@/utils';
 import { P } from '@spwntch/typography';
 import styles from './paragraphs.module.css';
-import { cn } from '@spwntch/ui';
 
 export type ParagraphAlignment = 'left' | 'center' | 'right' | 'justified';
 

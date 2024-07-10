@@ -1,7 +1,7 @@
 /* my-<%= name %>-component.stories.tsx */
 
 import React, { forwardRef } from 'react';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import { ContentBlock } from '@spwntch/blocks';
 import styles from './my-<%= name %>-component.module.css';
 

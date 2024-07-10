@@ -1,5 +1,5 @@
+import { cn } from '@/utils';
 import {
-  cn,
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,

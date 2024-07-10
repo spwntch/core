@@ -1,4 +1,4 @@
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import { IMdxDoc } from '../../types';
 import styles from './article-mdx.module.css';
 
@@ -14,8 +14,8 @@ export const ArticleMdx = ({
   toc,
   content,
   onBackTo,
-  // onToc,
-}: IArticleProps) => {
+}: // onToc,
+IArticleProps) => {
   return (
     <div className={cn(styles.container)}>
       <article className={cn(styles.article)}>

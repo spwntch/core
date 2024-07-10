@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Shell brand={brand} navbar={navbar} underContruction>
-          {children}
+        {children}
         </Shell>
       </body>
     </html>

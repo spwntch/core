@@ -1,5 +1,5 @@
 import { ContentContainer, IContent } from '@spwntch/components';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import React from 'react';
 import styles from './content-block.module.css';
 

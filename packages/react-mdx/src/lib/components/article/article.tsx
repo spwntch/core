@@ -1,4 +1,4 @@
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import { IMdxDoc } from '../../types';
 import { ArticleHeader } from '../article-header/article-header';
 import { ArticleMdx } from '../article-mdx/article-mdx';

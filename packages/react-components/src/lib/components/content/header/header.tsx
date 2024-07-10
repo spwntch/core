@@ -1,5 +1,5 @@
 import { H2, H3 } from '@spwntch/typography';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import React from 'react';
 import { Tags } from '../../content/tags/tags';
 import styles from './header.module.css';

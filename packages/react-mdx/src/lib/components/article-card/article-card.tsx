@@ -1,3 +1,4 @@
+import { cn } from '@/utils';
 import { Tags } from '@spwntch/components'; // Import the Tags component
 import { Small } from '@spwntch/typography';
 import {
@@ -6,7 +7,6 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  cn,
 } from '@spwntch/ui';
 import { IMdxDocMeta } from '../../types';
 import styles from './article-card.module.css';

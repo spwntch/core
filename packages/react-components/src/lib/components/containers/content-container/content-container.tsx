@@ -1,4 +1,4 @@
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import { PropsWithChildren, forwardRef } from 'react';
 import { IContent } from '../../../types';
 import { Announcement } from '../../content/announcement/announcement';

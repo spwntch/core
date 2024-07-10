@@ -1,6 +1,6 @@
 import { H3 } from '@spwntch/typography';
 import styles from './logo-cloud.module.css';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import React from 'react';
 
 export interface ILogoCloudProps {

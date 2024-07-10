@@ -1,4 +1,4 @@
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import React, { forwardRef, ReactNode } from 'react';
 import styles from './quad-layout.module.css';
 

@@ -1,4 +1,4 @@
-import '@spwntch/tailwind/tailwind.css';
+// import '@spwntch/tailwind/tailwind.css';
 
 export * from './brand';
 export * from './buttons';

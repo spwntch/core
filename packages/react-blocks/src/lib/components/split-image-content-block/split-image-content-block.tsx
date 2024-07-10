@@ -5,7 +5,7 @@ import {
   ImageContainer,
   SplitLayout,
 } from '@spwntch/components';
-import { cn } from '@spwntch/ui';
+import { cn } from '@/utils';
 import React from 'react';
 import styles from './split-image-content-block.module.css';
 
