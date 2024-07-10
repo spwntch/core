@@ -4,6 +4,34 @@
   "sourceRoot": "apps/site",
   "projectType": "application",
   "tags": [],
+
   "// targets": "to see all targets run: nx show project site --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "options": {
+        "assets": [
+          {
+            "input": "assets/spwn/under-construction/public",
+            "glob": "*.webp",
+            "output": "under-construction"
+          },
+          {
+            "input": "assets/interact/brand/public",
+            "glob": "*.webp",
+            "output": "brand"
+          },
+          {
+            "input": "assets/interact/images/public",
+            "glob": "*.webp",
+            "output": "images"
+          },
+          {
+            "input": "assets/interact/client-logos/svg",
+            "glob": "*.svg",
+            "output": "client-logos"
+          }
+        ]
+      }
+    }
+  }
 }
