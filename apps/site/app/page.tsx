@@ -1,9 +1,9 @@
-import { cn } from "@/utils";
+import { cn } from '@/utils';
 
 export default function Index() {
   return (
-    <div className="container">
-      <h1 className={cn("text-7xl text-primary", "underline")}>Hello World</h1>
-    </div>
+    <h1 className={cn('text-7xl text-primary', 'underline', 'p-8')}>
+      Hello World
+    </h1>
   );
 }
