@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/react-storybook": ["storybook/react/src/index.ts"],
+      "@/utils": ["libs/utils/src/index.ts"],
       "@spwn/component-library": ["plugins/component-library/src/index.ts"],
       "@spwntch/blocks": ["packages/react-blocks/src/index.ts"],
       "@spwntch/components": ["packages/react-components/src/index.ts"],
