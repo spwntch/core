@@ -38,3 +38,5 @@ jobs:
 
       # - run: pnpm exec nx-cloud record -- nx format:check
       - run: pnpm run ci
+        env:
+          NODE_ENV: production
