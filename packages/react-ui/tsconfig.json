@@ -6,9 +6,11 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "types": ["vite/client"],
-    "baseUrl": ".",
+    // commenting these lines out to get @/utils from a our libs to resolve.
+    // may need to uncomment when qdding new shadcn/ui components
+    // "baseUrl": ".",
     "paths": {
-      "@spwntch/ui/*": ["./src/*"]
+      "@/ui/*": ["./src/*"]
     }
   },
   "files": [],
