@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
-import { IBrand } from '../brand/brand-provider/brand-provider';
-import { INavItem } from '../nav/nav-provider/nav-provider';
+import { BrandProvider, IBrand } from '../brand/brand-provider/brand-provider';
+import { INavItem, NavProvider } from '../nav/nav-provider/nav-provider';
+import { ThemeProvider } from '../theme-provider/theme-provider';
 // import { AuthBackends } from './auth-backend-provider';
 
 export interface IShellProviderProps {
@@ -17,21 +18,20 @@ export const ShellProvider = ({
   navItems,
   children,
 }: IShellProviderProps & PropsWithChildren) => {
-  return <>{children}</>;
-  // return (
-  //   <ThemeProvider
-  //     attribute="class"
-  //     defaultTheme={defaultTheme}
-  //     enableSystem
-  //     disableTransitionOnChange
-  //   >
-  //     <BrandProvider brand={brand}>
-  //       <NavProvider navItems={navItems}>
-  //         {/* <AuthBackendContextProvider backendProvider={authBackendProvider}> */}
-  //         {children}
-  //         {/* </AuthBackendContextProvider> */}
-  //       </NavProvider>
-  //     </BrandProvider>
-  //   </ThemeProvider>
-  // );
+   return (
+     <ThemeProvider
+       attribute="class"
+       defaultTheme={defaultTheme}
+       enableSystem
+       disableTransitionOnChange
+     >
+       <BrandProvider brand={brand}>
+         <NavProvider navItems={navItems}>
+           {/* <AuthBackendContextProvider backendProvider={authBackendProvider}> */}
+           {children}
+           {/* </AuthBackendContextProvider> */}
+         </NavProvider>
+       </BrandProvider>
+     </ThemeProvider>
+   );
 };
